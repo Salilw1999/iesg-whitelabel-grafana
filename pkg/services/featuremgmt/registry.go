@@ -57,7 +57,7 @@ var (
 		},
 		{
 			Name:           "featureHighlights",
-			Description:    "Highlight Grafana Enterprise features",
+			Description:    "Highlight IESG Enterprise features",
 			Stage:          FeatureStageGeneralAvailability,
 			Owner:          grafanaOperatorExperienceSquad,
 			AllowSelfServe: true,
@@ -295,7 +295,7 @@ var (
 		},
 		{
 			Name:        "awsDatasourcesTempCredentials",
-			Description: "Support temporary security credentials in AWS plugins for Grafana Cloud customers",
+			Description: "Support temporary security credentials in AWS plugins for IESG Cloud customers",
 			Stage:       FeatureStageExperimental,
 			Owner:       awsDatasourcesSquad,
 		},
@@ -354,7 +354,7 @@ var (
 		},
 		{
 			Name:            "featureToggleAdminPage",
-			Description:     "Enable admin page for managing feature toggles from the Grafana front-end. Grafana Cloud only.",
+			Description:     "Enable admin page for managing feature toggles from the IESG front-end. IESG Cloud only.",
 			Stage:           FeatureStageExperimental,
 			FrontendOnly:    false,
 			Owner:           grafanaOperatorExperienceSquad,
@@ -558,7 +558,7 @@ var (
 		},
 		{
 			Name:         "cachingOptimizeSerializationMemoryUsage",
-			Description:  "If enabled, the caching backend gradually serializes query responses for the cache, comparing against the configured `[caching]max_value_mb` value as it goes. This can can help prevent Grafana from running out of memory while attempting to cache very large query responses.",
+			Description:  "If enabled, the caching backend gradually serializes query responses for the cache, comparing against the configured `[caching]max_value_mb` value as it goes. This can can help prevent IESG from running out of memory while attempting to cache very large query responses.",
 			Stage:        FeatureStageExperimental,
 			Owner:        grafanaOperatorExperienceSquad,
 			FrontendOnly: false,
@@ -580,13 +580,13 @@ var (
 		},
 		{
 			Name:        "alertmanagerRemoteSecondary",
-			Description: "Enable Grafana to sync configuration and state with a remote Alertmanager.",
+			Description: "Enable IESG to sync configuration and state with a remote Alertmanager.",
 			Stage:       FeatureStageExperimental,
 			Owner:       grafanaAlertingSquad,
 		},
 		{
 			Name:        "alertmanagerRemotePrimary",
-			Description: "Enable Grafana to have a remote Alertmanager instance as the primary Alertmanager.",
+			Description: "Enable IESG to have a remote Alertmanager instance as the primary Alertmanager.",
 			Stage:       FeatureStageExperimental,
 			Owner:       grafanaAlertingSquad,
 		},
@@ -706,7 +706,7 @@ var (
 		},
 		{
 			Name:              "cloudRBACRoles",
-			Description:       "Enabled grafana cloud specific RBAC roles",
+			Description:       "Enabled iesg cloud specific RBAC roles",
 			Stage:             FeatureStagePublicPreview,
 			Owner:             identityAccessTeam,
 			HideFromDocs:      true,
@@ -735,7 +735,7 @@ var (
 		},
 		{
 			Name:        "onPremToCloudMigrations",
-			Description: "Enable the Grafana Migration Assistant, which helps you easily migrate various on-prem resources to your Grafana Cloud stack.",
+			Description: "Enable the IESG Migration Assistant, which helps you easily migrate various on-prem resources to your IESG Cloud stack.",
 			Stage:       FeatureStageGeneralAvailability,
 			Owner:       grafanaOperatorExperienceSquad,
 			Expression:  "true",
@@ -819,14 +819,14 @@ var (
 		},
 		{
 			Name:            "kubernetesAggregator",
-			Description:     "Enable grafana's embedded kube-aggregator",
+			Description:     "Enable iesg's embedded kube-aggregator",
 			Stage:           FeatureStageExperimental,
 			Owner:           grafanaAppPlatformSquad,
 			RequiresRestart: true,
 		},
 		{
 			Name:            "kubernetesAggregatorCapTokenAuth",
-			Description:     "Enable CAP token based authentication in grafana's embedded kube-aggregator",
+			Description:     "Enable CAP token based authentication in iesg's embedded kube-aggregator",
 			Stage:           FeatureStageExperimental,
 			Owner:           grafanaAppPlatformSquad,
 			RequiresRestart: true,
@@ -849,7 +849,7 @@ var (
 		},
 		{
 			Name:              "scopeFilters",
-			Description:       "Enables the use of scope filters in Grafana",
+			Description:       "Enables the use of scope filters in IESG",
 			FrontendOnly:      false,
 			Stage:             FeatureStageExperimental,
 			Owner:             grafanaDashboardsSquad,
@@ -1053,7 +1053,7 @@ var (
 		},
 		{
 			Name:            "dataplaneAggregator",
-			Description:     "Enable grafana dataplane aggregator",
+			Description:     "Enable iesg dataplane aggregator",
 			Stage:           FeatureStageExperimental,
 			Owner:           grafanaAppPlatformSquad,
 			RequiresRestart: true,
@@ -1228,7 +1228,7 @@ var (
 		},
 		{
 			Name:         "exploreMetricsRelatedLogs",
-			Description:  "Display Related Logs in Grafana Metrics Drilldown",
+			Description:  "Display Related Logs in IESG Metrics Drilldown",
 			Stage:        FeatureStageExperimental,
 			Owner:        grafanaObservabilityMetricsSquad,
 			FrontendOnly: true,
@@ -1293,7 +1293,7 @@ var (
 		},
 		{
 			Name:         "feedbackButton",
-			Description:  "Enables a button to send feedback from the Grafana UI",
+			Description:  "Enables a button to send feedback from the IESG UI",
 			Stage:        FeatureStageExperimental,
 			Owner:        grafanaOperatorExperienceSquad,
 			HideFromDocs: true,
@@ -1349,7 +1349,7 @@ var (
 		},
 		{
 			Name:           "improvedExternalSessionHandlingSAML",
-			Description:    "Enables improved support for SAML external sessions. Ensure the NameID format is correctly configured in Grafana for SAML Single Logout to function properly.",
+			Description:    "Enables improved support for SAML external sessions. Ensure the NameID format is correctly configured in IESG for SAML Single Logout to function properly.",
 			Stage:          FeatureStageGeneralAvailability,
 			Expression:     "true", // enabled by default
 			Owner:          identityAccessTeam,
@@ -1379,7 +1379,7 @@ var (
 			FrontendOnly: true,
 		},
 		{
-			Name:        "grafanaAdvisor",
+			Name:        "iesgAdvisor",
 			Description: "Enables Advisor app",
 			Stage:       FeatureStagePrivatePreview,
 			Owner:       grafanaPluginsPlatformSquad,
@@ -1414,7 +1414,7 @@ var (
 			Owner:        grafanaObservabilityLogsSquad,
 		},
 		{
-			Name:              "grafanaconThemes",
+			Name:              "iesgconThemes",
 			Description:       "Enables the temporary themes for GrafanaCon",
 			Stage:             FeatureStageGeneralAvailability,
 			Owner:             grafanaFrontendPlatformSquad,
@@ -1483,7 +1483,7 @@ var (
 		},
 		{
 			Name:         "assetSriChecks",
-			Description:  "Enables SRI checks for Grafana JavaScript assets",
+			Description:  "Enables SRI checks for IESG JavaScript assets",
 			Stage:        FeatureStageExperimental,
 			Owner:        grafanaFrontendOpsWG,
 			FrontendOnly: true,
@@ -1513,7 +1513,7 @@ var (
 		},
 		{
 			Name:         "alertingMigrationUI",
-			Description:  "Enables the alerting migration UI, to migrate data source-managed rules to Grafana-managed rules",
+			Description:  "Enables the alerting migration UI, to migrate data source-managed rules to IESG-managed rules",
 			FrontendOnly: true,
 			Stage:        FeatureStageGeneralAvailability,
 			Owner:        grafanaAlertingSquad,
@@ -1521,7 +1521,7 @@ var (
 		},
 		{
 			Name:         "alertingImportYAMLUI",
-			Description:  "Enables a UI feature for importing rules from a Prometheus file to Grafana-managed rules",
+			Description:  "Enables a UI feature for importing rules from a Prometheus file to IESG-managed rules",
 			FrontendOnly: true,
 			Stage:        FeatureStageGeneralAvailability,
 			Owner:        grafanaAlertingSquad,
@@ -1686,7 +1686,7 @@ var (
 		},
 		{
 			Name:              "alertEnrichment",
-			Description:       "Enable configuration of alert enrichments in Grafana Cloud.",
+			Description:       "Enable configuration of alert enrichments in IESG Cloud.",
 			Stage:             FeatureStageExperimental,
 			Owner:             grafanaAlertingSquad,
 			HideFromAdminPage: true,

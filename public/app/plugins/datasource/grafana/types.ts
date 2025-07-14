@@ -48,8 +48,8 @@ export const defaultQuery: GrafanaQuery = {
 export const defaultFileUploadQuery: GrafanaQuery = {
   refId: 'A',
   datasource: {
-    type: 'grafana',
-    uid: 'grafana',
+    type: 'IESG',
+    uid: 'IESG',
   },
   queryType: GrafanaQueryType.Snapshot,
   snapshot: [],

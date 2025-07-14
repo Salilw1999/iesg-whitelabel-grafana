@@ -47,7 +47,7 @@ function Banner() {
           <TextLink href={'https://grafana.com/grafana/download/nightly'} external>
             nightly build
           </TextLink>{' '}
-          of Grafana.
+          of IESG.
         </Trans>
       </Text>
     </Box>

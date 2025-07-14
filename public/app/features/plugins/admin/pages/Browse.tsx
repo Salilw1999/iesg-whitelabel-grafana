@@ -79,7 +79,7 @@ export default function Browse() {
   const subTitle = (
     <div>
       <Trans i18nKey="plugins.browse.subtitle">
-        Extend the Grafana experience with panel plugins and apps. To find more data sources go to{' '}
+        Extend the IESG experience with panel plugins and apps. To find more data sources go to{' '}
         <TextLink href={`${CONNECTIONS_ROUTES.AddNewConnection}?cat=data-source`}>Connections</TextLink>.
       </Trans>
     </div>
@@ -127,7 +127,7 @@ export default function Browse() {
               <Tooltip
                 content={t(
                   'plugins.browse.tooltip-filter-disabled',
-                  'This filter has been disabled because the Grafana server cannot access grafana.com'
+                  'This filter has been disabled because the IESG server cannot access IESG.com'
                 )}
                 placement="top"
               >

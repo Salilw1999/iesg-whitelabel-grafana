@@ -20,7 +20,7 @@ import (
 func TargetCommand(version, commit, buildBranch, buildstamp string) *cli.Command {
 	return &cli.Command{
 		Name:  "target",
-		Usage: "target specific grafana dskit services",
+		Usage: "target specific IESG dskit services",
 		Flags: commonFlags,
 		Action: func(context *cli.Context) error {
 			return RunTargetServer(standalone.BuildInfo{
@@ -63,10 +63,10 @@ func RunTargetServer(opts standalone.BuildInfo, cli *cli.Context) error {
 
 	defer func() {
 		// If we've managed to initialize them, this is the last place
-		// where we're able to log anything that'll end up in Grafana's
+		// where we're able to log anything that'll end up in IESG's
 		// log files.
 		// Since operators are not always looking at stderr, we'll try
-		// to log any and all panics that are about to crash Grafana to
+		// to log any and all panics that are about to crash IESG to
 		// our regular log locations before exiting.
 		if r := recover(); r != nil {
 			reason := fmt.Sprintf("%v", r)

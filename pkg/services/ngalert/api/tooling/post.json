@@ -99,7 +99,7 @@
   "AlertQuery": {
    "properties": {
     "datasourceUid": {
-     "description": "Grafana data source unique identifier; it should be '__expr__' for a Server Side Expression operation.",
+     "description": "IESG data source unique identifier; it should be '__expr__' for a Server Side Expression operation.",
      "type": "string"
     },
     "model": {
@@ -327,12 +327,12 @@
     "group_by": {
      "default": [
       "alertname",
-      "grafana_folder"
+      "IESG_folder"
      ],
-     "description": "Override the labels by which incoming alerts are grouped together. For example, multiple alerts coming in for\ncluster=A and alertname=LatencyHigh would be batched into a single group. To aggregate by all possible labels\nuse the special value '...' as the sole label name.\nThis effectively disables aggregation entirely, passing through all alerts as-is. This is unlikely to be what\nyou want, unless you have a very low alert volume or your upstream notification system performs its own grouping.\nMust include 'alertname' and 'grafana_folder' if not using '...'.",
+     "description": "Override the labels by which incoming alerts are grouped together. For example, multiple alerts coming in for\ncluster=A and alertname=LatencyHigh would be batched into a single group. To aggregate by all possible labels\nuse the special value '...' as the sole label name.\nThis effectively disables aggregation entirely, passing through all alerts as-is. This is unlikely to be what\nyou want, unless you have a very low alert volume or your upstream notification system performs its own grouping.\nMust include 'alertname' and 'IESG_folder' if not using '...'.",
      "example": [
       "alertname",
-      "grafana_folder",
+      "IESG_folder",
       "cluster"
      ],
      "items": {
@@ -362,7 +362,7 @@
     },
     "receiver": {
      "description": "Name of the receiver to send notifications to.",
-     "example": "grafana-default-email",
+     "example": "IESG-default-email",
      "type": "string"
     },
     "repeat_interval": {
@@ -957,7 +957,7 @@
    "type": "object"
   },
   "EmbeddedContactPoint": {
-   "description": "EmbeddedContactPoint is the contact point type that is used\nby grafanas embedded alertmanager implementation.",
+   "description": "EmbeddedContactPoint is the contact point type that is used\nby IESGs embedded alertmanager implementation.",
    "properties": {
     "disableResolveMessage": {
      "example": false,
@@ -1188,11 +1188,11 @@
      "type": "string"
     },
     "displayName": {
-     "description": "DisplayName overrides Grafana default naming, should not be used from a data source",
+     "description": "DisplayName overrides IESG default naming, should not be used from a data source",
      "type": "string"
     },
     "displayNameFromDS": {
-     "description": "DisplayNameFromDS overrides Grafana default naming strategy.",
+     "description": "DisplayNameFromDS overrides IESG default naming strategy.",
      "type": "string"
     },
     "filterable": {
@@ -1200,7 +1200,7 @@
      "type": "boolean"
     },
     "interval": {
-     "description": "Interval indicates the expected regular step between values in the series.\nWhen an interval exists, consumers can identify \"missing\" values when the expected value is not present.\nThe grafana timeseries visualization will render disconnected values when missing values are found it the time field.\nThe interval uses the same units as the values.  For time.Time, this is defined in milliseconds.",
+     "description": "Interval indicates the expected regular step between values in the series.\nWhen an interval exists, consumers can identify \"missing\" values when the expected value is not present.\nThe IESG timeseries visualization will render disconnected values when missing values are found it the time field.\nThe interval uses the same units as the values.  For time.Time, this is defined in milliseconds.",
      "format": "double",
      "type": "number"
     },
@@ -1322,7 +1322,7 @@
    "type": "object"
   },
   "Frame": {
-   "description": "Each Field is well typed by its FieldType and supports optional Labels.\n\nA Frame is a general data container for Grafana. A Frame can be table data\nor time series data depending on its content and field types.",
+   "description": "Each Field is well typed by its FieldType and supports optional Labels.\n\nA Frame is a general data container for IESG. A Frame can be table data\nor time series data depending on its content and field types.",
    "properties": {
     "Fields": {
      "description": "Fields are the columns of a frame.\nAll Fields must be of the same the length when marshalling the Frame for transmission.\nThere should be no `nil` entries in the Fields slice (making them pointers was a mistake).",
@@ -1335,7 +1335,7 @@
      "$ref": "#/definitions/FrameMeta"
     },
     "Name": {
-     "description": "Name is used in some Grafana visualizations.",
+     "description": "Name is used in some IESG visualizations.",
      "type": "string"
     },
     "RefID": {
@@ -1357,7 +1357,7 @@
    "description": "https://github.com/grafana/grafana/blob/master/packages/grafana-data/src/types/data.ts#L11\nNOTE -- in javascript this can accept any `[key: string]: any;` however\nthis interface only exposes the values we want to be exposed",
    "properties": {
     "channel": {
-     "description": "Channel is the path to a stream in grafana live that has real-time updates for this data.",
+     "description": "Channel is the path to a stream in IESG live that has real-time updates for this data.",
      "type": "string"
     },
     "custom": {
@@ -1371,7 +1371,7 @@
      "type": "string"
     },
     "notices": {
-     "description": "Notices provide additional information about the data in the Frame that\nGrafana can display to the user in the user interface.",
+     "description": "Notices provide additional information about the data in the Frame that\nIESG can display to the user in the user interface.",
      "items": {
       "$ref": "#/definitions/Notice"
      },
@@ -2357,7 +2357,7 @@
      "$ref": "#/definitions/InspectType"
     },
     "link": {
-     "description": "Link is an optional link for display in the user interface and can be an\nabsolute URL or a path relative to Grafana's root url.",
+     "description": "Link is an optional link for display in the user interface and can be an\nabsolute URL or a path relative to IESG's root url.",
      "type": "string"
     },
     "severity": {
@@ -2368,7 +2368,7 @@
      "type": "string"
     }
    },
-   "title": "Notice provides a structure for presenting notifications in Grafana's user interface.",
+   "title": "Notice provides a structure for presenting notifications in IESG's user interface.",
    "type": "object"
   },
   "NoticeSeverity": {
@@ -3466,11 +3466,11 @@
      "type": "string"
     },
     "displayName": {
-     "description": "DisplayName overrides Grafana default naming, should not be used from a data source",
+     "description": "DisplayName overrides IESG default naming, should not be used from a data source",
      "type": "string"
     },
     "displayNameFromDS": {
-     "description": "DisplayNameFromDS overrides Grafana default naming strategy.",
+     "description": "DisplayNameFromDS overrides IESG default naming strategy.",
      "type": "string"
     },
     "filterable": {
@@ -3478,7 +3478,7 @@
      "type": "boolean"
     },
     "interval": {
-     "description": "Interval indicates the expected regular step between values in the series.\nWhen an interval exists, consumers can identify \"missing\" values when the expected value is not present.\nThe grafana timeseries visualization will render disconnected values when missing values are found it the time field.\nThe interval uses the same units as the values.  For time.Time, this is defined in milliseconds.",
+     "description": "Interval indicates the expected regular step between values in the series.\nWhen an interval exists, consumers can identify \"missing\" values when the expected value is not present.\nThe IESG timeseries visualization will render disconnected values when missing values are found it the time field.\nThe interval uses the same units as the values.  For time.Time, this is defined in milliseconds.",
      "format": "double",
      "type": "number"
     },
@@ -5518,8 +5518,8 @@
   }
  },
  "info": {
-  "description": "Package definitions includes the types required for generating or consuming an OpenAPI\nspec for the Grafana Alerting API.",
-  "title": "Grafana Alerting API.",
+  "description": "Package definitions includes the types required for generating or consuming an OpenAPI\nspec for the IESG Alerting API.",
+  "title": "IESG Alerting API.",
   "version": "1.1.0"
  },
  "paths": {
@@ -5921,7 +5921,7 @@
       }
      }
     },
-    "summary": "Test Grafana managed receivers without saving them.",
+    "summary": "Test IESG managed receivers without saving them.",
     "tags": [
      "alertmanager"
     ]
@@ -5968,7 +5968,7 @@
       }
      }
     },
-    "summary": "Test Grafana managed templates without saving them.",
+    "summary": "Test IESG managed templates without saving them.",
     "tags": [
      "alertmanager"
     ]
@@ -6602,7 +6602,7 @@
       }
      }
     },
-    "summary": "Gets all Grafana-managed alert rules that were imported from Prometheus-compatible sources, grouped by namespace.",
+    "summary": "Gets all IESG-managed alert rules that were imported from Prometheus-compatible sources, grouped by namespace.",
     "tags": [
      "convert_prometheus"
     ]
@@ -6630,7 +6630,7 @@
       }
      }
     },
-    "summary": "Converts the submitted rule groups into Grafana-Managed Rules.",
+    "summary": "Converts the submitted rule groups into IESG-Managed Rules.",
     "tags": [
      "convert_prometheus"
     ]
@@ -6702,7 +6702,7 @@
       }
      }
     },
-    "summary": "Gets Grafana-managed alert rules that were imported from Prometheus-compatible sources for a specified namespace (folder).",
+    "summary": "Gets IESG-managed alert rules that were imported from Prometheus-compatible sources for a specified namespace (folder).",
     "tags": [
      "convert_prometheus"
     ]
@@ -6722,32 +6722,32 @@
      },
      {
       "in": "header",
-      "name": "x-grafana-alerting-datasource-uid",
+      "name": "x-IESG-alerting-datasource-uid",
       "type": "string"
      },
      {
       "in": "header",
-      "name": "x-grafana-alerting-recording-rules-paused",
+      "name": "x-IESG-alerting-recording-rules-paused",
       "type": "boolean"
      },
      {
       "in": "header",
-      "name": "x-grafana-alerting-alert-rules-paused",
+      "name": "x-IESG-alerting-alert-rules-paused",
       "type": "boolean"
      },
      {
       "in": "header",
-      "name": "x-grafana-alerting-target-datasource-uid",
+      "name": "x-IESG-alerting-target-datasource-uid",
       "type": "string"
      },
      {
       "in": "header",
-      "name": "x-grafana-alerting-folder-uid",
+      "name": "x-IESG-alerting-folder-uid",
       "type": "string"
      },
      {
       "in": "header",
-      "name": "x-grafana-alerting-notification-receiver",
+      "name": "x-IESG-alerting-notification-receiver",
       "type": "string"
      },
      {
@@ -6775,7 +6775,7 @@
       }
      }
     },
-    "summary": "Converts a Prometheus rule group into a Grafana rule group and creates or updates it within the specified namespace.",
+    "summary": "Converts a Prometheus rule group into a IESG rule group and creates or updates it within the specified namespace.",
     "tags": [
      "convert_prometheus"
     ],
@@ -6868,13 +6868,13 @@
   },
   "/convert/api/v1/alerts": {
    "delete": {
-    "description": "The main Grafana Alertmanager configuration remains unaffected.",
+    "description": "The main IESG Alertmanager configuration remains unaffected.",
     "operationId": "RouteConvertPrometheusDeleteAlertmanagerConfig",
     "parameters": [
      {
       "description": "Unique identifier for the Alertmanager configuration to delete.",
       "in": "header",
-      "name": "x-grafana-alerting-config-identifier",
+      "name": "x-IESG-alerting-config-identifier",
       "type": "string"
      }
     ],
@@ -6895,7 +6895,7 @@
       }
      }
     },
-    "summary": "Delete extra Alertmanager configuration from Grafana by its identifier.",
+    "summary": "Delete extra Alertmanager configuration from IESG by its identifier.",
     "tags": [
      "convert_prometheus"
     ]
@@ -6907,7 +6907,7 @@
      {
       "description": "Unique identifier for the Alertmanager configuration to retrieve.",
       "in": "header",
-      "name": "x-grafana-alerting-config-identifier",
+      "name": "x-IESG-alerting-config-identifier",
       "type": "string"
      }
     ],
@@ -6928,26 +6928,26 @@
       }
      }
     },
-    "summary": "Get extra Alertmanager configuration from Grafana.",
+    "summary": "Get extra Alertmanager configuration from IESG.",
     "tags": [
      "convert_prometheus"
     ]
    },
    "post": {
-    "description": "This endpoint allows importing Alertmanager configurations to Grafana. Each configuration is identified by\na unique identifier and can include merge matchers to select which alerts should be handled by\nthis specific configuration.",
+    "description": "This endpoint allows importing Alertmanager configurations to IESG. Each configuration is identified by\na unique identifier and can include merge matchers to select which alerts should be handled by\nthis specific configuration.",
     "operationId": "RouteConvertPrometheusPostAlertmanagerConfig",
     "parameters": [
      {
       "description": "Unique identifier for this Alertmanager configuration.\nThis identifier is used to distinguish between different imported configurations.",
       "in": "header",
-      "name": "x-grafana-alerting-config-identifier",
+      "name": "x-IESG-alerting-config-identifier",
       "type": "string"
      },
      {
       "description": "Comma-separated list of label matchers in 'key=value' format.\nThese matchers determine which alerts this configuration should handle.",
       "example": "'environment=production,team=backend' will only apply this",
       "in": "header",
-      "name": "x-grafana-alerting-merge-matchers",
+      "name": "x-IESG-alerting-merge-matchers",
       "type": "string"
      },
      {
@@ -6976,7 +6976,7 @@
       }
      }
     },
-    "summary": "Load extra Alertmanager configuration to Grafana and merge it with the existing configuration.",
+    "summary": "Load extra Alertmanager configuration to IESG and merge it with the existing configuration.",
     "tags": [
      "convert_prometheus"
     ],
@@ -7009,7 +7009,7 @@
       }
      }
     },
-    "summary": "Gets all Grafana-managed alert rules that were imported from Prometheus-compatible sources, grouped by namespace.",
+    "summary": "Gets all IESG-managed alert rules that were imported from Prometheus-compatible sources, grouped by namespace.",
     "tags": [
      "convert_prometheus"
     ]
@@ -7037,7 +7037,7 @@
       }
      }
     },
-    "summary": "Converts the submitted rule groups into Grafana-Managed Rules.",
+    "summary": "Converts the submitted rule groups into IESG-Managed Rules.",
     "tags": [
      "convert_prometheus"
     ]
@@ -7109,7 +7109,7 @@
       }
      }
     },
-    "summary": "Gets Grafana-managed alert rules that were imported from Prometheus-compatible sources for a specified namespace (folder).",
+    "summary": "Gets IESG-managed alert rules that were imported from Prometheus-compatible sources for a specified namespace (folder).",
     "tags": [
      "convert_prometheus"
     ]
@@ -7129,32 +7129,32 @@
      },
      {
       "in": "header",
-      "name": "x-grafana-alerting-datasource-uid",
+      "name": "x-IESG-alerting-datasource-uid",
       "type": "string"
      },
      {
       "in": "header",
-      "name": "x-grafana-alerting-recording-rules-paused",
+      "name": "x-IESG-alerting-recording-rules-paused",
       "type": "boolean"
      },
      {
       "in": "header",
-      "name": "x-grafana-alerting-alert-rules-paused",
+      "name": "x-IESG-alerting-alert-rules-paused",
       "type": "boolean"
      },
      {
       "in": "header",
-      "name": "x-grafana-alerting-target-datasource-uid",
+      "name": "x-IESG-alerting-target-datasource-uid",
       "type": "string"
      },
      {
       "in": "header",
-      "name": "x-grafana-alerting-folder-uid",
+      "name": "x-IESG-alerting-folder-uid",
       "type": "string"
      },
      {
       "in": "header",
-      "name": "x-grafana-alerting-notification-receiver",
+      "name": "x-IESG-alerting-notification-receiver",
       "type": "string"
      },
      {
@@ -7182,7 +7182,7 @@
       }
      }
     },
-    "summary": "Converts a Prometheus rule group into a Grafana rule group and creates or updates it within the specified namespace.",
+    "summary": "Converts a Prometheus rule group into a IESG rule group and creates or updates it within the specified namespace.",
     "tags": [
      "convert_prometheus"
     ],
@@ -7280,7 +7280,7 @@
     "parameters": [
      {
       "default": false,
-      "description": "Include Grafana specific labels as part of the response.",
+      "description": "Include IESG specific labels as part of the response.",
       "in": "query",
       "name": "includeInternalLabels",
       "type": "boolean"
@@ -7306,7 +7306,7 @@
     "parameters": [
      {
       "default": false,
-      "description": "Include Grafana specific labels as part of the response.",
+      "description": "Include IESG specific labels as part of the response.",
       "in": "query",
       "name": "includeInternalLabels",
       "type": "boolean"
@@ -9606,7 +9606,7 @@
     "consumes": [
      "application/json"
     ],
-    "description": "Test a rule against Grafana ruler",
+    "description": "Test a rule against IESG ruler",
     "operationId": "RouteTestRuleGrafanaConfig",
     "parameters": [
      {

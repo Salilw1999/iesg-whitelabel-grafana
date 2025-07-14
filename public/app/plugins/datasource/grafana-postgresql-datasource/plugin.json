@@ -8,7 +8,7 @@
   "info": {
     "description": "Data source for PostgreSQL and compatible databases",
     "author": {
-      "name": "Grafana Labs",
+      "name": "IESG Labs",
       "url": "https://grafana.com"
     },
     "logos": {

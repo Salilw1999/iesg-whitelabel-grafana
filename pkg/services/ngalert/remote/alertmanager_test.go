@@ -56,9 +56,9 @@ const (
 	testPassword = "test"
 
 	// Valid Grafana Alertmanager configurations.
-	testGrafanaConfig                               = `{"template_files":{},"alertmanager_config":{"time_intervals":[{"name":"weekends","time_intervals":[{"weekdays":["saturday","sunday"],"location":"Africa/Accra"}]}],"route":{"receiver":"grafana-default-email","group_by":["grafana_folder","alertname"]},"receivers":[{"name":"grafana-default-email","grafana_managed_receiver_configs":[{"uid":"","name":"some other name","type":"email","disableResolveMessage":false,"settings":{"addresses":"\u003cexample@email.com\u003e"}}]}]}}`
-	testGrafanaConfigWithSecret                     = `{"template_files":{},"alertmanager_config":{"time_intervals":[{"name":"weekends","time_intervals":[{"weekdays":["saturday","sunday"],"location":"Africa/Accra"}]}],"route":{"receiver":"grafana-default-email","group_by":["grafana_folder","alertname"]},"receivers":[{"name":"grafana-default-email","grafana_managed_receiver_configs":[{"uid":"dde6ntuob69dtf","name":"WH","type":"webhook","disableResolveMessage":false,"settings":{"url":"http://localhost:8080","username":"test","password":"test"}}]}]}}`
-	testGrafanaDefaultConfigWithDifferentFieldOrder = `{"alertmanager_config":{"route":{"group_by":["alertname","grafana_folder"],"receiver":"grafana-default-email"},"receivers":[{"grafana_managed_receiver_configs":[{"uid":"","name":"email receiver","type":"email","settings":{"addresses":"<example@email.com>"}}],"name":"grafana-default-email"}]}}`
+	testGrafanaConfig                               = `{"template_files":{},"alertmanager_config":{"time_intervals":[{"name":"weekends","time_intervals":[{"weekdays":["saturday","sunday"],"location":"Africa/Accra"}]}],"route":{"receiver":"IESG-default-email","group_by":["IESG_folder","alertname"]},"receivers":[{"name":"IESG-default-email","IESG_managed_receiver_configs":[{"uid":"","name":"some other name","type":"email","disableResolveMessage":false,"settings":{"addresses":"\u003cexample@email.com\u003e"}}]}]}}`
+	testGrafanaConfigWithSecret                     = `{"template_files":{},"alertmanager_config":{"time_intervals":[{"name":"weekends","time_intervals":[{"weekdays":["saturday","sunday"],"location":"Africa/Accra"}]}],"route":{"receiver":"IESG-default-email","group_by":["IESG_folder","alertname"]},"receivers":[{"name":"IESG-default-email","IESG_managed_receiver_configs":[{"uid":"dde6ntuob69dtf","name":"WH","type":"webhook","disableResolveMessage":false,"settings":{"url":"http://localhost:8080","username":"test","password":"test"}}]}]}}`
+	testGrafanaDefaultConfigWithDifferentFieldOrder = `{"alertmanager_config":{"route":{"group_by":["alertname","IESG_folder"],"receiver":"IESG-default-email"},"receivers":[{"IESG_managed_receiver_configs":[{"uid":"","name":"email receiver","type":"email","settings":{"addresses":"<example@email.com>"}}],"name":"IESG-default-email"}]}}`
 
 	// Valid Alertmanager state base64 encoded.
 	testSilence1 = "lwEKhgEKATESFxIJYWxlcnRuYW1lGgp0ZXN0X2FsZXJ0EiMSDmdyYWZhbmFfZm9sZGVyGhF0ZXN0X2FsZXJ0X2ZvbGRlchoMCN2CkbAGEJbKrMsDIgwI7Z6RsAYQlsqsywMqCwiAkrjDmP7///8BQgxHcmFmYW5hIFRlc3RKDFRlc3QgU2lsZW5jZRIMCO2ekbAGEJbKrMsD"
@@ -392,14 +392,14 @@ func TestCompareAndSendConfiguration(t *testing.T) {
 			string(testGrafanaConfigWithBadEncoding),
 			NoopAutogenFn,
 			nil,
-			[]string{`"grafana-default-email"`, "dde6ntuob69dtf", "password", "illegal base64 data at input byte 0"},
+			[]string{`"IESG-default-email"`, "dde6ntuob69dtf", "password", "illegal base64 data at input byte 0"},
 		},
 		{
 			"decrypt error",
 			string(testGrafanaConfigWithBadEncryption),
 			NoopAutogenFn,
 			nil,
-			[]string{`"grafana-default-email"`, "dde6ntuob69dtf", "password", "unable to compute salt"},
+			[]string{`"IESG-default-email"`, "dde6ntuob69dtf", "password", "unable to compute salt"},
 		},
 		{
 			"error from autogen function",
@@ -691,12 +691,12 @@ func TestCompareAndSendConfigurationWithExtraConfigs(t *testing.T) {
 		AlertmanagerConfig: apimodels.PostableApiAlertingConfig{
 			Config: apimodels.Config{
 				Route: &apimodels.Route{
-					Receiver: "grafana-default-email",
+					Receiver: "IESG-default-email",
 				},
 			},
 			Receivers: []*apimodels.PostableApiReceiver{
 				{
-					Receiver: config.Receiver{Name: "grafana-default-email"},
+					Receiver: config.Receiver{Name: "IESG-default-email"},
 					PostableGrafanaReceivers: apimodels.PostableGrafanaReceivers{
 						GrafanaManagedReceivers: []*apimodels.PostableGrafanaReceiver{
 							{

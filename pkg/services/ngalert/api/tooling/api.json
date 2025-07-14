@@ -327,12 +327,12 @@
     "group_by": {
      "default": [
       "alertname",
-      "grafana_folder"
+      "IESG_folder"
      ],
-     "description": "Override the labels by which incoming alerts are grouped together. For example, multiple alerts coming in for\ncluster=A and alertname=LatencyHigh would be batched into a single group. To aggregate by all possible labels\nuse the special value '...' as the sole label name.\nThis effectively disables aggregation entirely, passing through all alerts as-is. This is unlikely to be what\nyou want, unless you have a very low alert volume or your upstream notification system performs its own grouping.\nMust include 'alertname' and 'grafana_folder' if not using '...'.",
+     "description": "Override the labels by which incoming alerts are grouped together. For example, multiple alerts coming in for\ncluster=A and alertname=LatencyHigh would be batched into a single group. To aggregate by all possible labels\nuse the special value '...' as the sole label name.\nThis effectively disables aggregation entirely, passing through all alerts as-is. This is unlikely to be what\nyou want, unless you have a very low alert volume or your upstream notification system performs its own grouping.\nMust include 'alertname' and 'IESG_folder' if not using '...'.",
      "example": [
       "alertname",
-      "grafana_folder",
+      "IESG_folder",
       "cluster"
      ],
      "items": {
@@ -362,7 +362,7 @@
     },
     "receiver": {
      "description": "Name of the receiver to send notifications to.",
-     "example": "grafana-default-email",
+     "example": "IESG-default-email",
      "type": "string"
     },
     "repeat_interval": {
@@ -957,7 +957,7 @@
    "type": "object"
   },
   "EmbeddedContactPoint": {
-   "description": "EmbeddedContactPoint is the contact point type that is used\nby grafanas embedded alertmanager implementation.",
+   "description": "EmbeddedContactPoint is the contact point type that is used\nby IESGs embedded alertmanager implementation.",
    "properties": {
     "disableResolveMessage": {
      "example": false,
@@ -1188,11 +1188,11 @@
      "type": "string"
     },
     "displayName": {
-     "description": "DisplayName overrides Grafana default naming, should not be used from a data source",
+     "description": "DisplayName overrides IESG default naming, should not be used from a data source",
      "type": "string"
     },
     "displayNameFromDS": {
-     "description": "DisplayNameFromDS overrides Grafana default naming strategy.",
+     "description": "DisplayNameFromDS overrides IESG default naming strategy.",
      "type": "string"
     },
     "filterable": {
@@ -1200,7 +1200,7 @@
      "type": "boolean"
     },
     "interval": {
-     "description": "Interval indicates the expected regular step between values in the series.\nWhen an interval exists, consumers can identify \"missing\" values when the expected value is not present.\nThe grafana timeseries visualization will render disconnected values when missing values are found it the time field.\nThe interval uses the same units as the values.  For time.Time, this is defined in milliseconds.",
+     "description": "Interval indicates the expected regular step between values in the series.\nWhen an interval exists, consumers can identify \"missing\" values when the expected value is not present.\nThe IESG timeseries visualization will render disconnected values when missing values are found it the time field.\nThe interval uses the same units as the values.  For time.Time, this is defined in milliseconds.",
      "format": "double",
      "type": "number"
     },
@@ -1322,7 +1322,7 @@
    "type": "object"
   },
   "Frame": {
-   "description": "Each Field is well typed by its FieldType and supports optional Labels.\n\nA Frame is a general data container for Grafana. A Frame can be table data\nor time series data depending on its content and field types.",
+   "description": "Each Field is well typed by its FieldType and supports optional Labels.\n\nA Frame is a general data container for IESG. A Frame can be table data\nor time series data depending on its content and field types.",
    "properties": {
     "Fields": {
      "description": "Fields are the columns of a frame.\nAll Fields must be of the same the length when marshalling the Frame for transmission.\nThere should be no `nil` entries in the Fields slice (making them pointers was a mistake).",
@@ -1335,7 +1335,7 @@
      "$ref": "#/definitions/FrameMeta"
     },
     "Name": {
-     "description": "Name is used in some Grafana visualizations.",
+     "description": "Name is used in some IESG visualizations.",
      "type": "string"
     },
     "RefID": {
@@ -1357,7 +1357,7 @@
    "description": "https://github.com/grafana/grafana/blob/master/packages/grafana-data/src/types/data.ts#L11\nNOTE -- in javascript this can accept any `[key: string]: any;` however\nthis interface only exposes the values we want to be exposed",
    "properties": {
     "channel": {
-     "description": "Channel is the path to a stream in grafana live that has real-time updates for this data.",
+     "description": "Channel is the path to a stream in IESG live that has real-time updates for this data.",
      "type": "string"
     },
     "custom": {
@@ -1371,7 +1371,7 @@
      "type": "string"
     },
     "notices": {
-     "description": "Notices provide additional information about the data in the Frame that\nGrafana can display to the user in the user interface.",
+     "description": "Notices provide additional information about the data in the Frame that\nIESG can display to the user in the user interface.",
      "items": {
       "$ref": "#/definitions/Notice"
      },
@@ -2368,7 +2368,7 @@
      "type": "string"
     }
    },
-   "title": "Notice provides a structure for presenting notifications in Grafana's user interface.",
+   "title": "Notice provides a structure for presenting notifications in IESG's user interface.",
    "type": "object"
   },
   "NoticeSeverity": {
@@ -3466,11 +3466,11 @@
      "type": "string"
     },
     "displayName": {
-     "description": "DisplayName overrides Grafana default naming, should not be used from a data source",
+     "description": "DisplayName overrides IESG default naming, should not be used from a data source",
      "type": "string"
     },
     "displayNameFromDS": {
-     "description": "DisplayNameFromDS overrides Grafana default naming strategy.",
+     "description": "DisplayNameFromDS overrides IESG default naming strategy.",
      "type": "string"
     },
     "filterable": {
@@ -3478,7 +3478,7 @@
      "type": "boolean"
     },
     "interval": {
-     "description": "Interval indicates the expected regular step between values in the series.\nWhen an interval exists, consumers can identify \"missing\" values when the expected value is not present.\nThe grafana timeseries visualization will render disconnected values when missing values are found it the time field.\nThe interval uses the same units as the values.  For time.Time, this is defined in milliseconds.",
+     "description": "Interval indicates the expected regular step between values in the series.\nWhen an interval exists, consumers can identify \"missing\" values when the expected value is not present.\nThe IESG timeseries visualization will render disconnected values when missing values are found it the time field.\nThe interval uses the same units as the values.  For time.Time, this is defined in milliseconds.",
      "format": "double",
      "type": "number"
     },
@@ -5518,8 +5518,8 @@
   }
  },
  "info": {
-  "description": "Package definitions includes the types required for generating or consuming an OpenAPI\nspec for the Grafana Alerting API.",
-  "title": "Grafana Alerting API.",
+  "description": "Package definitions includes the types required for generating or consuming an OpenAPI\nspec for the IESG Alerting API.",
+  "title": "IESG Alerting API.",
   "version": "1.1.0"
  },
  "paths": {

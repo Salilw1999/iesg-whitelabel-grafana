@@ -429,7 +429,7 @@ describe('AppRootPage', () => {
         });
       });
 
-      describe('Grafana Admin access', () => {
+      describe('IESG Admin access', () => {
         beforeEach(() => {
           contextSrv.isGrafanaAdmin = true;
         });

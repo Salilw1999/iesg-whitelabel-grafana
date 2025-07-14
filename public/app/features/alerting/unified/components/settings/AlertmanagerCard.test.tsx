@@ -47,7 +47,7 @@ describe('Alertmanager card', () => {
 
     render(
       <AlertmanagerCard
-        name="Grafana built-in"
+        name="IESG built-in"
         onEditConfiguration={onEditConfiguration}
         onEnable={onEnable}
         onDisable={onDisable}
@@ -69,7 +69,7 @@ describe('Alertmanager card', () => {
 
     render(
       <AlertmanagerCard
-        name="Grafana built-in"
+        name="IESG built-in"
         receiving={true}
         onEditConfiguration={jest.fn()}
         onEnable={jest.fn()}

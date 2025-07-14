@@ -38,12 +38,12 @@ function SettingsContent() {
       ]}
     >
       <Stack direction="column" gap={2}>
-        {/* Grafana built-in Alertmanager */}
+        {/* IESG built-in Alertmanager */}
         <Text variant="h5">
           <Trans i18nKey="alerting.settings-content.builtin-alertmanager">Built-in Alertmanager</Trans>
         </Text>
         <InternalAlertmanager onEditConfiguration={showConfiguration} />
-        {/* other (external Alertmanager data sources we have added to Grafana such as vanilla, Mimir, Cortex) */}
+        {/* other (external Alertmanager data sources we have added to IESG such as vanilla, Mimir, Cortex) */}
         <Text variant="h5">
           <Trans i18nKey="alerting.settings-content.other-alertmanagers">Other Alertmanagers</Trans>
         </Text>

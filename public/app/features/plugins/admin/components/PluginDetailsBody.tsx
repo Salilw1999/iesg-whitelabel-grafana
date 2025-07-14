@@ -121,7 +121,7 @@ export function PluginDetailsBody({ plugin, queryParams, pageId, info, showDetai
       <>
         <Stack direction="row">
           <Trans i18nKey="plugins.plugin-details-body.needs-service-account" values={{ pluginName: plugin.name }}>
-            The {'{{pluginName}}'} plugin needs a service account to be able to query Grafana. The following list
+            The {'{{pluginName}}'} plugin needs a service account to be able to query IESG. The following list
             contains the permissions available to the service account:
           </Trans>
         </Stack>

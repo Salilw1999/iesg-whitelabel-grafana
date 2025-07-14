@@ -14,7 +14,7 @@ jest.mock('@grafana/runtime', () => ({
   }),
 }));
 
-describe('grafana data source', () => {
+describe('IESG data source', () => {
   const getMock = jest.spyOn(backendSrv, 'get');
 
   beforeEach(() => {

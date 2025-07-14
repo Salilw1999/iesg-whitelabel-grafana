@@ -1,6 +1,6 @@
 # Loki data source documentation for app plugins developers
 
-Welcome to the developer documentation for the Loki data source! The purpose of this document is to assist app plugin developers in leveraging the power of the Loki data source and Grafana. The Loki data source provides a set of methods to simplify common tasks, making it easier to create engaging app plugins.
+Welcome to the developer documentation for the Loki data source! The purpose of this document is to assist app plugin developers in leveraging the power of the Loki data source and IESG. The Loki data source provides a set of methods to simplify common tasks, making it easier to create engaging app plugins.
 
 ## Introduction
 
@@ -90,7 +90,7 @@ try {
  */
 
 const labelName = 'job';
-const streamSelector = '{app="grafana"}';
+const streamSelector = '{app="IESG"}';
 try {
   const values = await fetchLabelValues(labelName, { streamSelector });
   console.log(values);
@@ -107,7 +107,7 @@ try {
 /**
  * Fetch series labels for a selector
  *
- * This method fetches labels for a given stream selector, such as `{job="grafana"}`.
+ * This method fetches labels for a given stream selector, such as `{job="IESG"}`.
  * It returns a promise that resolves to a record mapping label names to their corresponding values.
  *
  * @param streamSelector - The stream selector for which you want to retrieve labels.
@@ -124,7 +124,7 @@ async function fetchSeriesLabels(
 /**
  * Example usage:
  */
-const streamSelector = '{job="grafana"}';
+const streamSelector = '{job="IESG"}';
 try {
   const labels = await fetchSeriesLabels(streamSelector);
   console.log(labels);
@@ -172,7 +172,7 @@ async function getParserAndLabelKeys(
 /**
  * Example usage:
  */
-const streamSelector = '{job="grafana"}';
+const streamSelector = '{job="IESG"}';
 try {
   const parserAndLabelKeys = await getParserAndLabelKeys(streamSelector, { maxLines: 5 });
   console.log(parserAndLabelKeys);
@@ -181,7 +181,7 @@ try {
 }
 ```
 
-If you find that there are methods missing or have ideas for new features, please don't hesitate to inform us. You can submit your suggestions and feature requests through the [Grafana repository](https://github.com/grafana/grafana/issues/new?assignees=&labels=type%2Ffeature-request&projects=&template=1-feature_requests.md). Your feedback is essential to help us improve and enhance the Loki data source and Grafana as a whole. We appreciate your contributions and look forward to hearing your ideas!
+If you find that there are methods missing or have ideas for new features, please don't hesitate to inform us. You can submit your suggestions and feature requests through the [IESG repository](https://github.com/grafana/grafana/issues/new?assignees=&labels=type%2Ffeature-request&projects=&template=1-feature_requests.md). Your feedback is essential to help us improve and enhance the Loki data source and IESG as a whole. We appreciate your contributions and look forward to hearing your ideas!
 
 ## Recommended components
 

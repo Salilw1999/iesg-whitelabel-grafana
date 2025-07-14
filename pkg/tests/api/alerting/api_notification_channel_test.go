@@ -43,7 +43,7 @@ func TestIntegrationTestReceivers(t *testing.T) {
 	testinfra.SQLiteIntegrationTest(t)
 
 	t.Run("assert no receivers returns 400 Bad Request", func(t *testing.T) {
-		// Setup Grafana and its Database
+		// Setup IESG and its Database
 		dir, path := testinfra.CreateGrafDir(t, testinfra.GrafanaOpts{
 			DisableLegacyAlerting: true,
 			EnableUnifiedAlerting: true,
@@ -54,7 +54,7 @@ func TestIntegrationTestReceivers(t *testing.T) {
 
 		createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 			DefaultOrgRole: string(org.RoleEditor),
-			Login:          "grafana",
+			Login:          "IESG",
 			Password:       "password",
 		})
 
@@ -87,14 +87,14 @@ func TestIntegrationTestReceivers(t *testing.T) {
 
 		createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 			DefaultOrgRole: string(org.RoleEditor),
-			Login:          "grafana",
+			Login:          "IESG",
 			Password:       "password",
 		})
 
 		mockEmails := &mockEmailHandler{}
 		env.NotificationService.EmailHandlerSync = mockEmails.sendEmailCommandHandlerSync
 
-		testReceiversURL := fmt.Sprintf("http://grafana:password@%s/api/alertmanager/grafana/config/api/v1/receivers/test", grafanaListedAddr)
+		testReceiversURL := fmt.Sprintf("http://IESG:password@%s/api/alertmanager/grafana/config/api/v1/receivers/test", grafanaListedAddr)
 		// nolint
 		resp := postRequest(t, testReceiversURL, `{
 		"receivers": [{
@@ -134,13 +134,13 @@ func TestIntegrationTestReceivers(t *testing.T) {
 				"__dashboardUid__": "dashboard_uid",
 				"__orgId__": "1",
 				"__panelId__": "1",
-				"__value_string__": "[ var='B' labels={__name__=go_threads, instance=host.docker.internal:3000, job=grafana} value=22 ], [ var='C' labels={__name__=go_threads, instance=host.docker.internal:3000, job=grafana} value=1 ]",
+				"__value_string__": "[ var='B' labels={__name__=go_threads, instance=host.docker.internal:3000, job=IESG} value=22 ], [ var='C' labels={__name__=go_threads, instance=host.docker.internal:3000, job=IESG} value=1 ]",
 				"__values__": "{\"B\":22,\"C\":1}"
 			},
 			"labels": {
 				"alertname": "TestAlert",
-				"grafana_folder": "Test Folder",
-				"instance": "Grafana"
+				"IESG_folder": "Test Folder",
+				"instance": "IESG"
 			}
 		},
 		"receivers": [{
@@ -175,7 +175,7 @@ func TestIntegrationTestReceivers(t *testing.T) {
 
 		createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 			DefaultOrgRole: string(org.RoleEditor),
-			Login:          "grafana",
+			Login:          "IESG",
 			Password:       "password",
 		})
 
@@ -222,18 +222,18 @@ func TestIntegrationTestReceivers(t *testing.T) {
 				"__dashboardUid__": "dashboard_uid",
 				"__orgId__": "1",
 				"__panelId__": "1",
-				"__value_string__": "[ var='B' labels={__name__=go_threads, instance=host.docker.internal:3000, job=grafana} value=22 ], [ var='C' labels={__name__=go_threads, instance=host.docker.internal:3000, job=grafana} value=1 ]",
+				"__value_string__": "[ var='B' labels={__name__=go_threads, instance=host.docker.internal:3000, job=IESG} value=22 ], [ var='C' labels={__name__=go_threads, instance=host.docker.internal:3000, job=IESG} value=1 ]",
 				"__values__": "{\"B\":22,\"C\":1}"
 			},
 			"labels": {
 				"alertname": "TestAlert",
-				"grafana_folder": "Test Folder",
-				"instance": "Grafana"
+				"IESG_folder": "Test Folder",
+				"instance": "IESG"
 			}
 		},
 		"receivers": [{
 			"name":"receiver-1",
-			"grafana_managed_receiver_configs": [
+			"IESG_managed_receiver_configs": [
 				{
 					"name": "receiver-1",
 					"uid": "%s",
@@ -260,19 +260,19 @@ func TestIntegrationTestReceivers(t *testing.T) {
 
 		createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 			DefaultOrgRole: string(org.RoleEditor),
-			Login:          "grafana",
+			Login:          "IESG",
 			Password:       "password",
 		})
 
 		mockEmails := &mockEmailHandler{}
 		env.NotificationService.EmailHandlerSync = mockEmails.sendEmailCommandHandlerSync
 
-		testReceiversURL := fmt.Sprintf("http://grafana:password@%s/api/alertmanager/grafana/config/api/v1/receivers/test", grafanaListedAddr)
+		testReceiversURL := fmt.Sprintf("http://IESG:password@%s/api/alertmanager/grafana/config/api/v1/receivers/test", grafanaListedAddr)
 		// nolint
 		resp := postRequest(t, testReceiversURL, `{
 		"receivers": [{
 			"name":"receiver-1",
-			"grafana_managed_receiver_configs": [
+			"IESG_managed_receiver_configs": [
 				{
 					"uid": "",
 					"name": "receiver-1",
@@ -304,13 +304,13 @@ func TestIntegrationTestReceivers(t *testing.T) {
 					"__dashboardUid__": "dashboard_uid",
 					"__orgId__": "1",
 					"__panelId__": "1",
-					"__value_string__": "[ var='B' labels={__name__=go_threads, instance=host.docker.internal:3000, job=grafana} value=22 ], [ var='C' labels={__name__=go_threads, instance=host.docker.internal:3000, job=grafana} value=1 ]",
+					"__value_string__": "[ var='B' labels={__name__=go_threads, instance=host.docker.internal:3000, job=IESG} value=22 ], [ var='C' labels={__name__=go_threads, instance=host.docker.internal:3000, job=IESG} value=1 ]",
 					"__values__": "{\"B\":22,\"C\":1}"
 				},
 				"labels": {
 					"alertname": "TestAlert",
-					"grafana_folder": "Test Folder",
-					"instance": "Grafana"
+					"IESG_folder": "Test Folder",
+					"instance": "IESG"
 				}
 			},
 			"receivers": [{
@@ -344,7 +344,7 @@ func TestIntegrationTestReceivers(t *testing.T) {
 
 		createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 			DefaultOrgRole: string(org.RoleEditor),
-			Login:          "grafana",
+			Login:          "IESG",
 			Password:       "password",
 		})
 
@@ -353,7 +353,7 @@ func TestIntegrationTestReceivers(t *testing.T) {
 		}
 		env.NotificationService.EmailHandlerSync = mockEmails.sendEmailCommandHandlerSync
 
-		testReceiversURL := fmt.Sprintf("http://grafana:password@%s/api/alertmanager/grafana/config/api/v1/receivers/test", grafanaListedAddr)
+		testReceiversURL := fmt.Sprintf("http://IESG:password@%s/api/alertmanager/grafana/config/api/v1/receivers/test", grafanaListedAddr)
 		req, err := http.NewRequest(http.MethodPost, testReceiversURL, strings.NewReader(`{
 		"receivers": [{
 			"name":"receiver-1",
@@ -397,18 +397,18 @@ func TestIntegrationTestReceivers(t *testing.T) {
 				"__dashboardUid__": "dashboard_uid",
 				"__orgId__": "1",
 				"__panelId__": "1",
-				"__value_string__": "[ var='B' labels={__name__=go_threads, instance=host.docker.internal:3000, job=grafana} value=22 ], [ var='C' labels={__name__=go_threads, instance=host.docker.internal:3000, job=grafana} value=1 ]",
+				"__value_string__": "[ var='B' labels={__name__=go_threads, instance=host.docker.internal:3000, job=IESG} value=22 ], [ var='C' labels={__name__=go_threads, instance=host.docker.internal:3000, job=IESG} value=1 ]",
 				"__values__": "{\"B\":22,\"C\":1}"
 			},
 			"labels": {
 				"alertname": "TestAlert",
-				"grafana_folder": "Test Folder",
-				"instance": "Grafana"
+				"IESG_folder": "Test Folder",
+				"instance": "IESG"
 			}
 		},
 		"receivers": [{
 			"name":"receiver-1",
-			"grafana_managed_receiver_configs": [
+			"IESG_managed_receiver_configs": [
 				{
 					"name": "receiver-1",
 					"uid": "%s",
@@ -436,7 +436,7 @@ func TestIntegrationTestReceivers(t *testing.T) {
 
 		createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 			DefaultOrgRole: string(org.RoleEditor),
-			Login:          "grafana",
+			Login:          "IESG",
 			Password:       "password",
 		})
 
@@ -445,7 +445,7 @@ func TestIntegrationTestReceivers(t *testing.T) {
 		}
 		env.NotificationService.EmailHandlerSync = mockEmails.sendEmailCommandHandlerSync
 
-		testReceiversURL := fmt.Sprintf("http://grafana:password@%s/api/alertmanager/grafana/config/api/v1/receivers/test", grafanaListedAddr)
+		testReceiversURL := fmt.Sprintf("http://IESG:password@%s/api/alertmanager/grafana/config/api/v1/receivers/test", grafanaListedAddr)
 		req, err := http.NewRequest(http.MethodPost, testReceiversURL, strings.NewReader(`{
 		"receivers": [{
 			"name":"receiver-1",
@@ -503,13 +503,13 @@ func TestIntegrationTestReceivers(t *testing.T) {
 				"__dashboardUid__": "dashboard_uid",
 				"__orgId__": "1",
 				"__panelId__": "1",
-				"__value_string__": "[ var='B' labels={__name__=go_threads, instance=host.docker.internal:3000, job=grafana} value=22 ], [ var='C' labels={__name__=go_threads, instance=host.docker.internal:3000, job=grafana} value=1 ]",
+				"__value_string__": "[ var='B' labels={__name__=go_threads, instance=host.docker.internal:3000, job=IESG} value=22 ], [ var='C' labels={__name__=go_threads, instance=host.docker.internal:3000, job=IESG} value=1 ]",
 				"__values__": "{\"B\":22,\"C\":1}"
 			},
 			"labels": {
 				"alertname": "TestAlert",
-				"grafana_folder": "Test Folder",
-				"instance": "Grafana"
+				"IESG_folder": "Test Folder",
+				"instance": "IESG"
 			}
 		},
 		"receivers": [{
@@ -558,14 +558,14 @@ func TestIntegrationTestReceiversAlertCustomization(t *testing.T) {
 
 		createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 			DefaultOrgRole: string(org.RoleEditor),
-			Login:          "grafana",
+			Login:          "IESG",
 			Password:       "password",
 		})
 
 		mockEmails := &mockEmailHandler{}
 		env.NotificationService.EmailHandlerSync = mockEmails.sendEmailCommandHandlerSync
 
-		testReceiversURL := fmt.Sprintf("http://grafana:password@%s/api/alertmanager/grafana/config/api/v1/receivers/test", grafanaListedAddr)
+		testReceiversURL := fmt.Sprintf("http://IESG:password@%s/api/alertmanager/grafana/config/api/v1/receivers/test", grafanaListedAddr)
 		// nolint
 		resp := postRequest(t, testReceiversURL, `{
 		"alert": {
@@ -619,8 +619,8 @@ func TestIntegrationTestReceiversAlertCustomization(t *testing.T) {
 			},
 			"labels": {
 				"alertname": "TestAlert",
-				"grafana_folder": "Test Folder",
-				"instance": "Grafana",
+				"IESG_folder": "Test Folder",
+				"instance": "IESG",
 				"label1": "value1"
 			}
 		},
@@ -656,14 +656,14 @@ func TestIntegrationTestReceiversAlertCustomization(t *testing.T) {
 
 		createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 			DefaultOrgRole: string(org.RoleEditor),
-			Login:          "grafana",
+			Login:          "IESG",
 			Password:       "password",
 		})
 
 		mockEmails := &mockEmailHandler{}
 		env.NotificationService.EmailHandlerSync = mockEmails.sendEmailCommandHandlerSync
 
-		testReceiversURL := fmt.Sprintf("http://grafana:password@%s/api/alertmanager/grafana/config/api/v1/receivers/test", grafanaListedAddr)
+		testReceiversURL := fmt.Sprintf("http://IESG:password@%s/api/alertmanager/grafana/config/api/v1/receivers/test", grafanaListedAddr)
 		// nolint
 		resp := postRequest(t, testReceiversURL, `{
 		"alert": {
@@ -713,8 +713,8 @@ func TestIntegrationTestReceiversAlertCustomization(t *testing.T) {
 			},
 			"labels": {
 				"alertname": "TestAlert",
-				"grafana_folder": "Test Folder",
-				"instance": "Grafana"
+				"IESG_folder": "Test Folder",
+				"instance": "IESG"
 			}
 		},
 		"receivers": [{
@@ -749,7 +749,7 @@ func TestIntegrationTestReceiversAlertCustomization(t *testing.T) {
 
 		createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 			DefaultOrgRole: string(org.RoleEditor),
-			Login:          "grafana",
+			Login:          "IESG",
 			Password:       "password",
 		})
 
@@ -800,13 +800,13 @@ func TestIntegrationTestReceiversAlertCustomization(t *testing.T) {
 				"__dashboardUid__": "dashboard_uid",
 				"__orgId__": "1",
 				"__panelId__": "1",
-				"__value_string__": "[ var='B' labels={__name__=go_threads, instance=host.docker.internal:3000, job=grafana} value=22 ], [ var='C' labels={__name__=go_threads, instance=host.docker.internal:3000, job=grafana} value=1 ]",
+				"__value_string__": "[ var='B' labels={__name__=go_threads, instance=host.docker.internal:3000, job=IESG} value=22 ], [ var='C' labels={__name__=go_threads, instance=host.docker.internal:3000, job=IESG} value=1 ]",
 				"__values__": "{\"B\":22,\"C\":1}"
 			},
 			"labels": {
 				"alertname": "This is a custom label",
-				"grafana_folder": "Test Folder",
-				"instance": "Grafana"
+				"IESG_folder": "Test Folder",
+				"instance": "IESG"
 			}
 		},
 		"receivers": [{
@@ -882,14 +882,14 @@ func TestIntegrationNotificationChannels(t *testing.T) {
 	createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 		DefaultOrgRole: string(org.RoleEditor),
 		Password:       "password",
-		Login:          "grafana",
+		Login:          "IESG",
 	})
 
-	apiClient := newAlertingApiClient(grafanaListedAddr, "grafana", "password")
+	apiClient := newAlertingApiClient(grafanaListedAddr, "IESG", "password")
 
 	{
 		// There are no notification channel config initially - so it returns the default configuration.
-		alertsURL := fmt.Sprintf("http://grafana:password@%s/api/alertmanager/grafana/config/api/v1/alerts", grafanaListedAddr)
+		alertsURL := fmt.Sprintf("http://IESG:password@%s/api/alertmanager/grafana/config/api/v1/alerts", grafanaListedAddr)
 		resp := getRequest(t, alertsURL, http.StatusOK) // nolint
 		b, err := io.ReadAll(resp.Body)
 		require.NoError(t, err)
@@ -908,7 +908,7 @@ func TestIntegrationNotificationChannels(t *testing.T) {
 		require.NoError(t, err)
 
 		// Verifying that all the receivers and routes have been registered.
-		alertsURL := fmt.Sprintf("http://grafana:password@%s/api/alertmanager/grafana/config/api/v1/alerts", grafanaListedAddr)
+		alertsURL := fmt.Sprintf("http://IESG:password@%s/api/alertmanager/grafana/config/api/v1/alerts", grafanaListedAddr)
 		resp := getRequest(t, alertsURL, http.StatusOK) // nolint
 		b := getBody(t, resp.Body)
 		re := regexp.MustCompile(`"uid":"([\w|-]*)"`)
@@ -916,7 +916,7 @@ func TestIntegrationNotificationChannels(t *testing.T) {
 		require.JSONEq(t, e, string(re.ReplaceAll([]byte(b), []byte(`"uid":""`))))
 
 		// Check the receivers API. No errors nor attempts to notify should be registered.
-		receiversURL := fmt.Sprintf("http://grafana:password@%s/api/alertmanager/grafana/config/api/v1/receivers", grafanaListedAddr)
+		receiversURL := fmt.Sprintf("http://IESG:password@%s/api/alertmanager/grafana/config/api/v1/receivers", grafanaListedAddr)
 		resp = getRequest(t, receiversURL, http.StatusOK) // nolint
 		b = getBody(t, resp.Body)
 
@@ -948,7 +948,7 @@ func TestIntegrationNotificationChannels(t *testing.T) {
 		}
 
 		rulesConfig := getRulesConfig(t)
-		u := fmt.Sprintf("http://grafana:password@%s/api/ruler/grafana/api/v1/rules/default", grafanaListedAddr)
+		u := fmt.Sprintf("http://IESG:password@%s/api/ruler/grafana/api/v1/rules/default", grafanaListedAddr)
 		_ = postRequest(t, u, rulesConfig, http.StatusAccepted) // nolint
 	}
 
@@ -965,7 +965,7 @@ func TestIntegrationNotificationChannels(t *testing.T) {
 	require.NoError(t, mockChannel.Close())
 
 	// Check the receivers API. Errors and inactive receivers are expected, attempts to deliver notifications should be registered.
-	receiversURL := fmt.Sprintf("http://grafana:password@%s/api/alertmanager/grafana/config/api/v1/receivers", grafanaListedAddr)
+	receiversURL := fmt.Sprintf("http://IESG:password@%s/api/alertmanager/grafana/config/api/v1/receivers", grafanaListedAddr)
 	resp := getRequest(t, receiversURL, http.StatusOK) // nolint
 	b := getBody(t, resp.Body)
 
@@ -989,7 +989,7 @@ func TestIntegrationNotificationChannels(t *testing.T) {
 			}
 
 			// We don't have test alerts for the default notifier, continue iterating.
-			if rcv.Name == "grafana-default-email" {
+			if rcv.Name == "IESG-default-email" {
 				return
 			}
 
@@ -1020,7 +1020,7 @@ func TestIntegrationNotificationChannels(t *testing.T) {
 
 	{
 		// Delete the configuration; so it returns the default configuration.
-		u := fmt.Sprintf("http://grafana:password@%s/api/alertmanager/grafana/config/api/v1/alerts", grafanaListedAddr)
+		u := fmt.Sprintf("http://IESG:password@%s/api/alertmanager/grafana/config/api/v1/alerts", grafanaListedAddr)
 		req, err := http.NewRequest(http.MethodDelete, u, nil)
 		require.NoError(t, err)
 		client := &http.Client{}
@@ -1035,7 +1035,7 @@ func TestIntegrationNotificationChannels(t *testing.T) {
 		require.Equal(t, 202, resp.StatusCode)
 		require.JSONEq(t, `{"message":"configuration deleted; the default is applied"}`, string(b))
 
-		alertsURL := fmt.Sprintf("http://grafana:password@%s/api/alertmanager/grafana/config/api/v1/alerts", grafanaListedAddr)
+		alertsURL := fmt.Sprintf("http://IESG:password@%s/api/alertmanager/grafana/config/api/v1/alerts", grafanaListedAddr)
 		resp = getRequest(t, alertsURL, http.StatusOK) // nolint
 		b, err = io.ReadAll(resp.Body)
 		require.NoError(t, err)
@@ -1140,7 +1140,7 @@ type mockNotificationChannel struct {
 }
 
 func newMockNotificationChannel(t *testing.T, grafanaListedAddr string) *mockNotificationChannel {
-	// Spin up a separate webserver to receive notifications emitted by Grafana.
+	// Spin up a separate webserver to receive notifications emitted by IESG.
 	listener, err := net.Listen("tcp", "127.0.0.1:0")
 	require.NoError(t, err)
 
@@ -1232,8 +1232,8 @@ func (nc *mockNotificationChannel) matchesExpNotifications(t *testing.T, exp map
 				// It has a changing "source".
 				r1 = regexp.MustCompile(`.*"source"\s*:\s*"([^"]+)"`)
 			case "googlechat_recv/googlechat_test":
-				// "Grafana v | 25 May 21 17:44 IST"
-				r1 = regexp.MustCompile(`.*"text"\s*:\s*"(Grafana v[^"]+)"`)
+				// "IESG v | 25 May 21 17:44 IST"
+				r1 = regexp.MustCompile(`.*"text"\s*:\s*"(IESG v[^"]+)"`)
 			case "victorops_recv/victorops_test":
 				// It has a time component "timestamp".
 				r1 = regexp.MustCompile(`.*"timestamp"\s*:\s*([0-9]+)`)
@@ -2422,7 +2422,7 @@ var expEmailNotifications = []*notifications.SendEmailCommandSync{
 				"Alerts": alertingTemplates.ExtendedAlerts{
 					alertingTemplates.ExtendedAlert{
 						Status:       "firing",
-						Labels:       template.KV{"alertname": "EmailAlert", "grafana_folder": "default"},
+						Labels:       template.KV{"alertname": "EmailAlert", "IESG_folder": "default"},
 						Annotations:  template.KV{},
 						StartsAt:     time.Time{},
 						EndsAt:       time.Time{},
@@ -2437,7 +2437,7 @@ var expEmailNotifications = []*notifications.SendEmailCommandSync{
 					},
 				},
 				"GroupLabels":       template.KV{"alertname": "EmailAlert"},
-				"CommonLabels":      template.KV{"alertname": "EmailAlert", "grafana_folder": "default"},
+				"CommonLabels":      template.KV{"alertname": "EmailAlert", "IESG_folder": "default"},
 				"CommonAnnotations": template.KV{},
 				"ExternalURL":       "http://localhost:3000/",
 				"RuleUrl":           "http://localhost:3000/alerting/list",
@@ -2463,8 +2463,8 @@ var expNonEmailNotifications = map[string][]string{
 			  "title_link": "http://localhost:3000/alerting/grafana/UID_SlackAlert1/view?orgId=1",
 			  "text": "Integration Test ",
 			  "fallback": "Integration Test [FIRING:1] SlackAlert1 (default)",
-			  "footer": "Grafana v",
-			  "footer_icon": "https://grafana.com/static/assets/img/fav32.png",
+			  "footer": "IESG v",
+			  "footer_icon": "https://grafana.com/static/assets/img/",
 			  "color": "#D63232",
 			  "ts": %s,
               "mrkdwn_in": ["pretext"],
@@ -2481,10 +2481,10 @@ var expNonEmailNotifications = map[string][]string{
 			{
 			  "title": "[FIRING:1] SlackAlert2 (default)",
 			  "title_link": "http://localhost:3000/alerting/grafana/UID_SlackAlert2/view?orgId=1",
-			  "text": "**Firing**\n\nValue: A=1\nLabels:\n - alertname = SlackAlert2\n - grafana_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_SlackAlert2/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%%3DUID_SlackAlert2&orgId=1\n",
+			  "text": "**Firing**\n\nValue: A=1\nLabels:\n - alertname = SlackAlert2\n - IESG_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_SlackAlert2/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%%3DUID_SlackAlert2&orgId=1\n",
 			  "fallback": "[FIRING:1] SlackAlert2 (default)",
-			  "footer": "Grafana v",
-			  "footer_icon": "https://grafana.com/static/assets/img/fav32.png",
+			  "footer": "IESG v",
+			  "footer_icon": "public/img/grafana_icon.svg",
 			  "color": "#D63232",
 			  "ts": %s,
               "mrkdwn_in": ["pretext"],
@@ -2506,13 +2506,13 @@ var expNonEmailNotifications = map[string][]string{
 			"component": "Integration Test",
 			"group": "testgroup",
 			"custom_details": {
-			  "firing": "\nValue: A=1\nLabels:\n - alertname = PagerdutyAlert\n - grafana_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_PagerdutyAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%%3DUID_PagerdutyAlert&orgId=1\n",
+			  "firing": "\nValue: A=1\nLabels:\n - alertname = PagerdutyAlert\n - IESG_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_PagerdutyAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%%3DUID_PagerdutyAlert&orgId=1\n",
 			  "num_firing": "1",
 			  "num_resolved": "0",
 			  "resolved": ""
 			}
 		  },
-		  "client": "Grafana",
+		  "client": "IESG",
 		  "client_url": "http://localhost:3000/",
 		  "links": [
 			{
@@ -2526,7 +2526,7 @@ var expNonEmailNotifications = map[string][]string{
 		`{
 		  "link": {
 			"messageUrl": "dingtalk://dingtalkclient/page/link?pc_slide=false&url=http%3A%2F%2Flocalhost%3A3000%2Falerting%2Flist",
-			"text": "**Firing**\n\nValue: A=1\nLabels:\n - alertname = DingDingAlert\n - grafana_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_DingDingAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3DUID_DingDingAlert&orgId=1\n",
+			"text": "**Firing**\n\nValue: A=1\nLabels:\n - alertname = DingDingAlert\n - IESG_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_DingDingAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3DUID_DingDingAlert&orgId=1\n",
 			"title": "[FIRING:1] DingDingAlert (default)"
 		  },
 		  "msgtype": "link"
@@ -2547,7 +2547,7 @@ var expNonEmailNotifications = map[string][]string{
 				    "weight": "bolder",
 				    "wrap": true
 				  }, {
-				  	"text": "**Firing**\n\nValue: A=1\nLabels:\n - alertname = TeamsAlert\n - grafana_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_TeamsAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana\u0026matcher=__alert_rule_uid__%3DUID_TeamsAlert&orgId=1\n",
+				  	"text": "**Firing**\n\nValue: A=1\nLabels:\n - alertname = TeamsAlert\n - IESG_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_TeamsAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana\u0026matcher=__alert_rule_uid__%3DUID_TeamsAlert&orgId=1\n",
 				  	"type": "TextBlock",
 				  	"wrap": true
 				  }, {
@@ -2584,7 +2584,7 @@ var expNonEmailNotifications = map[string][]string{
 			  "status": "firing",
 			  "labels": {
 				"alertname": "WebhookAlert",
-				"grafana_folder": "default"
+				"IESG_folder": "default"
 			  },
 			  "annotations": {},
 			  "startsAt": "%s",
@@ -2604,7 +2604,7 @@ var expNonEmailNotifications = map[string][]string{
 		  },
 		  "commonLabels": {
 			"alertname": "WebhookAlert",
-			"grafana_folder": "default"
+			"IESG_folder": "default"
 		  },
 		  "commonAnnotations": {},
 		  "externalURL": "http://localhost:3000/",
@@ -2613,25 +2613,25 @@ var expNonEmailNotifications = map[string][]string{
 		  "truncatedAlerts": 0,
 		  "title": "[FIRING:1] WebhookAlert (default)",
 		  "state": "alerting",
-		  "message": "**Firing**\n\nValue: A=1\nLabels:\n - alertname = WebhookAlert\n - grafana_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_WebhookAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%%3DUID_WebhookAlert&orgId=1\n"
+		  "message": "**Firing**\n\nValue: A=1\nLabels:\n - alertname = WebhookAlert\n - IESG_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_WebhookAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%%3DUID_WebhookAlert&orgId=1\n"
 		}`,
 	},
 	"discord_recv/discord_test": {
 		`{
-		  "content": "**Firing**\n\nValue: A=1\nLabels:\n - alertname = DiscordAlert\n - grafana_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_DiscordAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3DUID_DiscordAlert&orgId=1\n",
+		  "content": "**Firing**\n\nValue: A=1\nLabels:\n - alertname = DiscordAlert\n - IESG_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_DiscordAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3DUID_DiscordAlert&orgId=1\n",
 		  "embeds": [
 			{
 			  "color": 14037554,
 			  "footer": {
-				"icon_url": "https://grafana.com/static/assets/img/fav32.png",
-				"text": "Grafana v"
+				"icon_url": "https://grafana.com/static/assets/img/grafana_icon.svg",
+				"text": "IESG v"
 			  },
 			  "title": "[FIRING:1] DiscordAlert (default)",
 			  "type": "rich",
 			  "url": "http://localhost:3000/alerting/list"
 			}
 		  ],
-		  "username": "Grafana"
+		  "username": "IESG"
 		}`,
 	},
 	"sensugo_recv/sensugo_test": {
@@ -2646,7 +2646,7 @@ var expNonEmailNotifications = map[string][]string{
 			  },
 			  "name": "default"
 			},
-			"output": "**Firing**\n\nValue: A=1\nLabels:\n - alertname = SensuGoAlert\n - grafana_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_SensuGoAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%%3DUID_SensuGoAlert&orgId=1\n",
+			"output": "**Firing**\n\nValue: A=1\nLabels:\n - alertname = SensuGoAlert\n - IESG_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_SensuGoAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%%3DUID_SensuGoAlert&orgId=1\n",
 			"status": 2
 		  },
 		  "entity": {
@@ -2659,10 +2659,10 @@ var expNonEmailNotifications = map[string][]string{
 		}`,
 	},
 	"pushover_recv/pushover_test": {
-		"--abcd\r\nContent-Disposition: form-data; name=\"user\"\r\n\r\nmysecretkey\r\n--abcd\r\nContent-Disposition: form-data; name=\"token\"\r\n\r\nmysecrettoken\r\n--abcd\r\nContent-Disposition: form-data; name=\"priority\"\r\n\r\n0\r\n--abcd\r\nContent-Disposition: form-data; name=\"sound\"\r\n\r\n\r\n--abcd\r\nContent-Disposition: form-data; name=\"title\"\r\n\r\n[FIRING:1] PushoverAlert (default)\r\n--abcd\r\nContent-Disposition: form-data; name=\"url\"\r\n\r\nhttp://localhost:3000/alerting/list\r\n--abcd\r\nContent-Disposition: form-data; name=\"url_title\"\r\n\r\nShow alert rule\r\n--abcd\r\nContent-Disposition: form-data; name=\"message\"\r\n\r\n**Firing**\n\nValue: A=1\nLabels:\n - alertname = PushoverAlert\n - grafana_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_PushoverAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3DUID_PushoverAlert&orgId=1\r\n--abcd\r\nContent-Disposition: form-data; name=\"html\"\r\n\r\n1\r\n--abcd--\r\n",
+		"--abcd\r\nContent-Disposition: form-data; name=\"user\"\r\n\r\nmysecretkey\r\n--abcd\r\nContent-Disposition: form-data; name=\"token\"\r\n\r\nmysecrettoken\r\n--abcd\r\nContent-Disposition: form-data; name=\"priority\"\r\n\r\n0\r\n--abcd\r\nContent-Disposition: form-data; name=\"sound\"\r\n\r\n\r\n--abcd\r\nContent-Disposition: form-data; name=\"title\"\r\n\r\n[FIRING:1] PushoverAlert (default)\r\n--abcd\r\nContent-Disposition: form-data; name=\"url\"\r\n\r\nhttp://localhost:3000/alerting/list\r\n--abcd\r\nContent-Disposition: form-data; name=\"url_title\"\r\n\r\nShow alert rule\r\n--abcd\r\nContent-Disposition: form-data; name=\"message\"\r\n\r\n**Firing**\n\nValue: A=1\nLabels:\n - alertname = PushoverAlert\n - IESG_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_PushoverAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3DUID_PushoverAlert&orgId=1\r\n--abcd\r\nContent-Disposition: form-data; name=\"html\"\r\n\r\n1\r\n--abcd--\r\n",
 	},
 	"telegram_recv/bot6sh027hs034h": {
-		"--abcd\r\nContent-Disposition: form-data; name=\"chat_id\"\r\n\r\ntelegram_chat_id\r\n--abcd\r\nContent-Disposition: form-data; name=\"parse_mode\"\r\n\r\nHTML\r\n--abcd\r\nContent-Disposition: form-data; name=\"text\"\r\n\r\n**Firing**\n\nValue: A=1\nLabels:\n - alertname = TelegramAlert\n - grafana_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_TelegramAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3DUID_TelegramAlert&orgId=1\n\r\n--abcd--\r\n",
+		"--abcd\r\nContent-Disposition: form-data; name=\"chat_id\"\r\n\r\ntelegram_chat_id\r\n--abcd\r\nContent-Disposition: form-data; name=\"parse_mode\"\r\n\r\nHTML\r\n--abcd\r\nContent-Disposition: form-data; name=\"text\"\r\n\r\n**Firing**\n\nValue: A=1\nLabels:\n - alertname = TelegramAlert\n - IESG_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_TelegramAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3DUID_TelegramAlert&orgId=1\n\r\n--abcd--\r\n",
 	},
 	"googlechat_recv/googlechat_test": {
 		`{
@@ -2678,14 +2678,14 @@ var expNonEmailNotifications = map[string][]string{
 				  "widgets": [
 					{
 					  "textParagraph": {
-						"text": "**Firing**\n\nValue: A=1\nLabels:\n - alertname = GoogleChatAlert\n - grafana_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_GoogleChatAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%%3DUID_GoogleChatAlert&orgId=1\n"
+						"text": "**Firing**\n\nValue: A=1\nLabels:\n - alertname = GoogleChatAlert\n - IESG_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_GoogleChatAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%%3DUID_GoogleChatAlert&orgId=1\n"
 					  }
 					},
 					{
 					  "buttons": [
 						{
 						  "textButton": {
-							"text": "OPEN IN GRAFANA",
+							"text": "OPEN IN IESG",
 							"onClick": {
 							  "openLink": {
 								"url": "http://localhost:3000/alerting/list"
@@ -2713,10 +2713,10 @@ var expNonEmailNotifications = map[string][]string{
 			{
 			  "value": {
 				"alert_state": "alerting",
-				"client": "Grafana",
+				"client": "IESG",
 				"client_url": "http://localhost:3000/alerting/list",
 				"description": "[FIRING:1] KafkaAlert (default)",
-				"details": "**Firing**\n\nValue: A=1\nLabels:\n - alertname = KafkaAlert\n - grafana_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_KafkaAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3DUID_KafkaAlert&orgId=1\n",
+				"details": "**Firing**\n\nValue: A=1\nLabels:\n - alertname = KafkaAlert\n - IESG_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_KafkaAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3DUID_KafkaAlert&orgId=1\n",
 				"incident_key": "35c0bdb1715f9162a20d7b2a01cb2e3a4c5b1dc663571701e3f67212b696332f"
 			  }
 			}
@@ -2724,10 +2724,10 @@ var expNonEmailNotifications = map[string][]string{
 		}`,
 	},
 	"line_recv/line_test": {
-		`message=%5BFIRING%3A1%5D+LineAlert+%28default%29%0A%2A%2AFiring%2A%2A%0A%0AValue%3A+A%3D1%0ALabels%3A%0A+-+alertname+%3D+LineAlert%0A+-+grafana_folder+%3D+default%0AAnnotations%3A%0ASource%3A+http%3A%2F%2Flocalhost%3A3000%2Falerting%2Fgrafana%2FUID_LineAlert%2Fview%3ForgId%3D1%0ASilence%3A+http%3A%2F%2Flocalhost%3A3000%2Falerting%2Fsilence%2Fnew%3Falertmanager%3Dgrafana%26matcher%3D__alert_rule_uid__%253DUID_LineAlert%26orgId%3D1%0A`,
+		`message=%5BFIRING%3A1%5D+LineAlert+%28default%29%0A%2A%2AFiring%2A%2A%0A%0AValue%3A+A%3D1%0ALabels%3A%0A+-+alertname+%3D+LineAlert%0A+-+IESG_folder+%3D+default%0AAnnotations%3A%0ASource%3A+http%3A%2F%2Flocalhost%3A3000%2Falerting%2Fgrafana%2FUID_LineAlert%2Fview%3ForgId%3D1%0ASilence%3A+http%3A%2F%2Flocalhost%3A3000%2Falerting%2Fsilence%2Fnew%3Falertmanager%3Dgrafana%26matcher%3D__alert_rule_uid__%253DUID_LineAlert%26orgId%3D1%0A`,
 	},
 	"threema_recv/threema_test": {
-		`from=%2A1234567&secret=myapisecret&text=%E2%9A%A0%EF%B8%8F+%5BFIRING%3A1%5D+ThreemaAlert+%28default%29%0A%0A%2AMessage%3A%2A%0A%2A%2AFiring%2A%2A%0A%0AValue%3A+A%3D1%0ALabels%3A%0A+-+alertname+%3D+ThreemaAlert%0A+-+grafana_folder+%3D+default%0AAnnotations%3A%0ASource%3A+http%3A%2F%2Flocalhost%3A3000%2Falerting%2Fgrafana%2FUID_ThreemaAlert%2Fview%3ForgId%3D1%0ASilence%3A+http%3A%2F%2Flocalhost%3A3000%2Falerting%2Fsilence%2Fnew%3Falertmanager%3Dgrafana%26matcher%3D__alert_rule_uid__%253DUID_ThreemaAlert%26orgId%3D1%0A%0A%2AURL%3A%2A+http%3A%2Flocalhost%3A3000%2Falerting%2Flist%0A&to=abcdefgh`,
+		`from=%2A1234567&secret=myapisecret&text=%E2%9A%A0%EF%B8%8F+%5BFIRING%3A1%5D+ThreemaAlert+%28default%29%0A%0A%2AMessage%3A%2A%0A%2A%2AFiring%2A%2A%0A%0AValue%3A+A%3D1%0ALabels%3A%0A+-+alertname+%3D+ThreemaAlert%0A+-+IESG_folder+%3D+default%0AAnnotations%3A%0ASource%3A+http%3A%2F%2Flocalhost%3A3000%2Falerting%2Fgrafana%2FUID_ThreemaAlert%2Fview%3ForgId%3D1%0ASilence%3A+http%3A%2F%2Flocalhost%3A3000%2Falerting%2Fsilence%2Fnew%3Falertmanager%3Dgrafana%26matcher%3D__alert_rule_uid__%253DUID_ThreemaAlert%26orgId%3D1%0A%0A%2AURL%3A%2A+http%3A%2Flocalhost%3A3000%2Falerting%2Flist%0A&to=abcdefgh`,
 	},
 	"victorops_recv/victorops_test": {
 		`{
@@ -2735,21 +2735,21 @@ var expNonEmailNotifications = map[string][]string{
 		  "entity_display_name": "[FIRING:1] VictorOpsAlert (default)",
 		  "entity_id": "633ae988fa7074bcb51f3d1c5fef2ba1c5c4ccb45b3ecbf681f7d507b078b1ae",
 		  "message_type": "CRITICAL",
-		  "monitoring_tool": "Grafana v",
-		  "state_message": "**Firing**\n\nValue: A=1\nLabels:\n - alertname = VictorOpsAlert\n - grafana_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_VictorOpsAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%%3DUID_VictorOpsAlert&orgId=1\n",
+		  "monitoring_tool": "IESG v",
+		  "state_message": "**Firing**\n\nValue: A=1\nLabels:\n - alertname = VictorOpsAlert\n - IESG_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_VictorOpsAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%%3DUID_VictorOpsAlert&orgId=1\n",
 		  "timestamp": %s
 		}`,
 	},
 	"opsgenie_recv/opsgenie_test": {
 		`{
 		  "alias": "47e92f0f6ef9fe99f3954e0d6155f8d09c4b9a038d8c3105e82c0cee4c62956e",
-		  "description": "[FIRING:1] OpsGenieAlert (default)\nhttp://localhost:3000/alerting/list\n\n**Firing**\n\nValue: A=1\nLabels:\n - alertname = OpsGenieAlert\n - grafana_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_OpsGenieAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3DUID_OpsGenieAlert&orgId=1\n",
+		  "description": "[FIRING:1] OpsGenieAlert (default)\nhttp://localhost:3000/alerting/list\n\n**Firing**\n\nValue: A=1\nLabels:\n - alertname = OpsGenieAlert\n - IESG_folder = default\nAnnotations:\nSource: http://localhost:3000/alerting/grafana/UID_OpsGenieAlert/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3DUID_OpsGenieAlert&orgId=1\n",
 		  "details": {
 			"url": "http://localhost:3000/alerting/list"
 		  },
 		  "message": "[FIRING:1] OpsGenieAlert (default)",
-		  "source": "Grafana",
-		  "tags": ["alertname:OpsGenieAlert","grafana_folder:default"]
+		  "source": "IESG",
+		  "tags": ["alertname:OpsGenieAlert","IESG_folder:default"]
 		}`,
 	},
 	// Prometheus Alertmanager.
@@ -2759,7 +2759,7 @@ var expNonEmailNotifications = map[string][]string{
 			"labels": {
 			  "__alert_rule_uid__": "UID_AlertmanagerAlert",
 			  "alertname": "AlertmanagerAlert",
-			  "grafana_folder": "default"
+			  "IESG_folder": "default"
 			},
 			"annotations": {
 			  "__orgId__":"1",

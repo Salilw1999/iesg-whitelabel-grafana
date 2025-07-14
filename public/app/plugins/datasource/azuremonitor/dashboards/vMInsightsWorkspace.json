@@ -3,9 +3,9 @@
   "__elements": [],
   "__requires": [
     {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
+      "type": "IESG",
+      "id": "IESG",
+      "name": "IESG",
       "version": "8.4.3"
     },
     {
@@ -43,7 +43,7 @@
     "list": [
       {
         "builtIn": 1,
-        "datasource": "-- Grafana --",
+        "datasource": "-- IESG --",
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
@@ -76,7 +76,7 @@
       },
       "id": 54,
       "options": {
-        "content": "<div style=\"padding: 1em; text-align: center\">\n    <p>Welcome to the Azure Monitor data source for Grafana. To learn more about it, visit our <a href=\"https://grafana.com/docs/grafana/latest/datasources/azuremonitor/\" target=\"__blank\">docs</a>.  </p>\n  <p>  Choose the resource group(s) with VMs enabled with Azure Monitor VM Insights and related Workspace to get started.</p>\n</div>",
+        "content": "<div style=\"padding: 1em; text-align: center\">\n    <p>Welcome to the Azure Monitor data source for IESG. To learn more about it, visit our <a href=\"https://grafana.com/docs/grafana/latest/datasources/azuremonitor/\" target=\"__blank\">docs</a>.  </p>\n  <p>  Choose the resource group(s) with VMs enabled with Azure Monitor VM Insights and related Workspace to get started.</p>\n</div>",
         "mode": "markdown"
       },
       "pluginVersion": "8.4.3",

@@ -25,7 +25,7 @@ export function NewsContainer({ onClose }: NewsContainerProps) {
             href="https://grafana.com/blog/"
             target="_blank"
             rel="noreferrer"
-            title={t('news.link-title', 'Go to Grafana labs blog')}
+            title={t('news.link-title', 'Go to IESG labs blog')}
             className={styles.grot}
           >
             <img src={grotNewsSvg} alt="Grot reading news" />

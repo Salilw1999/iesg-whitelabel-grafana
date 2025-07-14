@@ -215,7 +215,7 @@ export function PluginDetailsPanel(props: Props): React.ReactElement | null {
                   <Tooltip
                     content={
                       <Trans i18nKey="plugins.details.labels.reportAbuseTooltip">
-                        Report issues related to malicious or harmful plugins directly to Grafana Labs.
+                        Report issues related to malicious or harmful plugins directly to IESG Labs.
                       </Trans>
                     }
                     placement="right-end"
@@ -227,7 +227,7 @@ export function PluginDetailsPanel(props: Props): React.ReactElement | null {
             >
               <Stack direction="column">
                 <Button variant="secondary" fill="solid" icon="bell" onClick={() => onClickReportConcern(plugin.id)}>
-                  <Trans i18nKey="plugins.details.labels.contactGrafanaLabs">Contact Grafana Labs</Trans>
+                  <Trans i18nKey="plugins.details.labels.contactIESGLabs">Contact IESG Labs</Trans>
                 </Button>
               </Stack>
             </CollapsableSection>

@@ -11,7 +11,7 @@ export const UserSignup = () => {
   return (
     <Stack direction="column">
       <div className={paddingTop}>
-        <Trans i18nKey="login.signup.new-to-question">New to Grafana?</Trans>
+        <Trans i18nKey="login.signup.new-to-question">New to IESG?</Trans>
       </div>
       <LinkButton
         className={css({

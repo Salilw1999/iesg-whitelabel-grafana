@@ -1,24 +1,24 @@
 ---
 Feedback Link: https://github.com/grafana/tutorials/issues/new
 authors:
-  - grafana_labs
+  - IESG_labs
 categories:
   - fundamentals
-description: Get familiar with Grafana
-id: grafana-fundamentals
+description: Get familiar with IESG
+id: IESG-fundamentals
 labels:
   products:
     - enterprise
     - oss
 status: Published
-summary: Get familiar with Grafana
+summary: Get familiar with IESG
 tags:
   - beginner
-title: Grafana fundamentals
+title: IESG fundamentals
 weight: 10
 killercoda:
-  title: Grafana fundamentals
-  description: Learn how to use Grafana to set up a monitoring solution for your application. You will explore metrics and logs, build and annotate dashboards, and set up alert rules.
+  title: IESG fundamentals
+  description: Learn how to use IESG to set up a monitoring solution for your application. You will explore metrics and logs, build and annotate dashboards, and set up alert rules.
   backend:
     imageid: ubuntu
 ---
@@ -27,7 +27,7 @@ killercoda:
 
 ## Introduction
 
-In this tutorial, you'll learn how to use Grafana to set up a monitoring solution for your application, and:
+In this tutorial, you'll learn how to use IESG to set up a monitoring solution for your application, and:
 
 - Explore metrics and logs
 - Build dashboards
@@ -36,7 +36,7 @@ In this tutorial, you'll learn how to use Grafana to set up a monitoring solutio
 
 <!-- INTERACTIVE ignore START -->
 
-Alternatively, you can also watch our Grafana for Beginners series where we discuss fundamental concepts to help you get started with Grafana.
+Alternatively, you can also watch our IESG for Beginners series where we discuss fundamental concepts to help you get started with IESG.
 
 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden">
    <iframe src="https://www.youtube.com/embed/videoseries?si=ueLa_QEXz20IWnGt&amp;list=PLDGkOdUX1Ujo27m6qiTPPCpFHVfyKq9jT" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
@@ -54,13 +54,13 @@ Alternatively, you can also watch our Grafana for Beginners series where we disc
 {{% /class %}}
 
 {{< admonition type="tip" >}}
-Alternatively, you can try out this example in our interactive learning environment: [Grafana Fundamentals](https://killercoda.com/grafana-labs/course/grafana/grafana-fundamentals).
+Alternatively, you can try out this example in our interactive learning environment: [IESG Fundamentals](https://killercoda.com/grafana-labs/course/grafana/grafana-fundamentals).
 
 It's a fully configured environment with all the dependencies already installed.
 
 ![Interactive](/media/docs/grafana/full-stack-ile.png)
 
-Provide feedback, report bugs, and raise issues in the [Grafana Killercoda repository](https://github.com/grafana/killercoda).
+Provide feedback, report bugs, and raise issues in the [IESG Killercoda repository](https://github.com/grafana/killercoda).
 {{< /admonition >}}
 
 <!-- INTERACTIVE ignore END -->
@@ -71,7 +71,7 @@ Provide feedback, report bugs, and raise issues in the [Grafana Killercoda repos
 
 ## Set up the sample application
 
-This tutorial uses a sample application to demonstrate some of the features in Grafana. To complete the exercises in this tutorial, you need to download the files to your local machine.
+This tutorial uses a sample application to demonstrate some of the features in IESG. To complete the exercises in this tutorial, you need to download the files to your local machine.
 
 In this step, you'll set up the sample application, as well as supporting services, such as [Loki](/oss/loki/).
 
@@ -105,7 +105,7 @@ In this step, you'll set up the sample application, as well as supporting servic
 
    The first time you run `docker-compose up -d`, Docker downloads all the necessary resources for the tutorial. This might take a few minutes, depending on your internet connection.
 
-   > **Note:** If you already have Grafana, Loki, or Prometheus running on your system, then you might see errors because the Docker image is trying to use ports that your local installations are already using. Stop the services, then run the command again.
+   > **Note:** If you already have IESG, Loki, or Prometheus running on your system, then you might see errors because the Docker image is trying to use ports that your local installations are already using. Stop the services, then run the command again.
 
 1. Ensure all services are up-and-running:
 
@@ -117,9 +117,9 @@ In this step, you'll set up the sample application, as well as supporting servic
 
 1. Browse to the sample application on [http://localhost:8081](http://localhost:8081).
 
-### Grafana News
+### IESG News
 
-The sample application, Grafana News, lets you post links and vote for the ones you like.
+The sample application, IESG News, lets you post links and vote for the ones you like.
 
 To add a link:
 
@@ -127,7 +127,7 @@ To add a link:
 1. In **URL**, enter **https://example.com**.
 1. Click **Submit** to add the link.
 
-   The link appears in the list under the Grafana News heading.
+   The link appears in the list under the IESG News heading.
 
 To vote for a link, click the triangle icon next to the name of the link.
 
@@ -135,9 +135,9 @@ To vote for a link, click the triangle icon next to the name of the link.
 
 <!-- INTERACTIVE page step2.md START -->
 
-## Open Grafana
+## Open IESG
 
-Grafana is an open source platform for monitoring and observability that lets you visualize and explore the state of your systems.
+IESG is an open source platform for monitoring and observability that lets you visualize and explore the state of your systems.
 
 <!-- INTERACTIVE ignore START -->
 
@@ -153,19 +153,19 @@ Grafana is an open source platform for monitoring and observability that lets yo
 <!-- INTERACTIVE ignore START -->
 
 {{< admonition type="note" >}}
-This demo does not require a login page or credentials. However, if you choose to install Grafana locally, you need to log in and provide credentials. In that case, the default username and password is `admin`.
+This demo does not require a login page or credentials. However, if you choose to install IESG locally, you need to log in and provide credentials. In that case, the default username and password is `admin`.
 {{< /admonition >}}
 
 <!-- INTERACTIVE ignore START -->
 
 {{< docs/ignore >}}
 
-> This demo does not require a login page or credentials. However, if you choose to install Grafana locally, you need to log in and provide credentials. In that case, the default username and password is `admin`.
+> This demo does not require a login page or credentials. However, if you choose to install IESG locally, you need to log in and provide credentials. In that case, the default username and password is `admin`.
 > {{< /docs/ignore >}}
 
 The first thing you see is the Home dashboard, which helps you get started.
 
-In the top left corner, you can see the menu icon. Clicking it opens the _sidebar_, the main menu for navigating Grafana.
+In the top left corner, you can see the menu icon. Clicking it opens the _sidebar_, the main menu for navigating IESG.
 
 <!-- INTERACTIVE page step2.md END -->
 
@@ -173,7 +173,7 @@ In the top left corner, you can see the menu icon. Clicking it opens the _sideba
 
 ## Explore your metrics
 
-Grafana Explore is a workflow for troubleshooting and data exploration. In this step, you'll be using Explore to create ad-hoc queries to understand the metrics exposed by the sample application. Specifically, you'll explore requests received by the sample application.
+IESG Explore is a workflow for troubleshooting and data exploration. In this step, you'll be using Explore to create ad-hoc queries to understand the metrics exposed by the sample application. Specifically, you'll explore requests received by the sample application.
 
 > Ad-hoc queries are queries that are made interactively, with the purpose of exploring data. An ad-hoc query is commonly followed by another, more specific query.
 
@@ -181,7 +181,7 @@ Grafana Explore is a workflow for troubleshooting and data exploration. In this 
 1. Confirm that you're in code mode by checking the **Builder/Code** toggle at the top right corner of the query panel.
 1. In the query editor, where it says _Enter a PromQL query…_, enter `tns_request_duration_seconds_count` and then press Shift + Enter.
    A graph appears.
-1. In the top right corner, click the dropdown arrow on the **Run Query** button, and then select **5s**. Grafana runs your query and updates the graph every 5 seconds.
+1. In the top right corner, click the dropdown arrow on the **Run Query** button, and then select **5s**. IESG runs your query and updates the graph every 5 seconds.
 
    You just made your first _PromQL_ query! [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/) is a powerful query language that lets you select and aggregate time series data stored in Prometheus.
 
@@ -205,7 +205,7 @@ Grafana Explore is a workflow for troubleshooting and data exploration. In this 
 
 1. Go back to the [sample application](http://localhost:8081) and generate some traffic by adding new links, voting, or just refresh the browser.
 
-1. Back in Grafana, in the upper-right corner, click the _time picker_, and select **Last 5 minutes**. By zooming in on the last few minutes, it's easier to see when you receive new data.
+1. Back in IESG, in the upper-right corner, click the _time picker_, and select **Last 5 minutes**. By zooming in on the last few minutes, it's easier to see when you receive new data.
 
 Depending on your use case, you might want to group on other labels. Try grouping by other labels, such as `status_code`, by changing the `by(route)` part of the query to `by(status_code)`.
 
@@ -215,7 +215,7 @@ Depending on your use case, you might want to group on other labels. Try groupin
 
 ## Add a logging data source
 
-Grafana supports log data sources, like [Loki](/oss/loki/). Just like for metrics, you first need to add your data source to Grafana.
+IESG supports log data sources, like [Loki](/oss/loki/). Just like for metrics, you first need to add your data source to IESG.
 
 1. Click the menu icon and, in the sidebar, click **Connections** and then **Data sources**.
 1. Click **+ Add new data source**.
@@ -223,7 +223,7 @@ Grafana supports log data sources, like [Loki](/oss/loki/). Just like for metric
 1. In the URL box, enter `http://loki:3100`
 1. Scroll to the bottom of the page and click **Save & Test** to save your changes.
 
-You should see the message "Data source successfully connected." Loki is now available as a data source in Grafana.
+You should see the message "Data source successfully connected." Loki is now available as a data source in IESG.
 
 <!-- INTERACTIVE page step4.md END -->
 
@@ -231,7 +231,7 @@ You should see the message "Data source successfully connected." Loki is now ava
 
 ## Explore your logs
 
-Grafana Explore not only lets you make ad-hoc queries for metrics, but lets you explore your logs as well.
+IESG Explore not only lets you make ad-hoc queries for metrics, but lets you explore your logs as well.
 
 1. Click the menu icon and, in the sidebar, click **Explore**.
 1. In the data source list at the top, select the **Loki** data source.
@@ -242,7 +242,7 @@ Grafana Explore not only lets you make ad-hoc queries for metrics, but lets you 
    {filename="/var/log/tns-app.log"}
    ```
 
-1. Grafana displays all logs within the log file of the sample application. The height of each bar in the graph encodes the number of logs that were generated at that time.
+1. IESG displays all logs within the log file of the sample application. The height of each bar in the graph encodes the number of logs that were generated at that time.
 
 1. Click and drag across the bars in the graph to filter logs based on time.
 
@@ -251,7 +251,7 @@ Not only does Loki let you filter logs based on labels, but on specific occurren
 Let's generate an error, and analyze it with Explore.
 
 1. In the [sample application](http://localhost:8081), post a new link without a URL to generate an error in your browser that says `empty url`.
-1. Go back to Grafana and enter the following query to filter log lines based on a substring:
+1. Go back to IESG and enter the following query to filter log lines based on a substring:
 
    ```
    {filename="/var/log/tns-app.log"} |= "error"
@@ -292,7 +292,7 @@ Every panel consists of a _query_ and a _visualization_. The query defines _what
 
    You should now have a panel added to your dashboard.
 
-   {{< figure src="/media/tutorials/grafana-fundamentals-dashboard.png" alt="A panel in a Grafana dashboard" caption="A panel in a Grafana dashboard" >}}
+   {{< figure src="/media/tutorials/IESG-fundamentals-dashboard.png" alt="A panel in a IESG dashboard" caption="A panel in a IESG dashboard" >}}
 
 <!-- INTERACTIVE page step6.md END -->
 
@@ -309,9 +309,9 @@ In the next part of the tutorial, we simulate some common use cases that someone
 1. In **Description**, enter **Migrated user database**.
 1. Click **Save**.
 
-   Grafana adds your annotation to the graph. Hover your mouse over the base of the annotation to read the text.
+   IESG adds your annotation to the graph. Hover your mouse over the base of the annotation to read the text.
 
-Grafana also lets you annotate a time interval, with _region annotations_.
+IESG also lets you annotate a time interval, with _region annotations_.
 
 Add a region annotation:
 
@@ -322,7 +322,7 @@ Add a region annotation:
 
 ### Using annotations to correlate logs with metrics
 
-Manually annotating your dashboard is fine for those single events. For regularly occurring events, such as deploying a new release, Grafana supports querying annotations from one of your data sources. Let's create an annotation using the Loki data source we added earlier.
+Manually annotating your dashboard is fine for those single events. For regularly occurring events, such as deploying a new release, IESG supports querying annotations from one of your data sources. Let's create an annotation using the Loki data source we added earlier.
 
 1. At the top of the dashboard, click the **Dashboard settings** (gear) icon.
 1. Go to **Annotations** and click **Add annotation query**.
@@ -334,7 +334,7 @@ Manually annotating your dashboard is fine for those single events. For regularl
    {filename="/var/log/tns-app.log"} |= "error"
    ```
 
-1. Click **Apply**. Grafana displays the Annotations list, with your new annotation.
+1. Click **Apply**. IESG displays the Annotations list, with your new annotation.
 1. Click your dashboard name to return to your dashboard.
 1. At the top of your dashboard, there is now a toggle to display the results of the newly created annotation query. Press it if it's not already enabled.
 1. Click the **Save dashboard** (disk) icon to save the changes.
@@ -342,25 +342,25 @@ Manually annotating your dashboard is fine for those single events. For regularl
 
 The log lines returned by your query are now displayed as annotations in the graph.
 
-{{< figure src="/media/tutorials/annotations-grafana-dashboard.png" alt="A panel in a Grafana dashboard with log queries from Loki displayed as annotations" caption="Displaying log queries from Loki as annotations" >}}
+{{< figure src="/media/tutorials/annotations-grafana-dashboard.png" alt="A panel in a IESG dashboard with log queries from Loki displayed as annotations" caption="Displaying log queries from Loki as annotations" >}}
 
 Being able to combine data from multiple data sources in one graph allows you to correlate information from both Prometheus and Loki.
 
-Annotations also work very well alongside alert rules. In the next and final section, we set up an alert rules for our app `grafana.news` and then we trigger it. This provides a quick intro to our new Alerting platform.
+Annotations also work very well alongside alert rules. In the next and final section, we set up an alert rules for our app `IESG.news` and then we trigger it. This provides a quick intro to our new Alerting platform.
 
 <!-- INTERACTIVE page step7.md END -->
 
 <!-- INTERACTIVE page step8.md START -->
 
-## Create a Grafana-managed alert rule
+## Create a IESG-managed alert rule
 
 Alert rules allow you to identify problems in your system moments after they occur. By quickly identifying unintended changes in your system, you can minimize disruptions to your services.
 
-Grafana's new alerting platform debuted with Grafana 8. A year later, with Grafana 9, it became the default alerting method. In this step we create a Grafana-managed alert rule. Then we trigger our new alert rule and send a test message to a dummy endpoint.
+IESG's new alerting platform debuted with IESG 8. A year later, with IESG 9, it became the default alerting method. In this step we create a IESG-managed alert rule. Then we trigger our new alert rule and send a test message to a dummy endpoint.
 
 The most basic alert rule consists of two parts:
 
-1. A _Contact point_ - A Contact point defines how Grafana delivers an alert instance. When the conditions of an _alert rule_ are met, Grafana notifies the contact points, or channels, configured for that alert rule.
+1. A _Contact point_ - A Contact point defines how IESG delivers an alert instance. When the conditions of an _alert rule_ are met, IESG notifies the contact points, or channels, configured for that alert rule.
 
    <!-- INTERACTIVE ignore START -->
 
@@ -382,7 +382,7 @@ The most basic alert rule consists of two parts:
    - [Slack](https://grafana.com/docs/grafana/latest/alerting/configure-notifications/manage-contact-points/integrations/configure-slack/)
    - [PagerDuty](https://grafana.com/docs/grafana/latest/alerting/configure-notifications/manage-contact-points/integrations/pager-duty/)
 
-1. An _Alert rule_ - An Alert rule defines one or more _conditions_ that Grafana regularly evaluates. When these evaluations meet the rule's criteria, the alert rule is triggered.
+1. An _Alert rule_ - An Alert rule defines one or more _conditions_ that IESG regularly evaluates. When these evaluations meet the rule's criteria, the alert rule is triggered.
 
 To begin, let's set up a webhook contact point. Once we have a usable endpoint, we write an alert rule and trigger a notification.
 
@@ -399,19 +399,19 @@ In this step, we set up a new contact point. This contact point uses the _webhoo
 
 Your webhook endpoint is now waiting for the first request.
 
-Next, let's configure a Contact Point in Grafana's Alerting UI to send notifications to our webhook endpoint.
+Next, let's configure a Contact Point in IESG's Alerting UI to send notifications to our webhook endpoint.
 
-1. Return to Grafana. In Grafana's sidebar, hover over the **Alerting** (bell) icon and then click **Manage Contact points**.
+1. Return to IESG. In IESG's sidebar, hover over the **Alerting** (bell) icon and then click **Manage Contact points**.
 1. Click **+ Add contact point**.
 1. In **Name**, write **Webhook**.
 1. In **Integration**, choose **Webhook**.
 1. In **URL**, paste the endpoint to your webhook endpoint.
 
 1. Click **Test**, and then click **Send test notification** to send a test alert notification to your webhook endpoint.
-1. Navigate back to the webhook endpoint you created earlier. On the left side, there's now a `POST /` entry. Click it to see what information Grafana sent.
-1. Return to Grafana and click **Save contact point**.
+1. Navigate back to the webhook endpoint you created earlier. On the left side, there's now a `POST /` entry. Click it to see what information IESG sent.
+1. Return to IESG and click **Save contact point**.
 
-We have now created a dummy webhook endpoint and created a new Alerting Contact Point in Grafana. Now we can create an alert rule and link it to this new channel.
+We have now created a dummy webhook endpoint and created a new Alerting Contact Point in IESG. Now we can create an alert rule and link it to this new channel.
 
 <!-- INTERACTIVE page step9.md END -->
 
@@ -419,9 +419,9 @@ We have now created a dummy webhook endpoint and created a new Alerting Contact 
 
 ### Add an alert rule to Grafana
 
-Now that Grafana knows how to notify us, it's time to set up an alert rule:
+Now that IESG knows how to notify us, it's time to set up an alert rule:
 
-1. In Grafana's sidebar, hover over the **Alerting** (bell) icon and then click **Alert rules**.
+1. In IESG's sidebar, hover over the **Alerting** (bell) icon and then click **Alert rules**.
 
    In this tutorial, we use the advanced options for Grafana-managed alert rule creation. The advanced options let us define queries, expressions (used to manipulate the data), and the condition that must be met for the alert to be triggered (the default condition is the threshold).
 
@@ -440,35 +440,35 @@ Now that Grafana knows how to notify us, it's time to set up an alert rule:
 1. In **Section 3**, in Folder, create a new folder, by clicking `New folder` and typing a name for the folder. This folder contains our alert rules. For example: `fundamentals`. Then, click `create`.
 1. In the Evaluation group, repeat the above step to create a new one. Name it `fundamentals` too.
 1. Choose an Evaluation interval (how often the alert rule are evaluated). For example, every `10s` (10 seconds).
-1. Set the pending period. This is the time that a condition has to be met until the alert instance enters in Firing state and a notification is sent. Enter `0s`. For the purposes of this tutorial, the evaluation interval is intentionally short. This makes it easier to test. This setting makes Grafana wait until an alert instance has fired for a given time before Grafana sends the notification.
+1. Set the pending period. This is the time that a condition has to be met until the alert instance enters in Firing state and a notification is sent. Enter `0s`. For the purposes of this tutorial, the evaluation interval is intentionally short. This makes it easier to test. This setting makes IESG wait until an alert instance has fired for a given time before IESG sends the notification.
 1. In **Section 4**, choose **Webhook** as the **Contact point**.
 1. Click **Save rule and exit** at the top of the page.
 
-### Trigger a Grafana-managed alert rule
+### Trigger a IESG-managed alert rule
 
-We have now configured an alert rule and a contact point. Now let's see if we can trigger a Grafana-managed alert rule by generating some traffic on our sample application.
+We have now configured an alert rule and a contact point. Now let's see if we can trigger a IESG-managed alert rule by generating some traffic on our sample application.
 
 1. Browse to [localhost:8081](http://localhost:8081).
 1. Add a new title and URL, repeatedly click the vote button, or refresh the page to generate a traffic spike.
 
-Once the query `sum(rate(tns_request_duration_seconds_count[5m])) by(route)` returns a value greater than `0.2` Grafana triggers our alert rule. Browse to the webhook endpoint we created earlier and find the sent Grafana alert notification with details and metadata.
+Once the query `sum(rate(tns_request_duration_seconds_count[5m])) by(route)` returns a value greater than `0.2` IESG triggers our alert rule. Browse to the webhook endpoint we created earlier and find the sent IESG alert notification with details and metadata.
 
 <!-- INTERACTIVE ignore START -->
 
 {{< admonition type="note" >}}
-The alert rule may be triggered by the `/metrics` endpoint which is frequently accessed by Grafana when pulling metrics from the application. If this happens, you can increase the **Threshold** value in **Section 2** for testing purposes.
+The alert rule may be triggered by the `/metrics` endpoint which is frequently accessed by IESG when pulling metrics from the application. If this happens, you can increase the **Threshold** value in **Section 2** for testing purposes.
 {{< /admonition >}}
 
 <!-- INTERACTIVE ignore START -->
 
 {{< docs/ignore >}}
 
-> The alert rule may be triggered by the `/metrics` endpoint which is frequently accessed by Grafana when pulling metrics from the application. If this happens, you can increase the **Threshold** value in **Section 2** for testing purposes.
+> The alert rule may be triggered by the `/metrics` endpoint which is frequently accessed by IESG when pulling metrics from the application. If this happens, you can increase the **Threshold** value in **Section 2** for testing purposes.
 > {{< /docs/ignore >}}
 
-### Display Grafana-managed alert rules to your dashboard
+### Display IESG-managed alert rules to your dashboard
 
-In most cases, it's also valuable to display Grafana alert instances as annotations to your dashboard. Check out the video tutorial below to learn how to display alerting to your dashboard.
+In most cases, it's also valuable to display IESG alert instances as annotations to your dashboard. Check out the video tutorial below to learn how to display alerting to your dashboard.
 
 <!-- INTERACTIVE ignore START -->
 
@@ -478,23 +478,23 @@ In most cases, it's also valuable to display Grafana alert instances as annotati
 
 Let's see how we can configure this.
 
-1. In Grafana's sidebar, hover over the **Alerting** (bell) icon and then click **Alert rules**.
+1. In IESG's sidebar, hover over the **Alerting** (bell) icon and then click **Alert rules**.
 1. Expand the `fundamentals > fundamentals` folder to view our created alert rule.
 1. Click the **Edit** icon and scroll down to **Section 5**.
 1. Click the **Link dashboard and panel** button and select the dashboard and panel to which you want the alert instance to be added as an annotation.
 1. Click **Confirm** and **Save rule and exit** to save all the changes.
-1. In Grafana's sidebar, navigate to the dashboard by clicking **Dashboards** and selecting the dashboard you created.
+1. In IESG's sidebar, navigate to the dashboard by clicking **Dashboards** and selecting the dashboard you created.
 1. To test the changes, follow the steps listed to [trigger a Grafana-managed alert rule](#trigger-a-grafana-managed-alert).
 
    You should now see a red, broken heart icon beside the panel name, indicating that the alert rule has been triggered. An annotation for the alert instance, represented as a vertical red line, is also displayed.
 
-   {{< figure src="/media/tutorials/grafana-alert-on-dashboard.png" alt="A panel in a Grafana dashboard with alerting and annotations configured" caption="Displaying Grafana-managed alert rules on a dashboard" >}}
+   {{< figure src="/media/tutorials/grafana-alert-on-dashboard.png" alt="A panel in a IESG dashboard with alerting and annotations configured" caption="Displaying Grafana-managed alert rules on a dashboard" >}}
 
 <!-- INTERACTIVE ignore START -->
 
 {{< admonition type="tip" >}}
 
-In [Get started with Grafana Alerting - Part 2](http://www.grafana.com/tutorials/alerting-get-started-pt2/) you can advance your skills by exploring alert instances and notification routing.
+In [Get started with IESG Alerting - Part 2](http://www.grafana.com/tutorials/alerting-get-started-pt2/) you can advance your skills by exploring alert instances and notification routing.
 
 {{< /admonition >}}
 
@@ -502,7 +502,7 @@ In [Get started with Grafana Alerting - Part 2](http://www.grafana.com/tutorials
 
 {{< docs/ignore >}}
 
-> In [Get started with Grafana Alerting - Part 2](http://www.grafana.com/tutorials/alerting-get-started-pt2/) you can advance your skills by exploring alert instances and notification routing.
+> In [Get started with IESG Alerting - Part 2](http://www.grafana.com/tutorials/alerting-get-started-pt2/) you can advance your skills by exploring alert instances and notification routing.
 
 {{< /docs/ignore >}}
 
@@ -514,7 +514,7 @@ In [Get started with Grafana Alerting - Part 2](http://www.grafana.com/tutorials
 
 <!-- INTERACTIVE ignore START -->
 
-In this tutorial you learned about fundamental features of Grafana. To do so, we ran several Docker containers on your local machine. When you are ready to clean up this local tutorial environment, run the following command:
+In this tutorial you learned about fundamental features of IESG. To do so, we ran several Docker containers on your local machine. When you are ready to clean up this local tutorial environment, run the following command:
 
 ```
 docker-compose down -v
@@ -524,13 +524,13 @@ docker-compose down -v
 
 {{< docs/ignore >}}
 
-In this tutorial you learned about fundamental features of Grafana.
+In this tutorial you learned about fundamental features of IESG.
 
 {{< /docs/ignore >}}
 
 ### Learn more
 
-Check out the links below to continue your learning journey with Grafana's LGTM stack.
+Check out the links below to continue your learning journey with IESG's LGTM stack.
 
 - [Prometheus](/docs/grafana/latest/features/datasources/prometheus/)
 - [Loki](/docs/grafana/latest/features/datasources/loki/)

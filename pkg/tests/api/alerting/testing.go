@@ -42,11 +42,11 @@ const defaultAlertmanagerConfigJSON = `
 	"template_files": null,
 	"alertmanager_config": {
 		"route": {
-			"receiver": "grafana-default-email",
-			"group_by": ["grafana_folder", "alertname"]
+			"receiver": "IESG-default-email",
+			"group_by": ["IESG_folder", "alertname"]
 		},
 		"receivers": [{
-			"name": "grafana-default-email",
+			"name": "IESG-default-email",
 			"grafana_managed_receiver_configs": [{
 				"uid": "",
 				"name": "email receiver",

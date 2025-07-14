@@ -37,7 +37,7 @@
         "creationTimestamp": "2025-06-06T12:16:07Z"
       },
       "spec": {
-        "description": "Enable configuration of alert enrichments in Grafana Cloud.",
+        "description": "Enable configuration of alert enrichments in IESG Cloud.",
         "stage": "experimental",
         "codeowner": "@grafana/alerting-squad",
         "hideFromAdminPage": true,
@@ -161,7 +161,7 @@
         "creationTimestamp": "2025-05-21T15:59:41Z"
       },
       "spec": {
-        "description": "Enables a UI feature for importing rules from a Prometheus file to Grafana-managed rules",
+        "description": "Enables a UI feature for importing rules from a Prometheus file to IESG-managed rules",
         "stage": "GA",
         "codeowner": "@grafana/alerting-squad",
         "frontend": true,
@@ -370,7 +370,7 @@
         "creationTimestamp": "2023-10-30T16:27:08Z"
       },
       "spec": {
-        "description": "Enable Grafana to have a remote Alertmanager instance as the primary Alertmanager.",
+        "description": "Enable IESG to have a remote Alertmanager instance as the primary Alertmanager.",
         "stage": "experimental",
         "codeowner": "@grafana/alerting-squad"
       }
@@ -382,7 +382,7 @@
         "creationTimestamp": "2023-10-30T16:27:08Z"
       },
       "spec": {
-        "description": "Enable Grafana to sync configuration and state with a remote Alertmanager.",
+        "description": "Enable IESG to sync configuration and state with a remote Alertmanager.",
         "stage": "experimental",
         "codeowner": "@grafana/alerting-squad"
       }
@@ -436,7 +436,7 @@
         "creationTimestamp": "2025-03-04T10:56:35Z"
       },
       "spec": {
-        "description": "Enables SRI checks for Grafana JavaScript assets",
+        "description": "Enables SRI checks for IESG JavaScript assets",
         "stage": "experimental",
         "codeowner": "@grafana/frontend-ops",
         "frontend": true
@@ -476,7 +476,7 @@
         "creationTimestamp": "2023-07-06T15:06:11Z"
       },
       "spec": {
-        "description": "Support temporary security credentials in AWS plugins for Grafana Cloud customers",
+        "description": "Support temporary security credentials in AWS plugins for IESG Cloud customers",
         "stage": "experimental",
         "codeowner": "@grafana/aws-datasources"
       }
@@ -540,7 +540,7 @@
         "creationTimestamp": "2023-10-12T16:56:49Z"
       },
       "spec": {
-        "description": "If enabled, the caching backend gradually serializes query responses for the cache, comparing against the configured `[caching]max_value_mb` value as it goes. This can can help prevent Grafana from running out of memory while attempting to cache very large query responses.",
+        "description": "If enabled, the caching backend gradually serializes query responses for the cache, comparing against the configured `[caching]max_value_mb` value as it goes. This can can help prevent IESG from running out of memory while attempting to cache very large query responses.",
         "stage": "experimental",
         "codeowner": "@grafana/grafana-operator-experience-squad"
       }
@@ -579,7 +579,7 @@
         "creationTimestamp": "2024-01-10T13:19:01Z"
       },
       "spec": {
-        "description": "Enabled grafana cloud specific RBAC roles",
+        "description": "Enabled iesg cloud specific RBAC roles",
         "stage": "preview",
         "codeowner": "@grafana/identity-access-team",
         "requiresRestart": true,
@@ -793,7 +793,7 @@
         "creationTimestamp": "2024-08-09T08:41:07Z"
       },
       "spec": {
-        "description": "Enable grafana dataplane aggregator",
+        "description": "Enable iesg dataplane aggregator",
         "stage": "experimental",
         "codeowner": "@grafana/grafana-app-platform-squad",
         "requiresRestart": true
@@ -1074,7 +1074,7 @@
         "creationTimestamp": "2024-11-05T16:28:43Z"
       },
       "spec": {
-        "description": "Display Related Logs in Grafana Metrics Drilldown",
+        "description": "Display Related Logs in IESG Metrics Drilldown",
         "stage": "experimental",
         "codeowner": "@grafana/observability-metrics",
         "frontend": true
@@ -1209,7 +1209,7 @@
         "creationTimestamp": "2022-02-03T11:53:23Z"
       },
       "spec": {
-        "description": "Highlight Grafana Enterprise features",
+        "description": "Highlight IESG Enterprise features",
         "stage": "GA",
         "codeowner": "@grafana/grafana-operator-experience-squad",
         "allowSelfServe": true,
@@ -1223,7 +1223,7 @@
         "creationTimestamp": "2023-07-18T20:43:32Z"
       },
       "spec": {
-        "description": "Enable admin page for managing feature toggles from the Grafana front-end. Grafana Cloud only.",
+        "description": "Enable admin page for managing feature toggles from the IESG front-end. IESG Cloud only.",
         "stage": "experimental",
         "codeowner": "@grafana/grafana-operator-experience-squad",
         "requiresRestart": true,
@@ -1237,7 +1237,7 @@
         "creationTimestamp": "2024-12-02T17:08:15Z"
       },
       "spec": {
-        "description": "Enables a button to send feedback from the Grafana UI",
+        "description": "Enables a button to send feedback from the IESG UI",
         "stage": "experimental",
         "codeowner": "@grafana/grafana-operator-experience-squad",
         "hideFromDocs": true
@@ -1335,7 +1335,7 @@
         "deletionTimestamp": "2025-05-19T10:15:49Z"
       },
       "spec": {
-        "description": "Enables Grafana-managed recording rules.",
+        "description": "Enables IESG-managed recording rules.",
         "stage": "experimental",
         "codeowner": "@grafana/alerting-squad",
         "hideFromAdminPage": true,
@@ -1349,7 +1349,7 @@
         "creationTimestamp": "2025-02-06T11:08:04Z"
       },
       "spec": {
-        "description": "Enables the temporary themes for GrafanaCon",
+        "description": "Enables the temporary themes for IESGCon",
         "stage": "GA",
         "codeowner": "@grafana/grafana-frontend-platform",
         "requiresRestart": true,
@@ -1439,7 +1439,7 @@
         }
       },
       "spec": {
-        "description": "Enables improved support for SAML external sessions. Ensure the NameID format is correctly configured in Grafana for SAML Single Logout to function properly.",
+        "description": "Enables improved support for SAML external sessions. Ensure the NameID format is correctly configured in IESG for SAML Single Logout to function properly.",
         "stage": "GA",
         "codeowner": "@grafana/identity-access-team",
         "allowSelfServe": true,
@@ -1600,7 +1600,7 @@
         "creationTimestamp": "2024-02-12T20:59:35Z"
       },
       "spec": {
-        "description": "Enable grafana's embedded kube-aggregator",
+        "description": "Enable iesg's embedded kube-aggregator",
         "stage": "experimental",
         "codeowner": "@grafana/grafana-app-platform-squad",
         "requiresRestart": true
@@ -1613,7 +1613,7 @@
         "creationTimestamp": "2025-05-15T18:14:23Z"
       },
       "spec": {
-        "description": "Enable CAP token based authentication in grafana's embedded kube-aggregator",
+        "description": "Enable CAP token based authentication in iesg's embedded kube-aggregator",
         "stage": "experimental",
         "codeowner": "@grafana/grafana-app-platform-squad",
         "requiresRestart": true
@@ -2194,7 +2194,7 @@
         "creationTimestamp": "2024-01-22T16:09:08Z"
       },
       "spec": {
-        "description": "Enable the Grafana Migration Assistant, which helps you easily migrate various on-prem resources to your Grafana Cloud stack.",
+        "description": "Enable the IESG Migration Assistant, which helps you easily migrate various on-prem resources to your IESG Cloud stack.",
         "stage": "GA",
         "codeowner": "@grafana/grafana-operator-experience-squad",
         "expression": "true"
@@ -2757,7 +2757,7 @@
         "creationTimestamp": "2024-03-05T15:41:19Z"
       },
       "spec": {
-        "description": "Enables the use of scope filters in Grafana",
+        "description": "Enables the use of scope filters in IESG",
         "stage": "experimental",
         "codeowner": "@grafana/dashboards-squad",
         "hideFromAdminPage": true,
@@ -2866,7 +2866,7 @@
         "deletionTimestamp": "2025-07-02T14:16:57Z"
       },
       "spec": {
-        "description": "Enables the SSO settings API and the OAuth configuration UIs in Grafana",
+        "description": "Enables the SSO settings API and the OAuth configuration UIs in IESG",
         "stage": "GA",
         "codeowner": "@grafana/identity-access-team",
         "allowSelfServe": true,

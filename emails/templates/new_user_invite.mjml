@@ -6,7 +6,7 @@
   <mj-head>
     <!-- ⬇ Don't forget to specify an email subject below! ⬇ -->
     <mj-title>
-      {{ Subject .Subject .TemplateData "{{ .InvitedBy }} has invited you to join Grafana" }}
+      {{ Subject .Subject .TemplateData "{{ .InvitedBy }} has invited you to join IESG" }}
     </mj-title>
     <mj-include path="./partials/layout/head.mjml" />
   </mj-head>

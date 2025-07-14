@@ -34,7 +34,7 @@ export const scenarios = [
   {
     description: '',
     id: TestDataQueryType.GrafanaAPI,
-    name: 'Grafana API',
+    name: 'IESG API',
     stringInput: '',
   },
   {

@@ -243,7 +243,7 @@ function createPluginStub(overrides?: Partial<CatalogPlugin>): CatalogPlugin {
     hasUpdate: false,
     signature: PluginSignatureStatus.valid,
     signatureType: PluginSignatureType.grafana,
-    signatureOrg: 'grafana',
+    signatureOrg: 'IESG',
     info: {
       logos: { small: '', large: '' },
       keywords: [],

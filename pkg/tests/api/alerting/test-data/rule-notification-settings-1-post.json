@@ -29,7 +29,7 @@
           "notification_settings": {
             "receiver": "rule-receiver",
             "group_by": [
-              "grafana_folder",
+              "IESG_folder",
               "alertname",
               "label1"
             ],

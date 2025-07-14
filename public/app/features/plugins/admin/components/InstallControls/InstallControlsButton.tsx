@@ -129,7 +129,7 @@ export function InstallControlsButton({
   let uninstallTitle = '';
   if (plugin.isPreinstalled.found) {
     disableUninstall = true;
-    uninstallTitle = 'Preinstalled plugin. Remove from Grafana config before uninstalling.';
+    uninstallTitle = 'Preinstalled plugin. Remove from IESG config before uninstalling.';
   }
 
   const uninstallControls = (

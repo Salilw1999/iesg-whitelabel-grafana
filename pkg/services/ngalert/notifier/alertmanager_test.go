@@ -173,7 +173,7 @@ func TestAlertmanager_ApplyConfig(t *testing.T) {
 			config: &definitions.PostableUserConfig{
 				AlertmanagerConfig: basicConfig(),
 				TemplateFiles: map[string]string{
-					"grafana-template": "{{ define \"grafana.title\" }}Alert{{ end }}",
+					"iesg-template": "{{ define \"iesg.title\" }}Alert{{ end }}",
 				},
 			},
 			skipInvalid: false,
@@ -183,7 +183,7 @@ func TestAlertmanager_ApplyConfig(t *testing.T) {
 			config: &definitions.PostableUserConfig{
 				AlertmanagerConfig: basicConfig(),
 				TemplateFiles: map[string]string{
-					"grafana-template": "{{ define \"grafana.title\" }}Grafana Alert{{ end }}",
+					"iesg-template": "{{ define \"iesg.title\" }}IESG Alert{{ end }}",
 				},
 				ExtraConfigs: []definitions.ExtraConfiguration{
 					{

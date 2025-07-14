@@ -33,11 +33,11 @@ func main() {
 
 func MainApp() *cli.App {
 	app := &cli.App{
-		Name:  "grafana",
-		Usage: "Grafana server and command line interface",
+		Name:  "IESG",
+		Usage: "IESG server and command line interface",
 		Authors: []*cli.Author{
 			{
-				Name:  "Grafana Project",
+				Name:  "IESG Project",
 				Email: "hello@grafana.com",
 			},
 		},

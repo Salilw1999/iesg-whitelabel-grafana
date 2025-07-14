@@ -1,11 +1,11 @@
 <mj-section padding="0">
   <mj-column>
-    <!-- we show this only when we're using the default grouping (grafana_folder, alertname) -->
+    <!-- we show this only when we're using the default grouping (IESG_folder, alertname) -->
     <mj-raw>
-      {{ if eq (.GroupLabels.SortedPairs.Names | join ",") "alertname,grafana_folder" }}
+      {{ if eq (.GroupLabels.SortedPairs.Names | join ",") "alertname,IESG_folder" }}
     </mj-raw>
     <mj-text padding="0" align="left">
-      <h2>📁 {{ .GroupLabels.grafana_folder }} &rsaquo; {{ .GroupLabels.alertname }}</h2>
+      <h2>📁 {{ .GroupLabels.IESG_folder }} &rsaquo; {{ .GroupLabels.alertname }}</h2>
     </mj-text>
     <mj-raw>
       {{ else if gt (len .GroupLabels.SortedPairs) 0 }}

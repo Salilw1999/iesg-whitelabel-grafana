@@ -325,11 +325,11 @@ func (c *PostableRuleGroupConfig) validate() error {
 	}
 
 	if hasGrafRules && hasLotexRules {
-		return fmt.Errorf("cannot mix Grafana & Prometheus style rules")
+		return fmt.Errorf("cannot mix IESG & Prometheus style rules")
 	}
 
 	if hasGrafRules && (len(c.SourceTenants) > 0 || c.EvaluationDelay != nil || c.QueryOffset != nil || c.AlignEvaluationTimeOnInterval || c.Limit > 0) {
-		return fmt.Errorf("fields source_tenants, evaluation_delay, query_offset, align_evaluation_time_on_interval and limit are not supported for Grafana rules")
+		return fmt.Errorf("fields source_tenants, evaluation_delay, query_offset, align_evaluation_time_on_interval and limit are not supported for IESG rules")
 	}
 	return nil
 }
@@ -386,7 +386,7 @@ func (c *GettableRuleGroupConfig) validate() error {
 	}
 
 	if hasGrafRules && hasLotexRules {
-		return fmt.Errorf("cannot mix Grafana & Prometheus style rules")
+		return fmt.Errorf("cannot mix IESG & Prometheus style rules")
 	}
 	return nil
 }
@@ -439,7 +439,7 @@ func (n *PostableExtendedRuleNode) validate() error {
 
 	if n.GrafanaManagedAlert != nil {
 		if n.ApiRuleNode != nil && (n.Expr != "" || n.Record != "") {
-			return fmt.Errorf("cannot have both Prometheus style rules and Grafana rules together")
+			return fmt.Errorf("cannot have both Prometheus style rules and IESG rules together")
 		}
 	}
 	return nil
@@ -475,7 +475,7 @@ func (n *GettableExtendedRuleNode) validate() error {
 
 	if n.GrafanaManagedAlert != nil {
 		if n.ApiRuleNode != nil && (n.Expr != "" || n.Record != "") {
-			return fmt.Errorf("cannot have both Prometheus style rules and Grafana rules together")
+			return fmt.Errorf("cannot have both Prometheus style rules and IESG rules together")
 		}
 	}
 	return nil
@@ -524,9 +524,9 @@ type AlertRuleNotificationSettings struct {
 	// use the special value '...' as the sole label name.
 	// This effectively disables aggregation entirely, passing through all alerts as-is. This is unlikely to be what
 	// you want, unless you have a very low alert volume or your upstream notification system performs its own grouping.
-	// Must include 'alertname' and 'grafana_folder' if not using '...'.
-	// default: ["alertname", "grafana_folder"]
-	// example: ["alertname", "grafana_folder", "cluster"]
+	// Must include 'alertname' and 'IESG_folder' if not using '...'.
+	// default: ["alertname", "IESG_folder"]
+	// example: ["alertname", "IESG_folder", "cluster"]
 	GroupBy []string `json:"group_by,omitempty"`
 
 	// Override how long to initially wait to send a notification for a group of alerts. Allows to wait for an

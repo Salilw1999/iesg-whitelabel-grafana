@@ -19,7 +19,7 @@ func TestEmailIntegrationTest(t *testing.T) {
 		cfg.StaticRootPath = "../../../public/"
 		cfg.Smtp.TemplatesPatterns = []string{"emails/*.html", "emails/*.txt"}
 		cfg.Smtp.FromAddress = "from@address.com"
-		cfg.Smtp.FromName = "Grafana Admin"
+		cfg.Smtp.FromName = "IESG Admin"
 		cfg.Smtp.ContentTypes = []string{"text/html", "text/plain"}
 		ns, err := ProvideService(newBus(t), cfg, NewFakeMailer(), nil)
 		require.NoError(t, err)
@@ -57,7 +57,7 @@ func TestEmailIntegrationTest(t *testing.T) {
 			require.NoError(t, err)
 
 			sentMsg := <-ns.mailQueue
-			require.Equal(t, "\"Grafana Admin\" <from@address.com>", sentMsg.From)
+			require.Equal(t, "\"IESG Admin\" <from@address.com>", sentMsg.From)
 			require.Equal(t, "asdf@asdf.com", sentMsg.To[0])
 			require.Equal(t, "[CRITICAL] Imaginary timeseries alert", sentMsg.Subject)
 			require.Contains(t, sentMsg.Body["text/html"], "<title>[CRITICAL] Imaginary timeseries alert</title>")

@@ -2,7 +2,7 @@ import { dateTime, toDataFrameDTO } from '@grafana/data';
 
 import { doTimeRegionQuery } from './timeRegions';
 
-describe('grafana data source', () => {
+describe('IESG data source', () => {
   it('supports time region query', () => {
     const frame = doTimeRegionQuery(
       'test',

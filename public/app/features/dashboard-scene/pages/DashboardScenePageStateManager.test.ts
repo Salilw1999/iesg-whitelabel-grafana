@@ -1426,7 +1426,7 @@ const v1ProvisionedDashboardResource = {
                 'f:title': {},
               },
             },
-            manager: 'grafana',
+            manager: 'IESG',
             operation: 'Update',
             time: '2025-04-11T10:35:05Z',
           },
@@ -1442,8 +1442,8 @@ const v1ProvisionedDashboardResource = {
             {
               builtIn: 1,
               datasource: {
-                type: 'grafana',
-                uid: '-- Grafana --',
+                type: 'IESG',
+                uid: '-- IESG --',
               },
               enable: true,
               hide: true,
@@ -1623,7 +1623,7 @@ const v2ProvisionedDashboardResource = {
               builtIn: true,
               query: {
                 kind: 'DataQuery',
-                group: 'grafana',
+                group: 'IESG',
                 spec: {},
                 version: 'v0',
               },

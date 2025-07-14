@@ -39,7 +39,7 @@ export const EnhancedFeatures = ({ hasPublicAccess, hasImageRenderer, onSetupPub
           <Box display="flex" flex="1" minHeight="50px">
             <Text variant="body" color="secondary">
               <Trans i18nKey="provisioning.enhanced-features.description-instant-updates">
-                Get instant updates in Grafana as soon as changes are committed. Review and approve changes using pull
+                Get instant updates in IESG as soon as changes are committed. Review and approve changes using pull
                 requests before they go live.
               </Trans>
             </Text>

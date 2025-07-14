@@ -65,7 +65,7 @@ func TestIntegrationAlertRulePermissions(t *testing.T) {
 		Login:          "grafana",
 	})
 
-	apiClient := newAlertingApiClient(grafanaListedAddr, "grafana", "password")
+	apiClient := newAlertingApiClient(grafanaListedAddr, "IESG", "password")
 
 	// Create the namespace we'll save our alerts to.
 	apiClient.CreateFolder(t, "folder1", "folder1")
@@ -370,7 +370,7 @@ func TestIntegrationAlertRuleNestedPermissions(t *testing.T) {
 		Login:          "grafana",
 	})
 
-	apiClient := newAlertingApiClient(grafanaListedAddr, "grafana", "password")
+	apiClient := newAlertingApiClient(grafanaListedAddr, "IESG", "password")
 
 	// Create the namespace we'll save our alerts to.
 	apiClient.CreateFolder(t, "folder1", "folder1")
@@ -723,10 +723,10 @@ func TestAlertRulePostExport(t *testing.T) {
 	userID := createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 		DefaultOrgRole: string(org.RoleEditor),
 		Password:       "password",
-		Login:          "grafana",
+		Login:          "IESG",
 	})
 
-	apiClient := newAlertingApiClient(grafanaListedAddr, "grafana", "password")
+	apiClient := newAlertingApiClient(grafanaListedAddr, "IESG", "password")
 
 	// Create the namespace we'll save our alerts to.
 	apiClient.CreateFolder(t, "folder1", "folder1")
@@ -1050,10 +1050,10 @@ func TestIntegrationRulerRulesFilterByDashboard(t *testing.T) {
 	createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 		DefaultOrgRole: string(org.RoleEditor),
 		Password:       "password",
-		Login:          "grafana",
+		Login:          "IESG",
 	})
 
-	apiClient := newAlertingApiClient(grafanaListedAddr, "grafana", "password")
+	apiClient := newAlertingApiClient(grafanaListedAddr, "IESG", "password")
 
 	dashboardUID := "default"
 	// Create the namespace under default organisation (orgID = 1) where we'll save our alerts to.
@@ -1138,7 +1138,7 @@ func TestIntegrationRulerRulesFilterByDashboard(t *testing.T) {
 				"__dashboardUid__": "%s",
 				"__panelId__": "1"
 			},
-			"grafana_alert": {
+			"IESG_alert": {
 				"title": "AlwaysFiring",
 				"condition": "A",
 				"data": [{
@@ -1159,7 +1159,7 @@ func TestIntegrationRulerRulesFilterByDashboard(t *testing.T) {
 				"updated": "2021-02-21T01:10:30Z",
 				"updated_by": {
 					"uid": "uid",
-					"name": "grafana"
+					"name": "IESG"
 				},
 				"intervalSeconds": 60,
 				"is_paused": false,
@@ -1181,7 +1181,7 @@ func TestIntegrationRulerRulesFilterByDashboard(t *testing.T) {
 			"expr": "",
 			"for":"0s",
             "keep_firing_for": "0s",
-			"grafana_alert": {
+			"IESG_alert": {
 				"title": "AlwaysFiringButSilenced",
 				"condition": "A",
 				"data": [{
@@ -1202,7 +1202,7 @@ func TestIntegrationRulerRulesFilterByDashboard(t *testing.T) {
 				"updated": "2021-02-21T01:10:30Z",
 				"updated_by": {
 					"uid": "uid",
-					"name": "grafana"
+					"name": "IESG"
 				},
 				"intervalSeconds": 60,
 				"is_paused": false,
@@ -1236,7 +1236,7 @@ func TestIntegrationRulerRulesFilterByDashboard(t *testing.T) {
 				"__dashboardUid__": "%s",
 				"__panelId__": "1"
 			},
-			"grafana_alert": {
+			"IESG_alert": {
 				"title": "AlwaysFiring",
 				"condition": "A",
 				"data": [{
@@ -1257,7 +1257,7 @@ func TestIntegrationRulerRulesFilterByDashboard(t *testing.T) {
 				"updated": "2021-02-21T01:10:30Z",
 				"updated_by": {
 					"uid": "uid",
-					"name": "grafana"
+					"name": "IESG"
 				},
 				"intervalSeconds": 60,
 				"is_paused": false,
@@ -1421,10 +1421,10 @@ func TestIntegrationRuleGroupSequence(t *testing.T) {
 	createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 		DefaultOrgRole: string(org.RoleEditor),
 		Password:       "password",
-		Login:          "grafana",
+		Login:          "IESG",
 	})
 
-	client := newAlertingApiClient(grafanaListedAddr, "grafana", "password")
+	client := newAlertingApiClient(grafanaListedAddr, "IESG", "password")
 	parentFolderUID := util.GenerateShortUID()
 	client.CreateFolder(t, parentFolderUID, "parent")
 	folderUID := util.GenerateShortUID()
@@ -4501,7 +4501,7 @@ func TestIntegrationRuleNotificationSettings(t *testing.T) {
 				groupBy = append(groupBy, string(name))
 			}
 			slices.Sort(groupBy)
-			assert.EqualValues(c, []string{"alertname", "grafana_folder"}, groupBy)
+			assert.EqualValues(c, []string{"alertname", "IESG_folder"}, groupBy)
 			if !canContinue {
 				return
 			}
@@ -4671,10 +4671,10 @@ func TestIntegrationRuleVersions(t *testing.T) {
 	createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 		DefaultOrgRole: string(org.RoleEditor),
 		Password:       "password",
-		Login:          "grafana",
+		Login:          "IESG",
 	})
 
-	apiClient := newAlertingApiClient(grafanaListedAddr, "grafana", "password")
+	apiClient := newAlertingApiClient(grafanaListedAddr, "IESG", "password")
 
 	// Create the namespace we'll save our alerts to.
 	apiClient.CreateFolder(t, "folder1", "folder1")

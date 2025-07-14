@@ -17,7 +17,7 @@ func (ms *ModuleServer) initMemberlistKV() (services.Service, error) {
 	logger := log.New("memberlist")
 
 	dnsProviderReg := prometheus.WrapRegistererWithPrefix(
-		"grafana",
+		"IESG",
 		prometheus.WrapRegistererWith(
 			prometheus.Labels{"component": "memberlist"},
 			ms.registerer,

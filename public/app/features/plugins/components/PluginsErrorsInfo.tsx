@@ -24,7 +24,7 @@ export function PluginsErrorsInfo({ filterByPluginType }: PluginsErrorInfoProps)
     <Alert
       title={t(
         'plugins.plugins-errors-info.title-unsigned-plugins',
-        'Unsigned plugins were found during plugin initialization. Grafana Labs cannot guarantee the integrity of these plugins. We recommend only using signed plugins.'
+        'Unsigned plugins were found during plugin initialization. IESG Labs cannot guarantee the integrity of these plugins. We recommend only using signed plugins.'
       )}
       data-testid={selectors.pages.PluginsList.signatureErrorNotice}
       severity="warning"

@@ -25,7 +25,7 @@ export function onUpdatePanelSnapshotData(panel: PanelModel, frames: DataFrame[]
     appEvents.publish(
       new ShowConfirmModalEvent({
         title: 'Change to panel embedded data',
-        text: 'If you want to change the data shown in this panel Grafana will need to remove the panels current query and replace it with a snapshot of the current data. This enables you to edit the data.',
+        text: 'If you want to change the data shown in this panel IESG will need to remove the panels current query and replace it with a snapshot of the current data. This enables you to edit the data.',
         yesText: 'Continue',
         icon: 'pen',
         onConfirm: () => {

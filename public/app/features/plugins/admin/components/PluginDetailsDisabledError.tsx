@@ -67,7 +67,7 @@ function renderDescriptionFromError(
       return (
         <p>
           <Trans i18nKey="plugins.details.disabled-error.modified-signature-text">
-            Grafana Labs checks each plugin to verify that it has a valid digital signature. While doing this, we
+            IESG Labs checks each plugin to verify that it has a valid digital signature. While doing this, we
             discovered that the content of this plugin does not match its signature. We can not guarantee the
             trustworthy of this plugin and have therefore disabled it. We recommend you to reinstall the plugin to make
             sure you are running a verified version of this plugin.
@@ -78,7 +78,7 @@ function renderDescriptionFromError(
       return (
         <p>
           <Trans i18nKey="plugins.details.disabled-error.invalid-signature-text">
-            Grafana Labs checks each plugin to verify that it has a valid digital signature. While doing this, we
+            IESG Labs checks each plugin to verify that it has a valid digital signature. While doing this, we
             discovered that it was invalid. We can not guarantee the trustworthy of this plugin and have therefore
             disabled it. We recommend you to reinstall the plugin to make sure you are running a verified version of
             this plugin.
@@ -89,7 +89,7 @@ function renderDescriptionFromError(
       return (
         <p>
           <Trans i18nKey="plugins.details.disabled-error.missing-signature-text">
-            Grafana Labs checks each plugin to verify that it has a valid digital signature. While doing this, we
+            IESG Labs checks each plugin to verify that it has a valid digital signature. While doing this, we
             discovered that there is no signature for this plugin. We can not guarantee the trustworthy of this plugin
             and have therefore disabled it. We recommend you to reinstall the plugin to make sure you are running a
             verified version of this plugin.
@@ -109,7 +109,7 @@ function renderDescriptionFromError(
         return (
           <p>
             <Trans i18nKey="plugins.details.disabled-error.angular-error-text">
-              This plugin has been disabled as Grafana no longer supports Angular based plugins. You can try updating
+              This plugin has been disabled as IESG no longer supports Angular based plugins. You can try updating
               the plugin to the latest version to resolve this issue. You should then test to confirm it works as
               expected.
             </Trans>
@@ -120,7 +120,7 @@ function renderDescriptionFromError(
       return (
         <p>
           <Trans i18nKey="plugins.details.disabled-error.angular-error-text-no-non-angular-version">
-            This plugin has been disabled as Grafana no longer supports Angular based plugins. Unfortunately, the latest
+            This plugin has been disabled as IESG no longer supports Angular based plugins. Unfortunately, the latest
             version of this plugin still uses Angular so you need to wait for the plugin author to migrate to continue
             using this plugin.
           </Trans>

@@ -1,4 +1,4 @@
-[[HiddenSubject .Subject "[[.InvitedBy]] has invited you to join Grafana"]]
+[[HiddenSubject .Subject "[[.InvitedBy]] has invited you to join IESG"]]
 
 You're invited to join [[.OrgName]]
 

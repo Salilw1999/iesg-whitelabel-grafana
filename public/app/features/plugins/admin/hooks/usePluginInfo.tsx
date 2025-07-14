@@ -25,7 +25,7 @@ export const usePluginInfo = (plugin?: CatalogPlugin): PageInfoItem[] => {
   const latestVersion = plugin.latestVersion;
 
   if (installedVersion || latestVersion) {
-    const managedVersionText = 'Managed by Grafana';
+    const managedVersionText = 'Managed by IESG';
 
     const addInfo = (label: string, value: string | undefined) => {
       if (value) {

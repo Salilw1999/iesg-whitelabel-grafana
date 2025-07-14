@@ -189,12 +189,12 @@ var adminCommands = []*cli.Command{
 var Commands = []*cli.Command{
 	{
 		Name:        "plugins",
-		Usage:       "Manage plugins for grafana",
+		Usage:       "Manage plugins for IESG",
 		Subcommands: pluginCommands,
 	},
 	{
 		Name:        "admin",
-		Usage:       "Grafana admin commands",
+		Usage:       "IESG admin commands",
 		Subcommands: adminCommands,
 	},
 }

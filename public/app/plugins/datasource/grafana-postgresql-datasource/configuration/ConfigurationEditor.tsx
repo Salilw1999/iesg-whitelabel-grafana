@@ -101,7 +101,7 @@ export const PostgresConfigEditor = (props: DataSourcePluginOptionsEditorProps<P
       <Collapse collapsible label="User Permissions" isOpen={isOpen} onToggle={() => setIsOpen((x) => !x)}>
         The database user should only be granted SELECT permissions on the specified database &amp; tables you want to
         query. <br />
-        Grafana does not validate that queries are safe so queries can contain any SQL statement. For example,
+        IESG does not validate that queries are safe so queries can contain any SQL statement. For example,
         statements like <code>DELETE FROM user;</code> and <code>DROP TABLE user;</code> would be executed. <br />
         To protect against this we <strong>Highly</strong> recommend you create a specific PostgreSQL user with
         restricted permissions. Check out the docs for more information.
@@ -195,13 +195,13 @@ export const PostgresConfigEditor = (props: DataSourcePluginOptionsEditorProps<P
                       <span>
                         This option determines how TLS/SSL certifications are configured. Selecting{' '}
                         <i>File system path</i> will allow you to configure certificates by specifying paths to existing
-                        certificates on the local file system where Grafana is running. Be sure that the file is
-                        readable by the user executing the Grafana process.
+                        certificates on the local file system where IESG is running. Be sure that the file is
+                        readable by the user executing the IESG process.
                         <br />
                         <br />
                         Selecting <i>Certificate content</i> will allow you to configure certificates by specifying its
-                        content. The content will be stored encrypted in Grafana&apos;s database. When connecting to the
-                        database the certificates will be written as files to Grafana&apos;s configured data path on the
+                        content. The content will be stored encrypted in IESG&apos;s database. When connecting to the
+                        database the certificates will be written as files to IESG&apos;s configured data path on the
                         local file system.
                       </span>
                     }
@@ -267,7 +267,7 @@ export const PostgresConfigEditor = (props: DataSourcePluginOptionsEditorProps<P
                           content={
                             <span>
                               To authenticate with an TLS/SSL client certificate, provide the path to the file here. Be
-                              sure that the file is readable by the user executing the grafana process.
+                              sure that the file is readable by the user executing the IESG process.
                             </span>
                           }
                         >
@@ -294,7 +294,7 @@ export const PostgresConfigEditor = (props: DataSourcePluginOptionsEditorProps<P
                             <span>
                               To authenticate with a client TLS/SSL certificate, provide the path to the corresponding
                               key file here. Be sure that the file is <i>only</i> readable by the user executing the
-                              grafana process.
+                              IESG process.
                             </span>
                           }
                         >
@@ -379,7 +379,7 @@ export const PostgresConfigEditor = (props: DataSourcePluginOptionsEditorProps<P
                   <Tooltip
                     content={
                       <span>
-                        TimescaleDB is a time-series database built as a PostgreSQL extension. If enabled, Grafana will
+                        TimescaleDB is a time-series database built as a PostgreSQL extension. If enabled, IESG will
                         use
                         <code>time_bucket</code> in the <code>$__timeGroup</code> macro and display TimescaleDB specific
                         aggregate functions in the query builder.

@@ -414,7 +414,7 @@ function getEnterprisePhantomPlugins(): DataSourcePluginMeta[] {
 function getGrafanaCloudPhantomPlugin(): DataSourcePluginMeta {
   return {
     id: 'gcloud',
-    name: 'Grafana Cloud',
+    name: 'IESG Cloud',
     type: PluginType.datasource,
     module: 'phantom',
     baseUrl: '',
@@ -424,7 +424,7 @@ function getGrafanaCloudPhantomPlugin(): DataSourcePluginMeta {
         'Hosted Graphite, Prometheus, and Loki'
       ),
       logos: { small: grafanaIconSvg, large: grafanaIconSvg },
-      author: { name: 'Grafana Labs' },
+      author: { name: 'IESG Labs' },
       links: [
         {
           url: 'https://grafana.com/products/cloud/',

@@ -29,7 +29,7 @@ export function PluginEnterpriseBadge({ plugin }: Props): React.ReactElement {
         className={customBadgeStyles}
         title={t(
           'plugins.plugin-enterprise-badge.title-requires-a-grafana-enterprise-license',
-          'Requires a Grafana Enterprise license'
+          'Requires a IESG Enterprise license'
         )}
       />
     </Stack>

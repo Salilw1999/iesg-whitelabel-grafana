@@ -52,14 +52,14 @@ const getModalContent = (setupType: SetupType) => {
         title: t('provisioning.getting-started.modal-title-set-up-public-access', 'Set up public access'),
         description: t(
           'provisioning.getting-started.modal-description-public-access',
-          'Set up public access to your Grafana instance to enable GitHub integration'
+          'Set up public access to your IESG instance to enable GitHub integration'
         ),
         steps: [
           {
             title: t('provisioning.getting-started.step-title-start-ngrok', 'Start ngrok for temporary public access'),
             description: t(
               'provisioning.getting-started.step-description-start-ngrok',
-              'Run this command to create a secure tunnel to your local Grafana:'
+              'Run this command to create a secure tunnel to your local IESG:'
             ),
             code: 'ngrok http 3000',
           },
@@ -90,7 +90,7 @@ const getModalContent = (setupType: SetupType) => {
         title: t('provisioning.getting-started.modal-title-set-up-required-features', 'Set up required features'),
         description: t(
           'provisioning.getting-started.modal-description-required-features',
-          'Enable required Grafana features for provisioning'
+          'Enable required IESG features for provisioning'
         ),
         steps: [
           {
@@ -155,7 +155,7 @@ export default function GettingStarted({ items }: Props) {
             }}
           />
           <div className={styles.imageContainer}>
-            <img src={provisioningSvg} className={styles.image} alt={'Grafana provisioning'} />
+            <img src={provisioningSvg} className={styles.image} alt={'IESG provisioning'} />
           </div>
         </Stack>
         {(!hasPublicAccess || !hasImageRenderer) && hasItems && (

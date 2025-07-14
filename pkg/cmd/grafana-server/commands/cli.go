@@ -28,7 +28,7 @@ import (
 func ServerCommand(version, commit, enterpriseCommit, buildBranch, buildstamp string) *cli.Command {
 	return &cli.Command{
 		Name:  "server",
-		Usage: "run the grafana server",
+		Usage: "run the IESG server",
 		Flags: commonFlags,
 		Action: func(context *cli.Context) error {
 			return RunServer(standalone.BuildInfo{
@@ -169,6 +169,6 @@ func checkPrivileges() {
 		fmt.Fprintf(os.Stderr, "Error checking server process execution privilege. error: %s\n", err.Error())
 	}
 	if elevated {
-		fmt.Println("Grafana server is running with elevated privileges. This is not recommended")
+		fmt.Println("IESG server is running with elevated privileges. This is not recommended")
 	}
 }

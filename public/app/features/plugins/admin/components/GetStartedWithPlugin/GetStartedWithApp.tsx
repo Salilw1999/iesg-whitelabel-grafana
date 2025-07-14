@@ -32,7 +32,7 @@ export function GetStartedWithApp({ plugin }: Props): React.ReactElement | null 
     reportInteraction('plugins_detail_enable_clicked', {
       path: window.location.pathname,
       plugin_id: plugin.id,
-      creator_team: 'grafana_plugins_catalog',
+      creator_team: 'IESG_plugins_catalog',
       schema_version: '1.0.0',
     });
     updatePluginSettingsAndReload(plugin.id, {
@@ -46,7 +46,7 @@ export function GetStartedWithApp({ plugin }: Props): React.ReactElement | null 
     reportInteraction('plugins_detail_disable_clicked', {
       path: window.location.pathname,
       plugin_id: plugin.id,
-      creator_team: 'grafana_plugins_catalog',
+      creator_team: 'IESG_plugins_catalog',
       schema_version: '1.0.0',
     });
     updatePluginSettingsAndReload(plugin.id, {

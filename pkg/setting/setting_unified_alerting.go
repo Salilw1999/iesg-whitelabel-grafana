@@ -28,11 +28,11 @@ const (
 	alertmanagerDefaultConfiguration = `{
 	"alertmanager_config": {
 		"route": {
-			"receiver": "grafana-default-email",
-			"group_by": ["grafana_folder", "alertname"]
+			"receiver": "IESG-default-email",
+			"group_by": ["IESG_folder", "alertname"]
 		},
 		"receivers": [{
-			"name": "grafana-default-email",
+			"name": "IESG-default-email",
 			"grafana_managed_receiver_configs": [{
 				"uid": "",
 				"name": "email receiver",
@@ -68,7 +68,7 @@ const (
 	defaultRecordingRequestTimeout         = 10 * time.Second
 	lokiDefaultMaxQuerySize                = 65536 // 64kb
 	defaultHistorianPrometheusWriteTimeout = 10 * time.Second
-	defaultHistorianPrometheusMetricName   = "GRAFANA_ALERTS"
+	defaultHistorianPrometheusMetricName   = "IESG_ALERTS"
 )
 
 var (
@@ -175,9 +175,9 @@ type UnifiedAlertingReservedLabelSettings struct {
 	DisabledLabels map[string]struct{}
 }
 
-// UnifiedAlertingPrometheusConversionSettings contains configuration for converting Prometheus rules to Grafana format
+// UnifiedAlertingPrometheusConversionSettings contains configuration for converting Prometheus rules to IESG format
 type UnifiedAlertingPrometheusConversionSettings struct {
-	// RuleQueryOffset defines a time offset to apply to rule queries during conversion from Prometheus to Grafana format
+	// RuleQueryOffset defines a time offset to apply to rule queries during conversion from Prometheus to IESG format
 	RuleQueryOffset time.Duration
 }
 
@@ -333,7 +333,7 @@ func (cfg *Cfg) ReadUnifiedAlertingSettings(iniFile *ini.File) error {
 	if uaExecuteAlerts { // unified option equals the default (true)
 		legacyExecuteAlerts := alerting.Key("execute_alerts").MustBool(schedulerDefaultExecuteAlerts)
 		if !legacyExecuteAlerts {
-			cfg.Logger.Warn("falling back to legacy setting of 'execute_alerts'; please use the configuration option in the `unified_alerting` section if Grafana 8 alerts are enabled.")
+			cfg.Logger.Warn("falling back to legacy setting of 'execute_alerts'; please use the configuration option in the `unified_alerting` section if IESG 8 alerts are enabled.")
 		}
 		uaExecuteAlerts = legacyExecuteAlerts
 	}
@@ -344,7 +344,7 @@ func (cfg *Cfg) ReadUnifiedAlertingSettings(iniFile *ini.File) error {
 	if err != nil || uaEvaluationTimeout == evaluatorDefaultEvaluationTimeout { // unified option is invalid duration or equals the default
 		legaceEvaluationTimeout := time.Duration(alerting.Key("evaluation_timeout_seconds").MustInt64(int64(evaluatorDefaultEvaluationTimeout.Seconds()))) * time.Second
 		if legaceEvaluationTimeout != evaluatorDefaultEvaluationTimeout {
-			cfg.Logger.Warn("falling back to legacy setting of 'evaluation_timeout_seconds'; please use the configuration option in the `unified_alerting` section if Grafana 8 alerts are enabled.")
+			cfg.Logger.Warn("falling back to legacy setting of 'evaluation_timeout_seconds'; please use the configuration option in the `unified_alerting` section if IESG 8 alerts are enabled.")
 		}
 		uaEvaluationTimeout = legaceEvaluationTimeout
 	}
@@ -384,7 +384,7 @@ func (cfg *Cfg) ReadUnifiedAlertingSettings(iniFile *ini.File) error {
 		// if the legacy option is invalid, fallback to 10 (unified alerting min interval default)
 		legacyMinInterval := time.Duration(alerting.Key("min_interval_seconds").MustInt64(int64(uaCfg.BaseInterval.Seconds()))) * time.Second
 		if legacyMinInterval > uaCfg.BaseInterval {
-			cfg.Logger.Warn("falling back to legacy setting of 'min_interval_seconds'; please use the configuration option in the `unified_alerting` section if Grafana 8 alerts are enabled.")
+			cfg.Logger.Warn("falling back to legacy setting of 'min_interval_seconds'; please use the configuration option in the `unified_alerting` section if IESG 8 alerts are enabled.")
 			uaMinInterval = legacyMinInterval
 		} else {
 			// if legacy interval is smaller than the base interval, adjust it to the base interval

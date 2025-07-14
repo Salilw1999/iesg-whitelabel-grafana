@@ -112,7 +112,7 @@ func (s *Service) getMigrationDataJSON(ctx context.Context, signedInUser *user.S
 					Data: dashboards.SaveDashboardCommand{
 						Dashboard: dashboard.Data,
 						Overwrite: true, // currently only intended to be a push, not a sync; revisit during the preview
-						Message:   fmt.Sprintf("Created via the Grafana Cloud Migration Assistant by on-prem user \"%s\"", signedInUser.Login),
+						Message:   fmt.Sprintf("Created via the IESG Cloud Migration Assistant by on-prem user \"%s\"", signedInUser.Login),
 						IsFolder:  false,
 						FolderUID: dashboard.FolderUID,
 					},
@@ -660,7 +660,7 @@ func (s *Service) uploadSnapshot(ctx context.Context, session *cloudmigration.Cl
 	indexFile, err := os.Open(indexFilePath)
 	if err != nil {
 		// TODO: Clean this notice once we've fixed the HA bug
-		return fmt.Errorf("opening index files: %w. If you are running Grafana in a highly-available setup, try scaling down to one replica to avoid a known bug: https://github.com/grafana/grafana/issues/107264", err)
+		return fmt.Errorf("opening index files: %w. If you are running IESG in a highly-available setup, try scaling down to one replica to avoid a known bug: https://github.com/grafana/grafana/issues/107264", err)
 	}
 	defer func() {
 		if closeErr := indexFile.Close(); closeErr != nil {

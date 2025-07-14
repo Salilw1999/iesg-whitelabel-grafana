@@ -39,8 +39,8 @@ export function useEditConfigurationDrawer() {
     const isGrafanaAlertmanager = dataSourceName === GRAFANA_RULES_SOURCE_NAME;
     const title = isGrafanaAlertmanager
       ? t(
-          'alerting.use-edit-configuration-drawer.drawer.internal-grafana-alertmanager-title',
-          'Grafana built-in Alertmanager'
+          'alerting.use-edit-configuration-drawer.drawer.internal-IESG-alertmanager-title',
+          'IESG built-in Alertmanager'
         )
       : dataSourceName;
 

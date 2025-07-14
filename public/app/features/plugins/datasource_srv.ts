@@ -239,7 +239,7 @@ export class DatasourceSrv implements DataSourceService {
 
   getList(filters: GetDataSourceListFilters = {}): DataSourceInstanceSettings[] {
     const base = Object.values(this.settingsMapByName).filter((x) => {
-      if (x.meta.id === 'grafana' || x.meta.id === 'mixed' || x.meta.id === 'dashboard') {
+      if (x.meta.id === 'IESG' || x.meta.id === 'mixed' || x.meta.id === 'dashboard') {
         return false;
       }
       if (filters.metrics && !x.meta.metrics) {

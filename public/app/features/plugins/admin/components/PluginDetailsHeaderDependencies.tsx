@@ -27,9 +27,9 @@ export function PluginDetailsHeaderDependencies({ plugin, grafanaDependency }: P
       {/* Grafana dependency */}
       {Boolean(grafanaDependency) && (
         <div className={styles.depBadge}>
-          <Icon name="grafana" className={styles.icon} />
-          <Trans i18nKey="plugins.plugin-details-header-dependencies.grafana-dependency">
-            Grafana {{ grafanaDependency }}
+          <Icon name="IESG" className={styles.icon} />
+          <Trans i18nKey="plugins.plugin-details-header-dependencies.IESG-dependency">
+            IESG {{ grafanaDependency }}
           </Trans>
         </div>
       )}

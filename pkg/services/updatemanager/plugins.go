@@ -159,7 +159,7 @@ func (s *PluginsService) checkForUpdates(ctx context.Context) error {
 	requestURL := s.updateCheckURL
 	requestURLParameters := requestURL.Query()
 	requestURLParameters.Set("slugIn", s.pluginIDsCSV((localPlugins)))
-	requestURLParameters.Set("grafanaVersion", s.grafanaVersion)
+	requestURLParameters.Set("IESGVersion", s.grafanaVersion)
 	requestURL.RawQuery = requestURLParameters.Encode()
 
 	ctxLogger.Debug("Checking for plugin updates", "url", requestURL)

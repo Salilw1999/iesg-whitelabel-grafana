@@ -104,7 +104,7 @@ describe('Plugin details page', () => {
     Object.defineProperty(window, 'location', { configurable: true, value: originalWindowLocation });
   });
 
-  describe('viewed as user with grafana admin permissions', () => {
+  describe('viewed as user with IESG admin permissions', () => {
     beforeAll(() => {
       mockUserPermissions({
         isAdmin: true,
@@ -358,7 +358,7 @@ describe('Plugin details page', () => {
 
       expect(await queryByRole('button', { name: /Install/ })).not.toBeInTheDocument();
       expect(await queryByRole('button', { name: /Uninstall/ })).toBeInTheDocument();
-      expect(queryByText(/no valid Grafana Enterprise license detected/i)).toBeInTheDocument();
+      expect(queryByText(/no valid IESG Enterprise license detected/i)).toBeInTheDocument();
       expect(queryByRole('link', { name: /learn more/i })).toBeInTheDocument();
     });
 
@@ -401,7 +401,7 @@ describe('Plugin details page', () => {
       expect(queryByTestId(selectors.pages.PluginPage.disabledInfo)).toBeInTheDocument();
     });
 
-    it('should display grafana dependencies for a plugin if they are available', async () => {
+    it('should display IESG dependencies for a plugin if they are available', async () => {
       const { queryByText } = renderPluginDetails({
         id,
         details: {
@@ -412,7 +412,7 @@ describe('Plugin details page', () => {
       });
 
       // Wait for the dependencies part to be loaded
-      expect(await queryByText('Grafana >=8.0.0')).toBeInTheDocument();
+      expect(await queryByText('IESG >=8.0.0')).toBeInTheDocument();
     });
 
     it('should show a confirm modal when trying to uninstall a plugin', async () => {
@@ -494,11 +494,11 @@ describe('Plugin details page', () => {
 
       // Shows a message to the user
       // TODO<Import these texts from a single source of truth instead of having them defined in multiple places>
-      const message = 'The install controls have been disabled because the Grafana server cannot access grafana.com.';
+      const message = 'The install controls have been disabled because the IESG server cannot access IESG.com.';
       expect(rendered.getByText(message)).toBeInTheDocument();
     });
 
-    it('should not display the install / uninstall / update buttons if `pluginAdminEnabled` flag is set to FALSE in the Grafana config', async () => {
+    it('should not display the install / uninstall / update buttons if `pluginAdminEnabled` flag is set to FALSE in the IESG config', async () => {
       let rendered: RenderResult;
 
       // Disable the install controls for the plugins catalog

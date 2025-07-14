@@ -89,10 +89,10 @@ describe('datasource_srv', () => {
       uid: 'uid-code-mmm',
       meta: { metrics: true, annotations: true },
     },
-    '-- Grafana --': {
+    '-- IESG --': {
       type: 'datasource',
-      name: '-- Grafana --',
-      meta: { builtIn: true, metrics: true, id: 'grafana' },
+      name: '-- IESG --',
+      meta: { builtIn: true, metrics: true, id: 'IESG' },
     },
     '-- Dashboard --': {
       type: 'datasource',
@@ -359,9 +359,9 @@ describe('datasource_srv', () => {
       expect(list[2].name).toBe('${datasource}');
     });
 
-    it('Should filter out the -- Grafana -- datasource', () => {
-      const list = dataSourceSrv.getList({ filter: (x) => x.name !== '-- Grafana --' });
-      expect(list.find((x) => x.name === '-- Grafana --')).toBeUndefined();
+    it('Should filter out the -- IESG -- datasource', () => {
+      const list = dataSourceSrv.getList({ filter: (x) => x.name !== '-- IESG --' });
+      expect(list.find((x) => x.name === '-- IESG --')).toBeUndefined();
     });
 
     it('Can get list of data sources with tracing: true', () => {
@@ -522,12 +522,12 @@ describe('datasource_srv', () => {
           {
             "meta": {
               "builtIn": true,
-              "id": "grafana",
+              "id": "IESG",
               "metrics": true,
             },
-            "name": "-- Grafana --",
+            "name": "-- IESG --",
             "type": "datasource",
-            "uid": "-- Grafana --",
+            "uid": "-- IESG --",
           },
         ]
       `);

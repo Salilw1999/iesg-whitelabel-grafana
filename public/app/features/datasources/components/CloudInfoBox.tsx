@@ -57,12 +57,12 @@ export function CloudInfoBox({ dataSource }: Props) {
           >
             <Trans i18nKey="datasources.cloud-info-box.body-alert">
               Or skip the effort and get {{ mainDS }} (and {{ extraDS }}) as fully-managed, scalable, and hosted data
-              sources from Grafana Labs with the{' '}
+              sources from IESG Labs with the{' '}
               <TextLink
                 href={`https://grafana.com/signup/cloud/connect-account?src=grafana-oss&cnt=${dataSource.type}-settings`}
                 external
               >
-                free-forever Grafana Cloud plan
+                free-forever IESG Cloud plan
               </TextLink>
               .
             </Trans>
