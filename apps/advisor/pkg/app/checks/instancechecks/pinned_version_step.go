@@ -20,16 +20,16 @@ type pinnedVersionStep struct {
 }
 
 func (s *pinnedVersionStep) Title() string {
-	return "Grafana Cloud version check"
+	return "IESG Cloud version check"
 }
 
 func (s *pinnedVersionStep) Description() string {
-	return "Check if the Grafana version is pinned."
+	return "Check if the IESG version is pinned."
 }
 
 func (s *pinnedVersionStep) Resolution() string {
 	return "You may miss out on security updates and bug fixes if you use a pinned version. " +
-		"Contact your Grafana administrator and open a " +
+		"Contact your IESG administrator and open a " +
 		"<a href='https://grafana.com/profile/org#support' target=_blank>support ticket</a> to help you get unpinned."
 }
 
@@ -55,7 +55,7 @@ func (s *pinnedVersionStep) Run(ctx context.Context, log logging.Logger, _ *advi
 	return []advisor.CheckReportFailure{checks.NewCheckReportFailure(
 		advisor.CheckReportFailureSeverityLow,
 		s.ID(),
-		"Grafana version is pinned",
+		"IESG version is pinned",
 		"pinned_version",
 		[]advisor.CheckErrorLink{},
 	)}, nil

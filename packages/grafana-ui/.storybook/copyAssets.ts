@@ -37,8 +37,8 @@ export function copyAssetsSync() {
       to: './static/public/img/grafana_text_logo-light.svg',
     },
     {
-      from: '../../../public/img/grafana_icon.svg',
-      to: './static/public/img/grafana_icon.svg',
+      from: '../../..https://raw.githubusercontent.com/Salilw1999/custom-grafana/main/public/img/custom-grafana.png',
+      to: './static/https://raw.githubusercontent.com/Salilw1999/custom-grafana/main/public/img/custom-grafana.png',
     },
     {
       from: '../../../public/lib',

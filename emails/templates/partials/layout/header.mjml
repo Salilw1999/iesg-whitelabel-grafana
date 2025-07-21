@@ -1,3 +1,3 @@
 <mj-column background-color="transparent">
-  <mj-image padding="0" width="200px" src="/public/img/grafana_icon.svg" align="left" />
+  <mj-image padding="0" width="200px" src="https://raw.githubusercontent.com/Salilw1999/custom-grafana/main/public/img/custom-grafana.png" align="left" />
 </mj-column>

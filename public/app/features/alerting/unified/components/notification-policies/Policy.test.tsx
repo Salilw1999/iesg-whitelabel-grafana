@@ -56,7 +56,7 @@ describe('Policy', () => {
 
     renderPolicy(
       <Policy
-        receivers={[{ name: 'grafana-default-email' }]}
+        receivers={[{ name: 'IESG-default-email' }]}
         isDefaultPolicy
         currentRoute={routeTree}
         alertManagerSourceName={GRAFANA_RULES_SOURCE_NAME}
@@ -95,11 +95,11 @@ describe('Policy', () => {
     // expect(within(defaultPolicy).getByTestId('matching-instances')).toHaveTextContent('0instances');
 
     // for contact point
-    expect(within(defaultPolicy).getByTestId('contact-point')).toHaveTextContent('grafana-default-email');
-    expect(within(defaultPolicy).getByRole('link', { name: 'grafana-default-email' })).toBeInTheDocument();
+    expect(within(defaultPolicy).getByTestId('contact-point')).toHaveTextContent('IESG-default-email');
+    expect(within(defaultPolicy).getByRole('link', { name: 'IESG-default-email' })).toBeInTheDocument();
 
     // for grouping
-    expect(within(defaultPolicy).getByTestId('grouping')).toHaveTextContent('grafana_folder, alertname');
+    expect(within(defaultPolicy).getByTestId('grouping')).toHaveTextContent('IESG_folder, alertname');
 
     // no timings
     expect(within(defaultPolicy).queryByTestId('mute-timings')).not.toBeInTheDocument();
@@ -349,8 +349,8 @@ const eq = MatcherOperator.equal;
 
 const mockRoutes: RouteWithID = {
   id: '0',
-  receiver: 'grafana-default-email',
-  group_by: ['grafana_folder', 'alertname'],
+  receiver: 'IESG-default-email',
+  group_by: ['IESG_folder', 'alertname'],
   routes: [
     {
       id: '1',
@@ -366,7 +366,7 @@ const mockRoutes: RouteWithID = {
         },
         {
           id: '3',
-          receiver: 'grafana-default-email',
+          receiver: 'IESG-default-email',
           object_matchers: [
             ['foo', eq, 'bar'],
             ['bar', eq, 'baz'],

@@ -70,7 +70,7 @@ func TestPinnedVersionStep(t *testing.T) {
 				require.Len(t, failures, 1)
 				assert.Equal(t, advisor.CheckReportFailureSeverityLow, failures[0].Severity)
 				assert.Equal(t, "pinned_version", failures[0].ItemID)
-				assert.Equal(t, "Grafana version is pinned", failures[0].Item)
+				assert.Equal(t, "IESG version is pinned", failures[0].Item)
 			} else {
 				assert.Empty(t, failures)
 			}

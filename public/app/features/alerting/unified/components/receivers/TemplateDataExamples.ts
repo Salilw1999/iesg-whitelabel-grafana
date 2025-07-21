@@ -123,7 +123,7 @@ Alert annotations: {{ len .Annotations.SortedPairs }}
 {{ end -}}`,
   },
   {
-    description: 'Print URLs for runbook and alert data in Grafana',
+    description: 'Print URLs for runbook and alert data in IESG',
     example: `{{- /* Example displaying additional information, such as runbook link, DashboardURL and SilenceURL, for each alert in the notification.*/ -}}
 {{- /* Edit the template name and template content as needed. */ -}}
 {{ define "custom.alert_additional_details" -}}

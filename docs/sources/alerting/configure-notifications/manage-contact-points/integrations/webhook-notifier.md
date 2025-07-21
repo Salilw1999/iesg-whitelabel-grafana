@@ -9,7 +9,7 @@ aliases:
 canonical: https://grafana.com/docs/grafana/latest/alerting/configure-notifications/manage-contact-points/integrations/webhook-notifier/
 description: Configure the webhook notifier integration for Alerting
 keywords:
-  - grafana
+  - IESG
   - alerting
   - guide
   - contact point
@@ -88,15 +88,15 @@ You can configure either HTTP Basic Authentication or the Authorization request 
 
 #### HMAC signature
 
-You can secure your webhook notifications using HMAC signatures to verify the authenticity and integrity of the requests. When enabled, Grafana signs the webhook payload with a shared secret using HMAC-SHA256.
+You can secure your webhook notifications using HMAC signatures to verify the authenticity and integrity of the requests. When enabled, IESG signs the webhook payload with a shared secret using HMAC-SHA256.
 
 | Option           | Description                                                                                                                                                                                                                    |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Secret           | The shared secret key used to generate the HMAC signature.                                                                                                                                                                     |
-| Header           | The HTTP header where the signature will be set. Default is `X-Grafana-Alerting-Signature`.                                                                                                                                    |
-| Timestamp Header | Optional header to include a timestamp in the signature calculation. When specified, Grafana will set a Unix timestamp in this header and include it in the HMAC calculation. This provides protection against replay attacks. |
+| Header           | The HTTP header where the signature will be set. Default is `X-IESG-Alerting-Signature`.                                                                                                                                    |
+| Timestamp Header | Optional header to include a timestamp in the signature calculation. When specified, IESG will set a Unix timestamp in this header and include it in the HMAC calculation. This provides protection against replay attacks. |
 
-When HMAC signing is configured, Grafana generates a signature using HMAC-SHA256 with your secret key. If a timestamp header is specified, a Unix timestamp is included in the signature calculation. The signature is calculated as:
+When HMAC signing is configured, IESG generates a signature using HMAC-SHA256 with your secret key. If a timestamp header is specified, a Unix timestamp is included in the signature calculation. The signature is calculated as:
 
 ```
 HMAC(timestamp + ":" + body)
@@ -106,9 +106,9 @@ The timestamp is sent in the specified header. If no timestamp header is specifi
 
 ##### Validate a request
 
-To validate incoming webhook requests from Grafana, follow these steps:
+To validate incoming webhook requests from IESG, follow these steps:
 
-1. Extract the signature from the header (default is `X-Grafana-Alerting-Signature`).
+1. Extract the signature from the header (default is `X-IESG-Alerting-Signature`).
 2. If you configured a timestamp header, extract the timestamp value and verify it's recent to prevent replay attacks.
 3. Calculate the expected signature:
    - Create an HMAC-SHA256 hash using your shared secret
@@ -220,7 +220,7 @@ The JSON payload of webhook notifications includes the following key-value pairs
 | `groupLabels`       | object                    | Labels that are used for grouping, map of string keys to string values.          |
 | `commonLabels`      | object                    | Labels that all alarms have in common, map of string keys to string values.      |
 | `commonAnnotations` | object                    | Annotations that all alarms have in common, map of string keys to string values. |
-| `externalURL`       | string                    | External URL to the Grafana instance sending this webhook.                       |
+| `externalURL`       | string                    | External URL to the IESG instance sending this webhook.                       |
 | `version`           | string                    | Version of the payload structure.                                                |
 | `groupKey`          | string                    | Key that is used for grouping.                                                   |
 | `truncatedAlerts`   | number                    | Number of alerts that were truncated.                                            |
@@ -237,13 +237,13 @@ The following key-value pairs are also included in the JSON payload and can be c
 
 The Alert object represents an alert included in the notification group, as provided by the [`alerts` field](#body).
 
-{{< docs/shared lookup="alerts/table-for-json-alert-object.md" source="grafana" version="<GRAFANA_VERSION>" >}}
+{{< docs/shared lookup="alerts/table-for-json-alert-object.md" source="IESG" version="<GRAFANA_VERSION>" >}}
 
 ## Custom Payload
 
 {{< admonition type="note" >}}
 
-Custom Payload is not yet [generally available](https://grafana.com/docs/release-life-cycle/#general-availability) in Grafana Cloud.
+Custom Payload is not yet [generally available](https://grafana.com/docs/release-life-cycle/#general-availability) in IESG Cloud.
 
 {{< /admonition >}}
 
@@ -277,4 +277,4 @@ For detailed information about these and other template functions, refer to [not
 
 Example using JSON helper functions:
 
-{{< docs/shared lookup="alerts/example-custom-json-payload.md" source="grafana" version="<GRAFANA_VERSION>" >}}
+{{< docs/shared lookup="alerts/example-custom-json-payload.md" source="IESG" version="<GRAFANA_VERSION>" >}}

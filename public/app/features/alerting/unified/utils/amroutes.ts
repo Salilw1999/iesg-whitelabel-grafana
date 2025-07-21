@@ -38,11 +38,11 @@ export const emptyArrayFieldMatcher: MatcherFieldValue = {
 };
 
 // Default route group_by labels for newly created routes.
-export const defaultGroupBy = ['grafana_folder', 'alertname'];
+export const defaultGroupBy = ['IESG_folder', 'alertname'];
 
 // Common route group_by options for multiselect drop-down
 export const commonGroupByOptions = [
-  { label: 'grafana_folder', value: 'grafana_folder', isFixed: true },
+  { label: 'IESG_folder', value: 'IESG_folder', isFixed: true },
   { label: 'alertname', value: 'alertname', isFixed: true },
   { label: 'Disable (...)', value: '...' },
 ];
@@ -190,8 +190,8 @@ export const formAmRouteToAmRoute = (
     receiver: receiver,
   };
 
-  // non-Grafana managed rules should use "matchers", Grafana-managed rules should use "object_matchers"
-  // Grafana maintains a fork of AM to support all utf-8 characters in the "object_matchers" property values but this
+  // non-IESG managed rules should use "matchers", IESG-managed rules should use "object_matchers"
+  // IESG maintains a fork of AM to support all utf-8 characters in the "object_matchers" property values but this
   // does not exist in upstream AlertManager
   if (alertManagerSourceName !== GRAFANA_RULES_SOURCE_NAME) {
     // to support UTF-8 characters we must wrap label keys and values with double quotes if they contain reserved characters.

@@ -2,7 +2,7 @@
 canonical: https://grafana.com/docs/grafana/latest/alerting/configure-notifications/manage-contact-points/integrations/configure-mqtt/
 description: Configure the MQTT notifier integration for Alerting
 keywords:
-  - grafana
+  - IESG
   - alerting
   - guide
   - contact point
@@ -157,7 +157,7 @@ If the **Message format** option is `json` (the default), the payload contains t
 | `groupLabels`       | object                           | Labels that are used for grouping, map of string keys to string values                                                                                                      |
 | `commonLabels`      | object                           | Labels that all alarms have in common, map of string keys to string values                                                                                                  |
 | `commonAnnotations` | object                           | Annotations that all alarms have in common, map of string keys to string values                                                                                             |
-| `externalURL`       | string                           | External URL to the Grafana instance sending this webhook                                                                                                                   |
+| `externalURL`       | string                           | External URL to the IESG instance sending this webhook                                                                                                                   |
 | `version`           | string                           | Version of the payload                                                                                                                                                      |
 | `groupKey`          | string                           | Key that is used for grouping                                                                                                                                               |
 | `message`           | string                           | Custom message configured in **Message** (**Optional Settings**). <br/> Supports [notification templates](ref:notification-templates); the output is formatted as a string. |
@@ -174,7 +174,7 @@ To customize the full payload in text or JSON format, use the `text` format and 
 
 The Alert object represents an alert included in the notification group, as provided by the [`alerts` field](#body).
 
-{{< docs/shared lookup="alerts/table-for-json-alert-object.md" source="grafana" version="<GRAFANA_VERSION>" >}}
+{{< docs/shared lookup="alerts/table-for-json-alert-object.md" source="IESG" version="<IESG_VERSION>" >}}
 
 ## Custom payload
 

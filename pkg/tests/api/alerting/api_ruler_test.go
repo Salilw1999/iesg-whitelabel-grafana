@@ -1663,7 +1663,7 @@ func TestIntegrationRuleUpdate(t *testing.T) {
 	userID := createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 		DefaultOrgRole: string(org.RoleEditor),
 		Password:       "password",
-		Login:          "grafana",
+		Login:          "IESG",
 	})
 
 	if setting.IsEnterprise {
@@ -1684,7 +1684,7 @@ func TestIntegrationRuleUpdate(t *testing.T) {
 
 	adminClient := newAlertingApiClient(grafanaListedAddr, "admin", "admin")
 
-	client := newAlertingApiClient(grafanaListedAddr, "grafana", "password")
+	client := newAlertingApiClient(grafanaListedAddr, "IESG", "password")
 	folderUID := util.GenerateShortUID()
 	client.CreateFolder(t, folderUID, "folder1")
 
@@ -1916,7 +1916,7 @@ func TestIntegrationRuleUpdate(t *testing.T) {
 		require.Equal(t, http.StatusAccepted, status)
 		require.NotNil(t, getGroup.Rules[0].GrafanaManagedAlert.UpdatedBy)
 		assert.NotEmpty(t, getGroup.Rules[0].GrafanaManagedAlert.UpdatedBy.UID)
-		assert.Equal(t, "grafana", getGroup.Rules[0].GrafanaManagedAlert.UpdatedBy.Name)
+		assert.Equal(t, "IESG", getGroup.Rules[0].GrafanaManagedAlert.UpdatedBy.Name)
 	})
 }
 
@@ -1952,14 +1952,14 @@ func TestIntegrationAlertAndGroupsQuery(t *testing.T) {
 	createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 		DefaultOrgRole: string(org.RoleEditor),
 		Password:       "password",
-		Login:          "grafana",
+		Login:          "IESG",
 	})
 
-	apiClient := newAlertingApiClient(grafanaListedAddr, "grafana", "password")
+	apiClient := newAlertingApiClient(grafanaListedAddr, "IESG", "password")
 
 	// invalid credentials request to get the alerts should fail
 	{
-		alertsURL := fmt.Sprintf("http://grafana:invalid@%s/api/alertmanager/grafana/api/v2/alerts", grafanaListedAddr)
+		alertsURL := fmt.Sprintf("http://IESG:invalid@%s/api/alertmanager/grafana/api/v2/alerts", grafanaListedAddr)
 		// nolint:gosec
 		resp, err := http.Get(alertsURL)
 		require.NoError(t, err)
@@ -1978,7 +1978,7 @@ func TestIntegrationAlertAndGroupsQuery(t *testing.T) {
 
 	// When there are no alerts available, it returns an empty list.
 	{
-		alertsURL := fmt.Sprintf("http://grafana:password@%s/api/alertmanager/grafana/api/v2/alerts", grafanaListedAddr)
+		alertsURL := fmt.Sprintf("http://IESG:password@%s/api/alertmanager/grafana/api/v2/alerts", grafanaListedAddr)
 		// nolint:gosec
 		resp, err := http.Get(alertsURL)
 		require.NoError(t, err)
@@ -1994,7 +1994,7 @@ func TestIntegrationAlertAndGroupsQuery(t *testing.T) {
 
 	// When are there no alerts available, it returns an empty list of groups.
 	{
-		alertsURL := fmt.Sprintf("http://grafana:password@%s/api/alertmanager/grafana/api/v2/alerts/groups", grafanaListedAddr)
+		alertsURL := fmt.Sprintf("http://IESG:password@%s/api/alertmanager/grafana/api/v2/alerts/groups", grafanaListedAddr)
 		// nolint:gosec
 		resp, err := http.Get(alertsURL)
 		require.NoError(t, err)
@@ -2052,7 +2052,7 @@ func TestIntegrationAlertAndGroupsQuery(t *testing.T) {
 
 	// Eventually, we'll get an alert with its state being active.
 	{
-		alertsURL := fmt.Sprintf("http://grafana:password@%s/api/alertmanager/grafana/api/v2/alerts", grafanaListedAddr)
+		alertsURL := fmt.Sprintf("http://IESG:password@%s/api/alertmanager/grafana/api/v2/alerts", grafanaListedAddr)
 		// nolint:gosec
 		require.Eventually(t, func() bool {
 			resp, err := http.Get(alertsURL)
@@ -2208,9 +2208,9 @@ func TestIntegrationEval(t *testing.T) {
 	createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 		DefaultOrgRole: string(org.RoleEditor),
 		Password:       "password",
-		Login:          "grafana",
+		Login:          "IESG",
 	})
-	apiClient := newAlertingApiClient(grafanaListedAddr, "grafana", "password")
+	apiClient := newAlertingApiClient(grafanaListedAddr, "IESG", "password")
 	// Create the namespace we'll save our alerts to.
 	apiClient.CreateFolder(t, "default", "default")
 
@@ -2445,7 +2445,7 @@ func TestIntegrationEval(t *testing.T) {
 
 	for _, tc := range testCases {
 		t.Run(tc.desc, func(t *testing.T) {
-			u := fmt.Sprintf("http://grafana:password@%s/api/v1/eval", grafanaListedAddr)
+			u := fmt.Sprintf("http://IESG:password@%s/api/v1/eval", grafanaListedAddr)
 			r := strings.NewReader(tc.payload)
 			// nolint:gosec
 			resp, err := http.Post(u, "application/json", r)
@@ -2491,9 +2491,9 @@ func TestIntegrationQuota(t *testing.T) {
 		IsAdmin:        true,
 		DefaultOrgRole: string(org.RoleEditor),
 		Password:       "password",
-		Login:          "grafana",
+		Login:          "IESG",
 	})
-	apiClient := newAlertingApiClient(grafanaListedAddr, "grafana", "password")
+	apiClient := newAlertingApiClient(grafanaListedAddr, "IESG", "password")
 	// Create the namespace we'll save our alerts to.
 	apiClient.CreateFolder(t, "default", "default")
 
@@ -2506,7 +2506,7 @@ func TestIntegrationQuota(t *testing.T) {
 	// get the generated rule UID
 	var ruleUID string
 	{
-		u := fmt.Sprintf("http://grafana:password@%s/api/ruler/grafana/api/v1/rules/default", grafanaListedAddr)
+		u := fmt.Sprintf("http://IESG:password@%s/api/ruler/grafana/api/v1/rules/default", grafanaListedAddr)
 		// nolint:gosec
 		resp, err := http.Get(u)
 		require.NoError(t, err)
@@ -2604,7 +2604,7 @@ func TestIntegrationQuota(t *testing.T) {
 		require.Len(t, respModel.Updated, 1)
 
 		// let's make sure that rule definitions are updated correctly.
-		u := fmt.Sprintf("http://grafana:password@%s/api/ruler/grafana/api/v1/rules/default", grafanaListedAddr)
+		u := fmt.Sprintf("http://IESG:password@%s/api/ruler/grafana/api/v1/rules/default", grafanaListedAddr)
 		// nolint:gosec
 		resp, err := http.Get(u)
 		require.NoError(t, err)
@@ -2656,7 +2656,7 @@ func TestIntegrationQuota(t *testing.T) {
 						  "updated":"2021-02-21T01:10:30Z",
 		                  "updated_by": {
 							"uid": "uid",
-							"name": "grafana"
+							"name": "IESG"
 						  },
 						  "intervalSeconds":60,
 						  "is_paused": false,
@@ -2796,7 +2796,7 @@ func TestIntegrationDeleteFolderWithRules(t *testing.T) {
 			}`
 		assert.JSONEq(t, expectedGetRulesResponseBody, body)
 	})
-	t.Run("editor can not delete the folder because it contains Grafana 8 alerts", func(t *testing.T) {
+	t.Run("editor can not delete the folder because it contains IESG 8 alerts", func(t *testing.T) {
 		u := fmt.Sprintf("http://editor:editor@%s/api/folders/%s", grafanaListedAddr, namespaceUID)
 		req, err := http.NewRequest(http.MethodDelete, u, nil)
 		require.NoError(t, err)
@@ -2865,10 +2865,10 @@ func TestIntegrationAlertRuleCRUD(t *testing.T) {
 	createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 		DefaultOrgRole: string(org.RoleEditor),
 		Password:       "password",
-		Login:          "grafana",
+		Login:          "IESG",
 	})
 
-	apiClient := newAlertingApiClient(grafanaListedAddr, "grafana", "password")
+	apiClient := newAlertingApiClient(grafanaListedAddr, "IESG", "password")
 
 	// Create the namespace we'll save our alerts to.
 	apiClient.CreateFolder(t, "default", "default")
@@ -3193,7 +3193,7 @@ func TestIntegrationAlertRuleCRUD(t *testing.T) {
 	createdRuleUIDs := make(map[string]string)
 	// With the rules created, let's make sure that rule definition is stored correctly.
 	{
-		u := fmt.Sprintf("http://grafana:password@%s/api/ruler/grafana/api/v1/rules/default", grafanaListedAddr)
+		u := fmt.Sprintf("http://IESG:password@%s/api/ruler/grafana/api/v1/rules/default", grafanaListedAddr)
 		// nolint:gosec
 		resp, err := http.Get(u)
 		require.NoError(t, err)
@@ -3255,7 +3255,7 @@ func TestIntegrationAlertRuleCRUD(t *testing.T) {
 						  "updated":"2021-02-21T01:10:30Z",
 						  "updated_by": {
 							"uid": "uid",
-							"name": "grafana"
+							"name": "IESG"
 						  },
 						  "intervalSeconds":60,
 						  "is_paused": false,
@@ -3301,7 +3301,7 @@ func TestIntegrationAlertRuleCRUD(t *testing.T) {
 						  "updated":"2021-02-21T01:10:30Z",
 						  "updated_by": {
 							"uid": "uid",
-							"name": "grafana"
+							"name": "IESG"
 						  },
 						  "intervalSeconds":60,
 						  "is_paused": false,
@@ -3596,7 +3596,7 @@ func TestIntegrationAlertRuleCRUD(t *testing.T) {
 		require.Equal(t, fmt.Sprintf("rule [1] has UID %s that is already assigned to another rule at index 0", ruleUID), res["message"])
 
 		// let's make sure that rule definitions are not affected by the failed POST request.
-		u := fmt.Sprintf("http://grafana:password@%s/api/ruler/grafana/api/v1/rules/default", grafanaListedAddr)
+		u := fmt.Sprintf("http://IESG:password@%s/api/ruler/grafana/api/v1/rules/default", grafanaListedAddr)
 		// nolint:gosec
 		resp, err := http.Get(u)
 		require.NoError(t, err)
@@ -3653,7 +3653,7 @@ func TestIntegrationAlertRuleCRUD(t *testing.T) {
 						  "updated":"2021-02-21T01:10:30Z",
 						  "updated_by": {
 							"uid": "uid",
-							"name": "grafana"
+							"name": "IESG"
 						  },
 						  "intervalSeconds":60,
 						  "is_paused": false,
@@ -3699,7 +3699,7 @@ func TestIntegrationAlertRuleCRUD(t *testing.T) {
 						  "updated":"2021-02-21T01:10:30Z",
 						  "updated_by": {
 							"uid": "uid",
-							"name": "grafana"
+							"name": "IESG"
 						  },
 						  "intervalSeconds":60,
 						  "is_paused": false,
@@ -3782,7 +3782,7 @@ func TestIntegrationAlertRuleCRUD(t *testing.T) {
 		require.Len(t, respModel.Deleted, 1)
 
 		// let's make sure that rule definitions are updated correctly.
-		u := fmt.Sprintf("http://grafana:password@%s/api/ruler/grafana/api/v1/rules/default", grafanaListedAddr)
+		u := fmt.Sprintf("http://IESG:password@%s/api/ruler/grafana/api/v1/rules/default", grafanaListedAddr)
 		// nolint:gosec
 		resp, err := http.Get(u)
 		require.NoError(t, err)
@@ -3842,7 +3842,7 @@ func TestIntegrationAlertRuleCRUD(t *testing.T) {
 		                  "updated":"2021-02-21T01:10:30Z",
                           "updated_by": {
 							"uid": "uid",
-							"name": "grafana"
+							"name": "IESG"
 						  },
 		                  "intervalSeconds":60,
 		                  "is_paused": false,
@@ -3913,7 +3913,7 @@ func TestIntegrationAlertRuleCRUD(t *testing.T) {
 		require.Equal(t, respModel.Updated, []string{ruleUID})
 
 		// let's make sure that rule definitions are updated correctly.
-		u := fmt.Sprintf("http://grafana:password@%s/api/ruler/grafana/api/v1/rules/default", grafanaListedAddr)
+		u := fmt.Sprintf("http://IESG:password@%s/api/ruler/grafana/api/v1/rules/default", grafanaListedAddr)
 		// nolint:gosec
 		resp, err := http.Get(u)
 		require.NoError(t, err)
@@ -3965,7 +3965,7 @@ func TestIntegrationAlertRuleCRUD(t *testing.T) {
 					  "updated":"2021-02-21T01:10:30Z",
 					  "updated_by": {
 						"uid": "uid",
-						"name": "grafana"
+						"name": "IESG"
 					  },
 					  "intervalSeconds":60,
 					  "is_paused":false,
@@ -4011,7 +4011,7 @@ func TestIntegrationAlertRuleCRUD(t *testing.T) {
 		assert.Empty(t, respModel.Deleted)
 
 		// let's make sure that rule definitions are updated correctly.
-		u := fmt.Sprintf("http://grafana:password@%s/api/ruler/grafana/api/v1/rules/default", grafanaListedAddr)
+		u := fmt.Sprintf("http://IESG:password@%s/api/ruler/grafana/api/v1/rules/default", grafanaListedAddr)
 		// nolint:gosec
 		resp, err := http.Get(u)
 		require.NoError(t, err)
@@ -4063,7 +4063,7 @@ func TestIntegrationAlertRuleCRUD(t *testing.T) {
 					  "updated":"2021-02-21T01:10:30Z",
                       "updated_by": {
 						"uid": "uid",
-						"name": "grafana"
+						"name": "IESG"
                       },
 					  "intervalSeconds":60,
 					  "is_paused":false,
@@ -4092,7 +4092,7 @@ func TestIntegrationAlertRuleCRUD(t *testing.T) {
 	// Finally, make sure we can delete it.
 	{
 		t.Run("succeed if the rule group name does not exists", func(t *testing.T) {
-			u := fmt.Sprintf("http://grafana:password@%s/api/ruler/grafana/api/v1/rules/default/groupnotexist", grafanaListedAddr)
+			u := fmt.Sprintf("http://IESG:password@%s/api/ruler/grafana/api/v1/rules/default/groupnotexist", grafanaListedAddr)
 			req, err := http.NewRequest(http.MethodDelete, u, nil)
 			require.NoError(t, err)
 			resp, err := client.Do(req)
@@ -4111,7 +4111,7 @@ func TestIntegrationAlertRuleCRUD(t *testing.T) {
 		})
 
 		t.Run("succeed if the rule group name does exist", func(t *testing.T) {
-			u := fmt.Sprintf("http://grafana:password@%s/api/ruler/grafana/api/v1/rules/default/arulegroup", grafanaListedAddr)
+			u := fmt.Sprintf("http://IESG:password@%s/api/ruler/grafana/api/v1/rules/default/arulegroup", grafanaListedAddr)
 			req, err := http.NewRequest(http.MethodDelete, u, nil)
 			require.NoError(t, err)
 			resp, err := client.Do(req)
@@ -4145,10 +4145,10 @@ func TestIntegrationRulePause(t *testing.T) {
 	createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 		DefaultOrgRole: string(org.RoleEditor),
 		Password:       "password",
-		Login:          "grafana",
+		Login:          "IESG",
 	})
 
-	client := newAlertingApiClient(grafanaListedAddr, "grafana", "password")
+	client := newAlertingApiClient(grafanaListedAddr, "IESG", "password")
 	folderUID := util.GenerateShortUID()
 	client.CreateFolder(t, folderUID, "folder1")
 
@@ -4278,10 +4278,10 @@ func TestIntegrationHysteresisRule(t *testing.T) {
 	createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 		DefaultOrgRole: string(org.RoleAdmin),
 		Password:       "password",
-		Login:          "grafana",
+		Login:          "IESG",
 	})
 
-	apiClient := newAlertingApiClient(grafanaListedAddr, "grafana", "password")
+	apiClient := newAlertingApiClient(grafanaListedAddr, "IESG", "password")
 
 	folder := "hysteresis"
 	testDs := apiClient.CreateTestDatasource(t)
@@ -4352,10 +4352,10 @@ func TestIntegrationRuleNotificationSettings(t *testing.T) {
 	createUser(t, env.SQLStore, env.Cfg, user.CreateUserCommand{
 		DefaultOrgRole: string(org.RoleAdmin),
 		Password:       "password",
-		Login:          "grafana",
+		Login:          "IESG",
 	})
 
-	apiClient := newAlertingApiClient(grafanaListedAddr, "grafana", "password")
+	apiClient := newAlertingApiClient(grafanaListedAddr, "IESG", "password")
 
 	folder := "Test-Alerting"
 	apiClient.CreateFolder(t, folder, folder)

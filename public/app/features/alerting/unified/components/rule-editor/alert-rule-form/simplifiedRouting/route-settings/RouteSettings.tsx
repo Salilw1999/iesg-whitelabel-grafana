@@ -20,7 +20,7 @@ import { TIMING_OPTIONS_DEFAULTS } from '../../../../notification-policies/timin
 
 import { RouteTimings } from './RouteTimings';
 
-const REQUIRED_FIELDS_IN_GROUPBY = ['grafana_folder', 'alertname'];
+const REQUIRED_FIELDS_IN_GROUPBY = ['IESG_folder', 'alertname'];
 
 const DEFAULTS_TIMINGS = {
   groupWaitValue: TIMING_OPTIONS_DEFAULTS.group_wait,

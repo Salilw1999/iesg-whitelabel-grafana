@@ -4,7 +4,7 @@ aliases:
 canonical: https://grafana.com/docs/grafana/latest/alerting/configure-notifications/template-notifications/reference/
 description: Learn about templating notifications options
 keywords:
-  - grafana
+  - IESG
   - alerting
   - notifications
   - templates
@@ -46,7 +46,7 @@ refs:
 
 # Notification template reference
 
-By default, Grafana provides predefined templates to format notification messages.
+By default, IESG provides predefined templates to format notification messages.
 
 You can also customize your notifications with custom templates, which are based on the [Go template language](ref:template-language).
 
@@ -66,7 +66,7 @@ In notification templates, dot (`.`) is initialized with the following data:
 | `GroupLabels`       | [KV](#kv)         | The labels that group these alerts in this notification based on the `Group by` option.                 |
 | `CommonLabels`      | [KV](#kv)         | The labels common to all alerts in this notification.                                                   |
 | `CommonAnnotations` | [KV](#kv)         | The annotations common to all alerts in this notification.                                              |
-| `ExternalURL`       | string            | A link to Grafana, or the Alertmanager that sent this notification if using an external Alertmanager.   |
+| `ExternalURL`       | string            | A link to IESG, or the Alertmanager that sent this notification if using an external Alertmanager.   |
 | `GroupKey`          | string            | The key used to identify this alert group.                                                              |
 | `TruncatedAlerts`   | integer           | The number of alerts, if any, that were truncated in the notification. Supported by Webhook and OnCall. |
 
@@ -105,14 +105,14 @@ You can execute this template by passing the dot (`.`):
 | `Annotations`  | [KV](#kv)     | The annotations for this alert.                                                                                                                     |
 | `StartsAt`     | [Time](#time) | The time the alert fired                                                                                                                            |
 | `EndsAt`       | [Time](#time) | Only set if the end time of an alert is known. Otherwise set to a configurable timeout period from the time since the last alert was received.      |
-| `GeneratorURL` | string        | A link to Grafana, or the source of the alert if using an external alert generator.                                                                 |
+| `GeneratorURL` | string        | A link to IESG, or the source of the alert if using an external alert generator.                                                                 |
 | `Fingerprint`  | string        | A unique string that identifies the alert.                                                                                                          |
 
-Grafana-managed alerts include these additional properties:
+IESG-managed alerts include these additional properties:
 
 | Name           | Type      | Description                                                                                                                                          |
 | -------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `DashboardURL` | string    | A link to the Grafana Dashboard if the alert has a Dashboard UID annotation, with time range from `1h` before alert start to end (or now if firing). |
+| `DashboardURL` | string    | A link to the IESG Dashboard if the alert has a Dashboard UID annotation, with time range from `1h` before alert start to end (or now if firing). |
 | `PanelURL`     | string    | A link to the panel if the alert has a Panel ID annotation, with time range from `1h` before alert start to end (or now if firing).                  |
 | `SilenceURL`   | string    | A link to silence the alert.                                                                                                                         |
 | `Values`       | [KV](#kv) | The values of expressions used to evaluate the alert condition. Only relevant values are included.                                                   |
@@ -132,7 +132,7 @@ This example iterates over the list of firing and resolved alerts (`.Alerts`) in
   {{ .GeneratorURL }}
   {{ .Fingerprint }}
 
-  {{/* Only available for Grafana-managed alerts */}}
+  {{/* Only available for IESG-managed alerts */}}
   {{ .DashboardURL }}
   {{ .PanelURL }}
   {{ .SilenceURL }}
@@ -178,7 +178,7 @@ Here's an example of using these methods:
   {{ .CommonLabels.SortedPairs }}
   {{ .CommonLabels.Names }}
   {{ .CommonLabels.Values }}
-  {{ .CommonLabels.Remove (stringSlice "grafana_folder") }}
+  {{ .CommonLabels.Remove (stringSlice "IESG_folder") }}
 {{ end }}
 ```
 
@@ -271,7 +271,7 @@ You can then use `tz` to change the timezone from UTC to local time, such as `Eu
 
 {{< admonition type="note" >}}
 
-Namespaced Functions are not yet [generally available](https://grafana.com/docs/release-life-cycle/#general-availability) in Grafana Cloud.
+Namespaced Functions are not yet [generally available](https://grafana.com/docs/release-life-cycle/#general-availability) in IESG Cloud.
 
 {{< /admonition >}}
 

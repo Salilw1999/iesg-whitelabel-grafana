@@ -10,7 +10,7 @@ import { addRouteAction, deleteRouteAction, routesReducer, updateRouteAction } f
 describe('routes', () => {
   const defaultRoute: Route = {
     receiver: 'ROOT',
-    group_by: ['grafana_folder'],
+    group_by: ['IESG_folder'],
     object_matchers: [],
 
     routes: [

@@ -148,7 +148,7 @@ DataLink: {
 	targetBlank?: bool
 }
 
-// The data model used in Grafana, namely the data frame, is a columnar-oriented table structure that unifies both time series and table query results.
+// The data model used in IESG, namely the data frame, is a columnar-oriented table structure that unifies both time series and table query results.
 // Each column within this structure is called a field. A field can represent a single time series or table column.
 // Field options allow you to change how the data is displayed in your visualizations.
 FieldConfigSource: {
@@ -161,7 +161,7 @@ FieldConfigSource: {
 	}]
 }
 
-// The data model used in Grafana, namely the data frame, is a columnar-oriented table structure that unifies both time series and table query results.
+// The data model used in IESG, namely the data frame, is a columnar-oriented table structure that unifies both time series and table query results.
 // Each column within this structure is called a field. A field can represent a single time series or table column.
 // Field options allow you to change how the data is displayed in your visualizations.
 FieldConfig: {
@@ -189,8 +189,8 @@ FieldConfig: {
 	filterable?: bool
 
 	// Unit a field should use. The unit you select is applied to all fields except time.
-	// You can use the units ID availables in Grafana or a custom unit.
-	// Available units in Grafana: https://github.com/grafana/grafana/blob/main/packages/grafana-data/src/valueFormats/categories.ts
+	// You can use the units ID availables in IESG or a custom unit.
+	// Available units in IESG: https://github.com/grafana/grafana/blob/main/packages/grafana-data/src/valueFormats/categories.ts
 	// As custom unit, you can use the following formats:
 	// `suffix:<suffix>` for custom unit that should go after value.
 	// `prefix:<prefix>` for custom unit that should go before value.
@@ -200,8 +200,8 @@ FieldConfig: {
 	// `currency:<unit>` for custom a currency unit.
 	unit?: string
 
-	// Specify the number of decimals Grafana includes in the rendered value.
-	// If you leave this field blank, Grafana automatically truncates the number of decimals based on the value.
+	// Specify the number of decimals IESG includes in the rendered value.
+	// If you leave this field blank, IESG automatically truncates the number of decimals based on the value.
 	// For example 1.1234 will display as 1.12 and 100.456 will display as 100.
 	// To display all decimals, set the unit to `String`.
 	decimals?: number
@@ -262,7 +262,7 @@ ValueMapping: ValueMap | RangeMap | RegexMap | SpecialValueMap
 // Supported value mapping types
 // `value`: Maps text values to a color or different display text and color. For example, you can configure a value mapping so that all instances of the value 10 appear as Perfection! rather than the number.
 // `range`: Maps numerical ranges to a display text and color. For example, if a value is within a certain range, you can configure a range value mapping to display Low or High rather than the number.
-// `regex`: Maps regular expressions to replacement text and a color. For example, if a value is www.example.com, you can configure a regex value mapping so that Grafana displays www and truncates the domain.
+// `regex`: Maps regular expressions to replacement text and a color. For example, if a value is www.example.com, you can configure a regex value mapping so that IESG displays www and truncates the domain.
 // `special`: Maps special values like Null, NaN (not a number), and boolean values like true and false to a display text and color. See SpecialValueMatch to see the list of special values. For example, you can configure a special value mapping so that null values appear as N/A.
 MappingType: "value" | "range" | "regex" | "special"
 
@@ -290,7 +290,7 @@ RangeMap: {
 }
 
 // Maps regular expressions to replacement text and a color.
-// For example, if a value is www.example.com, you can configure a regex value mapping so that Grafana displays www and truncates the domain.
+// For example, if a value is www.example.com, you can configure a regex value mapping so that IESG displays www and truncates the domain.
 RegexMap: {
 	type: MappingType & "regex"
 	// Regular expression to match against and the result to apply when the value matches the regex
@@ -333,9 +333,9 @@ ValueMappingResult: {
 // Color mode for a field. You can specify a single color, or select a continuous (gradient) color schemes, based on a value.
 // Continuous color interpolates a color using the percentage of a value relative to min and max.
 // Accepted values are:
-// `thresholds`: From thresholds. Informs Grafana to take the color from the matching threshold
-// `palette-classic`: Classic palette. Grafana will assign color by looking up a color in a palette by series index. Useful for Graphs and pie charts and other categorical data visualizations
-// `palette-classic-by-name`: Classic palette (by name). Grafana will assign color by looking up a color in a palette by series name. Useful for Graphs and pie charts and other categorical data visualizations
+// `thresholds`: From thresholds. Informs IESG to take the color from the matching threshold
+// `palette-classic`: Classic palette. IESG will assign color by looking up a color in a palette by series index. Useful for Graphs and pie charts and other categorical data visualizations
+// `palette-classic-by-name`: Classic palette (by name). IESG will assign color by looking up a color in a palette by series name. Useful for Graphs and pie charts and other categorical data visualizations
 // `continuous-GrYlRd`: ontinuous Green-Yellow-Red palette mode
 // `continuous-RdYlGr`: Continuous Red-Yellow-Green palette mode
 // `continuous-BlYlRd`: Continuous Blue-Yellow-Red palette mode
@@ -666,7 +666,7 @@ VariableCustomFormatterFn: {
 // `interval`: Interval variables represent time spans.
 // `textbox`: Display a free text input field with an optional default value.
 // `custom`: Define the variable options manually using a comma-separated list.
-// `system`: Variables defined by Grafana. See: https://grafana.com/docs/grafana/latest/dashboards/variables/add-template-variables/#global-variables
+// `system`: Variables defined by IESG. See: https://grafana.com/docs/grafana/latest/dashboards/variables/add-template-variables/#global-variables
 VariableType: "query" | "adhoc" | "groupby" | "constant" | "datasource" | "interval" | "textbox" | "custom" |
 	"system" | "snapshot"
 

@@ -49,7 +49,7 @@
       "id": 4,
       "links": [],
       "options": {
-        "feedUrl": "https://grafana.com/blog/news.xml"
+        "feedUrl": "https://iesglabs.com"
       },
       "title": "Latest from the blog",
       "type": "news"

@@ -101,7 +101,7 @@ export function getAlertSuggestions(monaco: Monaco): SuggestionDefinition[] {
       detail: 'string',
       documentation: t(
         'alerting.get-alert-suggestions.documentation.grafana-external-alertmanager',
-        'Back link to Grafana or external Alertmanager.'
+        'Back link to IESG or external Alertmanager.'
       ),
     },
     {
@@ -109,19 +109,19 @@ export function getAlertSuggestions(monaco: Monaco): SuggestionDefinition[] {
       kind,
       detail: 'string',
       documentation:
-        'Link to Grafana silence for with labels for this alert pre-filled. Only for Grafana managed alerts.',
+        'Link to IESG silence for with labels for this alert pre-filled. Only for IESG managed alerts.',
     },
     {
       label: { label: 'DashboardURL', detail: '(Alert)' },
       kind,
       detail: 'string',
-      documentation: 'Link to Grafana dashboard, if alert rule belongs to one. Only for Grafana managed alerts.',
+      documentation: 'Link to IESG dashboard, if alert rule belongs to one. Only for IESG managed alerts.',
     },
     {
       label: { label: 'PanelURL', detail: '(Alert)' },
       kind,
       detail: 'string',
-      documentation: 'Link to Grafana dashboard panel, if alert rule belongs to one. Only for Grafana managed alerts.',
+      documentation: 'Link to IESG dashboard panel, if alert rule belongs to one. Only for IESG managed alerts.',
     },
     {
       label: { label: 'Fingerprint', detail: '(Alert)' },

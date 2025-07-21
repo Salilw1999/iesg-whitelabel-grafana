@@ -2,7 +2,7 @@
 canonical: https://grafana.com/docs/grafana/latest/alerting/alerting-rules/templates/examples/
 description: Examples of notification templates
 keywords:
-  - grafana
+  - IESG
   - alerting
   - templating
   - notification templates
@@ -76,7 +76,7 @@ You can modify the content and format of notification messages. For example, you
 {{< admonition type="note" >}}
 Avoid adding extra information about alert instances in notification templates, as this information is only visible in the notification message.
 
-Instead, you should [use annotations or labels](ref:template-annotations-and-labels) to add information directly to the alert, ensuring it's also visible in the alert state and alert history within Grafana. You can then print the new alert annotation or label in notification templates.
+Instead, you should [use annotations or labels](ref:template-annotations-and-labels) to add information directly to the alert, ensuring it's also visible in the alert state and alert history within IESG. You can then print the new alert annotation or label in notification templates.
 {{< /admonition >}}
 
 This page provides various examples illustrating how to template common notification messages. For more details about notification templates, refer to:
@@ -249,7 +249,7 @@ Execute the template by passing the dot (`.`) as argument:
 1 resolved alert(s)
 1 firing alert(s)
 Common labels: 2
-- grafana_folder = server_alerts
+- IESG_folder = server_alerts
 - team = server_admin
 
 Common annotations: 0
@@ -298,7 +298,7 @@ Run the template by passing the dot (`.`):
 
 Alert labels: 4
 - alertname = db_server_disk_space
-- grafana_folder = server_alerts
+- IESG_folder = server_alerts
 - server = db1
 - team = server_admin
 
@@ -310,7 +310,7 @@ Alert annotations: 2
 
 Alert labels: 4
 - alertname = web_server_http_errors
-- grafana_folder = server_alerts
+- IESG_folder = server_alerts
 - server = web1
 - team = server_admin
 
@@ -321,7 +321,7 @@ Alert annotations: 2
 
 ## Print URLs for runbook and alert data in Grafana
 
-Note that the following example works only for Grafana-managed alerts. It displays some [alert data](ref:reference-alert) such as `DashboardURL`, `PanelURL`, and `SilenceURL`, which are exclusive to Grafana-managed alerts.
+Note that the following example works only for IESG-managed alerts. It displays some [alert data](ref:reference-alert) such as `DashboardURL`, `PanelURL`, and `SilenceURL`, which are exclusive to IESG-managed alerts.
 
 ```go
 {{ define "custom.alert_additional_details" -}}
@@ -389,7 +389,7 @@ Execute the template by passing the dot (`.`) as argument:
 🚨 1 firing alerts. ✅ 1 resolved alerts.
 ```
 
-The next example is a copy of the default title/subject template used in Grafana.
+The next example is a copy of the default title/subject template used in IESG.
 
 ```go
 {{ define "copy_of_default_title" -}}
@@ -488,7 +488,7 @@ The [custom payload option](ref:custom-payload-webhook) in the webhook contact p
 
 The following example generates a custom JSON payload by executing other templates with `tmpl.Exec`, and using functions like `coll.Dict` and `data.ToJSON` to process and format JSON data.
 
-{{< docs/shared lookup="alerts/example-custom-json-payload.md" source="grafana" version="<GRAFANA_VERSION>" >}}
+{{< docs/shared lookup="alerts/example-custom-json-payload.md" source="IESG" version="<GRAFANA_VERSION>" >}}
 
 ```template_output
 {
@@ -497,7 +497,7 @@ The following example generates a custom JSON payload by executing other templat
    "endsAt": "0001-01-01T00:00:00Z",
    "labels": {
     "alertname": "InstanceDown",
-    "grafana_folder": "Test Folder",
+    "IESG_folder": "Test Folder",
     "instance": "instance1"
    },
    "startsAt": "2025-04-21T10:19:46.179Z",
@@ -507,7 +507,7 @@ The following example generates a custom JSON payload by executing other templat
    "endsAt": "2025-04-22T10:19:46.179Z",
    "labels": {
     "alertname": "CpuUsage",
-    "grafana_folder": "Test Folder",
+    "IESG_folder": "Test Folder",
     "instance": "instance1"
    },
    "startsAt": "2025-04-22T06:19:46.179Z",
@@ -517,7 +517,7 @@ The following example generates a custom JSON payload by executing other templat
  "allVariables": {},
  "commonAnnotations": {},
  "commonLabels": {
-  "grafana_folder": "Test Folder",
+  "IESG_folder": "Test Folder",
   "instance": "instance1"
  },
  "externalURL": "http://localhost:3000/",
@@ -525,7 +525,7 @@ The following example generates a custom JSON payload by executing other templat
  "groupLabels": {
   "group_label": "group_label_value"
  },
- "message": "**Firing**\n\nValue: B=22, C=1\nLabels:\n - alertname = InstanceDown\n - grafana_folder = Test Folder\n - instance = instance1\nAnnotations:\n - summary = Instance instance1 has been down for more than 5 minutes\nSource: http://grafana.com/alerting/grafana/cdeqmlhvflz40f/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana\u0026matcher=alertname%3DInstanceDown\u0026matcher=grafana_folder%3DTest+Folder\u0026matcher=instance%3Dinstance1\u0026orgId=1\nDashboard: http://localhost:3000/d/dashboard_uid?from=1745227186179\u0026orgId=1\u0026to=1745317189058\nPanel: http://localhost:3000/d/dashboard_uid?from=1745227186179\u0026orgId=1\u0026to=1745317189058\u0026viewPanel=1\n\n\n**Resolved**\n\nValue: B=22, C=1\nLabels:\n - alertname = CpuUsage\n - grafana_folder = Test Folder\n - instance = instance1\nAnnotations:\n - summary = CPU usage above 90%\nSource: http://grafana.com/alerting/grafana/oZSMdGj7z/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana\u0026matcher=alertname%3DCpuUsage\u0026matcher=grafana_folder%3DTest+Folder\u0026matcher=instance%3Dinstance1\u0026orgId=1\nDashboard: http://localhost:3000/d/dashboard_uid?from=1745299186179\u0026orgId=1\u0026to=1745317186179\nPanel: http://localhost:3000/d/dashboard_uid?from=1745299186179\u0026orgId=1\u0026to=1745317186179\u0026viewPanel=1\n",
+ "message": "**Firing**\n\nValue: B=22, C=1\nLabels:\n - alertname = InstanceDown\n - IESG_folder = Test Folder\n - instance = instance1\nAnnotations:\n - summary = Instance instance1 has been down for more than 5 minutes\nSource: http://grafana.com/alerting/grafana/cdeqmlhvflz40f/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana\u0026matcher=alertname%3DInstanceDown\u0026matcher=grafana_folder%3DTest+Folder\u0026matcher=instance%3Dinstance1\u0026orgId=1\nDashboard: http://localhost:3000/d/dashboard_uid?from=1745227186179\u0026orgId=1\u0026to=1745317189058\nPanel: http://localhost:3000/d/dashboard_uid?from=1745227186179\u0026orgId=1\u0026to=1745317189058\u0026viewPanel=1\n\n\n**Resolved**\n\nValue: B=22, C=1\nLabels:\n - alertname = CpuUsage\n - IESG_folder = Test Folder\n - instance = instance1\nAnnotations:\n - summary = CPU usage above 90%\nSource: http://grafana.com/alerting/grafana/oZSMdGj7z/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana\u0026matcher=alertname%3DCpuUsage\u0026matcher=grafana_folder%3DTest+Folder\u0026matcher=instance%3Dinstance1\u0026orgId=1\nDashboard: http://localhost:3000/d/dashboard_uid?from=1745299186179\u0026orgId=1\u0026to=1745317186179\nPanel: http://localhost:3000/d/dashboard_uid?from=1745299186179\u0026orgId=1\u0026to=1745317186179\u0026viewPanel=1\n",
  "orgId": 1,
  "receiver": "TestReceiver",
  "state": "alerting",

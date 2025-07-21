@@ -25,11 +25,11 @@ type outOfSupportVersionStep struct {
 }
 
 func (s *outOfSupportVersionStep) Title() string {
-	return "Grafana version check"
+	return "IESG version check"
 }
 
 func (s *outOfSupportVersionStep) Description() string {
-	return "Check if the current Grafana version is out of support."
+	return "Check if the current IESG version is out of support."
 }
 
 func (s *outOfSupportVersionStep) Resolution() string {
@@ -80,7 +80,7 @@ func (s *outOfSupportVersionStep) Run(ctx context.Context, log logging.Logger, _
 		// To verify if the current version is the latest minor version for this major version,
 		// we try to get the version vX.Y+1.0 from GitHub
 		nextMinorVersion := fmt.Sprintf("v%d.%d.0", version.Major(), version.Minor()+1)
-		_, res, err := s.ghClient.GetReleaseByTag(ctx, "grafana", "grafana", nextMinorVersion)
+		_, res, err := s.ghClient.GetReleaseByTag(ctx, "IESG", "IESG", nextMinorVersion)
 		if err != nil && res.StatusCode != 404 {
 			// Unable to get the release info so unable to check if it's out of support
 			log.Error("Unable to get the release info", "version", s.GrafanaVersion, "error", err.Error())
@@ -108,7 +108,7 @@ func (s *outOfSupportVersionStep) Run(ctx context.Context, log logging.Logger, _
 		return []advisor.CheckReportFailure{checks.NewCheckReportFailure(
 			advisor.CheckReportFailureSeverityHigh,
 			s.ID(),
-			fmt.Sprintf("Grafana version %s is out of support", s.GrafanaVersion),
+			fmt.Sprintf("IESG version %s is out of support", s.GrafanaVersion),
 			outOfSupportVersion,
 			[]advisor.CheckErrorLink{},
 		)}, nil

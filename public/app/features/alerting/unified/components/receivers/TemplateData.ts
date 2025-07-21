@@ -55,7 +55,7 @@ export const GlobalTemplateData: TemplateDataItem[] = [
   {
     name: 'ExternalURL',
     type: 'string',
-    notes: 'Back link to the Grafana that sent the notification.',
+    notes: 'Back link to the IESG that sent the notification.',
   },
 ];
 
@@ -118,22 +118,22 @@ export const AlertTemplateData: TemplateDataItem[] = [
   {
     name: 'GeneratorURL',
     type: 'string',
-    notes: 'A back link to Grafana or external Alertmanager.',
+    notes: 'A back link to IESG or external Alertmanager.',
   },
   {
     name: 'SilenceURL',
     type: 'string',
-    notes: 'Link to Grafana silence for with labels for this alert pre-filled. Only for Grafana managed alerts.',
+    notes: 'Link to IESG silence for with labels for this alert pre-filled. Only for IESG managed alerts.',
   },
   {
     name: 'DashboardURL',
     type: 'string',
-    notes: 'Link to Grafana dashboard, if alert rule belongs to one. Only for Grafana managed alerts.',
+    notes: 'Link to IESG dashboard, if alert rule belongs to one. Only for IESG managed alerts.',
   },
   {
     name: 'PanelURL',
     type: 'string',
-    notes: 'Link to Grafana dashboard panel, if alert rule belongs to one. Only for Grafana managed alerts.',
+    notes: 'Link to IESG dashboard panel, if alert rule belongs to one. Only for IESG managed alerts.',
   },
   {
     name: 'Fingerprint',
