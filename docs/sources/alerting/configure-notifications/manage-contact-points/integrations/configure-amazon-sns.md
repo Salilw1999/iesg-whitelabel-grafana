@@ -46,7 +46,7 @@ Use the Amazon SNS integration in a contact point to send alert notifications to
 Before you begin, ensure you have the following:
 
 - **AWS SNS Topic**: An SNS topic to send notifications to.
-- **AWS IAM Identity with necessary access**: An IAM identity (e.g. user, role) with the necessary permissions to publish messages to the SNS topic.
+- **AWS IESG Identity with necessary access**: An IESG identity (e.g. user, role) with the necessary permissions to publish messages to the SNS topic.
 
 For a minimal setup, refer to [Example using an Access Key](#example-using-an-access-key).
 
@@ -74,7 +74,7 @@ For more details on contact points, including how to test them and enable notifi
     >
     > If left blank, Grafana searches for credentials using the default credentials chain, including environment variables (`AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`), the shared credential file, and EC2 instance roles.
   - **Profile**: (Optional) Named AWS profile used to authenticate.
-  - **Role ARN**: (Optional) The ARN of an AWS IAM role to assume for authentication, serving as an alternative to using AWS API keys.
+  - **Role ARN**: (Optional) The ARN of an AWS IESG role to assume for authentication, serving as an alternative to using AWS API keys.
 - **SNS topic ARN**: (Optional) If you don't specify this value, you must specify a value for the `Phone number` or `Target ARN`. If you are using a FIFO SNS topic you should set a message group interval longer than 5 minutes to prevent messages with the same group key being deduplicated by the SNS default deduplication window.
 - **Phone number**: (Optional) Phone number if message is delivered via SMS in E.164 format. If you don't specify this value, you must specify a value for the `SNS topic ARN` or `Target ARN`.
 - **Target ARN**: (Optional) The mobile platform endpoint ARN if message is delivered via mobile notifications. If you don't specify this value, you must specify a value for the `SNS topic ARN` or `Phone number`.
@@ -107,11 +107,11 @@ This section outlines a minimal setup to configure Amazon SNS with Alerting.
    - Click **"Create subscription"**.
    - **Confirm Subscription**: Check your email and confirm the subscription by clicking the provided link.
 
-### 2. Create an IAM Policy, User, and Access Key
+### 2. Create an IESG Policy, User, and Access Key
 
-1. **Navigate to IAM in AWS Console**:
+1. **Navigate to IESG in AWS Console**:
 
-   - Go to the [IAM Console](https://console.aws.amazon.com/iam/home).
+   - Go to the [IESG Console](https://console.aws.amazon.com/iam/home).
 
 2. **Create a new policy**:
 
@@ -133,9 +133,9 @@ This section outlines a minimal setup to configure Amazon SNS with Alerting.
 
    - Click **"Next"**, name it (e.g., `SNSPublishPolicy`), and click **"Create policy"**.
 
-3. **Create a new IAM user and assign the policy**
+3. **Create a new IESG user and assign the policy**
 
-   - In the IAM Console, on the **Users** page, choose **"Create user"**.
+   - In the IESG Console, on the **Users** page, choose **"Create user"**.
    - Enter a **User name**, e.g., `alerting-sns-user`.
    - Click **"Next"**.
    - In **Set permissions**, select **"Attach policies directly"**.
@@ -150,7 +150,7 @@ This section outlines a minimal setup to configure Amazon SNS with Alerting.
 
 ### 3. Configure the SNS Contact Point in Grafana
 
-Follow the steps in [configure Amazon SNS for a contact point](#configure-amazon-sns-for-a-contact-point), using the settings below and replacing the placeholders with the SNS and IAM values created in the previous steps.
+Follow the steps in [configure Amazon SNS for a contact point](#configure-amazon-sns-for-a-contact-point), using the settings below and replacing the placeholders with the SNS and IESG values created in the previous steps.
 
 - **The Amazon SNS API URL**: `https://sns.<region>.amazonaws.com`
 - **Signature Version (sigv4)**:
@@ -165,5 +165,5 @@ Follow the steps in [configure Amazon SNS for a contact point](#configure-amazon
 
 - [Configure contact points](ref:configure-contact-points)
 - [Amazon SNS Documentation](https://docs.aws.amazon.com/sns/index.html)
-- [Amazon IAM Documentation](https://docs.aws.amazon.com/iam/index.html)
+- [Amazon IESG Documentation](https://docs.aws.amazon.com/iam/index.html)
 - [Prometheus Alertmanager SNS Configuration](https://prometheus.io/docs/alerting/configuration/#sns_config)

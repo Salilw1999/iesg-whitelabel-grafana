@@ -44,13 +44,13 @@ func TestMultiOrgAlertmanager_SyncAlertmanagersForOrgs(t *testing.T) {
 		require.NoError(t, mam.LoadAndSyncAlertmanagersForOrgs(ctx))
 		require.Len(t, mam.alertmanagers, 3)
 		require.NoError(t, testutil.GatherAndCompare(reg, bytes.NewBufferString(`
-# HELP grafana_alerting_active_configurations The number of active Alertmanager configurations.
-# TYPE grafana_alerting_active_configurations gauge
-grafana_alerting_active_configurations 3
-# HELP grafana_alerting_discovered_configurations The number of organizations we've discovered that require an Alertmanager configuration.
-# TYPE grafana_alerting_discovered_configurations gauge
-grafana_alerting_discovered_configurations 3
-`), "grafana_alerting_discovered_configurations", "grafana_alerting_active_configurations"))
+# HELP iesg_alerting_active_configurations The number of active Alertmanager configurations.
+# TYPE iesg_alerting_active_configurations gauge
+iesg_alerting_active_configurations 3
+# HELP iesg_alerting_discovered_configurations The number of organizations we've discovered that require an Alertmanager configuration.
+# TYPE iesg_alerting_discovered_configurations gauge
+iesg_alerting_discovered_configurations 3
+`), "iesg_alerting_discovered_configurations", "iesg_alerting_active_configurations"))
 
 		// Configurations should be marked as successfully applied.
 		for _, org := range orgStore.orgs {
@@ -65,13 +65,13 @@ grafana_alerting_discovered_configurations 3
 		require.NoError(t, mam.LoadAndSyncAlertmanagersForOrgs(ctx))
 		require.Len(t, mam.alertmanagers, 2)
 		require.NoError(t, testutil.GatherAndCompare(reg, bytes.NewBufferString(`
-# HELP grafana_alerting_active_configurations The number of active Alertmanager configurations.
-# TYPE grafana_alerting_active_configurations gauge
-grafana_alerting_active_configurations 2
-# HELP grafana_alerting_discovered_configurations The number of organizations we've discovered that require an Alertmanager configuration.
-# TYPE grafana_alerting_discovered_configurations gauge
-grafana_alerting_discovered_configurations 2
-`), "grafana_alerting_discovered_configurations", "grafana_alerting_active_configurations"))
+# HELP iesg_alerting_active_configurations The number of active Alertmanager configurations.
+# TYPE iesg_alerting_active_configurations gauge
+iesg_alerting_active_configurations 2
+# HELP iesg_alerting_discovered_configurations The number of organizations we've discovered that require an Alertmanager configuration.
+# TYPE iesg_alerting_discovered_configurations gauge
+iesg_alerting_discovered_configurations 2
+`), "iesg_alerting_discovered_configurations", "iesg_alerting_active_configurations"))
 	}
 	// if the org comes back, it should detect it.
 	{
@@ -79,13 +79,13 @@ grafana_alerting_discovered_configurations 2
 		require.NoError(t, mam.LoadAndSyncAlertmanagersForOrgs(ctx))
 		require.Len(t, mam.alertmanagers, 4)
 		require.NoError(t, testutil.GatherAndCompare(reg, bytes.NewBufferString(`
-# HELP grafana_alerting_active_configurations The number of active Alertmanager configurations.
-# TYPE grafana_alerting_active_configurations gauge
-grafana_alerting_active_configurations 4
-# HELP grafana_alerting_discovered_configurations The number of organizations we've discovered that require an Alertmanager configuration.
-# TYPE grafana_alerting_discovered_configurations gauge
-grafana_alerting_discovered_configurations 4
-`), "grafana_alerting_discovered_configurations", "grafana_alerting_active_configurations"))
+# HELP iesg_alerting_active_configurations The number of active Alertmanager configurations.
+# TYPE iesg_alerting_active_configurations gauge
+iesg_alerting_active_configurations 4
+# HELP iesg_alerting_discovered_configurations The number of organizations we've discovered that require an Alertmanager configuration.
+# TYPE iesg_alerting_discovered_configurations gauge
+iesg_alerting_discovered_configurations 4
+`), "iesg_alerting_discovered_configurations", "iesg_alerting_active_configurations"))
 	}
 	// if the disabled org comes back, it should not detect it.
 	{
@@ -253,7 +253,7 @@ func TestMultiOrgAlertmanager_ActivateHistoricalConfiguration(t *testing.T) {
 	require.Equal(t, defaultConfig, cfgs[3].AlertmanagerConfiguration)
 
 	// Now let's save a new config for org 2.
-	newConfig := `{"template_files":null,"alertmanager_config":{"route":{"receiver":"grafana-default-email","group_by":["grafana_folder","alertname"]},"receivers":[{"name":"grafana-default-email","grafana_managed_receiver_configs":[{"uid":"","name":"some other name","type":"email","disableResolveMessage":false,"settings":{"addresses":"\u003cexample@email.com\u003e"}}]}]}}`
+	newConfig := `{"template_files":null,"alertmanager_config":{"route":{"receiver":"iesg-default-email","group_by":["iesg_folder","alertname"]},"receivers":[{"name":"iesg-default-email","iesg_managed_receiver_configs":[{"uid":"","name":"some other name","type":"email","disableResolveMessage":false,"settings":{"addresses":"\u003cexample@email.com\u003e"}}]}]}}`
 	am, err := mam.alertmanagerForOrg(2)
 	require.NoError(t, err)
 
@@ -406,16 +406,16 @@ var defaultConfig = `
 	"template_files": null,
 	"alertmanager_config": {
 		"route": {
-			"receiver": "grafana-default-email",
+			"receiver": "iesg-default-email",
 			"group_by": [
-				"grafana_folder",
+				"iesg_folder",
 				"alertname"
 			]
 		},
 		"receivers": [
 			{
-				"name": "grafana-default-email",
-				"grafana_managed_receiver_configs": [
+				"name": "iesg-default-email",
+				"iesg_managed_receiver_configs": [
 					{
 						"uid": "",
 						"name": "email receiver",
@@ -434,11 +434,11 @@ var defaultConfig = `
 var brokenConfig = `
 	"alertmanager_config": {
 		"route": {
-			"receiver": "grafana-default-email"
+			"receiver": "iesg-default-email"
 		},
 		"receivers": [{
-			"name": "grafana-default-email",
-			"grafana_managed_receiver_configs": [{
+			"name": "iesg-default-email",
+			"iesg_managed_receiver_configs": [{
 				"uid": "",
 				"name": "slack receiver",
 				"type": "slack",

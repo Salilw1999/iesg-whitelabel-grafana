@@ -6,7 +6,7 @@ exports[`routes Should add a new route with receiver E as a child of default rou
     "mute_time_intervals": [],
     "route": {
       "group_by": [
-        "grafana_folder",
+        "IESG_folder",
       ],
       "group_interval": "1m",
       "group_wait": "10s",
@@ -87,7 +87,7 @@ exports[`routes Should delete route 1`] = `
     "mute_time_intervals": [],
     "route": {
       "group_by": [
-        "grafana_folder",
+        "IESG_folder",
       ],
       "group_interval": "1m",
       "group_wait": "10s",
@@ -119,7 +119,7 @@ exports[`routes Should update an existing route A with receiver B 1`] = `
     "mute_time_intervals": [],
     "route": {
       "group_by": [
-        "grafana_folder",
+        "IESG_folder",
       ],
       "group_interval": "1m",
       "group_wait": "10s",

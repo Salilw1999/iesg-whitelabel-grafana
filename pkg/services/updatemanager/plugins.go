@@ -159,7 +159,7 @@ func (s *PluginsService) checkForUpdates(ctx context.Context) error {
 	requestURL := s.updateCheckURL
 	requestURLParameters := requestURL.Query()
 	requestURLParameters.Set("slugIn", s.pluginIDsCSV((localPlugins)))
-	requestURLParameters.Set("grafanaVersion", s.grafanaVersion)
+	requestURLParameters.Set("IESG Version", s.grafanaVersion)
 	requestURL.RawQuery = requestURLParameters.Encode()
 
 	ctxLogger.Debug("Checking for plugin updates", "url", requestURL)
@@ -169,7 +169,7 @@ func (s *PluginsService) checkForUpdates(ctx context.Context) error {
 	}
 	resp, err := s.httpClient.Do(req)
 	if err != nil {
-		return fmt.Errorf("failed to get plugins repo from grafana.com: %w", err)
+		return fmt.Errorf("failed to get plugins repo from iesg.com: %w", err)
 	}
 	defer func() {
 		err = resp.Body.Close()

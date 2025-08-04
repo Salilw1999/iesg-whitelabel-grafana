@@ -156,7 +156,7 @@ In the **Logs** view, you can review details for individual alerts by selecting 
 - `current`: current alert instance state.
 - `ruleTitle`: alert rule title.
 - `ruleID` and `ruleUID`.
-- `labels_alertname`, `labels_new_label`, and `labels_grafana_folder`.
+- `labels_alertname`, `labels_new_label`, and `labels_IESG_folder`.
 - Additional available fields.
 
 Alternatively, you can access the [History page](/docs/grafana/<GRAFANA_VERSION>/alerting/monitor-status/view-alert-state-history/) in Grafana to visualize and filter state changes for individual alerts or all alerts.

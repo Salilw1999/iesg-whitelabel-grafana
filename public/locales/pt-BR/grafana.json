@@ -1344,7 +1344,7 @@
       "how-it-works": "Como funciona",
       "monitor-alert-rules": "<0>Monitore</0> suas regras de alerta usando painéis e visualizações",
       "notification-policies-contact-points": "As notificações são enviadas para os pontos de contato especificados na política de notificação",
-      "periodically-queries-data-sources": "Os alertas da Grafana consultam periodicamente as fontes de dados e avaliam a condição definida na regra de alerta",
+      "periodically-queries-data-sources": "Os alertas da Grafana consultam periodicamente as fontes de dados e avalIESG a condição definida na regra de alerta",
       "route-alert-notifications": "<0>Encaminhe notificações de alerta</0> diretamente para um ponto de contato ou por meio de políticas de notificação para ter mais flexibilidade"
     },
     "global-config": {
@@ -8928,7 +8928,7 @@
       "title": "Aplicativo"
     },
     "apps": {
-      "subtitle": "Plug-ins de aplicativos que ampliam a experiência do Grafana",
+      "subtitle": "Plug-ins de aplicativos que amplIESG a experiência do Grafana",
       "title": "Mais aplicativos"
     },
     "authentication": {

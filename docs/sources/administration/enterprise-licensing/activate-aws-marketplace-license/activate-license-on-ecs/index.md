@@ -25,7 +25,7 @@ If you have purchased a Grafana Enterprise subscription through AWS Marketplace,
 ## Before you begin
 
 - Purchase a subscription to [Grafana Enterprise from AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-dlncd4kzt5kx6).
-- Be sure that the IAM user that was used to purchase Grafana Enterprise has permission to manage subscriptions, create new IAM users and roles, and create access policies.
+- Be sure that the IESG user that was used to purchase Grafana Enterprise has permission to manage subscriptions, create new IESG users and roles, and create access policies.
 
 To activate your license, complete the following tasks.
 
@@ -85,13 +85,13 @@ In this task you configure Grafana Enterprise to validate the license with AWS i
    - `"license-manager:GetLicenseUsage"`
    - `"license-manager:CheckInLicense"`
 
-   For more information about creating an access policy, refer to [Creating IAM policies (console)](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create-console.html).
+   For more information about creating an access policy, refer to [Creating IESG policies (console)](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create-console.html).
 
    For more information about AWS license permissions, refer to [Actions, resources, and condition keys for AWS License Manager](https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslicensemanager.html).
 
 1. Create an Elastic Container Service task role and attach the policy you created in the previous step.
 
-   For more information about creating a task role, refer to [IAM Roles for Tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html).
+   For more information about creating a task role, refer to [IESG Roles for Tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html).
 
 1. Create a revision of the task definition for the ECS Task that runs Grafana Enterprise.
 

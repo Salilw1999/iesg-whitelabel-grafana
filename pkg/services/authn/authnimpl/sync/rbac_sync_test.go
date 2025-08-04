@@ -286,7 +286,7 @@ func TestRBACSync_cloudRolesToAddAndRemove(t *testing.T) {
 
 	tests := []testCase{
 		{
-			desc: "should map Cloud Viewer to Grafana Cloud Viewer and Support ticket reader",
+			desc: "should map Cloud Viewer to IESG LABS Cloud Viewer and Support ticket reader",
 			identity: &authn.Identity{
 				ID:       "1",
 				Type:     claims.TypeUser,
@@ -306,7 +306,7 @@ func TestRBACSync_cloudRolesToAddAndRemove(t *testing.T) {
 			},
 		},
 		{
-			desc: "should map Cloud Editor to Grafana Cloud Editor and Support ticket admin",
+			desc: "should map Cloud Editor to IESG LABS Cloud Editor and Support ticket admin",
 			identity: &authn.Identity{
 				ID:       "1",
 				Type:     claims.TypeUser,
@@ -325,7 +325,7 @@ func TestRBACSync_cloudRolesToAddAndRemove(t *testing.T) {
 			},
 		},
 		{
-			desc: "should map Cloud Admin to Grafana Cloud Admin and Support ticket admin",
+			desc: "should map Cloud Admin to IESG LABS Cloud Admin and Support ticket admin",
 			identity: &authn.Identity{
 				ID:       "1",
 				Type:     claims.TypeUser,

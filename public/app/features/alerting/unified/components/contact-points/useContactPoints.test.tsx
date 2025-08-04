@@ -50,7 +50,7 @@ describe('useContactPoints', () => {
     grantUserPermissions([AccessControlAction.AlertingNotificationsRead]);
     setOnCallIntegrations([
       {
-        display_name: 'grafana-integration',
+        display_name: 'IESG-integration',
         value: 'ABC123',
         integration_url: 'https://oncall-endpoint.example.com',
       },

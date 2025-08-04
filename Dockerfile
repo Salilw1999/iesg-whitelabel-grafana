@@ -218,10 +218,6 @@ COPY --from=js-src /tmp/grafana/public ./public
 COPY --from=js-src /tmp/grafana/LICENSE ./
 
 EXPOSE 3000
+USER grafana
 
-ARG RUN_SH=./packaging/docker/run.sh
-
-COPY ${RUN_SH} /run.sh
-
-USER "$GF_UID"
-ENTRYPOINT [ "/run.sh" ]
+CMD ["/usr/share/grafana/bin/grafana-server", "-homepath", "/usr/share/grafana"]

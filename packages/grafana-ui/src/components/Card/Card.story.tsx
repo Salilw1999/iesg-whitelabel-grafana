@@ -6,7 +6,7 @@ import { TagList } from '../Tags/TagList';
 
 import { Card } from './Card';
 
-const logo = 'https://grafana.com/static/assets/img/apple-touch-icon.png';
+const logo = 'https://raw.githubusercontent.com/Salilw1999/iesg-whitelabel-grafana/b5587aaf6797d5f10f2d78601b0a8429e71554f9/public/img/IESG%20White.png';
 
 const meta: Meta<typeof Card> = {
   title: 'General/Card',

@@ -295,7 +295,7 @@ var (
 		},
 		{
 			Name:        "awsDatasourcesTempCredentials",
-			Description: "Support temporary security credentials in AWS plugins for Grafana Cloud customers",
+			Description: "Support temporary security credentials in AWS plugins for IESG LABS Cloud customers",
 			Stage:       FeatureStageExperimental,
 			Owner:       awsDatasourcesSquad,
 		},
@@ -354,7 +354,7 @@ var (
 		},
 		{
 			Name:            "featureToggleAdminPage",
-			Description:     "Enable admin page for managing feature toggles from the Grafana front-end. Grafana Cloud only.",
+			Description:     "Enable admin page for managing feature toggles from the IESG LABS front-end. IESG LABS Cloud only.",
 			Stage:           FeatureStageExperimental,
 			FrontendOnly:    false,
 			Owner:           grafanaOperatorExperienceSquad,
@@ -725,7 +725,7 @@ var (
 		},
 		{
 			Name:              "cloudRBACRoles",
-			Description:       "Enabled grafana cloud specific RBAC roles",
+			Description:       "Enabled IESG LABS cloud specific RBAC roles",
 			Stage:             FeatureStagePublicPreview,
 			Owner:             identityAccessTeam,
 			HideFromDocs:      true,
@@ -754,7 +754,7 @@ var (
 		},
 		{
 			Name:        "onPremToCloudMigrations",
-			Description: "Enable the Grafana Migration Assistant, which helps you easily migrate various on-prem resources to your Grafana Cloud stack.",
+			Description: "Enable the IESG LABS Migration Assistant, which helps you easily migrate various on-prem resources to your IESG LABS Cloud stack.",
 			Stage:       FeatureStageGeneralAvailability,
 			Owner:       grafanaOperatorExperienceSquad,
 			Expression:  "true",
@@ -1704,7 +1704,7 @@ var (
 		},
 		{
 			Name:              "alertEnrichment",
-			Description:       "Enable configuration of alert enrichments in Grafana Cloud.",
+			Description:       "Enable configuration of alert enrichments in IESG LABS Cloud.",
 			Stage:             FeatureStageExperimental,
 			Owner:             grafanaAlertingSquad,
 			HideFromAdminPage: true,

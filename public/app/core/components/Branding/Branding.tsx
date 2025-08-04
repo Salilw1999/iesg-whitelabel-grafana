@@ -3,9 +3,9 @@ import { FC } from 'react';
 
 import { colorManipulator } from '@grafana/data';
 import { useTheme2 } from '@grafana/ui';
-import g8LoginDarkSvg from 'img/g8_login_dark.svg';
-import g8LoginLightSvg from 'img/g8_login_light.svg';
-import grafanaIconSvg from 'img/grafana_icon.svg';
+import g8LoginDarkSvg from 'img/background_grafana.png';
+import g8LoginLightSvg from 'img/background_grafana.png';
+import grafanaIconSvg from 'img/IESG_White.png';
 
 export interface BrandComponentProps {
   className?: string;
@@ -13,7 +13,7 @@ export interface BrandComponentProps {
 }
 
 export const LoginLogo: FC<BrandComponentProps & { logo?: string }> = ({ className, logo }) => {
-  return <img className={className} src={`${logo ? logo : grafanaIconSvg}`} alt="Grafana" />;
+  return <img className={className} src={`${logo ? logo : grafanaIconSvg}`} alt="IESG LABS" />;
 };
 
 const LoginBackground: FC<BrandComponentProps> = ({ className, children }) => {
@@ -46,7 +46,7 @@ const LoginBackground: FC<BrandComponentProps> = ({ className, children }) => {
 };
 
 const MenuLogo: FC<BrandComponentProps> = ({ className }) => {
-  return <img className={className} src={grafanaIconSvg} alt="Grafana" />;
+  return <img className={className} src={grafanaIconSvg} alt="IESG LABS" />;
 };
 
 const LoginBoxBackground = () => {
@@ -62,8 +62,8 @@ export class Branding {
   static LoginBackground = LoginBackground;
   static MenuLogo = MenuLogo;
   static LoginBoxBackground = LoginBoxBackground;
-  static AppTitle = 'Grafana';
-  static LoginTitle = 'Welcome to Grafana';
+  static AppTitle = 'IESG LABS'; // TODO: Make this configurable
+  static LoginTitle = 'Welcome to IESG LABS Dashboard';
   static HideEdition = false;
   static GetLoginSubTitle = (): null | string => {
     return null;

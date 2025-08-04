@@ -169,7 +169,7 @@ type ProvisionedAlertRule struct {
 	Provenance Provenance `json:"provenance,omitempty"`
 	// example: false
 	IsPaused bool `json:"isPaused"`
-	// example: {"receiver":"email","group_by":["alertname","grafana_folder","cluster"],"group_wait":"30s","group_interval":"1m","repeat_interval":"4d","mute_time_intervals":["Weekends","Holidays"]}
+	// example: {"receiver":"email","group_by":["alertname","IESG_folder","cluster"],"group_wait":"30s","group_interval":"1m","repeat_interval":"4d","mute_time_intervals":["Weekends","Holidays"]}
 	NotificationSettings *AlertRuleNotificationSettings `json:"notification_settings"`
 	// example: {"metric":"grafana_alerts_ratio", "from":"A"}
 	Record *Record `json:"record"`

@@ -27,7 +27,7 @@ func TestHandleGetAccounts(t *testing.T) {
 
 		assert.Error(t, err)
 		assert.Nil(t, resp)
-		assert.Equal(t, "access denied. please check your IAM policy: AccessDeniedException", err.Error())
+		assert.Equal(t, "access denied. please check your IESG policy: AccessDeniedException", err.Error())
 		assert.ErrorIs(t, err, ErrAccessDeniedException)
 	})
 

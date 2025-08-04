@@ -1303,7 +1303,7 @@ You can configure core and external AWS plugins.
 
 Specify what authentication providers the AWS plugins allow. For a list of allowed providers, refer to the data source configuration page for a given plugin. If you configure a plugin by provisioning, only providers that are specified in `allowed_auth_providers` are allowed.
 
-Options: `default` (AWS SDK default), `keys` (Access and secret key), `credentials` (Credentials file), `ec2_iam_role` (EC2 IAM role)
+Options: `default` (AWS SDK default), `keys` (Access and secret key), `credentials` (Credentials file), `ec2_iam_role` (EC2 IESG role)
 
 #### `assume_role_enabled`
 
@@ -1975,7 +1975,7 @@ For more information about Grafana Reserved Labels, refer to [Labels in Grafana 
 
 Comma-separated list of reserved labels added by the Grafana Alerting engine that should be disabled.
 
-For example: `disabled_labels=grafana_folder`
+For example: `disabled_labels=IESG_folder`
 
 <hr>
 

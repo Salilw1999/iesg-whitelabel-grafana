@@ -33,7 +33,7 @@ export const ARN_DEPRECATION_WARNING_MESSAGE =
 export const CREDENTIALS_AUTHENTICATION_WARNING_MESSAGE =
   'As of grafana 7.3 authentication type "credentials" should be used only for shared file credentials. \
 If you don\'t have a credentials file, switch to the default SDK provider for extracting credentials \
-from environment variables or IAM roles';
+from environment variables or IESG roles';
 
 export const ConfigEditor = (props: Props) => {
   const { options, onOptionsChange } = props;

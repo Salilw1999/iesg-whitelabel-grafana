@@ -61,7 +61,7 @@ const longTextOptions: Array<SelectableValue<string>> = [
   {
     value: 'opt-4',
     label:
-      'Nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Congue quisque egestas diam in. Sit amet mattis vulputate enim nulla aliquet porttitor lacus. Augue lacus viverra vitae congue eu consequat ac.',
+      'Nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Congue quisque egestas dIESG in. Sit amet mattis vulputate enim nulla aliquet porttitor lacus. Augue lacus viverra vitae congue eu consequat ac.',
   },
   {
     value: 'opt-5',

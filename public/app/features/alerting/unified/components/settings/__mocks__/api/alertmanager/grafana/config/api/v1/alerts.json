@@ -9,7 +9,7 @@
   "alertmanager_config": {
     "route": {
       "receiver": "grafana-default-email",
-      "group_by": ["grafana_folder", "alertname"],
+      "group_by": ["IESG_folder", "alertname"],
       "routes": [
         {
           "receiver": "grafana-default-email",

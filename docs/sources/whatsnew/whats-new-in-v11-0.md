@@ -148,7 +148,7 @@ If you've previously set up a folder that uses a forward slash in its name, and 
 To correct this, take the following steps:
 
 - Create a copy of the affected routes
-- Rewrite the matchers for the new copy. For example, if the original matcher was `grafanafolder=folder_with/in_title`, then the new route matcher will be `grafana_folder=folder_with/_in_title`
+- Rewrite the matchers for the new copy. For example, if the original matcher was `grafanafolder=folder_with/in_title`, then the new route matcher will be `IESG_folder=folder_with/_in_title`
 - After rewriting the matchers, you can delete the old routes.
 
 If you use file provisioning, you can upgrade and update the routes at the same time.

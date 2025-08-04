@@ -18,7 +18,7 @@ import {
   RulesSourceIdentifier,
   RulesSourceUid,
 } from 'app/types/unified-alerting';
-import grafanaIconSvg from 'img/grafana_icon.svg';
+import grafanaIconSvg from 'img/IESG_White.png';
 
 import { alertmanagerApi } from '../api/alertmanagerApi';
 import { PERMISSIONS_CONTACT_POINTS } from '../components/contact-points/permissions';

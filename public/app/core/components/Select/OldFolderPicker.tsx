@@ -100,7 +100,7 @@ export function OldFolderPicker(props: Props) {
       const resultsAfterMapAndFilter = mapSearchHitsToOptions(searchHits, filter);
       const options: Array<SelectableValue<string>> = resultsAfterMapAndFilter;
 
-      reportInteraction('grafana_folder_picker_results_loaded', {
+      reportInteraction('IESG_folder_picker_results_loaded', {
         results: options.length,
         searchTermLength: query.length,
         enableCreateNew: Boolean(enableCreateNew),
@@ -234,7 +234,7 @@ export function OldFolderPicker(props: Props) {
   const createNewFolder = useCallback(
     async (folderName: string) => {
       if (folderWarning?.warningCondition(folderName)) {
-        reportInteraction('grafana_folder_picker_folder_created', { status: 'failed_condition' });
+        reportInteraction('IESG_folder_picker_folder_created', { status: 'failed_condition' });
         return false;
       }
 
@@ -242,14 +242,14 @@ export function OldFolderPicker(props: Props) {
       let folder: SelectableValue<string> = { value: '', label: 'Not created' };
 
       if (newFolder.uid) {
-        reportInteraction('grafana_folder_picker_folder_created', { status: 'success' });
+        reportInteraction('IESG_folder_picker_folder_created', { status: 'success' });
         appEvents.emit(AppEvents.alertSuccess, ['Folder Created', 'OK']);
         folder = { value: newFolder.uid, label: newFolder.title };
 
         setFolder(newFolder);
         onFolderChange(folder, { action: 'create-option', option: folder });
       } else {
-        reportInteraction('grafana_folder_picker_folder_created', { status: 'failed' });
+        reportInteraction('IESG_folder_picker_folder_created', { status: 'failed' });
         appEvents.emit(AppEvents.alertError, ['Folder could not be created']);
       }
 

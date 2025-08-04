@@ -43,7 +43,7 @@ export const Example: StoryFn = (args) => {
     <Stack direction="column">
       <StoryExample name="This is a 'inline + external' link with the default behaviour">
         <Text element="p">
-          To get started with a forever free Grafana Cloud account, sign up at &#160;
+          To get started with a forever free IESG LABS Cloud account, sign up at &#160;
           <TextLink href="https://grafana.com/" {...args} inline>
             grafana.com
           </TextLink>

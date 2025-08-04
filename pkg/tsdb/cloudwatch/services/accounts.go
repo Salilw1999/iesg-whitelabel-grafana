@@ -12,7 +12,7 @@ import (
 	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models/resources"
 )
 
-var ErrAccessDeniedException = errors.New("access denied. please check your IAM policy")
+var ErrAccessDeniedException = errors.New("access denied. please check your IESG policy")
 
 type AccountsService struct {
 	models.OAMAPIProvider

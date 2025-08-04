@@ -8039,7 +8039,7 @@
   },
   "ldap-drawer": {
     "attributes-section": {
-      "description": "Especifique os atributos LDAP que mapeiam para o nome, apelido e endereço de e-mail do utilizador, garantindo que a aplicação recupere e exiba corretamente as informações do utilizador.",
+      "description": "Especifique os atributos LDAP que mapeIESG para o nome, apelido e endereço de e-mail do utilizador, garantindo que a aplicação recupere e exiba corretamente as informações do utilizador.",
       "email-label": "E-mail",
       "label": "Atributos",
       "member-of-label": "Membro de",
@@ -11527,7 +11527,7 @@
       "save": "Guardar"
     },
     "team-sync-upgrade-content": {
-      "description": "A sincronização de equipas facilita a gestão do acesso dos utilizadores na Grafana, atualizando imediatamente as equipas e permissões Grafana de cada utilizador com base na sua afiliação de grupo de início de sessão único, em vez de quando os utilizadores iniciam sessão"
+      "description": "A sincronização de equipas facilita a gestão do acesso dos utilizadores na Grafana, atualizando imediatamente as equipas e permissões Grafana de cada utilizador com base na sua afiliação de grupo de início de sessão único, em vez de quando os utilizadores inicIESG sessão"
     }
   },
   "text": {

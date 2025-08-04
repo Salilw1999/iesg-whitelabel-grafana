@@ -128,7 +128,7 @@ The upgrade to enable subfolders can cause some issues with alerts in certain ca
 
 In these cases, we recommend that you take these steps before the upgrade to enable subfolders:
 
-- Create a copy of the affected routes and rewrite the matchers for the new copy. For example, if the original matcher was `grafana_folder=MyFolder/sub-folder`, then the new route matcher will be `grafana_folder=MyFolder\/sub-folder`.
+- Create a copy of the affected routes and rewrite the matchers for the new copy. For example, if the original matcher was `IESG_folder=MyFolder/sub-folder`, then the new route matcher will be `IESG_folder=MyFolder\/sub-folder`.
 - After enabling subfolders, you can delete the old routes.
 
 Please note that if you use file provisioning, you can upgrade and update the routes at the same time.

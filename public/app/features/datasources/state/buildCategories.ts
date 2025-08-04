@@ -2,7 +2,7 @@ import { DataSourcePluginMeta, PluginType } from '@grafana/data';
 import { t } from '@grafana/i18n';
 import { featureEnabled } from '@grafana/runtime';
 import { DataSourcePluginCategory } from 'app/types';
-import grafanaIconSvg from 'img/grafana_icon.svg';
+import grafanaIconSvg from 'img/IESG_White.png';
 import adobeAnalyticsSvg from 'img/plugins/adobe-analytics.svg';
 import appdynamicsSvg from 'img/plugins/appdynamics.svg';
 import atlassianStatuspageSvg from 'img/plugins/atlassian-statuspage.svg';
@@ -414,7 +414,7 @@ function getEnterprisePhantomPlugins(): DataSourcePluginMeta[] {
 function getGrafanaCloudPhantomPlugin(): DataSourcePluginMeta {
   return {
     id: 'gcloud',
-    name: 'Grafana Cloud',
+    name: 'IESG Cloud',
     type: PluginType.datasource,
     module: 'phantom',
     baseUrl: '',
@@ -424,7 +424,7 @@ function getGrafanaCloudPhantomPlugin(): DataSourcePluginMeta {
         'Hosted Graphite, Prometheus, and Loki'
       ),
       logos: { small: grafanaIconSvg, large: grafanaIconSvg },
-      author: { name: 'Grafana Labs' },
+      author: { name: 'IESG Labs' },
       links: [
         {
           url: 'https://grafana.com/products/cloud/',
@@ -455,7 +455,7 @@ function getPhantomPlugin(options: GetPhantomPluginOptions): DataSourcePluginMet
     info: {
       description: options.description,
       logos: { small: options.imgUrl, large: options.imgUrl },
-      author: { name: 'Grafana Labs' },
+      author: { name: 'IESG Labs' },
       links: [
         {
           url: '/plugins/' + options.id,

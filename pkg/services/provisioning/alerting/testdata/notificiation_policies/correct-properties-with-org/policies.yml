@@ -3,5 +3,5 @@ policies:
   - orgId: 1337
     receiver: grafana-default-email
     group_by:
-    - grafana_folder
+    - IESG_folder
     - alertname

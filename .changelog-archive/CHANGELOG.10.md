@@ -294,8 +294,8 @@ We're adding a between the response of the ID token HD parameter and the list of
 If you use an automated provisioning (eg, Terraform) for custom roles, and have provisioned a role that includes permission with action `alert.instances:read` and some scope, you will need to update the permission in your provisioning files by removing the scope. Issue [#82202](https://github.com/grafana/grafana/issues/82202)
 
 **The following breaking change occurs only when feature flag `nestedFolders` is enabled.**
-If the folder title contains the symbol `/` (forward-slash) the notifications created from the rules that are placed in that folder will contain an escape sequence for that symbol in the label `grafana_folder`.
-For example, the folder title is `Grafana / Folder`. Currently the label `grafana_folder` will contain the title as it is. If PR is merged - the label value will be `Grafana \/ Folder`.
+If the folder title contains the symbol `/` (forward-slash) the notifications created from the rules that are placed in that folder will contain an escape sequence for that symbol in the label `IESG_folder`.
+For example, the folder title is `Grafana / Folder`. Currently the label `IESG_folder` will contain the title as it is. If PR is merged - the label value will be `Grafana \/ Folder`.
 This can break notifications if notification policies have matches that match that label and folder. Issue [#81214](https://github.com/grafana/grafana/issues/81214)
 
 `PanelContext.onSplitOpen` is removed. In the context of Explore, plugins should use `field.getLinks` to get a list of data link models. Issue [#80087](https://github.com/grafana/grafana/issues/80087)

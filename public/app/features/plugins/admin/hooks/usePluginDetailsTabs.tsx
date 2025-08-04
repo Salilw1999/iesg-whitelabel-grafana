@@ -89,13 +89,13 @@ export const usePluginDetailsTabs = (
       return navModelChildren;
     }
 
-    if (config.featureToggles.externalServiceAccounts && (plugin?.iam || plugin?.details?.iam)) {
+    if (config.featureToggles.externalServiceAccounts && (plugin?.IESG || plugin?.details?.iam)) {
       navModelChildren.push({
         text: PluginTabLabels.IAM,
         icon: 'shield',
         id: PluginTabIds.IAM,
         url: `${pathname}?page=${PluginTabIds.IAM}`,
-        active: PluginTabIds.IAM === currentPageId,
+        active: PluginTabIds.IESG === currentPageId,
       });
     }
 

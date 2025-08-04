@@ -292,7 +292,7 @@ func createSilence(id string, startsAt, expiresAt time.Time) *silencepb.MeshSile
 			},
 			StartsAt:  startsAt,
 			EndsAt:    expiresAt,
-			CreatedBy: "Grafana Test",
+			CreatedBy: "IESG Test",
 			Comment:   "Test Silence",
 		},
 		ExpiresAt: expiresAt,

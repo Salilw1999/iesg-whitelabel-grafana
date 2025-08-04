@@ -80,7 +80,7 @@ resource "grafana_rule_group" "rule_group_d3e8424bfbf66bc3" {
 
     notification_settings {
       contact_point   = "Test-Receiver"
-      group_by        = ["alertname", "grafana_folder", "test"]
+      group_by        = ["alertname", "IESG_folder", "test"]
       group_wait      = "1s"
       group_interval  = "5s"
       repeat_interval = "5m"
@@ -121,7 +121,7 @@ resource "grafana_rule_group" "rule_group_d3e8424bfbf66bc3" {
 
     notification_settings {
       contact_point   = "Test-Receiver"
-      group_by        = ["alertname", "grafana_folder", "test"]
+      group_by        = ["alertname", "IESG_folder", "test"]
       group_wait      = "1s"
       group_interval  = "5s"
       repeat_interval = "5m"

@@ -20,12 +20,12 @@ const ui = {
   otherAlertmanagerSection: byText('Other Alertmanagers'),
 
   alertmanagerCard: (name: string) => byTestId(`alertmanager-card-${name}`),
-  builtInAlertmanagerCard: byTestId('alertmanager-card-Grafana built-in'),
+  builtInAlertmanagerCard: byTestId('alertmanager-card-IESG built-in'),
 
-  statusReceiving: byText(/receiving grafana-managed alerts/i),
+  statusReceiving: byText(/receiving IESG-managed alerts/i),
   statusNotReceiving: byText(/not receiving/i),
 
-  configurationDrawer: byRole('dialog', { name: 'Drawer title Grafana built-in Alertmanager' }),
+  configurationDrawer: byRole('dialog', { name: 'Drawer title IESG built-in Alertmanager' }),
   editConfigurationButton: byRole('button', { name: /edit configuration/i }),
   viewConfigurationButton: byRole('button', { name: /view configuration/i }),
   saveConfigurationButton: byRole('button', { name: /save/i }),

@@ -32,8 +32,8 @@ func (hs *HTTPServer) registerSwaggerUI(r routing.RouteRegister) {
 		data := map[string]any{
 			"Nonce":          c.RequestNonce,
 			"Assets":         assets,
-			"FavIcon":        "public/img/fav32.png",
-			"AppleTouchIcon": "public/img/apple-touch-icon.png",
+			"FavIcon":        "public/img/IESG_White.png",
+			"AppleTouchIcon": "public/img/IESG_White.png",
 		}
 		if hs.Cfg.CSPEnabled {
 			data["CSPEnabled"] = true

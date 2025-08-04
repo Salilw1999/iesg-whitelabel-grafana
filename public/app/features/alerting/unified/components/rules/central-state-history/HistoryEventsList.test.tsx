@@ -48,10 +48,10 @@ describe('HistoryEventsList', () => {
     });
     expect(ui.rowHeader.getAll()).toHaveLength(2); // 2 events for alert1
     expect(ui.rowHeader.getAll()[0]).toHaveTextContent(
-      'June 14 at 06:39:00alert1alertnamealert1grafana_folderFOLDER Ahandler/alerting/*'
+      'June 14 at 06:39:00alert1alertnamealert1IESG_folderFOLDER Ahandler/alerting/*'
     );
     expect(ui.rowHeader.getAll()[1]).toHaveTextContent(
-      'June 14 at 06:38:30alert1alertnamealert1grafana_folderFOLDER Ahandler/alerting/*'
+      'June 14 at 06:38:30alert1alertnamealert1IESG_folderFOLDER Ahandler/alerting/*'
     );
   });
 
@@ -70,7 +70,7 @@ describe('HistoryEventsList', () => {
     });
     expect(ui.rowHeader.getAll()).toHaveLength(1);
     expect(ui.rowHeader.getAll()[0]).toHaveTextContent(
-      'June 14 at 06:38:30alert2alertnamealert2grafana_folderFOLDER Ahandler/alerting/*'
+      'June 14 at 06:38:30alert2alertnamealert2IESG_folderFOLDER Ahandler/alerting/*'
     );
   });
 
@@ -89,10 +89,10 @@ describe('HistoryEventsList', () => {
     });
     expect(ui.rowHeader.getAll()).toHaveLength(2);
     expect(ui.rowHeader.getAll()[0]).toHaveTextContent(
-      'June 14 at 06:39:00alert2alertnamealert2grafana_folderFOLDER Ahandler/alerting/*'
+      'June 14 at 06:39:00alert2alertnamealert2IESG_folderFOLDER Ahandler/alerting/*'
     );
     expect(ui.rowHeader.getAll()[1]).toHaveTextContent(
-      'June 14 at 06:38:30alert1alertnamealert1grafana_folderFOLDER Ahandler/alerting/*'
+      'June 14 at 06:38:30alert1alertnamealert1IESG_folderFOLDER Ahandler/alerting/*'
     );
   });
   it('should render the list correctly filtered by state from', async () => {
@@ -110,7 +110,7 @@ describe('HistoryEventsList', () => {
     });
     expect(ui.rowHeader.getAll()).toHaveLength(1);
     expect(ui.rowHeader.getAll()[0]).toHaveTextContent(
-      'June 14 at 06:38:30alert2alertnamealert2grafana_folderFOLDER Ahandler/alerting/*'
+      'June 14 at 06:38:30alert2alertnamealert2IESG_folderFOLDER Ahandler/alerting/*'
     );
   });
 
@@ -129,7 +129,7 @@ describe('HistoryEventsList', () => {
     });
     expect(ui.rowHeader.getAll()).toHaveLength(1);
     expect(ui.rowHeader.getAll()[0]).toHaveTextContent(
-      'June 14 at 06:38:30alert1alertnamealert1grafana_folderFOLDER Ahandler/alerting/*'
+      'June 14 at 06:38:30alert1alertnamealert1IESG_folderFOLDER Ahandler/alerting/*'
     );
   });
 

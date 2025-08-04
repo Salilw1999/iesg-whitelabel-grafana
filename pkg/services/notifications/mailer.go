@@ -23,14 +23,14 @@ var (
 func init() {
 	emailsSentTotal = promauto.NewCounter(prometheus.CounterOpts{
 		Name:      "emails_sent_total",
-		Help:      "Number of emails sent by Grafana",
-		Namespace: "grafana",
+		Help:      "Number of emails sent by iesg",
+		Namespace: "iesg",
 	})
 
 	emailsSentFailed = promauto.NewCounter(prometheus.CounterOpts{
 		Name:      "emails_sent_failed",
-		Help:      "Number of emails Grafana failed to send",
-		Namespace: "grafana",
+		Help:      "Number of emails IESG failed to send",
+		Namespace: "iesg",
 	})
 }
 

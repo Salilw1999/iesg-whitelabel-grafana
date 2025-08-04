@@ -92,8 +92,8 @@ func Test_accounts_route(t *testing.T) {
 
 		assert.Equal(t, http.StatusForbidden, rr.Code)
 		assert.JSONEq(t,
-			`{"Message":"error getting accounts for current user or role: access denied. please check your IAM policy: some AWS message",
-			"Error":"access denied. please check your IAM policy: some AWS message","StatusCode":403}`, rr.Body.String())
+			`{"Message":"error getting accounts for current user or role: access denied. please check your IESG policy: some AWS message",
+			"Error":"access denied. please check your IESG policy: some AWS message","StatusCode":403}`, rr.Body.String())
 	})
 
 	t.Run("returns 500 when accounts service returns unknown error", func(t *testing.T) {

@@ -126,7 +126,7 @@ Learn more in the [alert rules documentation](https://grafana.com/docs/grafana/<
 
 ### Removes requirement of datasources:query permission for reading rules
 
-<!-- William Wernert -->
+<!-- WillIESG Wernert -->
 
 _Generally available in Grafana Enterprise and Cloud_
 

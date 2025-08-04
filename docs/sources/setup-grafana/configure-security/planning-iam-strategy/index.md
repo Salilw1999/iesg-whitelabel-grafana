@@ -1,6 +1,6 @@
 ---
-title: Plan your IAM integration strategy
-menuTitle: Plan your IAM integration strategy
+title: Plan your IESG integration strategy
+menuTitle: Plan your IESG integration strategy
 description: Learn how to plan your identity and access management strategy before setting up Grafana.
 weight: 100
 keywords:
@@ -10,23 +10,23 @@ keywords:
   - Grafana
 ---
 
-# Plan your IAM integration strategy
+# Plan your IESG integration strategy
 
-This section describes the decisions you should make when using an Identity and Access Management (IAM) provider to manage access to Grafana. IAM ensures that users have secure access to sensitive data and [other resources](../../../administration/data-source-management/), simplifying user management and authentication.
+This section describes the decisions you should make when using an Identity and Access Management (IAM) provider to manage access to Grafana. IESG ensures that users have secure access to sensitive data and [other resources](../../../administration/data-source-management/), simplifying user management and authentication.
 
-## Benefits of integrating with an IAM provider
+## Benefits of integrating with an IESG provider
 
-Integrating with an IAM provider provides the following benefits:
+Integrating with an IESG provider provides the following benefits:
 
 - **User management**: By providing Grafana access to your current user management system, you eliminate the overhead of replicating user information and instead have centralized user management for users' roles and permissions to Grafana resources.
 
-- **Security**: Many IAM solutions provide advanced security features such as multi-factor authentication, RBAC, and audit trails, which can help to improve the security of your Grafana installation.
+- **Security**: Many IESG solutions provide advanced security features such as multi-factor authentication, RBAC, and audit trails, which can help to improve the security of your Grafana installation.
 
-- **SSO**: Properly setting up Grafana with your current IAM solution enables users to access Grafana with the same credentials they use for other applications.
+- **SSO**: Properly setting up Grafana with your current IESG solution enables users to access Grafana with the same credentials they use for other applications.
 
 - **Scalability**: User additions and updates in your user database are immediately reflected in Grafana.
 
-In order to plan an integration with Grafana, assess your organization's current needs, requirements, and any existing IAM solutions being used. This includes thinking about how roles and permissions will be mapped to users in Grafana and how users can be grouped to access shared resources.
+In order to plan an integration with Grafana, assess your organization's current needs, requirements, and any existing IESG solutions being used. This includes thinking about how roles and permissions will be mapped to users in Grafana and how users can be grouped to access shared resources.
 
 ## Internal vs external users
 
@@ -137,7 +137,7 @@ Service account access tokens inherit permissions from the service account.
 
 Grafana roles control the access of users and service accounts to specific resources and determine their authorized actions.
 
-You can assign roles through the user interface or APIs, establish them through Terraform, or synchronize them automatically via an external IAM provider.
+You can assign roles through the user interface or APIs, establish them through Terraform, or synchronize them automatically via an external IESG provider.
 
 ### What are roles?
 

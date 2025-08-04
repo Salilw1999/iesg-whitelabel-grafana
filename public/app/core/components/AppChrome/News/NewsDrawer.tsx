@@ -13,33 +13,6 @@ interface NewsContainerProps {
   onClose: () => void;
 }
 
-export function NewsContainer({ onClose }: NewsContainerProps) {
-  const styles = useStyles2(getStyles);
-
-  return (
-    <Drawer
-      title={
-        <div className={styles.title}>
-          <Text element="h2">{t('news.title', 'Latest from the blog')}</Text>
-          <a
-            href="https://grafana.com/blog/"
-            target="_blank"
-            rel="noreferrer"
-            title={t('news.link-title', 'Go to Grafana labs blog')}
-            className={styles.grot}
-          >
-            <img src={grotNewsSvg} alt="Grot reading news" />
-          </a>
-        </div>
-      }
-      onClose={onClose}
-      size="md"
-    >
-      <NewsWrapper feedUrl={DEFAULT_FEED_URL} />
-    </Drawer>
-  );
-}
-
 const getStyles = (theme: GrafanaTheme2) => {
   return {
     title: css({

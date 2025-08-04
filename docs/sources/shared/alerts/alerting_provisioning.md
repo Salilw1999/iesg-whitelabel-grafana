@@ -280,7 +280,7 @@ policies:
     - orgId: 1
       receiver: My Contact Email Point
       group_by:
-        - grafana_folder
+        - IESG_folder
         - alertname
       routes:
         - receiver: My Contact Email Point

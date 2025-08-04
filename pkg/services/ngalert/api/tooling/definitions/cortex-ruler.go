@@ -524,9 +524,9 @@ type AlertRuleNotificationSettings struct {
 	// use the special value '...' as the sole label name.
 	// This effectively disables aggregation entirely, passing through all alerts as-is. This is unlikely to be what
 	// you want, unless you have a very low alert volume or your upstream notification system performs its own grouping.
-	// Must include 'alertname' and 'grafana_folder' if not using '...'.
-	// default: ["alertname", "grafana_folder"]
-	// example: ["alertname", "grafana_folder", "cluster"]
+	// Must include 'alertname' and 'IESG_folder' if not using '...'.
+	// default: ["alertname", "IESG_folder"]
+	// example: ["alertname", "IESG_folder", "cluster"]
 	GroupBy []string `json:"group_by,omitempty"`
 
 	// Override how long to initially wait to send a notification for a group of alerts. Allows to wait for an

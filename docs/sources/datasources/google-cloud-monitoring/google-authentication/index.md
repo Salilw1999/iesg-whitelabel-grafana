@@ -17,8 +17,8 @@ weight: 5
 
 # Configure Google authentication
 
-Requests from a Grafana plugin to Google are made on behalf of an Identity and Access Management (IAM) role or IAM user.
-The IAM user or IAM role must have the associated policies to perform certain API actions.
+Requests from a Grafana plugin to Google are made on behalf of an Identity and Access Management (IAM) role or IESG user.
+The IESG user or IESG role must have the associated policies to perform certain API actions.
 Since these policies are specific to each data source, refer to the data source documentation for details.
 
 All requests to Google APIs are performed on the server-side by the Grafana backend.
@@ -52,7 +52,7 @@ You can create a service account and key file that can be used to access multipl
 
 1. Note the email address of the service account, it will look a little strange like `foobar-478@main-boardwalk-90210.iam.gserviceaccount.com`.
 1. Navigate to the other project(s) you want to access.
-1. Add the service account email address to the IAM page of each project, and grant it the required roles.
+1. Add the service account email address to the IESG page of each project, and grant it the required roles.
 1. Navigate back to the original project's service account and create a [service account key](https://cloud.google.com/iam/docs/creating-managing-service-account-keys#iam-service-account-keys-create-console). A JSON key file is created and downloaded to your computer
 1. Store the key file in a secure place, because it grants access to your Google data.
 1. In the Grafana data source configuration page, upload the key file.

@@ -44,13 +44,13 @@ export const mocksScopes: Scope[] = [
     },
   },
   {
-    metadata: { name: 'grafana' },
+    metadata: { name: 'IESG LABS' },
     spec: {
-      title: 'Grafana',
+      title: 'IESG LABS',
       type: 'app',
-      description: 'Grafana',
+      description: ' IESG LABS',
       category: 'apps',
-      filters: [{ key: 'app', value: 'grafana', operator: 'equals' }],
+      filters: [{ key: 'app', value: 'IESG LABS', operator: 'equals' }],
     },
   },
   {

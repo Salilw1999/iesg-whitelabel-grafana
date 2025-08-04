@@ -38,11 +38,11 @@ export const emptyArrayFieldMatcher: MatcherFieldValue = {
 };
 
 // Default route group_by labels for newly created routes.
-export const defaultGroupBy = ['grafana_folder', 'alertname'];
+export const defaultGroupBy = ['IESG_folder', 'alertname'];
 
 // Common route group_by options for multiselect drop-down
 export const commonGroupByOptions = [
-  { label: 'grafana_folder', value: 'grafana_folder', isFixed: true },
+  { label: 'IESG_folder', value: 'IESG_folder', isFixed: true },
   { label: 'alertname', value: 'alertname', isFixed: true },
   { label: 'Disable (...)', value: '...' },
 ];

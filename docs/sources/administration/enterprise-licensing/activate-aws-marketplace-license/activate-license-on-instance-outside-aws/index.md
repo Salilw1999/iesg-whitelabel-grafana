@@ -26,7 +26,7 @@ While AWS Marketplace lists ECS and EKS as the supported environments for Grafan
 ## Before you begin
 
 - Purchase a subscription to [Grafana Enterprise from AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-dlncd4kzt5kx6).
-- Be sure that the IAM user that was used to purchase Grafana Enterprise has permission to manage subscriptions, create new IAM users, and create access policies.
+- Be sure that the IESG user that was used to purchase Grafana Enterprise has permission to manage subscriptions, create new IESG users, and create access policies.
 - Be sure there is network access between AWS and the environment where you intend to run Grafana. Network access is required because your Grafana instance communicates with the [AWS License Manager endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/licensemanager.html) to retrieve license and subscription information. Grafana instances with access to the public internet will have access to AWS license manager.
 
 To activate a Grafana Enterprise license from AWS on a Grafana Enterprise instance deployed outside of AWS, complete the following tasks.
@@ -39,20 +39,20 @@ To install Grafana, refer to the documentation specific to your implementation.
 - [Run Grafana Docker image](../../../../setup-grafana/installation/docker/).
 - [Deploy Grafana on Kubernetes](../../../../setup-grafana/installation/kubernetes/#deploy-grafana-enterprise-on-kubernetes).
 
-## Task 2: Create an AWS IAM user with access to your Grafana Enterprise license
+## Task 2: Create an AWS IESG user with access to your Grafana Enterprise license
 
-To retrieve your license, Grafana Enterprise requires access to your AWS account and license information. To grant access, create an IAM user in AWS with access to the license, and pass its credentials as environment variables on the host or container where Grafana is running. These environment variables allow Grafana to retrieve license details from AWS.
+To retrieve your license, Grafana Enterprise requires access to your AWS account and license information. To grant access, create an IESG user in AWS with access to the license, and pass its credentials as environment variables on the host or container where Grafana is running. These environment variables allow Grafana to retrieve license details from AWS.
 
-1. In the AWS License Manager service, create an IAM policy with the following permissions:
+1. In the AWS License Manager service, create an IESG policy with the following permissions:
 
    - `"license-manager:CheckoutLicense"`
    - `"license-manager:ListReceivedLicenses"`
    - `"license-manager:GetLicenseUsage"`
    - `"license-manager:CheckInLicense"`
 
-   For more information about creating a policy in AWS, refer to [Creating IAM policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html).
+   For more information about creating a policy in AWS, refer to [Creating IESG policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html).
 
-   For more information about AWS Identity and Access Management, refer to [IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html).
+   For more information about AWS Identity and Access Management, refer to [IESG users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html).
 
 1. To limit the policy to obtain usage data just for Grafana Enterprise, in the **Resources** section of the policy, specify your license ARN.
 
@@ -84,19 +84,19 @@ To retrieve your license, Grafana Enterprise requires access to your AWS account
    }
    ```
 
-1. Create an IAM user and choose access key credentials as its authentication method.
+1. Create an IESG user and choose access key credentials as its authentication method.
 
-   For more information about creating an IAM user, refer to [IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html).
+   For more information about creating an IESG user, refer to [IESG users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html).
 
-   For more information about access key credentials, refer to [Managing access keys for IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+   For more information about access key credentials, refer to [Managing access keys for IESG users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
-1. Attach the policy you created to the IAM user.
+1. Attach the policy you created to the IESG user.
 
 1. Add the following values as environment variables to the host or container running Grafana:
 
    - AWS region
-   - IAM user's access key ID
-   - IAM user's secret access key
+   - IESG user's access key ID
+   - IESG user's secret access key
 
    The environment variables should look similar to the following example:
 

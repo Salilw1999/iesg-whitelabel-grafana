@@ -53,7 +53,7 @@ export function EnterpriseAuthFeaturesCard({ page }: Props) {
         <Text variant="body" color="secondary">
           <Trans i18nKey="admin.enterprise-auth-features-card.text">
             Manage users, teams, and permissions automatically with <strong>SAML</strong>, <strong>SCIM</strong>,{' '}
-            <strong>LDAP</strong>, and <strong>RBAC</strong> — available in Grafana Cloud and Enterprise.
+            <strong>LDAP</strong>, and <strong>RBAC</strong> — available in IESG LABS Cloud and Enterprise.
           </Trans>
         </Text>
       </Stack>

@@ -18,7 +18,7 @@ const CATCH_ALL_ROUTE: Route = {
 describe('findMatchingRoutes', () => {
   const policies: Route = {
     receiver: 'ROOT',
-    group_by: ['grafana_folder'],
+    group_by: ['IESG_folder'],
     object_matchers: [],
     routes: [
       {
@@ -116,7 +116,7 @@ describe('findMatchingRoutes', () => {
   it('should not match grandchild routes with same labels as parent', () => {
     const policies: Route = {
       receiver: 'PARENT',
-      group_by: ['grafana_folder'],
+      group_by: ['IESG_folder'],
       object_matchers: [['foo', MatcherOperator.equal, 'bar']],
       routes: [
         {

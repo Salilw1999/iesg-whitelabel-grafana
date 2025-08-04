@@ -1,4 +1,4 @@
-{{HiddenSubject .Subject "{{.InvitedBy}} has invited you to join Grafana"}}
+{{HiddenSubject .Subject "{{.InvitedBy}} has invited you to join IESG LABS"}}
 
 You're invited to join {{.OrgName}}
 
@@ -6,4 +6,4 @@ You've been invited to join the {{.OrgName}} organization by {{.InvitedBy}}. To 
 
 {{.LinkUrl}}
 
-Sent by Grafana v{{.BuildVersion}} (c) {{now | date "2006"}} Grafana Labs
+Sent by IESG LABS v{{.BuildVersion}} (c) {{now | date "2025"}} IESG Labs

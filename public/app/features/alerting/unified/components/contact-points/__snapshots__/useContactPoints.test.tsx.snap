@@ -7,7 +7,7 @@ exports[`useContactPoints should return contact points with status 1`] = `
       "grafana_managed_receiver_configs": [
         {
           "disableResolveMessage": false,
-          "name": "grafana-default-email",
+          "name": "IESG-default-email",
           "secureFields": {},
           "settings": {
             "addresses": "gilles.demey@grafana.com",
@@ -41,7 +41,7 @@ exports[`useContactPoints should return contact points with status 1`] = `
         },
         "uid": "grafana-default-email",
       },
-      "name": "grafana-default-email",
+      "name": "IESG-default-email",
       "policies": [
         {
           "receiver": "grafana-default-email",
@@ -292,7 +292,7 @@ exports[`useContactPoints when having oncall plugin installed and no alert manag
         },
         "uid": "grafana-default-email",
       },
-      "name": "grafana-default-email",
+      "name": "IESG-default-email",
       "policies": [
         {
           "receiver": "grafana-default-email",

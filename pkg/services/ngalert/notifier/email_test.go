@@ -169,7 +169,7 @@ func TestEmailNotifierIntegration(t *testing.T) {
 
 			require.NotNil(t, sentMsg)
 
-			require.Equal(t, "\"Grafana Admin\" <from@address.com>", sentMsg.From)
+			require.Equal(t, "\"IESG Admin\" <from@address.com>", sentMsg.From)
 			require.Equal(t, sentMsg.To[0], "someops@example.com")
 
 			require.Equal(t, c.expSubject, sentMsg.Subject)
@@ -223,7 +223,7 @@ func createEmailSender(t *testing.T) *emailSender {
 	cfg.Smtp.Enabled = true
 	cfg.Smtp.TemplatesPatterns = []string{"emails/*.html", "emails/*.txt"}
 	cfg.Smtp.FromAddress = "from@address.com"
-	cfg.Smtp.FromName = "Grafana Admin"
+	cfg.Smtp.FromName = "IESG Admin"
 	cfg.Smtp.ContentTypes = []string{"text/html", "text/plain"}
 	cfg.Smtp.Host = "localhost:1234"
 	mailer := notifications.NewFakeMailer()

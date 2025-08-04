@@ -1,4 +1,4 @@
-import grafanaIconSvg from 'img/grafana_icon.svg';
+import grafanaIconSvg from 'img/IESG_White.png';
 
 import { ConnectionStatus } from '../../hooks/useExternalAmSelector';
 import { GRAFANA_RULES_SOURCE_NAME } from '../../utils/datasource';
@@ -11,7 +11,7 @@ interface Props {
   onEditConfiguration: (dataSourceName: string) => void;
 }
 
-const BUILTIN_ALERTMANAGER_NAME = 'Grafana built-in';
+const BUILTIN_ALERTMANAGER_NAME = 'IESG built-in';
 
 export default function InternalAlertmanager({ onEditConfiguration }: Props) {
   const { configuration, enableAlertmanager, disableAlertmanager, forwardingDisabled } = useSettings();

@@ -227,7 +227,7 @@ func TestSendEmailAsync(t *testing.T) {
 		sentMsg := <-sut.mailQueue
 		assert.Contains(t, sentMsg.Body["text/html"], "body")
 		assert.NotContains(t, sentMsg.Body["text/plain"], "body")
-		assert.Equal(t, "Reset your Grafana password - asd@asd.com", sentMsg.Subject)
+		assert.Equal(t, "Reset your IESG password - asd@asd.com", sentMsg.Subject)
 		assert.NotContains(t, sentMsg.Body["text/html"], "Subject")
 		assert.NotContains(t, sentMsg.Body["text/plain"], "Subject")
 
@@ -328,7 +328,7 @@ func createSmtpConfig() *setting.Cfg {
 	cfg.Smtp.Enabled = true
 	cfg.Smtp.TemplatesPatterns = []string{"emails/*.html", "emails/*.txt"}
 	cfg.Smtp.FromAddress = "from@address.com"
-	cfg.Smtp.FromName = "Grafana Admin"
+	cfg.Smtp.FromName = "IESG Admin"
 	cfg.Smtp.ContentTypes = []string{"text/html", "text/plain"}
 	return cfg
 }

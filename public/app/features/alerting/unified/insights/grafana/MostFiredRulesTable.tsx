@@ -9,7 +9,7 @@ export function getMostFiredRulesScene(datasource: DataSourceRef, panelTitle: st
     queries: [
       {
         refId: 'A',
-        expr: 'topk(5, sum by(group, labels_grafana_folder) (count_over_time({from="state-history"} | json | current = `Alerting` [1w])))',
+        expr: 'topk(5, sum by(group, labels_IESG_folder) (count_over_time({from="state-history"} | json | current = `Alerting` [1w])))',
         instant: true,
       },
     ],
@@ -38,12 +38,12 @@ export function getMostFiredRulesScene(datasource: DataSourceRef, panelTitle: st
           },
           indexByName: {
             group: 0,
-            labels_grafana_folder: 1,
+            labels_IESG_folder: 1,
             'Value #A': 2,
           },
           renameByName: {
             group: 'Group',
-            labels_grafana_folder: 'Folder',
+            labels_IESG_folder: 'Folder',
             'Value #A': 'Number of fires',
           },
         },

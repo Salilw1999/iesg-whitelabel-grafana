@@ -78,7 +78,7 @@ type LokiQueryResponse struct {
 				From                string `json:"from"`
 				Group               string `json:"group"`
 				LabelsAlertname     string `json:"labels_alertname"`
-				LabelsGrafanaFolder string `json:"labels_grafana_folder"`
+				LabelsGrafanaFolder string `json:"labels_IESG_folder"`
 				OrgID               string `json:"orgID"`
 				PanelID             string `json:"panelID"`
 				Previous            string `json:"previous"`

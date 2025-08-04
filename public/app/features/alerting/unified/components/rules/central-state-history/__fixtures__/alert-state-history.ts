@@ -26,7 +26,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage 6',
             datasource_uid: 'gdev-prometheus',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             ref_id: 'A',
             team: 'operations',
             type: 'test',
@@ -47,7 +47,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage 4',
             datasource_uid: 'gdev-prometheus',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             ref_id: 'A',
             region: 'EMEA',
             team: 'operations',
@@ -70,7 +70,7 @@ const data: DataFrameJSON = {
           ruleUID: 'ddc5zx4l3zls0a',
           labels: {
             alertname: 'direct to contact point',
-            grafana_folder: 'Testing and reproducing',
+            IESG_folder: 'Testing and reproducing',
           },
         },
         {
@@ -88,7 +88,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'With Disabled Query',
             datasource_uid: 'gdev-prometheus',
-            grafana_folder: 'Testing and reproducing',
+            IESG_folder: 'Testing and reproducing',
             ref_id: 'A,B',
           },
         },
@@ -107,7 +107,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'Alert State History Random',
             datasource_uid: 'gdev-prometheus',
-            grafana_folder: 'Testing and reproducing',
+            IESG_folder: 'Testing and reproducing',
             ref_id: 'A',
           },
         },
@@ -128,7 +128,7 @@ const data: DataFrameJSON = {
           ruleUID: 'ddgfq7c57fqpsc',
           labels: {
             alertname: 'node_namespace_pod_container:container_cpu_usage_seconds_total:sum_irate4',
-            grafana_folder: 'Testing and reproducing',
+            IESG_folder: 'Testing and reproducing',
           },
         },
         {
@@ -146,7 +146,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'delete-ds',
             datasource_uid: 'gdev-prometheus',
-            grafana_folder: 'Testing and reproducing',
+            IESG_folder: 'Testing and reproducing',
             ref_id: 'A',
           },
         },
@@ -165,7 +165,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'Threshold Test',
             datasource_uid: 'gdev-prometheus',
-            grafana_folder: 'Testing and reproducing',
+            IESG_folder: 'Testing and reproducing',
             ref_id: 'A',
           },
         },
@@ -184,7 +184,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'Alert History fingerprint',
             datasource_uid: 'PDDA8E780A17E7EF1',
-            grafana_folder: 'Testing and reproducing',
+            IESG_folder: 'Testing and reproducing',
             ref_id: 'A',
           },
         },
@@ -205,7 +205,7 @@ const data: DataFrameJSON = {
           ruleUID: 'd10fc550-3552-4083-a3aa-f6b68058bc7f',
           labels: {
             alertname: 'UniFi CPU Usage',
-            grafana_folder: 'UniFi',
+            IESG_folder: 'UniFi',
             instance: 'unpoller:9130',
             job: 'unifipoller',
             name: 'Dream Router',
@@ -230,7 +230,7 @@ const data: DataFrameJSON = {
           ruleUID: 'p8TBxnq7k',
           labels: {
             alertname: 'XSS attack vector',
-            grafana_folder: 'gdev dashboards',
+            IESG_folder: 'gdev dashboards',
           },
         },
         {
@@ -248,7 +248,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage',
             datasource_uid: 'gdev-prometheus',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             ref_id: 'A',
             team: 'operations',
             type: 'cpu',
@@ -272,7 +272,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage',
             cpu: '7',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             team: 'operations',
             type: 'cpu',
           },
@@ -295,7 +295,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage',
             cpu: '2',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             team: 'operations',
             type: 'cpu',
           },
@@ -318,7 +318,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage',
             cpu: '1',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             team: 'operations',
             type: 'cpu',
           },
@@ -341,7 +341,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage',
             cpu: '0',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             team: 'operations',
             type: 'cpu',
           },
@@ -364,7 +364,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage',
             cpu: '6',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             team: 'operations',
             type: 'cpu',
           },
@@ -387,7 +387,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage',
             cpu: '5',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             team: 'operations',
             type: 'cpu',
           },
@@ -410,7 +410,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage',
             cpu: '4',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             team: 'operations',
             type: 'cpu',
           },
@@ -433,7 +433,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage',
             cpu: '3',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             team: 'operations',
             type: 'cpu',
           },
@@ -453,7 +453,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage',
             datasource_uid: 'gdev-prometheus',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             ref_id: 'A',
             team: 'operations',
             type: 'cpu',
@@ -474,7 +474,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage',
             datasource_uid: 'gdev-prometheus',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             ref_id: 'A',
             team: 'operations',
             type: 'cpu',
@@ -496,7 +496,7 @@ const data: DataFrameJSON = {
           ruleUID: 'Wq5jJlc4k',
           labels: {
             alertname: 'test-read-only-threshold-indicators',
-            grafana_folder: 'Testing and reproducing',
+            IESG_folder: 'Testing and reproducing',
           },
         },
         {
@@ -517,7 +517,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage 5',
             cpu: '6',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             team: 'operations',
           },
         },
@@ -539,7 +539,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage 5',
             cpu: '5',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             team: 'operations',
           },
         },
@@ -561,7 +561,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage 5',
             cpu: '4',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             team: 'operations',
           },
         },
@@ -583,7 +583,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage 5',
             cpu: '3',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             team: 'operations',
           },
         },
@@ -605,7 +605,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage 5',
             cpu: '2',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             team: 'operations',
           },
         },
@@ -627,7 +627,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage 5',
             cpu: '1',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             team: 'operations',
           },
         },
@@ -649,7 +649,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage 5',
             cpu: '0',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             team: 'operations',
           },
         },
@@ -669,7 +669,7 @@ const data: DataFrameJSON = {
           ruleUID: 'I1M_iCWVk',
           labels: {
             alertname: 'Random Values',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
           },
         },
         {
@@ -690,7 +690,7 @@ const data: DataFrameJSON = {
           labels: {
             alertname: 'CPU Usage 5',
             cpu: '7',
-            grafana_folder: 'Demonstrations',
+            IESG_folder: 'Demonstrations',
             team: 'operations',
           },
         },

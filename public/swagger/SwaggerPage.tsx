@@ -8,7 +8,7 @@ import { Trans } from '@grafana/i18n';
 import { Stack, Select, UserIcon, UserView, Button } from '@grafana/ui';
 import { setMonacoEnv } from 'app/core/monacoEnv';
 import { ThemeProvider } from 'app/core/utils/ConfigProvider';
-import grafanaIconSvg from 'img/grafana_icon.svg';
+import grafanaIconSvg from 'img/IESG_White.png';
 
 import { NamespaceContext, WrappedPlugins } from './plugins';
 

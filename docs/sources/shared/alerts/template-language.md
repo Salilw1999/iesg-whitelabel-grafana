@@ -216,7 +216,7 @@ The indentation and line breaks are also present in the text:
 ```
     alertname = "Test"
 
-    grafana_folder = "Test alerts"
+    IESG_folder = "Test alerts"
 ```
 
 You can remove the indentation and line breaks from the text changing `}}` to `-}}` at the start of each range:
@@ -233,5 +233,5 @@ The indentation and line breaks in the template are now absent from the text:
 
 ```
 alertname = "Test"
-grafana_folder = "Test alerts"
+IESG_folder = "Test alerts"
 ```

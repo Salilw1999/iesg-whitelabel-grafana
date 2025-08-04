@@ -77,7 +77,7 @@ func TestIntegrationReceiverService_GetReceivers(t *testing.T) {
 		Receivers, err := sut.GetReceivers(context.Background(), multiQ(1), redactedUser)
 		require.NoError(t, err)
 		require.Len(t, Receivers, 2)
-		require.Equal(t, "grafana-default-email", Receivers[0].Name)
+		require.Equal(t, "iesg-default-email", Receivers[0].Name)
 		require.Equal(t, "slack receiver", Receivers[1].Name)
 	})
 
@@ -245,8 +245,8 @@ func TestReceiverService_Delete(t *testing.T) {
 		{
 			name:        "delete receiver used by route fails",
 			user:        writer,
-			deleteUID:   legacy_storage.NameToUid("grafana-default-email"),
-			version:     "cd95627c75892a39", // Correct version for grafana-default-email.
+			deleteUID:   legacy_storage.NameToUid("iesg-default-email"),
+			version:     "cd95627c75892a39", // Correct version for iesg-default-email.
 			expectedErr: makeReceiverInUseErr(true, nil),
 		},
 		{
@@ -381,7 +381,7 @@ func TestReceiverService_Create(t *testing.T) {
 		{
 			name:        "existing receiver fails",
 			user:        writer,
-			receiver:    models.CopyReceiverWith(baseReceiver, models.ReceiverMuts.WithName("grafana-default-email")),
+			receiver:    models.CopyReceiverWith(baseReceiver, models.ReceiverMuts.WithName("iesg-default-email")),
 			expectedErr: legacy_storage.ErrReceiverExists,
 		},
 		{
@@ -409,7 +409,7 @@ func TestReceiverService_Create(t *testing.T) {
 			name: "create integration with existing UID fails",
 			user: writer,
 			receiver: models.CopyReceiverWith(baseReceiver, models.ReceiverMuts.WithIntegrations(
-				models.CopyIntegrationWith(slackIntegration, models.IntegrationMuts.WithUID("UID1")), // UID of grafana-default-email.
+				models.CopyIntegrationWith(slackIntegration, models.IntegrationMuts.WithUID("UID1")), // UID of iesg-default-email.
 			)),
 			expectedErr: legacy_storage.ErrReceiverInvalid,
 		},
@@ -806,11 +806,11 @@ func TestReceiverService_UpdateReceiverName(t *testing.T) {
 	}}
 
 	secretsService := fake_secrets.NewFakeSecretsService()
-	receiverName := "grafana-default-email"
+	receiverName := "iesg-default-email"
 	newReceiverName := "new-name"
 	slackIntegration := models.IntegrationGen(models.IntegrationMuts.WithName(receiverName), models.IntegrationMuts.WithValidConfig("slack"))()
 	baseReceiver := models.ReceiverGen(models.ReceiverMuts.WithName(receiverName), models.ReceiverMuts.WithIntegrations(slackIntegration))()
-	baseReceiver.Version = "cd95627c75892a39" // Correct version for grafana-default-email.
+	baseReceiver.Version = "cd95627c75892a39" // Correct version for iesg-default-email.
 	baseReceiver.Name = newReceiverName       // Done here instead of in a mutator so we keep the same uid.
 
 	t.Run("renames receiver and all its dependencies", func(t *testing.T) {
@@ -1572,21 +1572,21 @@ const defaultAlertmanagerConfigJSON = `
 	"template_files": null,
 	"alertmanager_config": {
 		"route": {
-			"receiver": "grafana-default-email",
+			"receiver": "iesg-default-email",
 			"group_by": [
 				"..."
 			],
 			"routes": [{
-				"receiver": "grafana-default-email",
+				"receiver": "iesg-default-email",
 				"object_matchers": [["a", "=", "b"]]
 			}]
 		},
 		"templates": null,
 		"receivers": [{
-			"name": "grafana-default-email",
-			"grafana_managed_receiver_configs": [{
+			"name": "iesg-default-email",
+			"iesg_managed_receiver_configs": [{
 				"uid": "UID1",
-				"name": "grafana-default-email",
+				"name": "iesg-default-email",
 				"type": "email",
 				"disableResolveMessage": false,
 				"settings": {
@@ -1596,7 +1596,7 @@ const defaultAlertmanagerConfigJSON = `
 			}]
 		}, {
 			"name": "slack receiver",
-			"grafana_managed_receiver_configs": [{
+			"iesg_managed_receiver_configs": [{
 				"uid": "UID2",
 				"name": "slack receiver",
 				"type": "slack",

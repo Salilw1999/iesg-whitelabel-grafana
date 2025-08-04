@@ -15,7 +15,7 @@ func TestGrafanaService(t *testing.T) {
 
 	ctx := context.Background()
 
-	t.Run("when the Grafana version is stable", func(t *testing.T) {
+	t.Run("when the IESG version is stable", func(t *testing.T) {
 		t.Parallel()
 
 		t.Run("and the latest version is newer than the current one", func(t *testing.T) {
@@ -71,7 +71,7 @@ func TestGrafanaService(t *testing.T) {
 		})
 	})
 
-	t.Run("when the Grafana version is a development build", func(t *testing.T) {
+	t.Run("when the IESG version is a development build", func(t *testing.T) {
 		t.Parallel()
 
 		grafanaVersion := "99.0.0-222555"

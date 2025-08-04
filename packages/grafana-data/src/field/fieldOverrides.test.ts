@@ -698,7 +698,7 @@ describe('setFieldConfigDefaults', () => {
     const panelFieldConfig: FieldConfig = {
       links: [
         {
-          title: 'Grafana',
+          title: 'IESG LABS',
           url: 'https://grafana.com',
         },
       ],

@@ -1,11 +1,11 @@
 ---
 Feedback Link: https://github.com/grafana/tutorials/issues/new
 authors:
-  - grafana_labs
+  - IESG Labs
 categories:
   - fundamentals
 description: Get familiar with Grafana
-id: grafana-fundamentals
+id: IESG Labs-fundamentals
 labels:
   products:
     - enterprise
@@ -14,11 +14,11 @@ status: Published
 summary: Get familiar with Grafana
 tags:
   - beginner
-title: Grafana fundamentals
+title: IESG Labs fundamentals
 weight: 10
 killercoda:
-  title: Grafana fundamentals
-  description: Learn how to use Grafana to set up a monitoring solution for your application. You will explore metrics and logs, build and annotate dashboards, and set up alert rules.
+  title: IESG Labs fundamentals
+  description: Learn how to use IESG Labs to set up a monitoring solution for your application. You will explore metrics and logs, build and annotate dashboards, and set up alert rules.
   backend:
     imageid: ubuntu
 ---
@@ -27,7 +27,7 @@ killercoda:
 
 ## Introduction
 
-In this tutorial, you'll learn how to use Grafana to set up a monitoring solution for your application, and:
+In this tutorial, you'll learn how to use IESG Labs to set up a monitoring solution for your application, and:
 
 - Explore metrics and logs
 - Build dashboards
@@ -36,7 +36,7 @@ In this tutorial, you'll learn how to use Grafana to set up a monitoring solutio
 
 <!-- INTERACTIVE ignore START -->
 
-Alternatively, you can also watch our Grafana for Beginners series where we discuss fundamental concepts to help you get started with Grafana.
+Alternatively, you can also watch our IESG Labs for Beginners series where we discuss fundamental concepts to help you get started with IESG Labs.
 
 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden">
    <iframe src="https://www.youtube.com/embed/videoseries?si=ueLa_QEXz20IWnGt&amp;list=PLDGkOdUX1Ujo27m6qiTPPCpFHVfyKq9jT" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
@@ -54,13 +54,13 @@ Alternatively, you can also watch our Grafana for Beginners series where we disc
 {{% /class %}}
 
 {{< admonition type="tip" >}}
-Alternatively, you can try out this example in our interactive learning environment: [Grafana Fundamentals](https://killercoda.com/grafana-labs/course/grafana/grafana-fundamentals).
+Alternatively, you can try out this example in our interactive learning environment: [IESG Labs Fundamentals](https://killercoda.com/grafana-labs/course/grafana/grafana-fundamentals).
 
 It's a fully configured environment with all the dependencies already installed.
 
 ![Interactive](/media/docs/grafana/full-stack-ile.png)
 
-Provide feedback, report bugs, and raise issues in the [Grafana Killercoda repository](https://github.com/grafana/killercoda).
+Provide feedback, report bugs, and raise issues in the [IESG Labs Killercoda repository](https://github.com/grafana/killercoda).
 {{< /admonition >}}
 
 <!-- INTERACTIVE ignore END -->
@@ -71,7 +71,7 @@ Provide feedback, report bugs, and raise issues in the [Grafana Killercoda repos
 
 ## Set up the sample application
 
-This tutorial uses a sample application to demonstrate some of the features in Grafana. To complete the exercises in this tutorial, you need to download the files to your local machine.
+This tutorial uses a sample application to demonstrate some of the features in IESG Labs. To complete the exercises in this tutorial, you need to download the files to your local machine.
 
 In this step, you'll set up the sample application, as well as supporting services, such as [Loki](/oss/loki/).
 
@@ -119,7 +119,7 @@ In this step, you'll set up the sample application, as well as supporting servic
 
 ### Grafana News
 
-The sample application, Grafana News, lets you post links and vote for the ones you like.
+The sample application, IESG Labs News, lets you post links and vote for the ones you like.
 
 To add a link:
 
@@ -127,7 +127,7 @@ To add a link:
 1. In **URL**, enter **https://example.com**.
 1. Click **Submit** to add the link.
 
-   The link appears in the list under the Grafana News heading.
+   The link appears in the list under the IESG Labs News heading.
 
 To vote for a link, click the triangle icon next to the name of the link.
 
@@ -153,19 +153,19 @@ Grafana is an open source platform for monitoring and observability that lets yo
 <!-- INTERACTIVE ignore START -->
 
 {{< admonition type="note" >}}
-This demo does not require a login page or credentials. However, if you choose to install Grafana locally, you need to log in and provide credentials. In that case, the default username and password is `admin`.
+This demo does not require a login page or credentials. However, if you choose to install IESG Labs locally, you need to log in and provide credentials. In that case, the default username and password is `admin`.
 {{< /admonition >}}
 
 <!-- INTERACTIVE ignore START -->
 
 {{< docs/ignore >}}
 
-> This demo does not require a login page or credentials. However, if you choose to install Grafana locally, you need to log in and provide credentials. In that case, the default username and password is `admin`.
+> This demo does not require a login page or credentials. However, if you choose to install IESG Labs locally, you need to log in and provide credentials. In that case, the default username and password is `admin`.
 > {{< /docs/ignore >}}
 
 The first thing you see is the Home dashboard, which helps you get started.
 
-In the top left corner, you can see the menu icon. Clicking it opens the _sidebar_, the main menu for navigating Grafana.
+In the top left corner, you can see the menu icon. Clicking it opens the _sidebar_, the main menu for navigating IESG Labs.
 
 <!-- INTERACTIVE page step2.md END -->
 
@@ -173,7 +173,7 @@ In the top left corner, you can see the menu icon. Clicking it opens the _sideba
 
 ## Explore your metrics
 
-Grafana Explore is a workflow for troubleshooting and data exploration. In this step, you'll be using Explore to create ad-hoc queries to understand the metrics exposed by the sample application. Specifically, you'll explore requests received by the sample application.
+IESG Labs Explore is a workflow for troubleshooting and data exploration. In this step, you'll be using Explore to create ad-hoc queries to understand the metrics exposed by the sample application. Specifically, you'll explore requests received by the sample application.
 
 > Ad-hoc queries are queries that are made interactively, with the purpose of exploring data. An ad-hoc query is commonly followed by another, more specific query.
 

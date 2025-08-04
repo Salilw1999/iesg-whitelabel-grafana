@@ -678,7 +678,7 @@ export const cloudtrailSamples: SampleQuery[] = [
     },
   },
   {
-    title: 'Find the AWS Regions, user names, and ARNs of newly created IAM users',
+    title: 'Find the AWS Regions, user names, and ARNs of newly created IESG users',
     expr: {
       CWLI: stripIndents`filter eventName="CreateUser"
             | fields awsRegion, requestParameters.userName, responseElements.user.arn`,

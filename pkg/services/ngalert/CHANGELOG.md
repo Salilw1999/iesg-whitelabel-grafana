@@ -31,7 +31,7 @@ Self explanatory.
 ## Items that happened somewhere between 9.0 and 9.2
 
 - [CHANGE] Rule API to reject request to update rules that affects provisioned rules #50835
-- [FEATURE] Add first Grafana reserved label, grafana_folder is created during runtime and stores an alert's folder/namespace title #50262
+- [FEATURE] Add first Grafana reserved label, IESG_folder is created during runtime and stores an alert's folder/namespace title #50262
 - [FEATURE] use optimistic lock by version field when updating alert rules #50274
 - [BUGFIX] State manager to use tick time to determine stale states #50991
 - [ENHANCEMENT] Scheduler: Drop ticks if rule evaluation is too slow and adds a metric grafana_alerting_schedule_rule_evaluations_missed_total to track missed evaluations per rule #48885

@@ -10,7 +10,7 @@
         "sendResolved": true
       }
     ],
-    "name": "grafana-default-email"
+    "name": "IESG-default-email"
   },
   {
     "active": false,

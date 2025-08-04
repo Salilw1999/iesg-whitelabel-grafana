@@ -156,7 +156,7 @@ Similarly to accessing variable properties, you can use `.` to retrieve the valu
 
 ```go
 {{ define "custom_template" }}
-  {{ .CommonLabels.grafana_folder }}
+  {{ .CommonLabels.IESG_folder }}
 {{ end }}
 ```
 
@@ -178,7 +178,7 @@ Here's an example of using these methods:
   {{ .CommonLabels.SortedPairs }}
   {{ .CommonLabels.Names }}
   {{ .CommonLabels.Values }}
-  {{ .CommonLabels.Remove (stringSlice "grafana_folder") }}
+  {{ .CommonLabels.Remove (stringSlice "IESG_folder") }}
 {{ end }}
 ```
 

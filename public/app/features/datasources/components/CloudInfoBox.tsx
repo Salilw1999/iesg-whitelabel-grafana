@@ -62,7 +62,7 @@ export function CloudInfoBox({ dataSource }: Props) {
                 href={`https://grafana.com/signup/cloud/connect-account?src=grafana-oss&cnt=${dataSource.type}-settings`}
                 external
               >
-                free-forever Grafana Cloud plan
+                free-forever IESG LABS Cloud plan
               </TextLink>
               .
             </Trans>

@@ -62,7 +62,7 @@ func NewIndexProvider(cfg *setting.Cfg, license licensing.Licensing) (*IndexProv
 		log:   logging.DefaultLogger.With("logger", "index-provider"),
 		index: t,
 		data: IndexViewData{
-			AppTitle:     "Grafana",
+			AppTitle:     "IESG LABS", // TODO: Make this configurable
 			AppSubUrl:    cfg.AppSubURL, // Based on the request?
 			BuildVersion: cfg.BuildVersion,
 			BuildCommit:  cfg.BuildCommit,

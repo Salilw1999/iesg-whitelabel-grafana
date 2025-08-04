@@ -17,7 +17,7 @@ export function BreadcrumbItem({ href, isCurrent, text, index, flexGrow }: Props
   const styles = useStyles2(getStyles);
 
   const onBreadcrumbClick = () => {
-    reportInteraction('grafana_breadcrumb_clicked', { url: href });
+    reportInteraction('IAM_LAB_breadcrumb_clicked', { url: href });
   };
 
   return (

@@ -6,7 +6,7 @@ import { PanelProps, PanelPlugin, PluginType, PanelPluginMeta } from '@grafana/d
 import { Trans, t } from '@grafana/i18n';
 import { Alert } from '@grafana/ui';
 import { AppNotificationSeverity } from 'app/types';
-import grafanaIconSvg from 'img/grafana_icon.svg';
+import grafanaIconSvg from 'img/IESG_White.png';
 
 interface Props {
   title: string;

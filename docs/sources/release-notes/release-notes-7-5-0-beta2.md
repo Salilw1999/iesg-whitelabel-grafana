@@ -15,7 +15,7 @@ title: Release notes for Grafana 7.5.0-beta2
 
 ### Features and enhancements
 
-- **CloudWatch**: Add support for EC2 IAM role. [#31804](https://github.com/grafana/grafana/pull/31804), [@sunker](https://github.com/sunker)
+- **CloudWatch**: Add support for EC2 IESG role. [#31804](https://github.com/grafana/grafana/pull/31804), [@sunker](https://github.com/sunker)
 - **CloudWatch**: Consume the grafana/aws-sdk. [#31807](https://github.com/grafana/grafana/pull/31807), [@sunker](https://github.com/sunker)
 - **CloudWatch**: Restrict auth provider and assume role usage according to Grafana configuration. [#31805](https://github.com/grafana/grafana/pull/31805), [@sunker](https://github.com/sunker)
 - **Cloudwatch**: ListMetrics API page limit. [#31788](https://github.com/grafana/grafana/pull/31788), [@sunker](https://github.com/sunker)

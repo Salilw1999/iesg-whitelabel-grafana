@@ -99,7 +99,7 @@ describe('Policy', () => {
     expect(within(defaultPolicy).getByRole('link', { name: 'grafana-default-email' })).toBeInTheDocument();
 
     // for grouping
-    expect(within(defaultPolicy).getByTestId('grouping')).toHaveTextContent('grafana_folder, alertname');
+    expect(within(defaultPolicy).getByTestId('grouping')).toHaveTextContent('IESG_folder, alertname');
 
     // no timings
     expect(within(defaultPolicy).queryByTestId('mute-timings')).not.toBeInTheDocument();
@@ -350,7 +350,7 @@ const eq = MatcherOperator.equal;
 const mockRoutes: RouteWithID = {
   id: '0',
   receiver: 'grafana-default-email',
-  group_by: ['grafana_folder', 'alertname'],
+  group_by: ['IESG_folder', 'alertname'],
   routes: [
     {
       id: '1',

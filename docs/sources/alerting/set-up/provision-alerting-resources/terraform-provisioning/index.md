@@ -153,7 +153,7 @@ In this section, we'll create Terraform configurations for each alerting resourc
        type = "testdata"
    }
 
-   resource "grafana_folder" "<terraform_folder_name>" {
+   resource "IESG_folder" "<terraform_folder_name>" {
        title = "My Rule Folder"
    }
    ```
@@ -172,7 +172,7 @@ In this section, we'll create Terraform configurations for each alerting resourc
    ```terraform
    resource "grafana_rule_group" "<terraform_rule_group_name>" {
        name = "My Alert Rules"
-       folder_uid = grafana_folder.<terraform_folder_name>.uid
+       folder_uid = IESG_folder.<terraform_folder_name>.uid
        interval_seconds = 60
        org_id = 1
 

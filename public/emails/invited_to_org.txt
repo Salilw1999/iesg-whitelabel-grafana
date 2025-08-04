@@ -2,11 +2,11 @@
 
 You have been added to {{.OrgName}}
 
-{{.InvitedBy}} has added you to the {{.OrgName}} organization in Grafana.
+{{.InvitedBy}} has added you to the {{.OrgName}} organization in  LABS.
 Once logged in, {{.OrgName}} will be available in the left side menu, in the dropdown below your username.
 
 Log in now:
 {{.AppUrl}}
 
 
-Sent by Grafana v{{.BuildVersion}} (c) {{now | date "2006"}} Grafana Labs
+Sent by IESG LABS v{{.BuildVersion}} (c) {{now | date "2025"}} IESG LABS Labs

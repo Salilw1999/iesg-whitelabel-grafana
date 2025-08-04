@@ -2567,7 +2567,7 @@
       "AlertQuery": {
         "properties": {
           "datasourceUid": {
-            "description": "Grafana data source unique identifier; it should be '__expr__' for a Server Side Expression operation.",
+            "description": "IESG data source unique identifier; it should be '__expr__' for a Server Side Expression operation.",
             "type": "string"
           },
           "model": {
@@ -2795,12 +2795,12 @@
           "group_by": {
             "default": [
               "alertname",
-              "grafana_folder"
+              "IESG_folder"
             ],
-            "description": "Override the labels by which incoming alerts are grouped together. For example, multiple alerts coming in for\ncluster=A and alertname=LatencyHigh would be batched into a single group. To aggregate by all possible labels\nuse the special value '...' as the sole label name.\nThis effectively disables aggregation entirely, passing through all alerts as-is. This is unlikely to be what\nyou want, unless you have a very low alert volume or your upstream notification system performs its own grouping.\nMust include 'alertname' and 'grafana_folder' if not using '...'.",
+            "description": "Override the labels by which incoming alerts are grouped together. For example, multiple alerts coming in for\ncluster=A and alertname=LatencyHigh would be batched into a single group. To aggregate by all possible labels\nuse the special value '...' as the sole label name.\nThis effectively disables aggregation entirely, passing through all alerts as-is. This is unlikely to be what\nyou want, unless you have a very low alert volume or your upstream notification system performs its own grouping.\nMust include 'alertname' and 'IESG_folder' if not using '...'.",
             "example": [
               "alertname",
-              "grafana_folder",
+              "IESG_folder",
               "cluster"
             ],
             "items": {
@@ -2830,7 +2830,7 @@
           },
           "receiver": {
             "description": "Name of the receiver to send notifications to.",
-            "example": "grafana-default-email",
+            "example": "IESG-default-email",
             "type": "string"
           },
           "repeat_interval": {
@@ -3228,7 +3228,7 @@
         "type": "object"
       },
       "AnnotationQuery": {
-        "description": "TODO docs\nFROM: AnnotationQuery in grafana-data/src/types/annotations.ts",
+        "description": "TODO docs\nFROM: AnnotationQuery in IESG-data/src/types/annotations.ts",
         "properties": {
           "builtIn": {
             "description": "Set to 1 for the standard annotation query all dashboards have by default.",
@@ -3261,33 +3261,33 @@
             "$ref": "#/components/schemas/AnnotationTarget"
           },
           "type": {
-            "description": "TODO -- this should not exist here, it is based on the --grafana-- datasource",
+            "description": "TODO -- this should not exist here, it is based on the --IESG-- datasource",
             "type": "string"
           }
         },
         "type": "object"
       },
       "AnnotationTarget": {
-        "description": "TODO: this should be a regular DataQuery that depends on the selected dashboard\nthese match the properties of the \"grafana\" datasouce that is default in most dashboards",
+        "description": "TODO: this should be a regular DataQuery that depends on the selected dashboard\nthese match the properties of the \"IESG\" datasouce that is default in most dashboards",
         "properties": {
           "limit": {
-            "description": "Only required/valid for the grafana datasource...\nbut code+tests is already depending on it so hard to change",
+            "description": "Only required/valid for the IESG datasource...\nbut code+tests is already depending on it so hard to change",
             "format": "int64",
             "type": "integer"
           },
           "matchAny": {
-            "description": "Only required/valid for the grafana datasource...\nbut code+tests is already depending on it so hard to change",
+            "description": "Only required/valid for the IESG datasource...\nbut code+tests is already depending on it so hard to change",
             "type": "boolean"
           },
           "tags": {
-            "description": "Only required/valid for the grafana datasource...\nbut code+tests is already depending on it so hard to change",
+            "description": "Only required/valid for the IESG datasource...\nbut code+tests is already depending on it so hard to change",
             "items": {
               "type": "string"
             },
             "type": "array"
           },
           "type": {
-            "description": "Only required/valid for the grafana datasource...\nbut code+tests is already depending on it so hard to change",
+            "description": "Only required/valid for the IESG datasource...\nbut code+tests is already depending on it so hard to change",
             "type": "string"
           }
         },
@@ -4423,7 +4423,7 @@
             "type": "boolean"
           },
           "name": {
-            "example": "grafana",
+            "example": "IESG",
             "type": "string"
           },
           "role": {
@@ -5195,7 +5195,7 @@
         "type": "object"
       },
       "EmbeddedContactPoint": {
-        "description": "EmbeddedContactPoint is the contact point type that is used\nby grafanas embedded alertmanager implementation.",
+        "description": "EmbeddedContactPoint is the contact point type that is used\nby IESGs embedded alertmanager implementation.",
         "properties": {
           "disableResolveMessage": {
             "example": false,
@@ -5483,11 +5483,11 @@
             "type": "string"
           },
           "displayName": {
-            "description": "DisplayName overrides Grafana default naming, should not be used from a data source",
+            "description": "DisplayName overrides IESG default naming, should not be used from a data source",
             "type": "string"
           },
           "displayNameFromDS": {
-            "description": "DisplayNameFromDS overrides Grafana default naming strategy.",
+            "description": "DisplayNameFromDS overrides IESG default naming strategy.",
             "type": "string"
           },
           "filterable": {
@@ -5495,7 +5495,7 @@
             "type": "boolean"
           },
           "interval": {
-            "description": "Interval indicates the expected regular step between values in the series.\nWhen an interval exists, consumers can identify \"missing\" values when the expected value is not present.\nThe grafana timeseries visualization will render disconnected values when missing values are found it the time field.\nThe interval uses the same units as the values.  For time.Time, this is defined in milliseconds.",
+            "description": "Interval indicates the expected regular step between values in the series.\nWhen an interval exists, consumers can identify \"missing\" values when the expected value is not present.\nThe IESG timeseries visualization will render disconnected values when missing values are found it the time field.\nThe interval uses the same units as the values.  For time.Time, this is defined in milliseconds.",
             "format": "double",
             "type": "number"
           },
@@ -5723,7 +5723,7 @@
         "type": "object"
       },
       "Frame": {
-        "description": "Each Field is well typed by its FieldType and supports optional Labels.\n\nA Frame is a general data container for Grafana. A Frame can be table data\nor time series data depending on its content and field types.",
+        "description": "Each Field is well typed by its FieldType and supports optional Labels.\n\nA Frame is a general data container for IESG. A Frame can be table data\nor time series data depending on its content and field types.",
         "properties": {
           "Fields": {
             "description": "Fields are the columns of a frame.\nAll Fields must be of the same the length when marshalling the Frame for transmission.\nThere should be no `nil` entries in the Fields slice (making them pointers was a mistake).",
@@ -5736,7 +5736,7 @@
             "$ref": "#/components/schemas/FrameMeta"
           },
           "Name": {
-            "description": "Name is used in some Grafana visualizations.",
+            "description": "Name is used in some IESG visualizations.",
             "type": "string"
           },
           "RefID": {
@@ -5758,7 +5758,7 @@
         "description": "https://github.com/grafana/grafana/blob/master/packages/grafana-data/src/types/data.ts#L11\nNOTE -- in javascript this can accept any `[key: string]: any;` however\nthis interface only exposes the values we want to be exposed",
         "properties": {
           "channel": {
-            "description": "Channel is the path to a stream in grafana live that has real-time updates for this data.",
+            "description": "Channel is the path to a stream in IESG live that has real-time updates for this data.",
             "type": "string"
           },
           "custom": {
@@ -5772,7 +5772,7 @@
             "type": "string"
           },
           "notices": {
-            "description": "Notices provide additional information about the data in the Frame that\nGrafana can display to the user in the user interface.",
+            "description": "Notices provide additional information about the data in the Frame that\nIESG can display to the user in the user interface.",
             "items": {
               "$ref": "#/components/schemas/Notice"
             },
@@ -7306,7 +7306,7 @@
             "type": "boolean"
           },
           "from": {
-            "description": "From Start time in epoch timestamps in milliseconds or relative using Grafana time units.",
+            "description": "From Start time in epoch timestamps in milliseconds or relative using IESG time units.",
             "example": "now-1h",
             "type": "string"
           },
@@ -7330,7 +7330,7 @@
             "type": "array"
           },
           "to": {
-            "description": "To End time in epoch timestamps in milliseconds or relative using Grafana time units.",
+            "description": "To End time in epoch timestamps in milliseconds or relative using IESG time units.",
             "example": "now",
             "type": "string"
           }
@@ -7552,7 +7552,7 @@
             "type": "string"
           },
           "name": {
-            "example": "grafana",
+            "example": "IESG",
             "type": "string"
           }
         },
@@ -7567,7 +7567,7 @@
             "$ref": "#/components/schemas/InspectType"
           },
           "link": {
-            "description": "Link is an optional link for display in the user interface and can be an\nabsolute URL or a path relative to Grafana's root url.",
+            "description": "Link is an optional link for display in the user interface and can be an\nabsolute URL or a path relative to IESG's root url.",
             "type": "string"
           },
           "severity": {
@@ -7578,7 +7578,7 @@
             "type": "string"
           }
         },
-        "title": "Notice provides a structure for presenting notifications in Grafana's user interface.",
+        "title": "Notice provides a structure for presenting notifications in IESG's user interface.",
         "type": "object"
       },
       "NoticeSeverity": {
@@ -8296,7 +8296,7 @@
             "type": "string"
           },
           "value": {
-            "description": "Value depends on type and describes the playlist item.\n\ndashboard_by_id: The value is an internal numerical identifier set by Grafana. This\nis not portable as the numerical identifier is non-deterministic between different instances.\nWill be replaced by dashboard_by_uid in the future. (deprecated)\ndashboard_by_tag: The value is a tag which is set on any number of dashboards. All\ndashboards behind the tag will be added to the playlist.\ndashboard_by_uid: The value is the dashboard UID",
+            "description": "Value depends on type and describes the playlist item.\n\ndashboard_by_id: The value is an internal numerical identifier set by IESG. This\nis not portable as the numerical identifier is non-deterministic between different instances.\nWill be replaced by dashboard_by_uid in the future. (deprecated)\ndashboard_by_tag: The value is a tag which is set on any number of dashboards. All\ndashboards behind the tag will be added to the playlist.\ndashboard_by_uid: The value is the dashboard UID",
             "type": "string"
           }
         },
@@ -9391,11 +9391,11 @@
             "type": "string"
           },
           "displayName": {
-            "description": "DisplayName overrides Grafana default naming, should not be used from a data source",
+            "description": "DisplayName overrides IESG default naming, should not be used from a data source",
             "type": "string"
           },
           "displayNameFromDS": {
-            "description": "DisplayNameFromDS overrides Grafana default naming strategy.",
+            "description": "DisplayNameFromDS overrides IESG default naming strategy.",
             "type": "string"
           },
           "filterable": {
@@ -9403,7 +9403,7 @@
             "type": "boolean"
           },
           "interval": {
-            "description": "Interval indicates the expected regular step between values in the series.\nWhen an interval exists, consumers can identify \"missing\" values when the expected value is not present.\nThe grafana timeseries visualization will render disconnected values when missing values are found it the time field.\nThe interval uses the same units as the values.  For time.Time, this is defined in milliseconds.",
+            "description": "Interval indicates the expected regular step between values in the series.\nWhen an interval exists, consumers can identify \"missing\" values when the expected value is not present.\nThe IESG timeseries visualization will render disconnected values when missing values are found it the time field.\nThe interval uses the same units as the values.  For time.Time, this is defined in milliseconds.",
             "format": "double",
             "type": "number"
           },
@@ -9601,7 +9601,7 @@
           },
           "metric": {
             "description": "Name of the recorded metric.",
-            "example": "grafana_alerts_ratio",
+            "example": "IESG_alerts_ratio",
             "type": "string"
           },
           "target_datasource_uid": {
@@ -10762,11 +10762,11 @@
             "type": "boolean"
           },
           "login": {
-            "example": "sa-grafana",
+            "example": "sa-IESG",
             "type": "string"
           },
           "name": {
-            "example": "grafana",
+            "example": "IESG",
             "type": "string"
           },
           "orgId": {
@@ -10821,7 +10821,7 @@
             "type": "boolean"
           },
           "login": {
-            "example": "sa-grafana",
+            "example": "sa-IESG",
             "type": "string"
           },
           "name": {
@@ -10834,7 +10834,7 @@
             "type": "integer"
           },
           "requiredBy": {
-            "example": "grafana-app",
+            "example": "IESG-app",
             "type": "string"
           },
           "role": {
@@ -12009,7 +12009,7 @@
             "type": "string"
           },
           "name": {
-            "example": "grafana",
+            "example": "IESG",
             "type": "string"
           },
           "secondsUntilExpiration": {
@@ -13706,11 +13706,11 @@
   "info": {
     "contact": {
       "email": "hello@grafana.com",
-      "name": "Grafana Labs",
+      "name": "IESG Labs",
       "url": "https://grafana.com"
     },
-    "description": "The Grafana backend exposes an HTTP API, the same API is used by the frontend to do\neverything from saving dashboards, creating users and updating data sources.",
-    "title": "Grafana HTTP API.",
+    "description": "The IESG backend exposes an HTTP API, the same API is used by the frontend to do\neverything from saving dashboards, creating users and updating data sources.",
+    "title": "IESG HTTP API.",
     "version": "0.0.1"
   },
   "openapi": "3.0.3",
@@ -14247,7 +14247,7 @@
     },
     "/access-control/users/roles/search": {
       "post": {
-        "description": "Lists the roles that have been directly assigned to the given users. The list does not include built-in roles (Viewer, Editor, Admin or Grafana Admin), and it does not include roles that have been inherited from a team.\n\nYou need to have a permission with action `users.roles:read` and scope `users:id:*`.",
+        "description": "Lists the roles that have been directly assigned to the given users. The list does not include built-in roles (Viewer, Editor, Admin or IESG Admin), and it does not include roles that have been inherited from a team.\n\nYou need to have a permission with action `users.roles:read` and scope `users:id:*`.",
         "operationId": "listUsersRoles",
         "requestBody": {
           "content": {
@@ -14283,7 +14283,7 @@
     },
     "/access-control/users/{userId}/roles": {
       "get": {
-        "description": "Lists the roles that have been directly assigned to a given user. The list does not include built-in roles (Viewer, Editor, Admin or Grafana Admin), and it does not include roles that have been inherited from a team.\n\nYou need to have a permission with action `users.roles:read` and scope `users:id:\u003cuser ID\u003e`.",
+        "description": "Lists the roles that have been directly assigned to a given user. The list does not include built-in roles (Viewer, Editor, Admin or IESG Admin), and it does not include roles that have been inherited from a team.\n\nYou need to have a permission with action `users.roles:read` and scope `users:id:\u003cuser ID\u003e`.",
         "operationId": "listUserRoles",
         "parameters": [
           {
@@ -14811,7 +14811,7 @@
     },
     "/admin/ldap/reload": {
       "post": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.config:reload`.",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.config:reload`.",
         "operationId": "reloadLDAPCfg",
         "responses": {
           "200": {
@@ -14840,7 +14840,7 @@
     },
     "/admin/ldap/status": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.status:read`.",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.status:read`.",
         "operationId": "getLDAPStatus",
         "responses": {
           "200": {
@@ -14869,7 +14869,7 @@
     },
     "/admin/ldap/sync/{user_id}": {
       "post": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.user:sync`.",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.user:sync`.",
         "operationId": "postSyncUserWithLDAP",
         "parameters": [
           {
@@ -14901,7 +14901,7 @@
             "basic": []
           }
         ],
-        "summary": "Enables a single Grafana user to be synchronized against LDAP.",
+        "summary": "Enables a single IESG user to be synchronized against LDAP.",
         "tags": [
           "admin_ldap"
         ]
@@ -14909,7 +14909,7 @@
     },
     "/admin/ldap/{user_name}": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.user:read`.",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.user:read`.",
         "operationId": "getUserFromLDAP",
         "parameters": [
           {
@@ -14940,7 +14940,7 @@
             "basic": []
           }
         ],
-        "summary": "Finds an user based on a username in LDAP. This helps illustrate how would the particular user be mapped in Grafana when synced.",
+        "summary": "Finds an user based on a username in LDAP. This helps illustrate how would the particular user be mapped in IESG when synced.",
         "tags": [
           "admin_ldap"
         ]
@@ -14969,7 +14969,7 @@
     },
     "/admin/provisioning/dashboards/reload": {
       "post": {
-        "description": "Reloads the provisioning config files for dashboards again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:dashboards`.",
+        "description": "Reloads the provisioning config files for dashboards again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:dashboards`.",
         "operationId": "adminProvisioningReloadDashboards",
         "responses": {
           "200": {
@@ -14998,7 +14998,7 @@
     },
     "/admin/provisioning/datasources/reload": {
       "post": {
-        "description": "Reloads the provisioning config files for datasources again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:datasources`.",
+        "description": "Reloads the provisioning config files for datasources again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:datasources`.",
         "operationId": "adminProvisioningReloadDatasources",
         "responses": {
           "200": {
@@ -15027,7 +15027,7 @@
     },
     "/admin/provisioning/plugins/reload": {
       "post": {
-        "description": "Reloads the provisioning config files for plugins again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:plugin`.",
+        "description": "Reloads the provisioning config files for plugins again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:plugin`.",
         "operationId": "adminProvisioningReloadPlugins",
         "responses": {
           "200": {
@@ -15056,7 +15056,7 @@
     },
     "/admin/settings": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `settings:read` and scopes: `settings:*`, `settings:auth.saml:` and `settings:auth.saml:enabled` (property level).",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `settings:read` and scopes: `settings:*`, `settings:auth.saml:` and `settings:auth.saml:enabled` (property level).",
         "operationId": "adminGetSettings",
         "responses": {
           "200": {
@@ -15082,7 +15082,7 @@
     },
     "/admin/stats": {
       "get": {
-        "description": "Only works with Basic Authentication (username and password). See introduction for an explanation.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `server:stats:read`.",
+        "description": "Only works with Basic Authentication (username and password). See introduction for an explanation.\nIf you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `server:stats:read`.",
         "operationId": "adminGetStats",
         "responses": {
           "200": {
@@ -15098,7 +15098,7 @@
             "$ref": "#/components/responses/internalServerError"
           }
         },
-        "summary": "Fetch Grafana Stats.",
+        "summary": "Fetch IESG Stats.",
         "tags": [
           "admin"
         ]
@@ -15106,7 +15106,7 @@
     },
     "/admin/users": {
       "post": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:create`.\nNote that OrgId is an optional parameter that can be used to assign a new user to a different organization when `auto_assign_org` is set to `true`.",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:create`.\nNote that OrgId is an optional parameter that can be used to assign a new user to a different organization when `auto_assign_org` is set to `true`.",
         "operationId": "adminCreateUser",
         "requestBody": {
           "content": {
@@ -15152,7 +15152,7 @@
     },
     "/admin/users/{user_id}": {
       "delete": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:delete` and scope `global.users:*`.",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:delete` and scope `global.users:*`.",
         "operationId": "adminDeleteUser",
         "parameters": [
           {
@@ -15195,7 +15195,7 @@
     },
     "/admin/users/{user_id}/auth-tokens": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.authtoken:list` and scope `global.users:*`.",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.authtoken:list` and scope `global.users:*`.",
         "operationId": "adminGetUserAuthTokens",
         "parameters": [
           {
@@ -15235,7 +15235,7 @@
     },
     "/admin/users/{user_id}/disable": {
       "post": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:disable` and scope `global.users:1` (userIDScope).",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:disable` and scope `global.users:1` (userIDScope).",
         "operationId": "adminDisableUser",
         "parameters": [
           {
@@ -15278,7 +15278,7 @@
     },
     "/admin/users/{user_id}/enable": {
       "post": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:enable` and scope `global.users:1` (userIDScope).",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:enable` and scope `global.users:1` (userIDScope).",
         "operationId": "adminEnableUser",
         "parameters": [
           {
@@ -15321,7 +15321,7 @@
     },
     "/admin/users/{user_id}/logout": {
       "post": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.logout` and scope `global.users:*`.",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.logout` and scope `global.users:*`.",
         "operationId": "adminLogoutUser",
         "parameters": [
           {
@@ -15367,7 +15367,7 @@
     },
     "/admin/users/{user_id}/password": {
       "put": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.password:update` and scope `global.users:*`.",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.password:update` and scope `global.users:*`.",
         "operationId": "adminUpdateUserPassword",
         "parameters": [
           {
@@ -15421,7 +15421,7 @@
     },
     "/admin/users/{user_id}/permissions": {
       "put": {
-        "description": "Only works with Basic Authentication (username and password). See introduction for an explanation.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.permissions:update` and scope `global.users:*`.",
+        "description": "Only works with Basic Authentication (username and password). See introduction for an explanation.\nIf you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.permissions:update` and scope `global.users:*`.",
         "operationId": "adminUpdateUserPermissions",
         "parameters": [
           {
@@ -15470,7 +15470,7 @@
     },
     "/admin/users/{user_id}/quotas": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.quotas:list` and scope `global.users:1` (userIDScope).",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.quotas:list` and scope `global.users:1` (userIDScope).",
         "operationId": "getUserQuota",
         "parameters": [
           {
@@ -15513,7 +15513,7 @@
     },
     "/admin/users/{user_id}/quotas/{quota_target}": {
       "put": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.quotas:update` and scope `global.users:1` (userIDScope).",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.quotas:update` and scope `global.users:1` (userIDScope).",
         "operationId": "updateUserQuota",
         "parameters": [
           {
@@ -15575,7 +15575,7 @@
     },
     "/admin/users/{user_id}/revoke-auth-token": {
       "post": {
-        "description": "Revokes the given auth token (device) for the user. User of issued auth token (device) will no longer be logged in and will be required to authenticate again upon next activity.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.authtoken:update` and scope `global.users:*`.",
+        "description": "Revokes the given auth token (device) for the user. User of issued auth token (device) will no longer be logged in and will be required to authenticate again upon next activity.\nIf you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.authtoken:update` and scope `global.users:*`.",
         "operationId": "adminRevokeUserAuthToken",
         "parameters": [
           {
@@ -15632,7 +15632,7 @@
     },
     "/annotations": {
       "get": {
-        "description": "Starting in Grafana v6.4 regions annotations are now returned in one entity that now includes the timeEnd property.",
+        "description": "Starting in IESG v6.4 regions annotations are now returned in one entity that now includes the timeEnd property.",
         "operationId": "getAnnotations",
         "parameters": [
           {
@@ -15763,7 +15763,7 @@
         ]
       },
       "post": {
-        "description": "Creates an annotation in the Grafana database. The dashboardId and panelId fields are optional. If they are not specified then an organization annotation is created and can be queried in any dashboard that adds the Grafana annotations data source. When creating a region annotation include the timeEnd property.\nThe format for `time` and `timeEnd` should be epoch numbers in millisecond resolution.\nThe response for this HTTP request is slightly different in versions prior to v6.4. In prior versions you would also get an endId if you where creating a region. But in 6.4 regions are represented using a single event with time and timeEnd properties.",
+        "description": "Creates an annotation in the IESG database. The dashboardId and panelId fields are optional. If they are not specified then an organization annotation is created and can be queried in any dashboard that adds the IESG annotations data source. When creating a region annotation include the timeEnd property.\nThe format for `time` and `timeEnd` should be epoch numbers in millisecond resolution.\nThe response for this HTTP request is slightly different in versions prior to v6.4. In prior versions you would also get an endId if you where creating a region. But in 6.4 regions are represented using a single event with time and timeEnd properties.",
         "operationId": "postAnnotation",
         "requestBody": {
           "content": {
@@ -15970,7 +15970,7 @@
         ]
       },
       "patch": {
-        "description": "Updates one or more properties of an annotation that matches the specified ID.\nThis operation currently supports updating of the `text`, `tags`, `time` and `timeEnd` properties.\nThis is available in Grafana 6.0.0-beta2 and above.",
+        "description": "Updates one or more properties of an annotation that matches the specified ID.\nThis operation currently supports updating of the `text`, `tags`, `time` and `timeEnd` properties.\nThis is available in IESG 6.0.0-beta2 and above.",
         "operationId": "patchAnnotation",
         "parameters": [
           {
@@ -16418,7 +16418,7 @@
             "$ref": "#/components/responses/internalServerError"
           }
         },
-        "summary": "Upload a snapshot to the Grafana Migration Service for processing.",
+        "summary": "Upload a snapshot to the IESG Migration Service for processing.",
         "tags": [
           "migrations"
         ]
@@ -17542,7 +17542,7 @@
     },
     "/datasources": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scope: `datasources:*`.",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scope: `datasources:*`.",
         "operationId": "getDataSources",
         "responses": {
           "200": {
@@ -17564,7 +17564,7 @@
         ]
       },
       "post": {
-        "description": "By defining `password` and `basicAuthPassword` under secureJsonData property\nGrafana encrypts them securely as an encrypted blob in the database.\nThe response then lists the encrypted fields under secureJsonFields.\n\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:create`",
+        "description": "By defining `password` and `basicAuthPassword` under secureJsonData property\nIESG encrypts them securely as an encrypted blob in the database.\nThe response then lists the encrypted fields under secureJsonFields.\n\nIf you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:create`",
         "operationId": "addDataSource",
         "requestBody": {
           "content": {
@@ -17659,7 +17659,7 @@
     },
     "/datasources/id/{name}": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).",
         "operationId": "getDataSourceIdByName",
         "parameters": [
           {
@@ -17696,7 +17696,7 @@
     },
     "/datasources/name/{name}": {
       "delete": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).",
         "operationId": "deleteDataSourceByName",
         "parameters": [
           {
@@ -17731,7 +17731,7 @@
         ]
       },
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).",
         "operationId": "getDataSourceByName",
         "parameters": [
           {
@@ -18249,7 +18249,7 @@
     },
     "/datasources/uid/{uid}": {
       "delete": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).",
         "operationId": "deleteDataSourceByUID",
         "parameters": [
           {
@@ -18284,7 +18284,7 @@
         ]
       },
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).",
         "operationId": "getDataSourceByUID",
         "parameters": [
           {
@@ -18322,7 +18322,7 @@
         ]
       },
       "put": {
-        "description": "Similar to creating a data source, `password` and `basicAuthPassword` should be defined under\nsecureJsonData in order to be stored securely as an encrypted blob in the database. Then, the\nencrypted fields are listed under secureJsonFields section in the response.\n\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:write` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:1` (single data source).",
+        "description": "Similar to creating a data source, `password` and `basicAuthPassword` should be defined under\nsecureJsonData in order to be stored securely as an encrypted blob in the database. Then, the\nencrypted fields are listed under secureJsonFields section in the response.\n\nIf you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:write` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:1` (single data source).",
         "operationId": "updateDataSourceByUID",
         "parameters": [
           {
@@ -18766,7 +18766,7 @@
     "/datasources/{id}": {
       "delete": {
         "deprecated": true,
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).\n\nPlease refer to [updated API](#/datasources/deleteDataSourceByUID) instead",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).\n\nPlease refer to [updated API](#/datasources/deleteDataSourceByUID) instead",
         "operationId": "deleteDataSourceByID",
         "parameters": [
           {
@@ -18802,7 +18802,7 @@
       },
       "get": {
         "deprecated": true,
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).\n\nPlease refer to [updated API](#/datasources/getDataSourceByUID) instead",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).\n\nPlease refer to [updated API](#/datasources/getDataSourceByUID) instead",
         "operationId": "getDataSourceByID",
         "parameters": [
           {
@@ -18841,7 +18841,7 @@
       },
       "put": {
         "deprecated": true,
-        "description": "Similar to creating a data source, `password` and `basicAuthPassword` should be defined under\nsecureJsonData in order to be stored securely as an encrypted blob in the database. Then, the\nencrypted fields are listed under secureJsonFields section in the response.\n\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:write` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).\n\nPlease refer to [updated API](#/datasources/updateDataSourceByUID) instead",
+        "description": "Similar to creating a data source, `password` and `basicAuthPassword` should be defined under\nsecureJsonData in order to be stored securely as an encrypted blob in the database. Then, the\nencrypted fields are listed under secureJsonFields section in the response.\n\nIf you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:write` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).\n\nPlease refer to [updated API](#/datasources/updateDataSourceByUID) instead",
         "operationId": "updateDataSourceByID",
         "parameters": [
           {
@@ -18973,7 +18973,7 @@
     },
     "/ds/query": {
       "post": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:query`.",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:query`.",
         "operationId": "queryMetricsWithExpressions",
         "requestBody": {
           "content": {
@@ -19171,7 +19171,7 @@
             }
           },
           {
-            "description": "If `true` any Grafana 8 Alerts under this folder will be deleted.\nSet to `false` so that the request will fail if the folder contains any Grafana 8 Alerts.",
+            "description": "If `true` any IESG 8 Alerts under this folder will be deleted.\nSet to `false` so that the request will fail if the folder contains any IESG 8 Alerts.",
             "in": "query",
             "name": "forceDeleteRules",
             "schema": {
@@ -19654,7 +19654,7 @@
     },
     "/health": {
       "get": {
-        "description": "apiHealthHandler will return ok if Grafana's web server is running and it\ncan access the database. If the database cannot be accessed it will return\nhttp status code 503.",
+        "description": "apiHealthHandler will return ok if IESG's web server is running and it\ncan access the database. If the database cannot be accessed it will return\nhttp status code 503.",
         "operationId": "getHealth",
         "responses": {
           "200": {
@@ -20082,7 +20082,7 @@
     },
     "/licensing/token": {
       "delete": {
-        "description": "Removes the license stored in the Grafana database. Available in Grafana Enterprise v7.4+.\n\nYou need to have a permission with action `licensing:delete`.",
+        "description": "Removes the license stored in the IESG database. Available in IESG Enterprise v7.4+.\n\nYou need to have a permission with action `licensing:delete`.",
         "operationId": "deleteLicenseToken",
         "requestBody": {
           "content": {
@@ -20166,7 +20166,7 @@
     },
     "/licensing/token/renew": {
       "post": {
-        "description": "Manually ask license issuer for a new token. Available in Grafana Enterprise v7.4+.\n\nYou need to have a permission with action `licensing:write`.",
+        "description": "Manually ask license issuer for a new token. Available in IESG Enterprise v7.4+.\n\nYou need to have a permission with action `licensing:write`.",
         "operationId": "postRenewLicenseToken",
         "requestBody": {
           "content": {
@@ -20505,7 +20505,7 @@
     },
     "/org/quotas": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:read` and scope `org:id:1` (orgIDScope).",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:read` and scope `org:id:1` (orgIDScope).",
         "operationId": "getCurrentOrgQuota",
         "responses": {
           "200": {
@@ -20532,7 +20532,7 @@
     },
     "/org/users": {
       "get": {
-        "description": "Returns all org users within the current organization. Accessible to users with org admin role.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:read` with scope `users:*`.",
+        "description": "Returns all org users within the current organization. Accessible to users with org admin role.\nIf you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:read` with scope `users:*`.",
         "operationId": "getOrgUsersForCurrentOrg",
         "parameters": [
           {
@@ -20571,7 +20571,7 @@
         ]
       },
       "post": {
-        "description": "Adds a global user to the current organization.\n\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:add` with scope `users:*`.",
+        "description": "Adds a global user to the current organization.\n\nIf you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:add` with scope `users:*`.",
         "operationId": "addOrgUserToCurrentOrg",
         "requestBody": {
           "content": {
@@ -20606,7 +20606,7 @@
     },
     "/org/users/lookup": {
       "get": {
-        "description": "Returns all org users within the current organization, but with less detailed information.\nAccessible to users with org admin role, admin in any folder or admin of any team.\nMainly used by Grafana UI for providing list of users when adding team members and when editing folder/dashboard permissions.",
+        "description": "Returns all org users within the current organization, but with less detailed information.\nAccessible to users with org admin role, admin in any folder or admin of any team.\nMainly used by IESG UI for providing list of users when adding team members and when editing folder/dashboard permissions.",
         "operationId": "getOrgUsersForCurrentOrgLookup",
         "parameters": [
           {
@@ -20647,7 +20647,7 @@
     },
     "/org/users/{user_id}": {
       "delete": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:remove` with scope `users:*`.",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:remove` with scope `users:*`.",
         "operationId": "removeOrgUserForCurrentOrg",
         "parameters": [
           {
@@ -20683,7 +20683,7 @@
         ]
       },
       "patch": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users.role:update` with scope `users:*`.",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users.role:update` with scope `users:*`.",
         "operationId": "updateOrgUserForCurrentOrg",
         "parameters": [
           {
@@ -21054,7 +21054,7 @@
     },
     "/orgs/{org_id}/quotas": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:read` and scope `org:id:1` (orgIDScope).",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:read` and scope `org:id:1` (orgIDScope).",
         "operationId": "getOrgQuota",
         "parameters": [
           {
@@ -21092,7 +21092,7 @@
     },
     "/orgs/{org_id}/quotas/{quota_target}": {
       "put": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:write` and scope `org:id:1` (orgIDScope).",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:write` and scope `org:id:1` (orgIDScope).",
         "operationId": "updateOrgQuota",
         "parameters": [
           {
@@ -21154,7 +21154,7 @@
     },
     "/orgs/{org_id}/users": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:read` with scope `users:*`.",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:read` with scope `users:*`.",
         "operationId": "getOrgUsers",
         "parameters": [
           {
@@ -21192,7 +21192,7 @@
         ]
       },
       "post": {
-        "description": "Adds a global user to the current organization.\n\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:add` with scope `users:*`.",
+        "description": "Adds a global user to the current organization.\n\nIf you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:add` with scope `users:*`.",
         "operationId": "addOrgUser",
         "parameters": [
           {
@@ -21238,7 +21238,7 @@
     },
     "/orgs/{org_id}/users/search": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:read` with scope `users:*`.",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:read` with scope `users:*`.",
         "operationId": "searchOrgUsers",
         "parameters": [
           {
@@ -21278,7 +21278,7 @@
     },
     "/orgs/{org_id}/users/{user_id}": {
       "delete": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:remove` with scope `users:*`.",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:remove` with scope `users:*`.",
         "operationId": "removeOrgUser",
         "parameters": [
           {
@@ -21323,7 +21323,7 @@
         ]
       },
       "patch": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users.role:update` with scope `users:*`.",
+        "description": "If you are running IESG Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users.role:update` with scope `users:*`.",
         "operationId": "updateOrgUser",
         "parameters": [
           {
@@ -22364,7 +22364,7 @@
     },
     "/reports/email": {
       "post": {
-        "description": "Generate and send a report. This API waits for the report to be generated before returning. We recommend that you set the client’s timeout to at least 60 seconds. Available to org admins only and with a valid license.\n\nOnly available in Grafana Enterprise v7.0+.\nThis API endpoint is experimental and may be deprecated in a future release. On deprecation, a migration strategy will be provided and the endpoint will remain functional until the next major release of Grafana.\n\nYou need to have a permission with action `reports:send`.",
+        "description": "Generate and send a report. This API waits for the report to be generated before returning. We recommend that you set the client’s timeout to at least 60 seconds. Available to org admins only and with a valid license.\n\nOnly available in IESG Enterprise v7.0+.\nThis API endpoint is experimental and may be deprecated in a future release. On deprecation, a migration strategy will be provided and the endpoint will remain functional until the next major release of IESG.\n\nYou need to have a permission with action `reports:send`.",
         "operationId": "sendReport",
         "requestBody": {
           "content": {
@@ -22652,7 +22652,7 @@
     "/reports/{id}": {
       "delete": {
         "deprecated": true,
-        "description": "Available to org admins only and with a valid or expired license.\n\nYou need to have a permission with action `reports.delete` with scope `reports:id:\u003creport ID\u003e`.\n\nRequesting reports using the internal id will stop workgin in the future\nUse the reporting apiserver to manage reports.  See: /apis/reporting.grafana.app/",
+        "description": "Available to org admins only and with a valid or expired license.\n\nYou need to have a permission with action `reports.delete` with scope `reports:id:\u003creport ID\u003e`.\n\nRequesting reports using the internal id will stop workgin in the future\nUse the reporting apiserver to manage reports.  See: /apis/reporting.IESG.app/",
         "operationId": "deleteReport",
         "parameters": [
           {
@@ -22693,7 +22693,7 @@
       },
       "get": {
         "deprecated": true,
-        "description": "Available to org admins only and with a valid or expired license.\n\nYou need to have a permission with action `reports:read` with scope `reports:id:\u003creport ID\u003e`.\n\nRequesting reports using the internal id will stop workgin in the future\nUse the reporting apiserver to manage reports.  See: /apis/reporting.grafana.app/",
+        "description": "Available to org admins only and with a valid or expired license.\n\nYou need to have a permission with action `reports:read` with scope `reports:id:\u003creport ID\u003e`.\n\nRequesting reports using the internal id will stop workgin in the future\nUse the reporting apiserver to manage reports.  See: /apis/reporting.IESG.app/",
         "operationId": "getReport",
         "parameters": [
           {
@@ -22734,7 +22734,7 @@
       },
       "put": {
         "deprecated": true,
-        "description": "Available to org admins only and with a valid or expired license.\n\nYou need to have a permission with action `reports.admin:write` with scope `reports:id:\u003creport ID\u003e`.\n\nRequesting reports using the internal id will stop workgin in the future\nUse the reporting apiserver to manage reports.  See: /apis/reporting.grafana.app/",
+        "description": "Available to org admins only and with a valid or expired license.\n\nYou need to have a permission with action `reports.admin:write` with scope `reports:id:\u003creport ID\u003e`.\n\nRequesting reports using the internal id will stop workgin in the future\nUse the reporting apiserver to manage reports.  See: /apis/reporting.IESG.app/",
         "operationId": "updateReport",
         "parameters": [
           {
@@ -22823,7 +22823,7 @@
             "$ref": "#/components/responses/contentResponse"
           }
         },
-        "summary": "It exposes the SP (Grafana's) metadata for the IdP's consumption.",
+        "summary": "It exposes the SP (IESG's) metadata for the IdP's consumption.",
         "tags": [
           "saml",
           "enterprise"
@@ -22832,7 +22832,7 @@
     },
     "/saml/slo": {
       "get": {
-        "description": "There might be two possible requests:\n1. Logout response (callback) when Grafana initiates single logout and IdP returns response to logout request.\n2. Logout request when another SP initiates single logout and IdP sends logout request to the Grafana,\nor in case of IdP-initiated logout.",
+        "description": "There might be two possible requests:\n1. Logout response (callback) when IESG initiates single logout and IdP returns response to logout request.\n2. Logout request when another SP initiates single logout and IdP sends logout request to the IESG,\nor in case of IdP-initiated logout.",
         "operationId": "getSLO",
         "responses": {
           "302": {
@@ -22855,7 +22855,7 @@
         ]
       },
       "post": {
-        "description": "There might be two possible requests:\n1. Logout response (callback) when Grafana initiates single logout and IdP returns response to logout request.\n2. Logout request when another SP initiates single logout and IdP sends logout request to the Grafana,\nor in case of IdP-initiated logout.",
+        "description": "There might be two possible requests:\n1. Logout response (callback) when IESG initiates single logout and IdP returns response to logout request.\n2. Logout request when another SP initiates single logout and IdP sends logout request to the IESG,\nor in case of IdP-initiated logout.",
         "operationId": "postSLO",
         "parameters": [
           {
@@ -22993,7 +22993,7 @@
             }
           },
           {
-            "description": "Use this parameter to access hits beyond limit. Numbering starts at 1. limit param acts as page size. Only available in Grafana v6.2+.",
+            "description": "Use this parameter to access hits beyond limit. Numbering starts at 1. limit param acts as page size. Only available in IESG v6.2+.",
             "in": "query",
             "name": "page",
             "schema": {
@@ -23532,7 +23532,7 @@
             "$ref": "#/components/responses/internalServerError"
           }
         },
-        "summary": "When creating a snapshot using the API, you have to provide the full dashboard payload including the snapshot data. This endpoint is designed for the Grafana UI.",
+        "summary": "When creating a snapshot using the API, you have to provide the full dashboard payload including the snapshot data. This endpoint is designed for the IESG UI.",
         "tags": [
           "snapshots"
         ]
@@ -27051,11 +27051,11 @@
   ],
   "tags": [
     {
-      "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
+      "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
       "name": "datasources"
     },
     {
-      "description": "Folders are identified by the identifier (id) and the unique identifier (uid).\nThe identifier (id) of a folder is an auto-incrementing numeric value and is only unique per Grafana install.\nThe unique identifier (uid) of a folder can be used for uniquely identify folders between multiple Grafana installs. It’s automatically generated if not provided when creating a folder. The uid allows having consistent URLs for accessing folders and when syncing folders between multiple Grafana installs. This means that changing the title of a folder will not break any bookmarked links to that folder.\nThe uid can have a maximum length of 40 characters.",
+      "description": "Folders are identified by the identifier (id) and the unique identifier (uid).\nThe identifier (id) of a folder is an auto-incrementing numeric value and is only unique per IESG install.\nThe unique identifier (uid) of a folder can be used for uniquely identify folders between multiple IESG installs. It’s automatically generated if not provided when creating a folder. The uid allows having consistent URLs for accessing folders and when syncing folders between multiple IESG installs. This means that changing the title of a folder will not break any bookmarked links to that folder.\nThe uid can have a maximum length of 40 characters.",
       "name": "folders"
     },
     {
@@ -27063,35 +27063,35 @@
       "name": "folder_permissions"
     },
     {
-      "description": "The Admin HTTP API does not currently work with an API Token. API Tokens are currently only linked to an organization and an organization role. They cannot be given the permission of server admin, only users can be given that permission. So in order to use these API calls you will have to use Basic Auth and the Grafana user must have the Grafana Admin permission. (The default admin user is called admin and has permission to use this API.)",
+      "description": "The Admin HTTP API does not currently work with an API Token. API Tokens are currently only linked to an organization and an organization role. They cannot be given the permission of server admin, only users can be given that permission. So in order to use these API calls you will have to use Basic Auth and the IESG user must have the IESG Admin permission. (The default admin user is called admin and has permission to use this API.)",
       "name": "admin"
     },
     {
-      "description": "You can use the Alerting API to get information about legacy dashboard alerts and their states but this API cannot be used to modify the alert. To create new alerts or modify them you need to update the dashboard JSON that contains the alerts.\nThis topic is relevant for the legacy dashboard alerts only.\nYou can find Grafana 8 alerts API specification details [here](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/main/pkg/services/ngalert/api/tooling/post.json).",
+      "description": "You can use the Alerting API to get information about legacy dashboard alerts and their states but this API cannot be used to modify the alert. To create new alerts or modify them you need to update the dashboard JSON that contains the alerts.\nThis topic is relevant for the legacy dashboard alerts only.\nYou can find IESG 8 alerts API specification details [here](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/main/pkg/services/ngalert/api/tooling/post.json).",
       "name": "legacy_alerts"
     },
     {
-      "description": "The identifier (id) of a notification channel is an auto-incrementing numeric value and is only unique per Grafana install.\nThe unique identifier (uid) of a notification channel can be used for uniquely identify a notification channel between multiple Grafana installs. It’s automatically generated if not provided when creating a notification channel. The uid allows having consistent URLs for accessing notification channels and when syncing notification channels between multiple Grafana installations, refer to alert notification channel provisioning.\nThe uid can have a maximum length of 40 characters.",
+      "description": "The identifier (id) of a notification channel is an auto-incrementing numeric value and is only unique per IESG install.\nThe unique identifier (uid) of a notification channel can be used for uniquely identify a notification channel between multiple IESG installs. It’s automatically generated if not provided when creating a notification channel. The uid allows having consistent URLs for accessing notification channels and when syncing notification channels between multiple IESG installations, refer to alert notification channel provisioning.\nThe uid can have a maximum length of 40 characters.",
       "name": "legacy_alerts_notification_channels"
     },
     {
-      "description": "Grafana Annotations feature released in Grafana 4.6. Annotations are saved in the Grafana database (sqlite, mysql or postgres). Annotations can be organization annotations that can be shown on any dashboard by configuring an annotation data source - they are filtered by tags. Or they can be tied to a panel on a dashboard and are then only shown on that panel.",
+      "description": "IESG Annotations feature released in IESG 4.6. Annotations are saved in the IESG database (sqlite, mysql or postgres). Annotations can be organization annotations that can be shown on any dashboard by configuring an annotation data source - they are filtered by tags. Or they can be tied to a panel on a dashboard and are then only shown on that panel.",
       "name": "annotations"
     },
     {
-      "description": "The identifier (ID) of a library element is an auto-incrementing numeric value that is unique per Grafana install.\nThe unique identifier (UID) of a library element uniquely identifies library elements between multiple Grafana installs. It’s automatically generated unless you specify it during library element creation. The UID provides consistent URLs for accessing library elements and when syncing library elements between multiple Grafana installs.\nThe maximum length of a UID is 40 characters.",
+      "description": "The identifier (ID) of a library element is an auto-incrementing numeric value that is unique per IESG install.\nThe unique identifier (UID) of a library element uniquely identifies library elements between multiple IESG installs. It’s automatically generated unless you specify it during library element creation. The UID provides consistent URLs for accessing library elements and when syncing library elements between multiple IESG installs.\nThe maximum length of a UID is 40 characters.",
       "name": "library_elements"
     },
     {
-      "description": "The identifier (ID) of a query in query history is an auto-incrementing numeric value that is unique per Grafana install.\nThe unique identifier (UID) of a query history uniquely identifies queries in query history between multiple Grafana installs. It’s automatically generated. The UID provides consistent URLs for accessing queries in query history.",
+      "description": "The identifier (ID) of a query in query history is an auto-incrementing numeric value that is unique per IESG install.\nThe unique identifier (UID) of a query history uniquely identifies queries in query history between multiple IESG installs. It’s automatically generated. The UID provides consistent URLs for accessing queries in query history.",
       "name": "query_history"
     },
     {
-      "description": "The Admin Organizations HTTP API does not currently work with an API Token. API Tokens are currently only linked to an organization and an organization role. They cannot be given the permission of server admin, only users can be given that permission. So in order to use these API calls you will have to use Basic Auth and the Grafana user must have the Grafana Admin permission (The default admin user is called `admin` and has permission to use this API).",
+      "description": "The Admin Organizations HTTP API does not currently work with an API Token. API Tokens are currently only linked to an organization and an organization role. They cannot be given the permission of server admin, only users can be given that permission. So in order to use these API calls you will have to use Basic Auth and the IESG user must have the IESG Admin permission (The default admin user is called `admin` and has permission to use this API).",
       "name": "orgs"
     },
     {
-      "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
+      "description": "If you are running IESG Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
       "name": "org"
     },
     {
@@ -27099,43 +27099,43 @@
       "name": "teams"
     },
     {
-      "description": "This API can be used to enable, disable, list, add and remove permissions for a data source.\nPermissions can be set for a user or a team. Permissions cannot be set for Admins - they always have access to everything.\nThis is only available in Grafana Enterprise\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
+      "description": "This API can be used to enable, disable, list, add and remove permissions for a data source.\nPermissions can be set for a user or a team. Permissions cannot be set for Admins - they always have access to everything.\nThis is only available in IESG Enterprise\nIf you are running IESG Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
       "name": "datasource_permissions"
     },
     {
-      "description": "These are only available in Grafana Enterprise",
+      "description": "These are only available in IESG Enterprise",
       "name": "enterprise"
     },
     {
-      "description": "The API can be used to create, update, get and list roles, and create or remove built-in role assignments. To use the API, you would need to enable fine-grained access control.\nThis only available in Grafana Enterprise.\nThe API does not currently work with an API Token. So in order to use these API endpoints you will have to use Basic auth.",
+      "description": "The API can be used to create, update, get and list roles, and create or remove built-in role assignments. To use the API, you would need to enable fine-grained access control.\nThis only available in IESG Enterprise.\nThe API does not currently work with an API Token. So in order to use these API endpoints you will have to use Basic auth.",
       "name": "access_control"
     },
     {
-      "description": "Licensing is only available in Grafana Enterprise. Read more about Grafana Enterprise.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
+      "description": "Licensing is only available in IESG Enterprise. Read more about IESG Enterprise.\nIf you are running IESG Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
       "name": "licensing"
     },
     {
-      "description": "This API allows you to interact programmatically with the Reporting feature.\nReporting is only available in Grafana Enterprise. Read more about Grafana Enterprise.\nIf you have Fine-grained access Control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
+      "description": "This API allows you to interact programmatically with the Reporting feature.\nReporting is only available in IESG Enterprise. Read more about IESG Enterprise.\nIf you have Fine-grained access Control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
       "name": "reports"
     },
     {
-      "description": "Grafana Alerting Alertmanager-compatible endpoints",
+      "description": "IESG Alerting Alertmanager-compatible endpoints",
       "name": "alertmanager"
     },
     {
-      "description": "Grafana Alerting endpoints for managing rules",
+      "description": "IESG Alerting endpoints for managing rules",
       "name": "ruler"
     },
     {
-      "description": "Grafana Alerting testing endpoints",
+      "description": "IESG Alerting testing endpoints",
       "name": "testing"
     },
     {
-      "description": "Grafana Alerting Prometheus-compatible endpoints",
+      "description": "IESG Alerting Prometheus-compatible endpoints",
       "name": "prometheus"
     },
     {
-      "description": "If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.",
+      "description": "If you are running IESG Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.",
       "name": "service_accounts"
     }
   ]

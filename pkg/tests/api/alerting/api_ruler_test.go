@@ -4501,7 +4501,7 @@ func TestIntegrationRuleNotificationSettings(t *testing.T) {
 				groupBy = append(groupBy, string(name))
 			}
 			slices.Sort(groupBy)
-			assert.EqualValues(c, []string{"alertname", "grafana_folder"}, groupBy)
+			assert.EqualValues(c, []string{"alertname", "IESG_folder"}, groupBy)
 			if !canContinue {
 				return
 			}

@@ -114,7 +114,7 @@
       "dismiss": "Dismiss",
       "heading": "Enterprise authentication",
       "learn-more-link": "Learn more",
-      "text": "Manage users, teams, and permissions automatically with <1>SAML</1>, <3>SCIM</3>, <6>LDAP</6>, and <8>RBAC</8> — available in Grafana Cloud and Enterprise."
+      "text": "Manage users, teams, and permissions automatically with <1>SAML</1>, <3>SCIM</3>, <6>LDAP</6>, and <8>RBAC</8> — available in IESG LABS Cloud and Enterprise."
     },
     "feature-listing": {
       "title-auditing": "Auditing",
@@ -125,7 +125,7 @@
       "title-enhanced-ldap-integration": "Enhanced LDAP integration",
       "title-enterprise-plugins": "Enterprise plugins",
       "title-find-unused-dashboards": "Find unused dashboards",
-      "title-grafana-usage-insights": "Grafana usage insights",
+      "title-grafana-usage-insights": "IESG LABS usage insights",
       "title-reporting": "Reporting",
       "title-saml-authentication": "SAML authentication",
       "title-settings-updates-at-runtime": "Settings updates at runtime",
@@ -133,19 +133,19 @@
       "title-team-sync": "Team Sync"
     },
     "feature-toggles": {
-      "restart-pending": "A restart is pending for your Grafana instance to apply the latest feature toggle changes",
+      "restart-pending": "A restart is pending for your IESG LABS instance to apply the latest feature toggle changes",
       "restart-required": "Saving feature toggle changes will prompt a restart of the instance, which may take a few minutes",
-      "sub-title": "View and edit feature toggles. Read more about feature toggles at <2>grafana.com</2>."
+      "sub-title": "View and edit feature toggles. Read more about feature toggles at <2>IESG LABS.com</2>."
     },
     "get-enterprise": {
       "contact-us": "Contact us and get a free trial",
       "description": "You can use the trial version for free for 30 days. We will remind you about it five days before the trial period ends.",
       "features-heading": "Enhanced functionality",
-      "included-description": "Indemnification, working with Grafana Labs on future prioritization, and training from the core Grafana team.",
+      "included-description": "Indemnification, working with IESG LABS Labs on future prioritization, and training from the core IESG LABS team.",
       "included-heading": "Also included:",
       "service-title": "At your service",
       "team-sync-details": "LDAP, GitHub OAuth, Auth Proxy, Okta",
-      "title": "Get Grafana Enterprise"
+      "title": "Get IESG LABS Enterprise"
     },
     "ldap": {
       "test-mapping-heading": "Test user mapping",
@@ -205,7 +205,7 @@
       "last-seen-never": "Never"
     },
     "org-users": {
-      "not-editable": "This user's role is not editable because it is synchronized from your auth provider. Refer to the <1>Grafana authentication docs</1> for details."
+      "not-editable": "This user's role is not editable because it is synchronized from your auth provider. Refer to the <1>IESG LABS authentication docs</1> for details."
     },
     "org-users-table": {
       "columns": {
@@ -282,9 +282,9 @@
     "user-orgs": {
       "add-button": "Add user to organization",
       "change-role-button": "Change role",
-      "external-user-tooltip": "This user's built-in role is not editable because it is synchronized from your auth provider. Refer to the <1>Grafana authentication docs</1> for details.",
+      "external-user-tooltip": "This user's built-in role is not editable because it is synchronized from your auth provider. Refer to the <1>IESG LABS authentication docs</1> for details.",
       "remove-button": "Remove from organization",
-      "role-not-editable": "This user's role is not editable because it is synchronized from your auth provider. Refer to the <1>Grafana authentication docs</1> for details.",
+      "role-not-editable": "This user's role is not editable because it is synchronized from your auth provider. Refer to the <1>IESG LABS authentication docs</1> for details.",
       "title": "Organizations"
     },
     "user-orgs-modal": {
@@ -293,7 +293,7 @@
     },
     "user-permissions": {
       "change-button": "Change",
-      "grafana-admin-key": "Grafana Admin",
+      "grafana-admin-key": "IESG LABS Admin",
       "grafana-admin-no": "No",
       "grafana-admin-yes": "Yes",
       "title": "Permissions"
@@ -330,7 +330,7 @@
     },
     "users-table": {
       "columns": {
-        "content-grafana-admin": "Grafana Admin",
+        "content-grafana-admin": "IESG LABS Admin",
         "title-edit-user": "Edit user"
       },
       "edit-aria-label": "Edit user: {{name}}",
@@ -409,12 +409,12 @@
       "clear-filters": "Clear filters"
     },
     "alert-groups": {
-      "body-grafana-alerted-delivered": "Grafana is configured to send alerts to external alertmanagers only. No alerts are expected to be available here for the selected Alertmanager.",
+      "body-grafana-alerted-delivered": "IESG LABS is configured to send alerts to external alertmanagers only. No alerts are expected to be available here for the selected Alertmanager.",
       "grouped-by": "Grouped by: {{labels}}",
       "no-results": "No results.",
       "text-loading-notifications": "Loading notifications",
       "title-error-loading-notifications": "Error loading notifications",
-      "title-grafana-alerts-delivered-alertmanager": "Grafana alerts are not delivered to Grafana Alertmanager"
+      "title-grafana-alerts-delivered-alertmanager": "IESG LABS alerts are not delivered to IESG LABS Alertmanager"
     },
     "alert-groups-summary": {
       "text-firing_one": "{{count}} firing",
@@ -537,16 +537,16 @@
       "disable": "Disable",
       "edit-configuration": "Edit configuration",
       "enable": "Enable",
-      "not-receiving-grafana-managed-alerts": "Not receiving Grafana managed alerts",
+      "not-receiving-grafana-managed-alerts": "Not receiving IESG LABS managed alerts",
       "text-activation-in-progress": "Activation in progress",
       "text-failed-to-adopt-alertmanager": "Failed to adopt Alertmanager",
       "text-inconclusive": "Inconclusive",
-      "text-receiving-grafanamanaged-alerts": "Receiving Grafana-managed alerts",
+      "text-receiving-grafanamanaged-alerts": "Receiving IESG LABS-managed alerts",
       "title-alerting-settings": "Alerting settings",
       "view-configuration": "View configuration"
     },
     "alertmanager-config": {
-      "gma-manual-configuration-description": "The internal Grafana Alertmanager configuration cannot be manually changed. To change this configuration, edit the individual resources through the UI.",
+      "gma-manual-configuration-description": "The internal IESG LABS Alertmanager configuration cannot be manually changed. To change this configuration, edit the individual resources through the UI.",
       "gma-manual-configuration-is-not-supported": "Manual configuration changes not supported",
       "message": {
         "configuration-cannot-be-empty": "Configuration cannot be empty"
@@ -983,11 +983,11 @@
       "update-datasource": "Update datasource"
     },
     "declare-incident-button": {
-      "content-grafana-incident-installed-configured-correctly": "Grafana Incident is not installed or is not configured correctly",
+      "content-grafana-incident-installed-configured-correctly": "IESG LABS Incident is not installed or is not configured correctly",
       "declare-incident": "Declare Incident"
     },
     "declare-incident-menu-item": {
-      "content-grafana-incident-installed-configured-correctly": "Grafana Incident is not installed or is not configured correctly",
+      "content-grafana-incident-installed-configured-correctly": "IESG LABS Incident is not installed or is not configured correctly",
       "label-declare-incident": "Declare incident"
     },
     "delete-rule-modal": {
@@ -1109,7 +1109,7 @@
       "title-something-wrong-trying-fetch-group-details": "Something went wrong when trying to fetch group details"
     },
     "evaluation-interval-limit-exceeded": {
-      "body-minimum-interval": "A minimum evaluation interval of <1>{{minInterval}}</1> has been configured in Grafana.<3></3>Please contact the administrator to configure a lower interval.",
+      "body-minimum-interval": "A minimum evaluation interval of <1>{{minInterval}}</1> has been configured in IESG LABS.<3></3>Please contact the administrator to configure a lower interval.",
       "title-global-evaluation-interval-limit-exceeded": "Global evaluation interval limit exceeded"
     },
     "existing-rule-editor": {
@@ -1139,11 +1139,11 @@
     },
     "export-new-grafana-rule-page": {
       "text": {
-        "export-new-grafana-rule": "Export new Grafana rule"
+        "export-new-grafana-rule": "Export new IESG LABS rule"
       }
     },
     "export-new-rule-button": {
-      "tooltip-export-new-grafana-rule": "Export new grafana rule"
+      "tooltip-export-new-grafana-rule": "Export new IESG LABS rule"
     },
     "expression": {
       "not-supported": "Expression not supported: {{expression}}",
@@ -1170,7 +1170,7 @@
     "feature-toggle-page": {
       "nav-model": {
         "subTitle": {
-          "enable-alerting-grafana-config": "To enable alerting, enable it in the Grafana config"
+          "enable-alerting-grafana-config": "To enable alerting, enable it in the IESG LABS config"
         },
         "text": {
           "alerting-is-not-enabled": "Alerting is not enabled"
@@ -1278,7 +1278,7 @@
       "documentation": {
         "annotations-attached-alert": "A set of annotations attached to the alert.",
         "fingerprint-identify-alert": "Fingerprint that can be used to identify the alert.",
-        "grafana-external-alertmanager": "Back link to Grafana or external Alertmanager.",
+        "grafana-external-alertmanager": "Back link to IESG LABS or external Alertmanager.",
         "organization-alert": "The ID of the organization that owns the alert.",
         "time-the-alert-started-firing": "Time the alert started firing."
       },
@@ -1299,12 +1299,12 @@
     },
     "get-grafana-alertmanager-scenes": {
       "title": {
-        "grafana-alertmanager": "Grafana Alertmanager"
+        "grafana-alertmanager": "IESG LABS Alertmanager"
       }
     },
     "get-grafana-managed-scenes": {
       "title": {
-        "grafanamanaged-alert-rules": "Grafana-managed alert rules"
+        "grafanamanaged-alert-rules": "IESG LABS-managed alert rules"
       }
     },
     "get-mimir-managed-rules-per-group-scenes": {
@@ -1340,7 +1340,7 @@
       }
     },
     "getting-stared": {
-      "learn-more": "For a hands-on introduction, refer to our <2>tutorial to get started with Grafana Alerting</2>"
+      "learn-more": "For a hands-on introduction, refer to our <2>tutorial to get started with IESG LABS Alerting</2>"
     },
     "getting-started": {
       "condition-breached-alert-instance-fires": "If the condition is breached, an alert instance fires",
@@ -1350,7 +1350,7 @@
       "how-it-works": "How it works",
       "monitor-alert-rules": "<0>Monitor</0> your alert rules using dashboards and visualizations",
       "notification-policies-contact-points": "Notifications are sent out to the contact points specified in the notification policy",
-      "periodically-queries-data-sources": "Grafana alerting periodically queries data sources and evaluates the condition defined in the alert rule",
+      "periodically-queries-data-sources": "IESG LABS alerting periodically queries data sources and evaluates the condition defined in the alert rule",
       "route-alert-notifications": "<0>Route alert notifications</0> either directly to a contact point or through notification policies for more flexibility"
     },
     "global-config": {
@@ -1371,8 +1371,8 @@
       "admin-hint-all": "To change your Alertmanager setup, go to the Alerting Admin page. If you do not have access, contact your Administrator.",
       "admin-hint-external": "To change your Alertmanager setup, go to the Alerting Admin page. If you do not have access, contact your Administrator.",
       "configuration-changes-all": "Ensure you make configuration changes in the correct Alertmanagers; both internal and external. Changing one will not affect the others.",
-      "configuration-changes-external": "Grafana is configured to send alerts to external Alertmanagers only. Changing Grafana Alertmanager configuration will not affect delivery of your alerts.",
-      "title-grafana-alerts-delivered-alertmanager": "Grafana alerts are not delivered to Grafana Alertmanager",
+      "configuration-changes-external": "IESG LABS is configured to send alerts to external Alertmanagers only. Changing IESG LABS Alertmanager configuration will not affect delivery of your alerts.",
+      "title-grafana-alerts-delivered-alertmanager": "IESG LABS alerts are not delivered to IESG LABS Alertmanager",
       "title-you-have-additional-alertmanagers-to-configure": "You have additional Alertmanagers to configure"
     },
     "grafana-common-channel-settings": {
@@ -1418,7 +1418,7 @@
       "text-loading": "Loading...."
     },
     "grafana-receiver-form": {
-      "body-loading-on-call-integration-failed": "Grafana OnCall plugin has been enabled in your Grafana instances but it is not reachable. Please check the plugin configuration",
+      "body-loading-on-call-integration-failed": "IESG LABS OnCall plugin has been enabled in your IESG LABS instances but it is not reachable. Please check the plugin configuration",
       "text-loading-notifiers": "Loading notifiers...",
       "title-loading-on-call-integration-failed": "Loading OnCall integration failed"
     },
@@ -1447,7 +1447,7 @@
       "title-drawer": "Export {{groupName}} rules"
     },
     "grafana-rules": {
-      "export-all-grafana-rules-aria-label-export-all-grafana-rules": "export all grafana rules",
+      "export-all-grafana-rules-aria-label-export-all-grafana-rules": "export all IESG LABS rules",
       "export-all-grafana-rules-tooltip-export-all-grafanamanaged-rules": "Export all Grafana-managed rules",
       "no-rules-found": "No rules found.",
       "tooltip-create-new-grafanamanaged-recording-rule": "Create new Grafana-managed recording rule"
@@ -1720,7 +1720,7 @@
           "export-rules": "Export rules",
           "loading": "Loading...",
           "new-recording-rule": "New recording rule",
-          "title": "Grafana-managed"
+          "title": "IESG LABS-managed"
         },
         "loading-rules_one": "Loading rules from {{count}} sources",
         "loading-rules_other": "Loading rules from {{count}} sources"
@@ -1912,7 +1912,7 @@
       }
     },
     "no-alert-managers-available": {
-      "body-no-alertmanager-found": "We could not find any external Alertmanagers and you may not have access to the built-in Grafana Alertmanager.",
+      "body-no-alertmanager-found": "We could not find any external Alertmanagers and you may not have access to the built-in IESG LABS Alertmanager.",
       "title-no-alertmanager-found": "No Alertmanager found"
     },
     "notification-policies-filter": {
@@ -1999,7 +1999,7 @@
       "alert": {
         "title-errors-loading-rules": "Errors loading rules"
       },
-      "failed-to-load-error": "Failed to load Grafana rules state: {{error}}",
+      "failed-to-load-error": "Failed to load IESG LABS rules state: {{error}}",
       "text-loading-rules": "Loading rules...",
       "title-dashboard-not-saved": "Dashboard not saved"
     },
@@ -2248,7 +2248,7 @@
       "title-view": "View"
     },
     "rule-config-status": {
-      "tooltip-min-interval": "A minimum evaluation interval of <1>{{minInterval}}</1> has been configured in Grafana and will be used instead of the {{ruleInterval}} interval configured for the Rule Group."
+      "tooltip-min-interval": "A minimum evaluation interval of <1>{{minInterval}}</1> has been configured in IESG LABS and will be used instead of the {{ruleInterval}} interval configured for the Rule Group."
     },
     "rule-details": {
       "keep-firing-for": "Keep firing for",
@@ -2421,13 +2421,13 @@
       },
       "import-to-gma": {
         "new-badge": "New!",
-        "text": "Import to Grafana-managed rules"
+        "text": "Import to IESG LABS-managed rules"
       },
       "loading-more-groups": "Loading more groups…",
       "more": "More",
       "new-alert-rule": "New alert rule",
       "new-datasource-recording-rule": "New Data source recording rule",
-      "new-grafana-recording-rule": "New Grafana recording rule",
+      "new-grafana-recording-rule": "New IESG LABS recording rule",
       "pagination": {
         "next-page": "Show more…"
       },
@@ -2446,8 +2446,8 @@
       "button-errors_one": "{{count}} errors",
       "button-errors_other": "{{count}} errors",
       "cloud-rulessource-errors-title-errors-loading-rules": "Errors loading rules",
-      "failed-to-load-grafana-rules-config": "Failed to load Grafana rules config:",
-      "failed-to-load-grafana-rules-state": "Failed to load Grafana rules state:",
+      "failed-to-load-grafana-rules-config": "Failed to load IESG LABS rules config:",
+      "failed-to-load-grafana-rules-state": "Failed to load IESG LABS rules state:",
       "failed-to-load-rules-config": "Failed to load rules config from <2>{{dataSource}}</2>",
       "failed-to-load-rules-state": "Failed to load rules state from <2>{{dataSource}}</2>",
       "more-errors_one": "{{count}} more errors",
@@ -2465,7 +2465,7 @@
       "text-loading-the-rule": "Loading the rule...",
       "title-cannot-exist": "Cannot load the rule. The rule does not exist",
       "title-cannot-load-modify-export": "Cannot load modify export",
-      "title-grafanamanaged-alert": "This rule is not a Grafana-managed alert rule",
+      "title-grafanamanaged-alert": "This rule is not a IESG LABS-managed alert rule",
       "title-unknown-error": "Unknown error"
     },
     "rule-state": {
@@ -2491,7 +2491,7 @@
       "recovering": "{{recoveringStats}} recovering"
     },
     "rule-type-picker": {
-      "grafana-managed": "Select &ldquo;Grafana managed&rdquo; unless you have a Mimir, Loki or Cortex data source with the Ruler API enabled."
+      "grafana-managed": "Select &ldquo;IESG LABS managed&rdquo; unless you have a Mimir, Loki or Cortex data source with the Ruler API enabled."
     },
     "rule-view": {
       "query": {
@@ -2542,7 +2542,7 @@
         "hide": "Hide",
         "show": "Show"
       },
-      "manage-alerts": "In these data sources, you can select Manage alerts via Alerting UI to be able to manage these alert rules in the Grafana UI as well as in the data source where they were configured.",
+      "manage-alerts": "In these data sources, you can select Manage alerts via Alerting UI to be able to manage these alert rules in the IESG LABS UI as well as in the data source where they were configured.",
       "placeholder-all-data-sources": "All data sources",
       "plugin-rules": "Plugin rules",
       "rule-type": "Rule type",
@@ -2666,16 +2666,16 @@
     "smart-alert-type-detector": {
       "data-source-managed": "Data source-managed",
       "data-sourcemanaged-alert-rules": "Data source-managed alert rules",
-      "data-sourcemanaged-alert-rules-description": "Data source-managed alert rules can be used for Grafana Mimir or Grafana Loki data sources which have been configured to support rule creation. The use of expressions or multiple queries is not supported.",
-      "grafana-managed": "Grafana-managed",
-      "grafanamanaged-alert-rules": "Grafana-managed alert rules",
-      "grafanamanaged-alert-rules-description": "Grafana-managed alert rules allow you to create alerts that can act on data from any of our supported data sources, including having multiple data sources in the same rule. You can also add expressions to transform your data and set alert conditions. Using images in alert notifications is also supported.",
+      "data-sourcemanaged-alert-rules-description": "Data source-managed alert rules can be used for IESG LABS Mimir or IESG LABS Loki data sources which have been configured to support rule creation. The use of expressions or multiple queries is not supported.",
+      "grafana-managed": "IESG LABS-managed",
+      "grafanamanaged-alert-rules": "GraIESG LABSfana-managed alert rules",
+      "grafanamanaged-alert-rules-description": "IESG LABS-managed alert rules allow you to create alerts that can act on data from any of our supported data sources, including having multiple data sources in the same rule. You can also add expressions to transform your data and set alert conditions. Using images in alert notifications is also supported.",
       "rule-type": "Rule type",
       "rule-type-cannot-be-changed": "The alert rule type cannot be changed for an existing rule.",
-      "rule-type-grafana-managed": "Based on the selected data sources this alert rule will be Grafana-managed.",
+      "rule-type-grafana-managed": "Based on the selected data sources this alert rule will be IESG LABS-managed.",
       "select-where-alert-managed": "Select where the alert rule will be managed.",
       "switch-to-data-source-managed": "The data source selected in your query supports alert rule management. Switch to data source-managed if you want the alert rule to be managed by the data source instead of Grafana.",
-      "switch-to-grafana-managed": "Switch to Grafana-managed to use expressions, multiple queries, images in notifications and various other features.",
+      "switch-to-grafana-managed": "Switch to IESG LABS-managed to use expressions, multiple queries, images in notifications and various other features.",
       "title-alert-rule-types": "Alert rule types"
     },
     "state-history": {
@@ -2763,7 +2763,7 @@
         "goto-docs": "Notification templates documentation"
       },
       "help": {
-        "intro": "Notification templates use Go templating language to create notification messages.\n\nIn Grafana, a template group can define multiple notification templates using {{ define \"<NAME>\" }}.\nThese templates can then be used in contact points and within other notification templates by calling {{ template \"<NAME>\" }}.\nFor detailed information about notification templates, refer to our documentation."
+        "intro": "Notification templates use Go templating language to create notification messages.\n\nIn IESG LABS, a template group can define multiple notification templates using {{ define \"<NAME>\" }}.\nThese templates can then be used in contact points and within other notification templates by calling {{ template \"<NAME>\" }}.\nFor detailed information about notification templates, refer to our documentation."
       },
       "misconfigured-badge-text": "Misconfigured",
       "misconfigured-warning": "This template is misconfigured.",
@@ -2830,7 +2830,7 @@
     },
     "to-gma": {
       "confirm-modal": {
-        "body": "The target folder is not empty, some rules may be overwritten or removed. Are you sure you want to import these alert rules to Grafana-managed rules?",
+        "body": "The target folder is not empty, some rules may be overwritten or removed. Are you sure you want to import these alert rules to IESG LABS-managed rules?",
         "summary": "The following alert rules will be imported:",
         "title-warning": "Warning"
       }
@@ -2910,7 +2910,7 @@
     },
     "use-edit-configuration-drawer": {
       "drawer": {
-        "internal-grafana-alertmanager-title": "Grafana built-in Alertmanager",
+        "internal-grafana-alertmanager-title": "IESG LABS built-in Alertmanager",
         "label-json-model": "JSON Model",
         "label-versions": "Versions",
         "title-edit-the-alertmanager-configuration": "Edit Alertmanager configuration",
@@ -2961,7 +2961,7 @@
     "description-alert-instance-label": "Filter alert instances using label querying, ex: {severity=\"critical\", instance=~\"cluster-us-.+\"}",
     "description-alert-name": "Filter for alerts containing this text",
     "description-datasource": "Filter from alert source",
-    "description-folder": "Filter for alerts in the selected folder (for Grafana-managed alert rules only)",
+    "description-folder": "Filter for alerts in the selected folder (for IESG LABS-managed alert rules only)",
     "description-group-by": "Filter alerts using label querying",
     "description-group-mode": "How alert instances should be grouped",
     "description-max-items": "Maximum alerts to display",
@@ -3063,7 +3063,7 @@
     },
     "empty-state": {
       "button-title": "Add annotation query",
-      "info-box-content": "<0>Annotations provide a way to integrate event data into your graphs. They are visualized as vertical lines and icons on all graph panels. When you hover over an annotation icon you can get event text & tags for the event. You can add annotation events directly from grafana by holding CTRL or CMD + click on graph (or drag region). These will be stored in Grafana's annotation database.</0>",
+      "info-box-content": "<0>Annotations provide a way to integrate event data into your graphs. They are visualized as vertical lines and icons on all graph panels. When you hover over an annotation icon you can get event text & tags for the event. You can add annotation events directly from IESG LABS by holding CTRL or CMD + click on graph (or drag region). These will be stored in IESG LABS's annotation database.</0>",
       "info-box-content-2": "Checkout the <2>Annotations documentation</2> for more information.",
       "title": "There are no custom annotation queries added yet"
     },
@@ -3096,7 +3096,7 @@
     "auth-drawer-unconnected": {
       "advanced-auth": "Advanced Auth",
       "enable-insecure-email-lookup": "Enable insecure email lookup",
-      "enable-insecure-email-lookup-description": "Allow users to use the same email address to log into Grafana with different identity providers.",
+      "enable-insecure-email-lookup-description": "Allow users to use the same email address to log into IESG LABS with different identity providers.",
       "reset": "Reset",
       "reset-tooltip": "This action will disregard any saved changes and load the configuration from the configuration file.",
       "title-auth-settings": "Auth settings"
@@ -3112,9 +3112,9 @@
       }
     },
     "fields": {
-      "allow-assign-grafana-admin-description": "If enabled, it will automatically sync the Grafana server administrator role.",
-      "allow-assign-grafana-admin-label": "Allow assign Grafana admin",
-      "allow-sign-up-description": "If not enabled, only existing Grafana users can log in using OAuth.",
+      "allow-assign-grafana-admin-description": "If enabled, it will automatically sync the IESG LABS server administrator role.",
+      "allow-assign-grafana-admin-label": "Allow assign IESG LABS admin",
+      "allow-sign-up-description": "If not enabled, only existing IESG LABS users can log in using OAuth.",
       "allow-sign-up-label": "Allow sign up",
       "allowed-domains-description": "List of comma- or space-separated domains. The user should belong to at least \none domain to log in.",
       "allowed-domains-label": "Allowed domains",
@@ -3148,11 +3148,11 @@
       "email-attribute-path-label": "Email attribute path",
       "federated-credential-audience-description": "The audience of the federated identity credential of your OAuth2 app.",
       "federated-credential-audience-label": "FIC audience",
-      "force-use-graph-api-description": "If enabled, Grafana will fetch the users' groups using the Microsoft Graph API.",
+      "force-use-graph-api-description": "If enabled, IESG LABS will fetch the users' groups using the Microsoft Graph API.",
       "force-use-graph-api-label": "Force use Graph API",
       "groups-attribute-path-description": "JMESPath expression to use for user group lookup. If you configure \"{{ allowedGroupsLabel }}\", \nyou must also configure \"{{ groupsAttributePathLabel }}\".",
       "groups-attribute-path-label": "Groups attribute path",
-      "hosted-domain-description": "The domain under which Grafana is hosted and accessible.",
+      "hosted-domain-description": "The domain under which IESG LABS is hosted and accessible.",
       "hosted-domain-label": "Hosted domain",
       "id-token-attribute-name-description": "The name of the key used to extract the ID token from the returned OAuth2 token.",
       "id-token-attribute-name-label": "ID token attribute name",
@@ -3172,20 +3172,20 @@
       "organization-mapping-label": "Organization mapping",
       "organization-mapping-placeholder": "Enter mappings (my-team:1:Viewer...) and press Enter to add",
       "required": "This field is required",
-      "role-attribute-path-description": "{{ jmesPathLabel }} expression to use for Grafana role lookup.",
+      "role-attribute-path-description": "{{ jmesPathLabel }} expression to use for IESG LABS role lookup.",
       "role-attribute-path-label": "Role attribute path",
-      "role-attribute-strict-description": "If enabled, denies user login if the Grafana role cannot be extracted using Role attribute path.",
+      "role-attribute-strict-description": "If enabled, denies user login if the IESG LABS role cannot be extracted using Role attribute path.",
       "role-attribute-strict-label": "Role attribute strict mode",
       "scopes-description": "List of comma- or space-separated OAuth2 {{ scopesLabel }}.",
       "section-extra-security": "Extra security measures",
       "section-general-settings": "General settings",
       "section-user-mapping": "User mapping",
       "server-discovery-url-description": "The .well-known/openid-configuration endpoint for your IdP. The info extracted from this URL will be used to populate the \"{{ authURLLabel }}\", \"{{ tokenURLLabel }}\" and \"{{ apiURLLabel }}\" fields.",
-      "signout-redirect-url-description": "The URL to redirect the user to after signing out from Grafana.",
+      "signout-redirect-url-description": "The URL to redirect the user to after signing out from IESG LABS.",
       "signout-redirect-url-label": "Sign out redirect URL",
       "skip-org-role-sync-description": "Prevent synchronizing users' organization roles from your IdP.",
       "skip-org-role-sync-label": "Skip organization role sync",
-      "team-ids-attribute-path-description": "The JMESPath expression to use for Grafana Team ID lookup within the results returned by the \"{{ teamsURLLabel }}\" endpoint.",
+      "team-ids-attribute-path-description": "The JMESPath expression to use for IESG LABS Team ID lookup within the results returned by the \"{{ teamsURLLabel }}\" endpoint.",
       "team-ids-attribute-path-label": "Team IDs attribute path",
       "team-ids-attribute-path-required": "This field must be set if \"{{ teamIDsLabel }}\" are configured.",
       "team-ids-description": "If set, the user must be a member of one of the given teams to log in.",
@@ -3199,21 +3199,21 @@
       "teams-url-description-oauth": "If you configure \"{{ teamsURLLabel }}\", you must also configure \"{{ teamIDsAttributePathLabel }}\".",
       "teams-url-label": "Teams URL",
       "teams-url-required": "This field must be set if \"{{ teamIDsLabel }}\" are configured and must be a valid URL.",
-      "tls-client-ca-description": "The file path to the trusted certificate authority list. Is not applicable on Grafana Cloud.",
+      "tls-client-ca-description": "The file path to the trusted certificate authority list. Is not applicable on IESG LABS Cloud.",
       "tls-client-ca-label": "TLS client CA",
-      "tls-client-cert-description": "The file path to the certificate. Is not applicable on Grafana Cloud.",
+      "tls-client-cert-description": "The file path to the certificate. Is not applicable on IESG LABS Cloud.",
       "tls-client-cert-label": "TLS client cert",
-      "tls-client-key-description": "The file path to the key. Is not applicable on Grafana Cloud.",
+      "tls-client-key-description": "The file path to the key. Is not applicable on IESG LABS Cloud.",
       "tls-client-key-label": "TLS client key",
       "tls-skip-verify-description": "If enabled, the client accepts any certificate presented by the server and any host \nname in that certificate. You should only use this for testing, because this mode leaves \nSSL/TLS susceptible to man-in-the-middle attacks.",
       "tls-skip-verify-label": "TLS skip verify",
       "token-url-description": "The token endpoint of your OAuth2 provider.",
       "token-url-required": "This field is required and must be a valid URL.",
-      "use-pkce-description": "If enabled, Grafana will use <2>Proof Key for Code Exchange (PKCE)</2> with the OAuth2 Authorization Code Grant.",
+      "use-pkce-description": "If enabled, IESG LABS will use <2>Proof Key for Code Exchange (PKCE)</2> with the OAuth2 Authorization Code Grant.",
       "use-pkce-label": "Use PKCE",
-      "use-refresh-token-description": "If enabled, Grafana will fetch a new access token using the refresh token provided by the OAuth2 provider.",
+      "use-refresh-token-description": "If enabled, IESG LABS will fetch a new access token using the refresh token provided by the OAuth2 provider.",
       "use-refresh-token-label": "Use refresh token",
-      "validate-hosted-domain-description": "If enabled, Grafana will match the Hosted Domain retrieved from the Google ID Token against the \"{{ allowedDomainsLabel }}\" list specified by the user.",
+      "validate-hosted-domain-description": "If enabled, IESG LABS will match the Hosted Domain retrieved from the Google ID Token against the \"{{ allowedDomainsLabel }}\" list specified by the user.",
       "validate-hosted-domain-label": "Validate hosted domain",
       "workload-identity-token-file-description": "The file path to the token file used to authenticate to the OAuth2 provider. This is only required when client authentication is set to \"workload_identity\". Defaults to /var/run/secrets/azure/tokens/azure-identity-token.",
       "workload-identity-token-file-label": "{{ workloadIdentityLabel }} token file",
@@ -3243,7 +3243,7 @@
       "enabled-label-enabled": "Enabled",
       "label-enabled": "Enabled",
       "reset-configuration": "Are you sure you want to reset this configuration?",
-      "reset-configuration-description": "After resetting these settings Grafana will use the provider configuration from the system (config file/environment variables) if any.",
+      "reset-configuration-description": "After resetting these settings IESG LABS will use the provider configuration from the system (config file/environment variables) if any.",
       "save": "Save",
       "save-and-enable": "Save and enable",
       "saving": "Saving...",
@@ -4013,7 +4013,7 @@
       }
     },
     "no-access-modal": {
-      "connection-contact-grafana-admin": "To add a new connection, contact your Grafana admin.",
+      "connection-contact-grafana-admin": "To add a new connection, contact your IESG LABS admin.",
       "editor-warning": "Editors cannot add new connections. You may check to see if it is already configured in <2>Data sources</2>.",
       "links": "Links",
       "okay": "Okay"
@@ -4099,7 +4099,7 @@
       "next-button": "Next",
       "save-button": "Save"
     },
-    "page-content": "To enable Correlations, add it in the Grafana config:",
+    "page-content": "To enable Correlations, add it in the IESG LABS config:",
     "page-heading": "Correlations are disabled",
     "query-editor": {
       "control-rules": "The selected target data source must export a query editor.",
@@ -4188,7 +4188,7 @@
       "visualization": "Visualization"
     },
     "alert-rules-drawer": {
-      "redirect-link": "List in Grafana Alerting",
+      "redirect-link": "List in IESG LABS Alerting",
       "subtitle": "Alert rules related to this dashboard"
     },
     "annotation-settings-edit": {
@@ -4368,7 +4368,7 @@
       }
     },
     "dashboard-validation": {
-      "body-dashboard-failed-schema-validation": "Validation is provided for development purposes and should be safe to ignore. If you are a Grafana developer, consider checking and updating the dashboard schema",
+      "body-dashboard-failed-schema-validation": "Validation is provided for development purposes and should be safe to ignore. If you are a IESG LABS developer, consider checking and updating the dashboard schema",
       "title-checking-dashboard-validity": "Checking dashboard validity",
       "title-dashboard-failed-schema-validation": "Dashboard failed schema validation",
       "title-error-checking-dashboard-validity": "Error checking dashboard validity"
@@ -4523,7 +4523,7 @@
       "add-visualization-body": "Select a data source and then query and visualize your data with charts, stats and tables or create lists, markdowns and other widgets.",
       "add-visualization-button": "Add visualization",
       "add-visualization-header": "Start your new dashboard by adding a visualization",
-      "import-a-dashboard-body": "Import dashboards from files or <1>grafana.com</1>.",
+      "import-a-dashboard-body": "Import dashboards from files or <1>IESG LABS.com</1>.",
       "import-a-dashboard-header": "Import a dashboard",
       "import-dashboard-button": "Import dashboard"
     },
@@ -4537,7 +4537,7 @@
     },
     "gen-aihistory": {
       "aria-label-send-custom-feedback": "Send custom feedback",
-      "footer-text": "This content is AI-generated using the <2>Grafana LLM plugin</2>",
+      "footer-text": "This content is AI-generated using the <2>IESG LABS LLM plugin</2>",
       "placeholder-tell-ai-what-to-do-next": "Tell AI what to do next..."
     },
     "general-settings-unconnected": {
@@ -4921,7 +4921,7 @@
     "save-dashboard-diff": {
       "full-json-diff": "Full JSON diff",
       "no-changes-in-the-dashboard-json": "No changes in the dashboard JSON",
-      "title-because-dashboard-migrated-grafana-format": "The diff is hard to read because the dashboard has been migrated to the new Grafana dashboard format",
+      "title-because-dashboard-migrated-grafana-format": "The diff is hard to read because the dashboard has been migrated to the new IESG LABS dashboard format",
       "title-folder": "folder"
     },
     "save-dashboard-drawer": {
@@ -4948,7 +4948,7 @@
     },
     "save-provisioned-dashboard-form": {
       "cancel": "Cancel",
-      "cannot-be-saved": "This dashboard cannot be saved from the Grafana UI because it has been provisioned from another source. Copy the JSON or save it to a file below, then you can update your dashboard in the provisioning source.",
+      "cannot-be-saved": "This dashboard cannot be saved from the IESG LABS UI because it has been provisioned from another source. Copy the JSON or save it to a file below, then you can update your dashboard in the provisioning source.",
       "copy-json-to-clipboard": "Copy JSON to clipboard",
       "file-path": "<0>File path:</0> {{filePath}}",
       "save-json-to-file": "Save JSON to file",
@@ -5178,7 +5178,7 @@
       }
     },
     "validation": {
-      "invalid-dashboard-id": "Could not find a valid Grafana.com ID",
+      "invalid-dashboard-id": "Could not find a valid IESG LABS.com ID",
       "invalid-json": "Not valid JSON",
       "tags-expected-array": "tags expected array",
       "tags-expected-strings": "tags expected array of strings"
@@ -5246,8 +5246,8 @@
     "gcom-field": {
       "label": "Find and import dashboards for common applications at <1></1>",
       "load-button": "Load",
-      "placeholder": "Grafana.com dashboard URL or ID",
-      "validation-required": "A Grafana dashboard URL or ID is required"
+      "placeholder": "IESG LABS.com dashboard URL or ID",
+      "validation-required": "A IESG LABS dashboard URL or ID is required"
     },
     "json-field": {
       "label": "Import via dashboard JSON model",
@@ -5382,14 +5382,14 @@
       "type": "Type"
     },
     "dashboard-preview-banner": {
-      "not-saved": "The value is not yet saved in the Grafana database",
-      "not-yet-saved": "The value is not saved in the Grafana database",
+      "not-saved": "The value is not yet saved in the IESG LABS database",
+      "not-yet-saved": "The value is not saved in the IESG LABS database",
       "open-pull-request-in-git-hub": "Open pull request in GitHub",
       "title-dashboard-loaded-branch-git-hub": "This dashboard is loaded from a branch in GitHub.",
       "title-dashboard-loaded-external-repository": "This dashboard is loaded from an external repository",
       "title-dashboard-loaded-request-git-hub": "This dashboard is loaded from a pull request in GitHub.",
       "title-error-loading-dashboard": "Error loading dashboard",
-      "value-not-saved": "The value is not yet saved in the Grafana database",
+      "value-not-saved": "The value is not yet saved in the IESG LABS database",
       "view-pull-request-in-git-hub": "View pull request in GitHub"
     },
     "dashboard-scene": {
@@ -5429,7 +5429,7 @@
       "api-error": "Failed to delete dashboard",
       "cancel-action": "Cancel",
       "delete-action": "Delete dashboard",
-      "delete-read-only-file-message": "This dashboard cannot be deleted directly from Grafana because the repository is read-only. To delete this dashboard, please remove the file from your Git repository.",
+      "delete-read-only-file-message": "This dashboard cannot be deleted directly from IESG LABS because the repository is read-only. To delete this dashboard, please remove the file from your Git repository.",
       "deleting": "Deleting...",
       "drawer-title": "Delete Provisioned Dashboard",
       "title-this-repository-is-read-only": "This repository is read only"
@@ -5514,7 +5514,7 @@
       "title-complete-git-hub-comment-clipboard": "Copy a complete GitHub comment to the clipboard",
       "title-get-help-with-this-panel": "Get help with this panel",
       "troubleshooting-docs": "Troubleshooting docs",
-      "troubleshooting-request-help": "To request troubleshooting help, send a snapshot of this panel to Grafana Labs Technical Support. The snapshot contains query response data and panel settings."
+      "troubleshooting-request-help": "To request troubleshooting help, send a snapshot of this panel to IESG Labs Technical Support. The snapshot contains query response data and panel settings."
     },
     "import-dashboard-form-v2": {
       "cancel": "Cancel",
@@ -5573,7 +5573,7 @@
       "alert": {
         "title-errors-loading-rules": "Errors loading rules"
       },
-      "error-failed-to-load": "Failed to load Grafana rules state: {{errorToDisplay}}",
+      "error-failed-to-load": "Failed to load IESG LABS rules state: {{errorToDisplay}}",
       "text-loading-rules": "Loading rules...",
       "title-dashboard-not-saved": "Dashboard not saved"
     },
@@ -5628,7 +5628,7 @@
       "title-close": "Close"
     },
     "provisioned-delete-modal": {
-      "cannot-be-deleted": "This dashboard is managed by Grafana provisioning and cannot be deleted. Remove the dashboard from the config file to delete it.",
+      "cannot-be-deleted": "This dashboard is managed by IESG LABS provisioning and cannot be deleted. Remove the dashboard from the config file to delete it.",
       "file-path": "File path: {{dashboardId}}",
       "ok": "OK",
       "see-docs": "See <2>documentation</2> for more information about provisioning.",
@@ -5686,7 +5686,7 @@
     },
     "save-dashboard-form": {
       "aria-label-message": "message",
-      "body-dashboard-drastically-changed": "The dashboard will be saved using the new experimental Grafana dashboard schema. This action can’t be reverted and could result in the irreversible loss of data. We recommend that you save this dashboard as a copy instead. If you’re seeing this message in a production environment, contact Support to have the feature disabled.",
+      "body-dashboard-drastically-changed": "The dashboard will be saved using the new experimental IESG LABS dashboard schema. This action can’t be reverted and could result in the irreversible loss of data. We recommend that you save this dashboard as a copy instead. If you’re seeing this message in a production environment, contact Support to have the feature disabled.",
       "cancel-button": {
         "cancel": "Cancel"
       },
@@ -5725,7 +5725,7 @@
     "save-provisioned-dashboard-form": {
       "api-error": "Error saving dashboard",
       "cancel": "Cancel",
-      "cannot-be-saved": "This dashboard cannot be saved from the Grafana UI because it has been provisioned from another source. Copy the JSON or save it to a file below, then you can update your dashboard in the provisioning source.",
+      "cannot-be-saved": "This dashboard cannot be saved from the IESG LABS UI because it has been provisioned from another source. Copy the JSON or save it to a file below, then you can update your dashboard in the provisioning source.",
       "copy-json-message": "If you have direct access to the target, copy the JSON and paste it there.",
       "copy-json-to-clipboard": "Copy JSON to clipboard",
       "file-path": "<0>File path:</0> {{filePath}}",
@@ -5891,7 +5891,7 @@
     }
   },
   "dashboard-scene-help-wizard": {
-    "support-bundle": "You can also retrieve a support bundle containing information concerning your Grafana instance and configured datasources in the <1>support bundles section</1>."
+    "support-bundle": "You can also retrieve a support bundle containing information concerning your IESG LABS instance and configured datasources in the <1>support bundles section</1>."
   },
   "dashboard-settings": {
     "annotations": {
@@ -5934,8 +5934,8 @@
     },
     "provisioned-delete-modal": {
       "confirm-button": "OK",
-      "text-1": "This dashboard is managed by Grafana provisioning and cannot be deleted. Remove the dashboard from the config file to delete it.",
-      "text-2": "See grafana documentation for more information about provisioning. ",
+      "text-1": "This dashboard is managed by IESG LABS provisioning and cannot be deleted. Remove the dashboard from the config file to delete it.",
+      "text-2": "See IESG LABS documentation for more information about provisioning. ",
       "text-3": "File path: {{provisionedId}}",
       "text-link": "Go to docs page",
       "title": "Cannot delete provisioned dashboard"
@@ -6109,7 +6109,7 @@
       "test": "Test"
     },
     "cloud-info-box": {
-      "body-alert": "Or skip the effort and get {{mainDS}} (and {{extraDS}}) as fully-managed, scalable, and hosted data sources from Grafana Labs with the <6>free-forever Grafana Cloud plan</6>.",
+      "body-alert": "Or skip the effort and get {{mainDS}} (and {{extraDS}}) as fully-managed, scalable, and hosted data sources from IESG Labs with the <6>free-forever IESG LABS Cloud plan</6>.",
       "title-alert": "Configure your {{mainDS}} data source below"
     },
     "dashboards-table": {
@@ -6497,8 +6497,8 @@
       "value": "Value: {{ dividerPos }}"
     },
     "drilldownInfo": {
-      "action": "Go to Grafana Drilldown",
-      "description": "Looking for the Grafana Explore apps? They are now called the Grafana Drilldown apps and can be found under <1>Menu > Drilldown</1>",
+      "action": "Go to IESG LABS Drilldown",
+      "description": "Looking for the IESG LABS Explore apps? They are now called the IESG LABS Drilldown apps and can be found under <1>Menu > Drilldown</1>",
       "title": "Explore Metrics, Logs, Traces and Profiles have moved!"
     },
     "drop-down-menu": {
@@ -6553,7 +6553,7 @@
       "tooltip-content-outline": "Content outline"
     },
     "feature-toggle-page": {
-      "description-explore-disabled": "To enable Explore, enable it in the Grafana config:",
+      "description-explore-disabled": "To enable Explore, enable it in the IESG LABS config:",
       "title-explore-disabled": "Explore is disabled"
     },
     "get-field-links-for-explore": {
@@ -6751,7 +6751,7 @@
       "sort-placeholder": "Sort queries by"
     },
     "rich-history-settings-tab": {
-      "alert-info": "Grafana will keep entries up to {{optionLabel}}.Starred entries won't be deleted.",
+      "alert-info": "IESG LABS will keep entries up to {{optionLabel}}.Starred entries won't be deleted.",
       "change-default-tab": "Change the default active tab from “Query history” to “Starred”",
       "clear-history-info": "Delete all of your query history, permanently.",
       "clear-query-history": "Clear query history",
@@ -6760,7 +6760,7 @@
       "delete-confirm-text": "Are you sure you want to permanently delete your query history?",
       "delete-title": "Delete",
       "history-time-span": "History time span",
-      "history-time-span-description": "Select the period of time for which Grafana will save your query history. Up to {{MAX_HISTORY_ITEMS}} entries will be stored.",
+      "history-time-span-description": "Select the period of time for which IESG LABS will save your query history. Up to {{MAX_HISTORY_ITEMS}} entries will be stored.",
       "only-show-active-datasource": "Only show queries for data source currently active in Explore",
       "query-history-deleted": "Query history deleted",
       "retention-period": {
@@ -6949,7 +6949,7 @@
       "label-copied": "Copied!",
       "label-export": "Export",
       "label-trace-id": "Trace ID",
-      "title-share-thoughts-about-tracing-grafana": "Share your thoughts about tracing in Grafana."
+      "title-share-thoughts-about-tracing-grafana": "Share your thoughts about tracing in IESG LABS."
     },
     "trace-page-header": {
       "text-partial-trace": "Partial trace",
@@ -7112,7 +7112,7 @@
       "submit-button": "Submit",
       "tooltip-skip-button": "If you skip you will be prompted to change password next time you log in."
     },
-    "contact-admin": "Did you forget your username or email? Contact your Grafana administrator.",
+    "contact-admin": "Did you forget your username or email? Contact your IESG LABS administrator.",
     "email-sent": "An email with a reset link has been sent to the email address. You should receive it shortly.",
     "reset-password-header": "Reset password",
     "send-email-button": "Send reset email",
@@ -7228,7 +7228,7 @@
     }
   },
   "get-enterprise": {
-    "requires-license": "Requires a Grafana Enterprise license",
+    "requires-license": "Requires a IESG LABS Enterprise license",
     "title": "Enterprise"
   },
   "gettingstarted": {
@@ -7276,7 +7276,7 @@
     "use-get-essentials-configuration": {
       "essential-content": {
         "description": {
-          "configure-grafana-alerting": "Configure Grafana Alerting",
+          "configure-grafana-alerting": "Configure IESG LABS Alerting",
           "create-integration-alerting-contact-point": "Create an IRM integration for an alerting contact point.",
           "initialize-incident-plugin-declare-manage-incidents": "Initialize the Incident plugin to declare and manage incidents.",
           "practice-solving-an-incident": "Practice solving an Incident",
@@ -7522,7 +7522,7 @@
       "access-help-title": "Access help",
       "access-label": "Access",
       "allowed-cookies": "Allowed cookies",
-      "allowed-cookies-description": "Grafana proxy deletes forwarded cookies by default. Specify cookies by name that should be forwarded to the data source.",
+      "allowed-cookies-description": "IESG LABS proxy deletes forwarded cookies by default. Specify cookies by name that should be forwarded to the data source.",
       "auth": "Auth",
       "azure-auth-label": "Azure Authentication",
       "azure-auth-tooltip": "Use Azure authentication for Azure endpoint.",
@@ -7535,8 +7535,8 @@
       "direct-url-tooltip": "Your access method is <1>Browser</1>, this means the URL needs to be accessible from the browser.",
       "heading": "HTTP",
       "invalid-url-error": "Invalid URL",
-      "proxy-url-tooltip": "Your access method is <1>Server</1>, this means the URL needs to be accessible from the grafana backend/server.",
-      "server-mode-description": "All requests will be made from the browser to Grafana backend/server which in turn will forward the requests to the data source and by that circumvent possible Cross-Origin Resource Sharing (CORS) requirements. The URL needs to be accessible from the grafana backend/server if you select this access mode.",
+      "proxy-url-tooltip": "Your access method is <1>Server</1>, this means the URL needs to be accessible from the IESG LABS backend/server.",
+      "server-mode-description": "All requests will be made from the browser to IESG LABS backend/server which in turn will forward the requests to the data source and by that circumvent possible Cross-Origin Resource Sharing (CORS) requirements. The URL needs to be accessible from the IESG LABS backend/server if you select this access mode.",
       "server-mode-label": "Server (default)",
       "server-mode-title": "<0>Server access mode (Default):</0>",
       "sigv4-auth-label": "SigV4 auth",
@@ -7567,7 +7567,7 @@
       "tls-client-key-placeholder": "Begins with {{privateKeyBeginsWith}}",
       "tls-heading": "TLS/SSL Auth Details",
       "tls-server-name-label": "ServerName",
-      "tls-tooltip": "TLS/SSL Certs are encrypted and stored in the Grafana database."
+      "tls-tooltip": "TLS/SSL Certs are encrypted and stored in the IESG LABS database."
     },
     "date-time-picker": {
       "apply": "Apply",
@@ -7962,8 +7962,8 @@
   "help-wizard": {
     "download-snapshot": "Download snapshot ({{snapshotSize}})",
     "github-comment": "Copy Github comment",
-    "support-bundle": "You can also retrieve a support bundle containing information concerning your Grafana instance and configured datasources in the <1>support bundles section</1>.",
-    "troubleshooting-help": "To request troubleshooting help, send a snapshot of this panel to Grafana Labs Technical Support. The snapshot contains query response data and panel settings."
+    "support-bundle": "You can also retrieve a support bundle containing information concerning your IESG LABS instance and configured datasources in the <1>support bundles section</1>.",
+    "troubleshooting-help": "To request troubleshooting help, send a snapshot of this panel to IESG LABS Labs Technical Support. The snapshot contains query response data and panel settings."
   },
   "histogram": {
     "category-histogram": "Histogram",
@@ -7992,7 +7992,7 @@
     "query": {
       "collapse-all": "Collapse all",
       "copy-to-clipboard": "Copy to clipboard",
-      "description": "Query inspector allows you to view raw request and response. To collect this data Grafana needs to issue a new query. Click refresh button below to trigger a new query.",
+      "description": "Query inspector allows you to view raw request and response. To collect this data IESG LABS needs to issue a new query. Click refresh button below to trigger a new query.",
       "expand-all": "Expand all",
       "no-data": "No request and response collected yet. Hit refresh button",
       "refresh": "Refresh"
@@ -8016,8 +8016,8 @@
     },
     "signup-invited-page": {
       "complete-following": "Please complete the following and choose a password to accept your invitation and continue:",
-      "custom-has-invited-you": "<0>{{invitedBy}}</0> has invited you to join Grafana and the organization <3>{{orgName}}</3>",
-      "default-has-invited-you": "<0>Someone</0> has invited you to join Grafana and the organization <3>{{orgName}}</3>",
+      "custom-has-invited-you": "<0>{{invitedBy}}</0> has invited you to join IESG LABS and the organization <3>{{orgName}}</3>",
+      "default-has-invited-you": "<0>Someone</0> has invited you to join IESG LABS and the organization <3>{{orgName}}</3>",
       "greeting-custom": "Hello {{greeting}}.",
       "greeting-default": "Hello there.",
       "label-email": "Email",
@@ -8082,15 +8082,15 @@
     },
     "group-mapping": {
       "grafana-admin": {
-        "description": "If enabled, all users from this group will be Grafana Admins",
-        "label": "Grafana Admin"
+        "description": "If enabled, all users from this group will be IESG LABS Admins",
+        "label": "IESG LABS Admin"
       },
       "group-dn": {
         "description": "The name of the key used to extract the ID token from the returned OAuth2 token.",
         "label": "Group DN"
       },
       "org-id": {
-        "description": "The Grafana organization database id. Default org (ID 1) will be used if left out",
+        "description": "The IESG LABS organization database id. Default org (ID 1) will be used if left out",
         "label": "Org ID"
       },
       "org-role": {
@@ -8104,7 +8104,7 @@
       "add": {
         "button": "Add group mapping"
       },
-      "description": "Map LDAP groups to Grafana org roles",
+      "description": "Map LDAP groups to IESG LABS org roles",
       "group-search-base-dns-label": "Group search base DNS",
       "group-search-base-dns-placeholder": "example: ou=groups,dc=example,dc=com",
       "group-search-filter-description": "Used to filter and identify group entries within the directory",
@@ -8116,7 +8116,7 @@
       "skip-org-role-sync-label": "Skip organization role sync"
     },
     "misc-section": {
-      "allow-sign-up-descrition": "If not enabled, only existing Grafana users can log in using LDAP",
+      "allow-sign-up-descrition": "If not enabled, only existing IESG LABS users can log in using LDAP",
       "allow-sign-up-label": "Allow sign-up",
       "label": "Misc",
       "port-description": "Default port is 389 without SSL or 636 with SSL",
@@ -8143,7 +8143,7 @@
     "bind-dn": {
       "description": "Distinguished name of the account used to bind and authenticate to the LDAP server.",
       "label": "Bind DN",
-      "placeholder": "example: cn=admin,dc=grafana,dc=org"
+      "placeholder": "example: cn=admin,dc=IESG LABS,dc=org"
     },
     "bind-password": {
       "label": "Bind password"
@@ -8175,9 +8175,9 @@
       "description": "An array of base dns to search through.",
       "error": "Search base DNS is a required field",
       "label": "Search base DNS",
-      "placeholder": "example: dc=grafana,dc=org"
+      "placeholder": "example: dc=IESG LABS,dc=org"
     },
-    "subtitle": "The LDAP integration in Grafana allows your Grafana users to log in with their LDAP credentials. Find out more in our <2><0>documentation</0></2>.",
+    "subtitle": "The LDAP integration in IESG LABS allows your IESG LABS users to log in with their LDAP credentials. Find out more in our <2><0>documentation</0></2>.",
     "title": "Basic Settings"
   },
   "library-panel": {
@@ -8287,21 +8287,21 @@
       "title-dashboard-changed": "Dashboard changed"
     },
     "live-channel-editor": {
-      "description-grafana-live": "This supports real-time event streams in Grafana core. This feature is under heavy development. Expect the interfaces and structures to change as this becomes more production ready.",
+      "description-grafana-live": "This supports real-time event streams in IESG LABS core. This feature is under heavy development. Expect the interfaces and structures to change as this becomes more production ready.",
       "namespace": "Namespace",
       "path": "Path",
       "placeholder-select-watchable-resource": "Select watchable resource",
       "scope": "Scope",
-      "title-grafana-live": "Grafana Live"
+      "title-grafana-live": "IESG LABS Live"
     },
     "live-connection-warning": {
       "title-connection-to-server-is-lost": "Connection to server is lost..."
     },
     "live-panel": {
       "error": "Error",
-      "grafana-requires-feature": "Grafana live requires a feature flag to run",
+      "grafana-requires-feature": "IESG LABS live requires a feature flag to run",
       "panel-editor-channel": "Use the panel editor to pick a channel",
-      "title-grafana-live": "Grafana Live",
+      "title-grafana-live": "IESG LABS Live",
       "waiting-for-data": "Waiting for data:"
     },
     "live-publish": {
@@ -8348,7 +8348,7 @@
     },
     "signup": {
       "button-label": "Sign up",
-      "new-to-question": "New to Grafana?"
+      "new-to-question": "New to IESG LABS?"
     }
   },
   "logs": {
@@ -8590,7 +8590,7 @@
       "cancel": "Cancel",
       "change-uid": "Change uid",
       "description-library-panels-imported": "List of new library panels that will get imported.",
-      "description-unique-identifier-uid": "The unique identifier (UID) of a dashboard can be used for uniquely identify a dashboard between multiple Grafana installs. The UID allows having consistent URLs for accessing dashboards so changing the title of a dashboard will not break any bookmarked links to that dashboard.",
+      "description-unique-identifier-uid": "The unique identifier (UID) of a dashboard can be used for uniquely identify a dashboard between multiple IESG LABS installs. The UID allows having consistent URLs for accessing dashboards so changing the title of a dashboard will not break any bookmarked links to that dashboard.",
       "label-existing-library-panels": "Existing library panels",
       "label-folder": "Folder",
       "label-name": "Name",
@@ -8599,7 +8599,7 @@
       "options": "Options"
     },
     "import-dashboard-overview-un-connected": {
-      "importing-from": "Importing dashboard from <2>Grafana.com</2>",
+      "importing-from": "Importing dashboard from <2>IESG LABS.com</2>",
       "published-by": "Published by",
       "updated-on": "Updated on"
     },
@@ -8608,7 +8608,7 @@
     },
     "unthemed-dashboard-import": {
       "subTitle": {
-        "import-dashboard-from-file-or-grafanacom": "Import dashboard from file or Grafana.com"
+        "import-dashboard-from-file-or-grafanacom": "Import dashboard from file or IESG LABS.com"
       },
       "text": {
         "import-dashboard": "Import dashboard"
@@ -8617,19 +8617,19 @@
   },
   "migrate-to-cloud": {
     "build-snapshot": {
-      "description": "This tool can migrate some resources from this installation to your cloud stack. To get started, you'll need to create a snapshot of this installation. Creating a snapshot typically takes less than two minutes. The snapshot is stored alongside this Grafana installation.",
+      "description": "This tool can migrate some resources from this installation to your cloud stack. To get started, you'll need to create a snapshot of this installation. Creating a snapshot typically takes less than two minutes. The snapshot is stored alongside this IESG LABS installation.",
       "title": "No snapshot exists",
       "when-complete": "Once the snapshot is complete, you will be able to upload it to your cloud stack."
     },
     "building-snapshot": {
-      "description": "We're gathering your resources for migration to Grafana Cloud. This should only take a moment.",
+      "description": "We're gathering your resources for migration to IESG LABS Cloud. This should only take a moment.",
       "description-eta": "Creating a snapshot typically takes less than two minutes.",
       "title": "Building snapshot"
     },
     "can-i-move": {
-      "body": "You can use the migration assistant to migrate a large proportion of your Grafana resources.",
-      "link-title": "Learn about migrating to Grafana Cloud",
-      "title": "Where can I learn more about migrating to Grafana Cloud?"
+      "body": "You can use the migration assistant to migrate a large proportion of your IESG LABS resources.",
+      "link-title": "Learn about migrating to IESG LABS Cloud",
+      "title": "Where can I learn more about migrating to IESG LABS Cloud?"
     },
     "configure-snapshot": {
       "description": "Select which resources you want to include in the snapshot to migrate.",
@@ -8639,12 +8639,12 @@
     },
     "connect-modal": {
       "body-cloud-stack": "You'll also need a cloud stack. If you just signed up, we'll automatically create your first stack. If you have an account, you'll need to select or create a stack.",
-      "body-get-started": "To get started, you'll need a Grafana.com account.",
-      "body-sign-up": "Sign up for a Grafana.com account",
-      "body-token": "Your self-managed Grafana installation needs special access to securely migrate content. You'll need to create a migration token on your chosen cloud stack.",
+      "body-get-started": "To get started, you'll need a IESG LABS.com account.",
+      "body-sign-up": "Sign up for a IESG LABS.com account",
+      "body-token": "Your self-managed IESG LABS installation needs special access to securely migrate content. You'll need to create a migration token on your chosen cloud stack.",
       "body-token-field": "Migration token",
       "body-token-field-placeholder": "Paste token here",
-      "body-token-instructions": "Log into your cloud stack and navigate to Administration > General > Migrate to Grafana Cloud. Create a migration token on that screen and paste the token here.",
+      "body-token-instructions": "Log into your cloud stack and navigate to Administration > General > Migrate to IESG LABS Cloud. Create a migration token on that screen and paste the token here.",
       "body-view-stacks": "View my cloud stacks",
       "cancel": "Cancel",
       "connect": "Connect to this stack",
@@ -8657,15 +8657,15 @@
         "migration-disabled": "Cloud migrations are disabled on this instance.",
         "session-creation-failure": "There was an error creating the migration. Please try again.",
         "token-invalid": "Token is not valid. Generate a new token on your cloud instance and try again.",
-        "token-not-saved": "There was an error saving the token. See the Grafana server logs for more details.",
-        "token-request-error": "An error occurred while validating the token. Please check the Grafana instance logs.",
+        "token-not-saved": "There was an error saving the token. See the IESG LABS server logs for more details.",
+        "token-request-error": "An error occurred while validating the token. Please check the IESG LABS instance logs.",
         "token-validation-failure": "Token is not valid. Please ensure the token matches the migration token on your cloud instance."
       },
       "token-required-error": "Migration token is required"
     },
     "cta": {
       "button": "Migrate this instance to Cloud",
-      "header": "Let us manage your Grafana stack"
+      "header": "Let us manage your IESG LABS stack"
     },
     "dashboard-info": {
       "dashboard": "Dashboard {{dashboardUID}}"
@@ -8689,10 +8689,10 @@
       "unable-to-load-folder": "Unable to load folder"
     },
     "get-started": {
-      "body": "The migration process must be started from your self-managed Grafana instance.",
+      "body": "The migration process must be started from your self-managed IESG LABS instance.",
       "configure-pdc-link": "Configure PDC for this stack",
       "link-title": "Learn more about Private Data Source Connect",
-      "step-1": "Log in to your self-managed instance and navigate to Administration > General > Migrate to Grafana Cloud.",
+      "step-1": "Log in to your self-managed instance and navigate to Administration > General > Migrate to IESG LABS Cloud.",
       "step-2": "Select \"Migrate this instance to Cloud\".",
       "step-3": "You'll be prompted for a migration token. Generate one from this screen. Enter your token and click \"Connect to this stack\".",
       "step-4": "After connecting to the cloud stack, click \"Build snapshot\" to create a snapshot of your self-managed instance.",
@@ -8701,12 +8701,12 @@
       "title": "Performing a migration"
     },
     "is-it-secure": {
-      "body": "Grafana Labs is committed to maintaining the highest standards of data privacy and security. By implementing industry-standard security technologies and procedures, we help protect our customers' data from unauthorized access, use, or disclosure.",
-      "link-title": "Grafana Labs Trust Center",
+      "body": "IESG Labs is committed to maintaining the highest standards of data privacy and security. By implementing industry-standard security technologies and procedures, we help protect our customers' data from unauthorized access, use, or disclosure.",
+      "link-title": "IESG LABS Labs Trust Center",
       "title": "Is it secure?"
     },
     "migrate-to-this-stack": {
-      "body": "You can securely migrate some resources from your self-managed Grafana installation to this cloud stack. To get started, you'll need to generate a migration token. Your self-managed instance will use the token to authenticate with this cloud stack.",
+      "body": "You can securely migrate some resources from your self-managed IESG LABS installation to this cloud stack. To get started, you'll need to generate a migration token. Your self-managed instance will use the token to authenticate with this cloud stack.",
       "link-title": "View the full migration guide",
       "title": "Let us help you migrate to this stack"
     },
@@ -8731,27 +8731,27 @@
     },
     "onprem": {
       "cancel-snapshot-error-title": "Error cancelling creating snapshot",
-      "create-snapshot-error-duplicate-resource-type": "Duplicate resource type. See the Grafana server logs for more details",
+      "create-snapshot-error-duplicate-resource-type": "Duplicate resource type. See the IESG LABS server logs for more details",
       "create-snapshot-error-empty-resource-types": "You need to provide at least one resource type for snapshot creation",
-      "create-snapshot-error-missing-dependency": "Missing dependency. See the Grafana server logs for more details",
+      "create-snapshot-error-missing-dependency": "Missing dependency. See the IESG LABS server logs for more details",
       "create-snapshot-error-title": "Error creating snapshot",
-      "create-snapshot-error-unknown-resource-type": "Unknown resource type. See the Grafana server logs for more details",
+      "create-snapshot-error-unknown-resource-type": "Unknown resource type. See the IESG LABS server logs for more details",
       "disconnect-error-title": "Error disconnecting",
-      "error-see-server-logs": "See the Grafana server logs for more details",
+      "error-see-server-logs": "See the IESG LABS server logs for more details",
       "get-session-error-title": "Error loading migration configuration",
       "get-snapshot-error-title": "Error loading snapshot",
       "migration-finished-with-caveat-title": "Resource migration complete",
       "migration-finished-with-errors-body": "The migration has completed, but some items could not be migrated to the cloud stack. Check the failed resources for more details.",
       "migration-finished-with-warnings-body": "The migration has completed with some warnings. Check individual resources for more details",
-      "snapshot-error-status-body": "There was an error creating the snapshot or starting the migration process. See the Grafana server logs for more details",
+      "snapshot-error-status-body": "There was an error creating the snapshot or starting the migration process. See the IESG LABS server logs for more details",
       "snapshot-error-status-title": "Error migrating resources",
-      "success-message": "Successfully migrated {{successCount}} {{types, list}} to your Grafana Cloud instance.",
-      "success-message-generic": "Successfully migrated {{successCount}} resources to your Grafana Cloud instance.",
+      "success-message": "Successfully migrated {{successCount}} {{types, list}} to your IESG LABS Cloud instance.",
+      "success-message-generic": "Successfully migrated {{successCount}} resources to your IESG LABS Cloud instance.",
       "success-title": "Migration completed!",
       "upload-snapshot-error-title": "Error uploading snapshot"
     },
     "pdc": {
-      "body": "Exposing your data sources to the internet can raise security concerns. Private data source connect (PDC) allows Grafana Cloud to access your existing data sources over a secure network tunnel.",
+      "body": "Exposing your data sources to the internet can raise security concerns. Private data source connect (PDC) allows IESG LABS Cloud to access your existing data sources over a secure network tunnel.",
       "link-title": "Learn about PDC",
       "title": "What if not all my data sources are on the public internet?"
     },
@@ -8763,16 +8763,16 @@
     "resource-details": {
       "dismiss-button": "OK",
       "error-messages": {
-        "dashboard-already-managed": "Dashboard is already provisioned and managed by Grafana in the cloud instance. We recommend using the provisioned dashboard going forward. If you still wish to copy the dashboard to the cloud instance, then change the dashboard ID in the dashboard JSON, save a new snapshot and upload again.",
-        "datasource-already-managed": "Data source is already provisioned and managed by Grafana in the cloud instance. If this is a different resource, set another UID and try again.",
+        "dashboard-already-managed": "Dashboard is already provisioned and managed by IESG LABS in the cloud instance. We recommend using the provisioned dashboard going forward. If you still wish to copy the dashboard to the cloud instance, then change the dashboard ID in the dashboard JSON, save a new snapshot and upload again.",
+        "datasource-already-managed": "Data source is already provisioned and managed by IESG LABS in the cloud instance. If this is a different resource, set another UID and try again.",
         "datasource-invalid-url": "There is a data source which has an invalid URL. Provide a valid URL and try again.",
         "datasource-name-conflict": "There is a data source with the same name in the target instance. Rename one of them and try again.",
         "folder-name-conflict": "There is a folder with the same name in the target instance. Rename one of them and try again.",
         "generic-error": "There has been an error while migrating. Please check the cloud migration logs for more information.",
-        "internal-service-error": "There has been an error while migrating. Please check the Grafana server logs for more details.",
+        "internal-service-error": "There has been an error while migrating. Please check the IESG LABS server logs for more details.",
         "library-element-name-conflict": "There is a library element with the same name in the target instance. Rename one of them and try again.",
-        "resource-conflict": "There is a resource conflict with the target instance. Please check the Grafana server logs for more details.",
-        "unexpected-error": "There has been an error while migrating. Please check the Grafana server logs for more details.",
+        "resource-conflict": "There is a resource conflict with the target instance. Please check the IESG LABS server logs for more details.",
+        "unexpected-error": "There has been an error while migrating. Please check the IESG LABS server logs for more details.",
         "unsupported-data-type": "Migration of this data type is not currently supported."
       },
       "error-title": "Unable to migrate this resource:",
@@ -8842,7 +8842,7 @@
       "upload-migration": "Upload snapshot"
     },
     "support-types-disclosure": {
-      "text": "Resources are copied to your Grafana Cloud stack. <2>Learn more</2> about the full set of supported resources and migrating other settings."
+      "text": "Resources are copied to your IESG LABS Cloud stack. <2>Learn more</2> about the full set of supported resources and migrating other settings."
     },
     "token-status": {
       "active": "Token created and active",
@@ -8851,14 +8851,14 @@
       "unknown-error": "Error retrieving token"
     },
     "what-is-cloud": {
-      "body": "Grafana cloud is a fully managed cloud-hosted observability platform ideal for cloud native environments. It's everything you love about Grafana without the overhead of maintaining, upgrading, and supporting an installation.",
+      "body": "IESG LABS cloud is a fully managed cloud-hosted observability platform ideal for cloud native environments. It's everything you love about IESG LABS without the overhead of maintaining, upgrading, and supporting an installation.",
       "link-title": "Learn about cloud features",
-      "title": "What is Grafana Cloud?"
+      "title": "What is IESG LABS Cloud?"
     },
     "why-host": {
-      "body": "In addition to the convenience of managed hosting, Grafana Cloud includes many cloud-exclusive features like SLOs, incident management, machine learning, and powerful observability integrations.",
+      "body": "In addition to the convenience of managed hosting, IESG LABS Cloud includes many cloud-exclusive features like SLOs, incident management, machine learning, and powerful observability integrations.",
       "link-title": "More questions? Talk to an expert",
-      "title": "Why host with Grafana?"
+      "title": "Why host with IESG LABS?"
     }
   },
   "multicombobox": {
@@ -8886,7 +8886,7 @@
       "title": "Alerting"
     },
     "alerting-admin": {
-      "subtitle": "Manage Alertmanager configurations and enable receiving Grafana-managed alerts",
+      "subtitle": "Manage Alertmanager configurations and enable receiving IESG LABS-managed alerts",
       "title": "Settings"
     },
     "alerting-am-routes": {
@@ -8919,7 +8919,7 @@
       "title": "Silences"
     },
     "alerting-upgrade": {
-      "subtitle": "Upgrade your existing legacy alerts and notification channels to the new Grafana Alerting",
+      "subtitle": "Upgrade your existing legacy alerts and notification channels to the new IESG LABS Alerting",
       "title": "Alerting upgrade"
     },
     "alerts-and-incidents": {
@@ -8934,7 +8934,7 @@
       "title": "Application"
     },
     "apps": {
-      "subtitle": "App plugins that extend the Grafana experience",
+      "subtitle": "App plugins that extend the IESG LABS experience",
       "title": "More apps"
     },
     "authentication": {
@@ -8957,7 +8957,7 @@
       "title": "Users and access"
     },
     "config-general": {
-      "subtitle": "Manage default preferences and settings across Grafana",
+      "subtitle": "Manage default preferences and settings across IESG LABS",
       "title": "General"
     },
     "config-plugins": {
@@ -9022,18 +9022,18 @@
       "title": "Frontend"
     },
     "global-orgs": {
-      "subtitle": "Isolated instances of Grafana running on the same server",
+      "subtitle": "Isolated instances of IESG LABS running on the same server",
       "title": "Organizations"
     },
     "global-users": {
-      "subtitle": "Manage users in Grafana",
+      "subtitle": "Manage users in IESG LABS",
       "title": "Users"
     },
     "grafana-quaderno": {
-      "title": "Grafana Quaderno"
+      "title": "IESG LABS Quaderno"
     },
     "groupsync": {
-      "subtitle": "Manage mappings of Identity Provider groups to Grafana Roles"
+      "subtitle": "Manage mappings of Identity Provider groups to IESG LABS Roles"
     },
     "help": {
       "title": "Help"
@@ -9086,7 +9086,7 @@
     },
     "migrate-to-cloud": {
       "subtitle": "Copy resources from your self-managed installation to a cloud stack",
-      "title": "Migrate to Grafana Cloud"
+      "title": "Migrate to IESG LABS Cloud"
     },
     "monitoring": {
       "subtitle": "Out-of-the-box observability solutions",
@@ -9113,11 +9113,11 @@
       "title": "Playlists"
     },
     "plugins": {
-      "subtitle": "Extend the Grafana experience with plugins",
+      "subtitle": "Extend the IESG LABS experience with plugins",
       "title": "Plugins"
     },
     "private-data-source-connections": {
-      "subtitle": "Query data that lives within a secured network without opening the network to inbound traffic from Grafana Cloud. Learn more in our docs.",
+      "subtitle": "Query data that lives within a secured network without opening the network to inbound traffic from IESG LABS Cloud. Learn more in our docs.",
       "title": "Private data source connect"
     },
     "profile/notifications": {
@@ -9155,11 +9155,11 @@
       "title": "Search dashboards"
     },
     "server-settings": {
-      "subtitle": "View the settings defined in your Grafana config",
+      "subtitle": "View the settings defined in your IESG LABS config",
       "title": "Settings"
     },
     "service-accounts": {
-      "subtitle": "Use service accounts to run automated workloads in Grafana",
+      "subtitle": "Use service accounts to run automated workloads in IESG LABS",
       "title": "Service accounts"
     },
     "setup-guide": {
@@ -9265,7 +9265,7 @@
     "category-news": "News",
     "description-show-image": "Controls if the news item social (og:image) image is shown above text content",
     "description-url": "Supports RSS and Atom feeds",
-    "link-title": "Go to Grafana labs blog",
+    "link-title": "Go to IESG LABS labs blog",
     "name-show-image": "Show image",
     "name-url": "URL",
     "news-panel": {
@@ -9446,7 +9446,7 @@
       "tooltip": "You can now select the \"No basic role\" option and add permissions to your custom needs. You can find more information in <1>our documentation</1>."
     },
     "user-invite-page": {
-      "sub-title": "Send invitation or add existing Grafana user to the organization.<1> {{orgName}}</1>",
+      "sub-title": "Send invitation or add existing IESG LABS user to the organization.<1> {{orgName}}</1>",
       "text": {
         "invite-user": "Invite user"
       }
@@ -9695,8 +9695,8 @@
       "label-search": "Search",
       "label-state": "State",
       "label-type": "Type",
-      "subtitle": "Extend the Grafana experience with panel plugins and apps. To find more data sources go to <2>Connections</2>.",
-      "tooltip-filter-disabled": "This filter has been disabled because the Grafana server cannot access grafana.com"
+      "subtitle": "Extend the IESG LABS experience with panel plugins and apps. To find more data sources go to <2>Connections</2>.",
+      "tooltip-filter-disabled": "This filter has been disabled because the IESG LABS server cannot access IESG LABS.com"
     },
     "catalog": {
       "no-updates-available": "No updates available",
@@ -9730,19 +9730,19 @@
       },
       "disabled-error": {
         "angular-deprecation-link": "Read more about angular deprecation",
-        "angular-error-text": "This plugin has been disabled as Grafana no longer supports Angular based plugins. You can try updating the plugin to the latest version to resolve this issue. You should then test to confirm it works as expected.",
-        "angular-error-text-no-non-angular-version": "This plugin has been disabled as Grafana no longer supports Angular based plugins. Unfortunately, the latest version of this plugin still uses Angular so you need to wait for the plugin author to migrate to continue using this plugin.",
+        "angular-error-text": "This plugin has been disabled as IESG LABS no longer supports Angular based plugins. You can try updating the plugin to the latest version to resolve this issue. You should then test to confirm it works as expected.",
+        "angular-error-text-no-non-angular-version": "This plugin has been disabled as IESG LABS no longer supports Angular based plugins. Unfortunately, the latest version of this plugin still uses Angular so you need to wait for the plugin author to migrate to continue using this plugin.",
         "contact-server-admin": "Please contact your server administrator to get this resolved.",
         "failed-backend-start-text": "This plugin failed to start. Server logs can provide more information.",
-        "invalid-signature-text": "Grafana Labs checks each plugin to verify that it has a valid digital signature. While doing this, we discovered that it was invalid. We can not guarantee the trustworthy of this plugin and have therefore disabled it. We recommend you to reinstall the plugin to make sure you are running a verified version of this plugin.",
+        "invalid-signature-text": "IESG LABS Labs checks each plugin to verify that it has a valid digital signature. While doing this, we discovered that it was invalid. We can not guarantee the trustworthy of this plugin and have therefore disabled it. We recommend you to reinstall the plugin to make sure you are running a verified version of this plugin.",
         "manage-plugins-link": "Read more about managing plugins",
-        "missing-signature-text": "Grafana Labs checks each plugin to verify that it has a valid digital signature. While doing this, we discovered that there is no signature for this plugin. We can not guarantee the trustworthy of this plugin and have therefore disabled it. We recommend you to reinstall the plugin to make sure you are running a verified version of this plugin.",
-        "modified-signature-text": "Grafana Labs checks each plugin to verify that it has a valid digital signature. While doing this, we discovered that the content of this plugin does not match its signature. We can not guarantee the trustworthy of this plugin and have therefore disabled it. We recommend you to reinstall the plugin to make sure you are running a verified version of this plugin.",
+        "missing-signature-text": "IESG LABS Labs checks each plugin to verify that it has a valid digital signature. While doing this, we discovered that there is no signature for this plugin. We can not guarantee the trustworthy of this plugin and have therefore disabled it. We recommend you to reinstall the plugin to make sure you are running a verified version of this plugin.",
+        "modified-signature-text": "IESG LABS Labs checks each plugin to verify that it has a valid digital signature. While doing this, we discovered that the content of this plugin does not match its signature. We can not guarantee the trustworthy of this plugin and have therefore disabled it. We recommend you to reinstall the plugin to make sure you are running a verified version of this plugin.",
         "title": "Plugin disabled",
         "unknown-error-text": "We failed to run this plugin due to an unkown reason and have therefore disabled it. We recommend you to reinstall the plugin to make sure you are running a working version of this plugin."
       },
       "labels": {
-        "contactGrafanaLabs": "Contact Grafana Labs",
+        "contactGrafanaLabs": "Contact IESG LABS Labs",
         "customLinks": "Custom links ",
         "customLinksTooltip": "These links are provided by the plugin developer to offer additional, developer-specific resources and information",
         "dependencies": "Dependencies",
@@ -9756,7 +9756,7 @@
         "license": "License",
         "raiseAnIssue": "Raise an issue",
         "reportAbuse": "Report a concern ",
-        "reportAbuseTooltip": "Report issues related to malicious or harmful plugins directly to Grafana Labs.",
+        "reportAbuseTooltip": "Report issues related to malicious or harmful plugins directly to IESG LABS Labs.",
         "repository": "Repository",
         "signature": "Signature",
         "sponsorDeveloper": "Sponsor this developer",
@@ -9779,7 +9779,7 @@
       }
     },
     "filter": {
-      "disabled": "This filter has been disabled because the Grafana server cannot access grafana.com",
+      "disabled": "This filter has been disabled because the IESG LABS server cannot access IESG LABS.com",
       "sort": "Sort",
       "sort-list": "Sort Plugins List",
       "state": "State"
@@ -9809,13 +9809,13 @@
       "title-uninstall-modal": "Uninstall {{plugin}}"
     },
     "install-controls-warning": {
-      "body-not-published": "This plugin is not published to <2>grafana.com/plugins</2> and can't be managed via the catalog.",
-      "enterprise-plugin-info": "This plugin is only available in Grafana Cloud and Grafana Enterprise.",
+      "body-not-published": "This plugin is not published to <2>IESG LABS.com/plugins</2> and can't be managed via the catalog.",
+      "enterprise-plugin-info": "This plugin is only available in IESG LABS Cloud and IESG LABS Enterprise.",
       "learn-more": "Learn more",
-      "no-valid-grafana-enterprise-license-detected": "No valid Grafana Enterprise license detected.",
+      "no-valid-grafana-enterprise-license-detected": "No valid IESG LABS Enterprise license detected.",
       "title-dev-alert": "This is a development build of the plugin and can't be uninstalled.",
-      "title-plugin-doesnt-support-version-grafana": "This plugin doesn't support your version of Grafana.",
-      "title-remote-plugins-unavailable": "The install controls have been disabled because the Grafana server cannot access grafana.com.",
+      "title-plugin-doesnt-support-version-grafana": "This plugin doesn't support your version of IESG LABS.",
+      "title-remote-plugins-unavailable": "The install controls have been disabled because the IESG LABS server cannot access IESG LABS.com.",
       "title-renderer-plugins-cannot-managed-plugin-catalog": "Renderer plugins cannot be managed by the Plugin Catalog."
     },
     "log-view-filters": {
@@ -9839,14 +9839,14 @@
       "tooltip-plugin-deprecated-longer-receives-updates": "This plugin is deprecated and no longer receives updates."
     },
     "plugin-details-body": {
-      "needs-service-account": "The {{pluginName}} plugin needs a service account to be able to query Grafana. The following list contains the permissions available to the service account:",
+      "needs-service-account": "The {{pluginName}} plugin needs a service account to be able to query IESG LABS. The following list contains the permissions available to the service account:",
       "page-not-found": "Page not found."
     },
     "plugin-details-deprecated-warning": {
       "title-deprecated": "Deprecated"
     },
     "plugin-details-header-dependencies": {
-      "grafana-dependency": "Grafana {{grafanaDependency}}"
+      "grafana-dependency": "IESG LABS {{grafanaDependency}}"
     },
     "plugin-details-page": {
       "not-found-model": {
@@ -9869,7 +9869,7 @@
     "plugin-enterprise-badge": {
       "aria-label-enterprise": "Enterprise",
       "text-enterprise": "Enterprise",
-      "title-requires-a-grafana-enterprise-license": "Requires a Grafana Enterprise license"
+      "title-requires-a-grafana-enterprise-license": "Requires a IESG LABS Enterprise license"
     },
     "plugin-help": {
       "error": "An error occurred when loading help.",
@@ -9898,10 +9898,10 @@
     "plugins-errors-info": {
       "disabled-list": "The following plugins are disabled and not shown in the list below:",
       "read-more-about-plugin-signing": "Read more about plugin signing",
-      "title-unsigned-plugins": "Unsigned plugins were found during plugin initialization. Grafana Labs cannot guarantee the integrity of these plugins. We recommend only using signed plugins."
+      "title-unsigned-plugins": "Unsigned plugins were found during plugin initialization. IESG LABS Labs cannot guarantee the integrity of these plugins. We recommend only using signed plugins."
     },
     "search-field": {
-      "placeholder-search-grafana-plugins": "Search Grafana plugins"
+      "placeholder-search-grafana-plugins": "Search IESG LABS plugins"
     },
     "use-plugin-details-tabs": {
       "nav-model-children": {
@@ -9914,7 +9914,7 @@
       "text-installed": "Installed"
     },
     "version-list": {
-      "grafana-dependency": "Grafana dependency",
+      "grafana-dependency": "IESG LABS dependency",
       "installed-version": "{{versionNumber}} (installed version)",
       "latest-compatible-version": "{{versionNumber}} (latest compatible version)",
       "latest-release-date": "Latest release date",
@@ -9944,7 +9944,7 @@
       "profile-not-enabled": "Profile is not enabled."
     },
     "feature-toggles-age": {
-      "enable-in-config": "Enable profile in the Grafana config file."
+      "enable-in-config": "Enable profile in the IESG LABS config file."
     },
     "input-suffix": {
       "content-login-details-locked-because-managed-another": "Login details locked because they are managed in another system."
@@ -9979,7 +9979,7 @@
   },
   "provisioning": {
     "banner": {
-      "message": "This feature is currently under active development. For the best experience and latest improvements, we recommend using the <2>nightly build</2> of Grafana."
+      "message": "This feature is currently under active development. For the best experience and latest improvements, we recommend using the <2>nightly build</2> of IESG LABS."
     },
     "bootstrap-step": {
       "description-clear-repository-connection": "Add a clear name for this repository connection",
@@ -9988,7 +9988,7 @@
       "ext-storage": "External storage",
       "files-count_one": "{{count}} files",
       "files-count_other": "{{count}} files",
-      "grafana": "Grafana instance",
+      "grafana": "IESG LABS instance",
       "label-display-name": "Display name",
       "placeholder-my-repository-connection": "My repository connection",
       "text-loading-resource-information": "Loading resource information..."
@@ -10003,7 +10003,7 @@
       "button-saving": "Saving...",
       "description-enabled": "Once automatic pulling is enabled, the target cannot be changed.",
       "description-path": "Path to a subdirectory in the Git repository",
-      "description-read-only": "Resources can't be modified through Grafana.",
+      "description-read-only": "Resources can't be modified through IESG LABS.",
       "description-repository-url": "Enter the GitHub repository URL",
       "description-title": "A human-readable name for the config",
       "error-required": "This field is required.",
@@ -10034,7 +10034,7 @@
       "placeholder-select-repository-type": "Select repository type"
     },
     "config-form-github-collapse": {
-      "description-realtime-feedback": "<0>Configure webhooks</0> to get instant updates in Grafana as soon as changes are committed. Review and approve changes using pull requests before they go live.",
+      "description-realtime-feedback": "<0>Configure webhooks</0> to get instant updates in IESG LABS as soon as changes are committed. Review and approve changes using pull requests before they go live.",
       "label-git-hub-features": "GitHub features",
       "label-realtime-feedback": "Realtime feedback"
     },
@@ -10089,7 +10089,7 @@
     },
     "enhanced-features": {
       "description": "Get the most out of your GitHub integration with these optional add-ons",
-      "description-instant-updates": "Get instant updates in Grafana as soon as changes are committed. Review and approve changes using pull requests before they go live.",
+      "description-instant-updates": "Get instant updates in IESG LABS as soon as changes are committed. Review and approve changes using pull requests before they go live.",
       "description-visual-previews-dashboard-updates-directly-requests": "See visual previews of dashboard updates directly in pull requests",
       "header": "Enhance your GitHub experience",
       "set-up-image-rendering": "Set up image rendering",
@@ -10127,11 +10127,11 @@
       "placeholder-search": "Search"
     },
     "finish-step": {
-      "description-enable-previews": "Adds an image preview of dashboard changes in pull requests. Images of your Grafana dashboards will be shared in your Git repository and visible to anyone with repository access.",
+      "description-enable-previews": "Adds an image preview of dashboard changes in pull requests. Images of your IESG LABS dashboards will be shared in your Git repository and visible to anyone with repository access.",
       "description-image-rendering": "Requires image rendering. <2>Set up image rendering</2>",
       "description-often-shall-instance-updates-git-hub": "How often shall the instance pull updates from GitHub?",
       "description-pr-enable-description": "Allows users to choose whether to open a pull request when saving changes. If the repository does not allow direct changes to the main branch, a pull request may still be required.",
-      "description-read-only": "Resources can't be modified through Grafana.",
+      "description-read-only": "Resources can't be modified through IESG LABS.",
       "description-webhooks-enable": "Allows users to choose whether to open a pull request when saving changes. If the repository does not allow direct changes to the main branch, a pull request may still be required.",
       "label-enable-previews": "Enable dashboard previews in pull requests",
       "label-pr-workflow": "Enable pull request option when saving",
@@ -10152,18 +10152,18 @@
     },
     "getting-started": {
       "alert-temporary-outage": "When you connect your whole instance, dashboards will be unavailable while running the migration. We recommend warning your users before starting the process.",
-      "modal-description-public-access": "Set up public access to your Grafana instance to enable GitHub integration",
-      "modal-description-required-features": "Enable required Grafana features for provisioning",
+      "modal-description-public-access": "Set up public access to your IESG LABS instance to enable GitHub integration",
+      "modal-description-required-features": "Enable required IESG LABS features for provisioning",
       "modal-title-set-up-public-access": "Set up public access",
       "modal-title-set-up-required-features": "Set up required features",
       "step-description-copy-url": "From the ngrok output, copy the https:// forwarding URL that looks like this:",
       "step-description-enable-feature-toggles": "Add these settings to your custom.ini file to enable necessary features:",
-      "step-description-start-ngrok": "Run this command to create a secure tunnel to your local Grafana:",
+      "step-description-start-ngrok": "Run this command to create a secure tunnel to your local IESG LABS:",
       "step-description-update-grafana-config": "Add this to your custom.ini file, replacing the URL with your actual ngrok URL:",
       "step-title-copy-url": "Copy your public URL",
       "step-title-enable-feature-toggles": "Enable Required Feature Toggles",
       "step-title-start-ngrok": "Start ngrok for temporary public access",
-      "step-title-update-grafana-config": "Update your Grafana configuration",
+      "step-title-update-grafana-config": "Update your IESG LABS configuration",
       "title-setting-connection-could-cause-temporary-outage": "Setting up this connection could cause a temporary outage"
     },
     "getting-started-page": {
@@ -10202,14 +10202,14 @@
     },
     "mode-options": {
       "folder": {
-        "description": "After setup, a new Grafana folder will be created and synced with external storage. If any resources are present in external storage, they will be provisioned to this new folder. All new resources created in this folder will be stored and versioned in external storage.",
-        "label": "Sync external storage to a new Grafana folder",
+        "description": "After setup, a new IESG LABS folder will be created and synced with external storage. If any resources are present in external storage, they will be provisioned to this new folder. All new resources created in this folder will be stored and versioned in external storage.",
+        "label": "Sync external storage to a new IESG LABS folder",
         "subtitle": "Use this option to sync external resources into a new folder without affecting the rest of your instance. You can repeat this process for up to 10 folders."
       },
       "instance": {
-        "description": "Resources will be synced with external storage and provisioned into this instance. Existing Grafana resources will be migrated and merged if needed. After setup, all new resources and changes will be saved to external storage and automatically provisioned back into the instance.",
+        "description": "Resources will be synced with external storage and provisioned into this instance. Existing IESG LABS resources will be migrated and merged if needed. After setup, all new resources and changes will be saved to external storage and automatically provisioned back into the instance.",
         "label": "Sync all resources with external storage",
-        "subtitle": "Use this option if you want to sync and manage your entire Grafana instance through external storage."
+        "subtitle": "Use this option if you want to sync and manage your entire IESG LABS instance through external storage."
       }
     },
     "recent-jobs": {
@@ -10284,7 +10284,7 @@
       "tab-overview": "Overview",
       "tab-overview-title": "Repository overview",
       "tab-resources": "Resources",
-      "tab-resources-title": "Resources saved in grafana database",
+      "tab-resources-title": "Resources saved in IESG LABS database",
       "title": "Repository Status",
       "title-legacy-storage": "Legacy Storage",
       "title-queued-for-deletion": "Queued for deletion"
@@ -10302,7 +10302,7 @@
       "tab-info": {
         "label": {
           "dry-run-result-after-apply": "Dry run (result after apply)",
-          "existing-from-grafana": "Existing (from Grafana)",
+          "existing-from-grafana": "Existing (from IESG LABS)",
           "file-from-repository": "File (from repository)"
         }
       },
@@ -10701,7 +10701,7 @@
     },
     "sub-menu-aria-label": "Role picker submenu",
     "title": {
-      "description": "Assign roles to users to ensure granular control over access to Grafana&lsquo;s features and resources. Find out more in our <2>documentation</2>."
+      "description": "Assign roles to users to ensure granular control over access to IESG LABS&lsquo;s features and resources. Find out more in our <2>documentation</2>."
     }
   },
   "role-picker-drawer": {
@@ -10711,7 +10711,7 @@
     "user-count": "+{{numUsers}}"
   },
   "route-error": {
-    "description": "Grafana has likely been updated. Please try reloading the page.",
+    "description": "IESG LABS has likely been updated. Please try reloading the page.",
     "error-title": "Error details",
     "error-unexpected-title": "An unexpected error happened",
     "reload-button": "Reload",
@@ -10927,7 +10927,7 @@
     "service-accounts-list-page-unconnected": {
       "add-service-account": "Add service account",
       "placeholder-search-service-account-by-name": "Search service account by name",
-      "sub-title": "Service accounts and their tokens can be used to authenticate against the Grafana API. Find out more in our <2>documentation.</2>",
+      "sub-title": "Service accounts and their tokens can be used to authenticate against the IESG LABS API. Find out more in our <2>documentation.</2>",
       "title-delete-service-account": "Delete service account",
       "title-disable-service-account": "Disable service account"
     },
@@ -10964,7 +10964,7 @@
     "embed": {
       "copy": "Copy to clipboard",
       "html": "Embed HTML",
-      "html-description": "The HTML code below can be pasted and included in another web page. Unless anonymous access is enabled, the users viewing that page need to be signed into Grafana for the graph to load.",
+      "html-description": "The HTML code below can be pasted and included in another web page. Unless anonymous access is enabled, the users viewing that page need to be signed into IESG LABS for the graph to load.",
       "info": "Generate HTML for embedding an iframe with this panel",
       "time-range": "Lock time range"
     },
@@ -10986,7 +10986,7 @@
       "info-text": "Create a direct link to this dashboard or panel, customized with the options below.",
       "link-url": "Link URL",
       "render-alert": "Image renderer plugin not installed",
-      "render-instructions": "To render a panel image, you must install the <2>Grafana image renderer plugin</2>. Please contact your Grafana administrator to install the plugin.",
+      "render-instructions": "To render a panel image, you must install the <2>IESG LABS image renderer plugin</2>. Please contact your IESG LABS administrator to install the plugin.",
       "rendered-image": "Direct link rendered image",
       "save-alert": "Dashboard is not saved",
       "save-dashboard": "To render a panel image, you must save the dashboard first.",
@@ -11193,7 +11193,7 @@
       "delete-title": "Delete snapshot",
       "deleted-alert": "Snapshot deleted. It could take an hour to be cleared from CDN caches.",
       "expiration-label": "Expires in",
-      "info-alert": "A Grafana dashboard snapshot publicly shares a dashboard while removing sensitive data such as queries and panel links, leaving only visible metrics and series names. Anyone with the link can access the snapshot.",
+      "info-alert": "A IESG LABS dashboard snapshot publicly shares a dashboard while removing sensitive data such as queries and panel links, leaving only visible metrics and series names. Anyone with the link can access the snapshot.",
       "learn-more-button": "Learn more",
       "local-button": "Publish snapshot",
       "name-label": "Snapshot name",
@@ -11203,7 +11203,7 @@
       "view-all-button": "View all snapshots"
     },
     "share-panel": {
-      "info-alert": "A Grafana panel snapshot publicly shares a panel while removing sensitive data such as queries and panel links, leaving only visible metrics and series names. Anyone with the link can access the snapshot."
+      "info-alert": "A IESG LABS panel snapshot publicly shares a panel while removing sensitive data such as queries and panel links, leaving only visible metrics and series names. Anyone with the link can access the snapshot."
     },
     "url-column-header": "Snapshot url",
     "view-button": "View"
@@ -11342,7 +11342,7 @@
       "download": "Download",
       "expires": "Expires",
       "requested-by": "Requested by",
-      "sub-title": "Support bundles allow you to easily collect and share Grafana logs, configuration, and data with the Grafana Labs team.",
+      "sub-title": "Support bundles allow you to easily collect and share IESG LABS logs, configuration, and data with the IESG Labs team.",
       "tooltip-remove-bundle": "Remove bundle"
     }
   },
@@ -11506,7 +11506,7 @@
       "external-group-id": "External Group ID",
       "external-group-sync": "External group sync",
       "label-add-external-group": "Add external group",
-      "team-sync-upgrade": "Add a group to enable team sync for free during your trial of Grafana Pro",
+      "team-sync-upgrade": "Add a group to enable team sync for free during your trial of IESG LABS Pro",
       "text": {
         "add-group": "Add group"
       },
@@ -11533,7 +11533,7 @@
       "save": "Save"
     },
     "team-sync-upgrade-content": {
-      "description": "Team Sync makes it easier for you to manage users' access in Grafana, by immediately updating each user's Grafana teams and permissions based on their single sign-on group membership, instead of when users sign in"
+      "description": "Team Sync makes it easier for you to manage users' access in IESG LABS, by immediately updating each user's IESG LABS teams and permissions based on their single sign-on group membership, instead of when users sign in"
     }
   },
   "text": {
@@ -11801,7 +11801,7 @@
       "label-set-timezone": "Set timezone",
       "placeholder-type": "Type",
       "tooltip-explicit-separator-joining-array-values": "Use an explicit separator when joining array values",
-      "tooltip-input-format": "Specify the format of the input field so Grafana can parse the date string correctly.",
+      "tooltip-input-format": "Specify the format of the input field so IESG LABS can parse the date string correctly.",
       "tooltip-specify-the-output-format": "Specify the output format.",
       "tooltip-timezone-manually": "Set the timezone of the date manually"
     },
@@ -12170,7 +12170,7 @@
   },
   "upgrade-box": {
     "discovery-text": "You’ve discovered a Pro feature!",
-    "discovery-text-continued": "Get the Grafana Pro plan to access {{featureName}}.",
+    "discovery-text-continued": "Get the IESG LABS Pro plan to access {{featureName}}.",
     "get-started": "Get started with {{featureName}}",
     "learn-more": "Learn more",
     "upgrade-button": "Upgrade"
@@ -12389,7 +12389,7 @@
   "welcome": {
     "welcome-banner": {
       "need-help": "Need help?",
-      "welcome-to-grafana": "Welcome to Grafana"
+      "welcome-to-grafana": "Welcome to IESG LABS"
     }
   },
   "xychart": {

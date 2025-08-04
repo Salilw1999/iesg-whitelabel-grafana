@@ -18,7 +18,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage 6",
           "datasource_uid": "gdev-prometheus",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "ref_id": "A",
           "team": "operations",
           "type": "test",
@@ -42,7 +42,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage 4",
           "datasource_uid": "gdev-prometheus",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "ref_id": "A",
           "region": "EMEA",
           "team": "operations",
@@ -65,7 +65,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "fingerprint": "bcf38efbb616d8d2",
         "labels": {
           "alertname": "direct to contact point",
-          "grafana_folder": "Testing and reproducing",
+          "IESG_folder": "Testing and reproducing",
         },
         "panelID": 0,
         "previous": "Alerting",
@@ -89,7 +89,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "With Disabled Query",
           "datasource_uid": "gdev-prometheus",
-          "grafana_folder": "Testing and reproducing",
+          "IESG_folder": "Testing and reproducing",
           "ref_id": "A,B",
         },
         "panelID": 13,
@@ -111,7 +111,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "Alert State History Random",
           "datasource_uid": "gdev-prometheus",
-          "grafana_folder": "Testing and reproducing",
+          "IESG_folder": "Testing and reproducing",
           "ref_id": "A",
         },
         "panelID": 0,
@@ -132,7 +132,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "fingerprint": "e11b0ff29886e8f2",
         "labels": {
           "alertname": "node_namespace_pod_container:container_cpu_usage_seconds_total:sum_irate4",
-          "grafana_folder": "Testing and reproducing",
+          "IESG_folder": "Testing and reproducing",
         },
         "panelID": 0,
         "previous": "Normal",
@@ -156,7 +156,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "delete-ds",
           "datasource_uid": "gdev-prometheus",
-          "grafana_folder": "Testing and reproducing",
+          "IESG_folder": "Testing and reproducing",
           "ref_id": "A",
         },
         "panelID": 0,
@@ -178,7 +178,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "Threshold Test",
           "datasource_uid": "gdev-prometheus",
-          "grafana_folder": "Testing and reproducing",
+          "IESG_folder": "Testing and reproducing",
           "ref_id": "A",
         },
         "panelID": 0,
@@ -200,7 +200,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "Alert History fingerprint",
           "datasource_uid": "PDDA8E780A17E7EF1",
-          "grafana_folder": "Testing and reproducing",
+          "IESG_folder": "Testing and reproducing",
           "ref_id": "A",
         },
         "panelID": 0,
@@ -221,7 +221,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "fingerprint": "40ddb0f6e97426e9",
         "labels": {
           "alertname": "UniFi CPU Usage",
-          "grafana_folder": "UniFi",
+          "IESG_folder": "UniFi",
           "instance": "unpoller:9130",
           "job": "unifipoller",
           "name": "Dream Router",
@@ -250,7 +250,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "fingerprint": "10716534bbf8086b",
         "labels": {
           "alertname": "XSS attack vector",
-          "grafana_folder": "gdev dashboards",
+          "IESG_folder": "gdev dashboards",
         },
         "panelID": 0,
         "previous": "Pending",
@@ -273,7 +273,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage",
           "datasource_uid": "gdev-prometheus",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "ref_id": "A",
           "team": "operations",
           "type": "cpu",
@@ -297,7 +297,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage",
           "cpu": "7",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "team": "operations",
           "type": "cpu",
         },
@@ -323,7 +323,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage",
           "cpu": "2",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "team": "operations",
           "type": "cpu",
         },
@@ -349,7 +349,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage",
           "cpu": "1",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "team": "operations",
           "type": "cpu",
         },
@@ -375,7 +375,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage",
           "cpu": "0",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "team": "operations",
           "type": "cpu",
         },
@@ -401,7 +401,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage",
           "cpu": "6",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "team": "operations",
           "type": "cpu",
         },
@@ -427,7 +427,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage",
           "cpu": "5",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "team": "operations",
           "type": "cpu",
         },
@@ -453,7 +453,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage",
           "cpu": "4",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "team": "operations",
           "type": "cpu",
         },
@@ -479,7 +479,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage",
           "cpu": "3",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "team": "operations",
           "type": "cpu",
         },
@@ -505,7 +505,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage",
           "datasource_uid": "gdev-prometheus",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "ref_id": "A",
           "team": "operations",
           "type": "cpu",
@@ -529,7 +529,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage",
           "datasource_uid": "gdev-prometheus",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "ref_id": "A",
           "team": "operations",
           "type": "cpu",
@@ -552,7 +552,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "fingerprint": "abeb2444057d7f01",
         "labels": {
           "alertname": "test-read-only-threshold-indicators",
-          "grafana_folder": "Testing and reproducing",
+          "IESG_folder": "Testing and reproducing",
         },
         "panelID": 0,
         "previous": "Normal",
@@ -575,7 +575,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage 5",
           "cpu": "6",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "team": "operations",
         },
         "panelID": 0,
@@ -600,7 +600,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage 5",
           "cpu": "5",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "team": "operations",
         },
         "panelID": 0,
@@ -625,7 +625,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage 5",
           "cpu": "4",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "team": "operations",
         },
         "panelID": 0,
@@ -650,7 +650,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage 5",
           "cpu": "3",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "team": "operations",
         },
         "panelID": 0,
@@ -675,7 +675,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage 5",
           "cpu": "2",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "team": "operations",
         },
         "panelID": 0,
@@ -700,7 +700,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage 5",
           "cpu": "1",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "team": "operations",
         },
         "panelID": 0,
@@ -725,7 +725,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage 5",
           "cpu": "0",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "team": "operations",
         },
         "panelID": 0,
@@ -749,7 +749,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "fingerprint": "91a8126f41689d98",
         "labels": {
           "alertname": "Random Values",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
         },
         "panelID": 0,
         "previous": "Normal",
@@ -772,7 +772,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response to log r
         "labels": {
           "alertname": "CPU Usage 5",
           "cpu": "7",
-          "grafana_folder": "Demonstrations",
+          "IESG_folder": "Demonstrations",
           "team": "operations",
         },
         "panelID": 0,
@@ -803,7 +803,7 @@ exports[`ruleHistoryToRecords should convert rule history JSON response with fil
         "fingerprint": "10716534bbf8086b",
         "labels": {
           "alertname": "XSS attack vector",
-          "grafana_folder": "gdev dashboards",
+          "IESG_folder": "gdev dashboards",
         },
         "panelID": 0,
         "previous": "Pending",

@@ -204,7 +204,7 @@ export const getHistoryResponse = (times: number[]) => ({
           ruleUID: 'adnpo0g62bg1sb',
           labels: {
             alertname: 'alert1',
-            grafana_folder: 'FOLDER A',
+            IESG_folder: 'FOLDER A',
             handler: '/alerting/*',
           },
         },
@@ -226,7 +226,7 @@ export const getHistoryResponse = (times: number[]) => ({
           ruleUID: 'adna1xso80hdsd',
           labels: {
             alertname: 'alert2',
-            grafana_folder: 'FOLDER A',
+            IESG_folder: 'FOLDER A',
             handler: '/alerting/*',
           },
         },
@@ -249,7 +249,7 @@ export const getHistoryResponse = (times: number[]) => ({
           ruleUID: 'adnpo0g62bg1sb',
           labels: {
             alertname: 'alert1',
-            grafana_folder: 'FOLDER A',
+            IESG_folder: 'FOLDER A',
             handler: '/alerting/*',
           },
         },
@@ -271,7 +271,7 @@ export const getHistoryResponse = (times: number[]) => ({
           ruleUID: 'adna1xso80hdsd',
           labels: {
             alertname: 'alert2',
-            grafana_folder: 'FOLDER A',
+            IESG_folder: 'FOLDER A',
             handler: '/alerting/*',
           },
         },

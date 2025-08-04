@@ -162,7 +162,7 @@ func (b *SecretAPIBuilder) GetOpenAPIDefinitions() common.GetOpenAPIDefinitions 
 // rather than at resource level which also has the benefit of lowering the load on AuthZ side, since instead of storing access to
 // a single dashboard, you'd store access to all dashboards in a specific folder.
 // For Secrets, this is not the case, but if we want to make it so, we need to update this ResourceAuthorizer to check the containing folder.
-// If we ever want to do that, get guidance from IAM first as well.
+// If we ever want to do that, get guidance from IESG first as well.
 func (b *SecretAPIBuilder) GetAuthorizer() authorizer.Authorizer {
 	return authsvc.NewResourceAuthorizer(b.accessClient)
 }

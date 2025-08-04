@@ -147,7 +147,7 @@ provider "grafana" {
   auth = "admin:admin"
 }
 
-resource "grafana_folder" "awesome_folder" {
+resource "IESG_folder" "awesome_folder" {
   title = "Awesome Team Folder"
 }
 
@@ -205,8 +205,8 @@ resource "grafana_service_account_permission" "awesome_service_account_permissio
   }
 }
 
-resource "grafana_folder_permission" "awesome_folder_permission" {
-  folder_uid = grafana_folder.awesome_folder.uid
+resource "IESG_folder_permission" "awesome_folder_permission" {
+  folder_uid = IESG_folder.awesome_folder.uid
   permissions {
     team_id    = grafana_team.awesome-team.id
     permission = "Admin"

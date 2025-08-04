@@ -21,7 +21,7 @@ export const GrafanaContext = createContext<GrafanaContextType | undefined>(unde
 export function useGrafana(): GrafanaContextType {
   const context = useContext(GrafanaContext);
   if (!context) {
-    throw new Error('No GrafanaContext found');
+    throw new Error('No IESG Labs dashboard Context found');
   }
   return context;
 }

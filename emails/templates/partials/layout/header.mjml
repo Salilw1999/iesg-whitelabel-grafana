@@ -1,3 +1,3 @@
 <mj-column background-color="transparent">
-  <mj-image padding="0" width="200px" src="https://grafana.com/static/assets/img/logo_new_transparent_light_400x100.png" align="left" />
+  <mj-image padding="0" width="200px" src="https://raw.githubusercontent.com/Salilw1999/iesg-whitelabel-grafana/b5587aaf6797d5f10f2d78601b0a8429e71554f9/public/img/IESG%20White.png" align="left" />
 </mj-column>

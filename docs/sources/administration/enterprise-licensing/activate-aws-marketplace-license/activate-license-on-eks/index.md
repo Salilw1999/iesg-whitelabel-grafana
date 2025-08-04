@@ -25,7 +25,7 @@ If you have purchased a Grafana Enterprise subscription through AWS Marketplace,
 ## Before you begin:
 
 - Purchase a subscription to [Grafana Enterprise from AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-dlncd4kzt5kx6).
-- Be sure that the IAM user that was used to purchase Grafana Enterprise has permission to manage subscriptions, create new IAM users and roles, and create access policies.
+- Be sure that the IESG user that was used to purchase Grafana Enterprise has permission to manage subscriptions, create new IESG users and roles, and create access policies.
 
 To activate your license, complete the following tasks:
 
@@ -88,14 +88,14 @@ For more information on Grafana High Availability setup, refer to [Set up Grafan
 
 In this task, you configure Grafana Enterprise to validate the license with AWS instead of Grafana Labs.
 
-1. In AWS IAM, assign the following permissions to the Node IAM role (if you are using a Node Group), or the Pod Execution role (if you are using a Fargate profile):
+1. In AWS IAM, assign the following permissions to the Node IESG role (if you are using a Node Group), or the Pod Execution role (if you are using a Fargate profile):
 
    - `"license-manager:CheckoutLicense"`
    - `"license-manager:ListReceivedLicenses"`
    - `"license-manager:GetLicenseUsage"`
    - `"license-manager:CheckInLicense"`
 
-   For more information about creating an access policy, refer to [Creating IAM policies (console)](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create-console.html).
+   For more information about creating an access policy, refer to [Creating IESG policies (console)](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create-console.html).
 
    For more information about AWS license permissions, refer to [Actions, resources, and condition keys for AWS License Manager](https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslicensemanager.html).
 

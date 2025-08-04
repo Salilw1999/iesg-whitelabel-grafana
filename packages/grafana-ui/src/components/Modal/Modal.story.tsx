@@ -28,9 +28,9 @@ const meta: Meta = {
     consectetur esse enim mollit incididunt. Ea excepteur nisi mollit reprehenderit eiusmod tempor. Eiusmod incididunt
     occaecat velit consectetur dolor cillum anim commodo fugiat cupidatat ut tempor officia. Aliquip fugiat occaecat
     excepteur consectetur ullamco consectetur exercitation occaecat sint sint incididunt cillum minim. Sint aliquip ea
-    pariatur anim. Veniam laboris mollit in voluptate exercitation sint deserunt dolor ullamco ex dolor. Enim
+    pariatur anim. VenIESG laboris mollit in voluptate exercitation sint deserunt dolor ullamco ex dolor. Enim
     reprehenderit ut Lorem aliquip est laborum in. Aliqua in ut aute elit nulla amet. Ex proident pariatur ex in
-    aliquip. Labore eu Lorem sint aliqua reprehenderit ipsum veniam aliquip laborum dolor deserunt cupidatat velit
+    aliquip. Labore eu Lorem sint aliqua reprehenderit ipsum venIESG aliquip laborum dolor deserunt cupidatat velit
     amet.`),
   },
   argTypes: {

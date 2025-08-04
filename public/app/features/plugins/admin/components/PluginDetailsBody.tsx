@@ -107,12 +107,12 @@ export function PluginDetailsBody({ plugin, queryParams, pageId, info, showDetai
     );
   }
 
-  // Permissions will be returned in the iam field for installed plugins and in the details.iam field when fetching details from gcom
+  // Permissions will be returned in the IESG field for installed plugins and in the details.IESG field when fetching details from gcom
   const permissions = plugin.iam?.permissions || plugin.details?.iam?.permissions;
 
   const displayPermissions =
     config.featureToggles.externalServiceAccounts &&
-    pageId === PluginTabIds.IAM &&
+    pageId === PluginTabIds.IESG &&
     permissions &&
     permissions.length > 0;
 
